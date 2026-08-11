@@ -1,0 +1,1176 @@
+/* ==========================================================================
+   AUTO 28 - SELL PAGE NEURAL EXPRESSIVE 2.0 DESIGN SYSTEM STYLES
+   ========================================================================== */
+
+/* 🔮 Translucency & Liquid Glassmorphism Elevation */
+.sell-card-bento,
+.glass-card-neural {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(243, 246, 252, 0.75) 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  border-radius: 32px !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  will-change: transform;
+}
+
+.sell-card-bento:hover,
+.glass-card-neural:hover {
+  transform: translateY(-4px) scale(1.008) !important;
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-color: rgba(37, 99, 235, 0.25) !important;
+}
+
+/* 🌟 Special Glass Card Accent for Hot Buyout (VF8) */
+.glass-card-highlight {
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9) 0%, rgba(219, 234, 254, 0.75) 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 2px solid #2563eb !important;
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-radius: 32px !important;
+}
+
+.glass-card-highlight:hover {
+  transform: translateY(-5px) scale(1.015) !important;
+  box-shadow: 0 24px 50px rgba(37, 99, 235, 0.28) !important;
+}
+
+.glass-card-dark {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.96) 0%, rgba(15, 23, 42, 0.98) 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3) !important;
+  border-radius: 32px !important;
+  color: #ffffff !important;
+}
+
+/* 🟢 Super Ellipse Radius Tokens */
+.rounded-squircle-32 {
+  border-radius: 32px !important;
+}
+
+.rounded-squircle-24 {
+  border-radius: 24px !important;
+}
+
+.rounded-squircle-20 {
+  border-radius: 20px !important;
+}
+
+.rounded-pill {
+  border-radius: 9999px !important;
+}
+
+/* ⚡ Bold-First Typography Scale & Metrics */
+.metric-value-hero {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.05em !important;
+  line-height: 1.1 !important;
+  color: #0f172a !important;
+}
+
+@media (min-width: 768px) {
+  .metric-value-hero {
+    font-size: 3rem !important;
+  }
+}
+
+.metric-value-card {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.15 !important;
+  color: #0f172a !important;
+}
+
+.card-title-neural {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.25 !important;
+  color: #0f172a !important;
+}
+
+/* 📐 Section Layout & Balanced Compact Spacing Tokens */
+.sell-section-padding {
+  padding: 3rem 1rem 2.5rem 1rem !important;
+  position: relative !important;
+}
+
+@media (min-width: 768px) {
+  .sell-section-padding {
+    padding: 3.5rem 1.5rem 2.75rem 1.5rem !important;
+  }
+}
+
+.section-header-wrapper {
+  text-align: center !important;
+  margin-bottom: 1.75rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.section-tag-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 5px 16px !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+.section-title-neural {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.2 !important;
+  color: #0f172a !important;
+  margin-top: 4px !important;
+  margin-bottom: 6px !important;
+}
+
+@media (min-width: 768px) {
+  .section-title-neural {
+    font-size: 2.25rem !important;
+  }
+}
+
+.tag-pill-neural {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  padding: 6px 16px !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* 🚀 Spring Physics & Interactive Buttons */
+.spring-interactive {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease, background 0.25s ease !important;
+  will-change: transform;
+}
+
+.spring-interactive:hover {
+  transform: translateY(-3px) scale(1.01) !important;
+}
+
+.spring-interactive:active {
+  transform: scale(0.96) !important;
+}
+
+.btn-neural-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: 0.02em !important;
+  padding: 14px 28px !important;
+  border-radius: 9999px !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 48px !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.btn-neural-primary::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 70%
+  ) !important;
+  transform: rotate(30deg) !important;
+  animation: shimmerSweep 3.5s infinite linear !important;
+  pointer-events: none !important;
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  20% { transform: translateX(100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+.btn-neural-primary:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 14px 34px rgba(37, 99, 235, 0.42) !important;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+}
+
+.btn-neural-primary:active {
+  transform: scale(0.96) !important;
+}
+
+.btn-neural-dark {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  padding: 14px 28px !important;
+  border-radius: 9999px !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25) !important;
+  cursor: pointer !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 48px !important;
+  text-decoration: none !important;
+}
+
+.btn-neural-dark:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-neural-dark:active {
+  transform: scale(0.96) !important;
+}
+
+.btn-neural-secondary {
+  background: rgba(241, 245, 249, 0.9) !important;
+  color: #2563eb !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem !important;
+  padding: 10px 18px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(37, 99, 235, 0.15) !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+  min-height: 40px !important;
+}
+
+.btn-neural-secondary:hover {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25) !important;
+}
+
+.btn-neural-secondary:active {
+  transform: scale(0.96) !important;
+}
+
+/* 📐 Sell Page Form Inputs & Custom Layout */
+.sell-form-wrapper {
+  width: 100% !important;
+  padding: 2rem 1.5rem !important;
+  margin-top: 1.25rem !important;
+}
+
+@media (max-width: 767px) {
+  .sell-form-wrapper {
+    padding: 1.25rem 1rem !important;
+  }
+}
+
+.valuation-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.sell-input-field {
+  background: rgba(255, 255, 255, 0.9) !important;
+  padding: 10px 20px !important;
+  border-radius: 9999px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.25s ease !important;
+  min-height: 52px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.sell-input-field--text::after,
+.sell-input-field--tel::after,
+.sell-input-field:not(.sell-input-field--select)::after {
+  display: none !important;
+  content: none !important;
+}
+
+.sell-input-field:focus-within,
+.sell-input-field:hover {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18), inset 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+  background: #ffffff !important;
+}
+
+/* ❓ FAQ Accordion Styling Enhancements */
+.sell-faq-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+details.sell-card-bento--faq {
+  border-radius: 20px !important;
+  padding: 18px 24px !important;
+  cursor: pointer !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(243, 246, 252, 0.8) 100%) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.03) !important;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+details.sell-card-bento--faq:hover,
+details.sell-card-bento--faq[open] {
+  border-color: rgba(37, 99, 235, 0.35) !important;
+  box-shadow: 0 14px 36px rgba(37, 99, 235, 0.12), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  background: #ffffff !important;
+}
+
+details.sell-card-bento--faq summary:focus-visible {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 4px !important;
+  border-radius: 12px !important;
+}
+
+.sell-faq-summary {
+  outline: none !important;
+  list-style: none !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  user-select: none !important;
+}
+
+.sell-faq-summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.sell-faq-question {
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  color: #0f172a !important;
+  line-height: 1.4 !important;
+}
+
+.sell-faq-answer {
+  margin-top: 14px !important;
+  color: #475569 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  padding-top: 10px !important;
+  border-top: 1px dashed rgba(226, 232, 240, 0.8) !important;
+}
+
+.faq-icon-pill {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(37, 99, 235, 0.08) !important;
+  color: #2563eb !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 900 !important;
+  font-size: 1.2rem !important;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease, color 0.3s ease !important;
+  flex-shrink: 0 !important;
+}
+
+details[open] .faq-icon-pill {
+  transform: rotate(45deg) !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* 📱 Mobile Sticky Bottom Bar & Touch Target Optimization */
+.sticky-mobile-cta-neural {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  background: rgba(15, 23, 42, 0.94) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  padding: 12px 16px !important;
+  padding-bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  z-index: 999 !important;
+  display: flex !important;
+  gap: 12px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 -12px 36px rgba(0, 0, 0, 0.3) !important;
+}
+
+.sticky-mobile-cta-btn {
+  flex: 1 !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  padding: 12px 16px !important;
+  border-radius: 14px !important;
+  font-weight: 800 !important;
+  font-size: 0.9rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-height: 48px !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.sticky-mobile-cta-btn--primary {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+}
+
+.sticky-mobile-cta-btn--call {
+  background: #10b981 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+}
+
+.sticky-mobile-cta-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* 🏷️ Badge Variant Modifier Tokens */
+.tag-pill-neural--urgent {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.25) !important;
+  color: #dc2626 !important;
+  margin-bottom: 12px !important;
+}
+
+/* 💊 Navigation Link Active State Token */
+.nav-link.active,
+.nav-link[aria-current="page"] {
+  color: #2563eb !important;
+  font-weight: 800 !important;
+}
+
+/* 🍞 Liquid Glassmorphic Toast Notifications */
+.neural-toast-container {
+  position: fixed !important;
+  top: 24px !important;
+  right: 24px !important;
+  z-index: 10000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  pointer-events: none !important;
+  max-width: 420px !important;
+  width: calc(100% - 48px) !important;
+}
+
+.neural-toast-item {
+  pointer-events: auto !important;
+  background: rgba(15, 23, 42, 0.94) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  padding: 16px 20px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  animation: toastSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+  transition: all 0.3s ease !important;
+}
+
+.neural-toast-item--success {
+  border-left: 4px solid #10b981 !important;
+}
+
+.neural-toast-item--warning {
+  border-left: 4px solid #f59e0b !important;
+}
+
+.neural-toast-item--error {
+  border-left: 4px solid #ef4444 !important;
+}
+
+@keyframes toastSlideIn {
+  from { opacity: 0; transform: translateX(40px) scale(0.95); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* 📋 Zero-Inline Component Classes */
+.sell-form-header {
+  width: 100%;
+  text-align: center;
+}
+
+.sell-form-badge {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sell-form-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 8px 0 6px 0;
+}
+
+.sell-form-subtitle {
+  font-size: 0.95rem;
+  color: #475569;
+  margin: 0;
+}
+
+.sell-field-label,
+.sell-field-label span:first-child {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  font-size: 0.82rem !important;
+  margin-bottom: 2px !important;
+  text-transform: none !important;
+}
+
+.sell-field-label--flex {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.sell-valid-badge {
+  font-size: 0.75rem;
+  color: #10b981;
+  font-weight: 800;
+  display: none;
+}
+
+.sell-field-input,
+.sell-field-select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  outline: none;
+  cursor: pointer;
+}
+
+.sell-price-preview {
+  display: none;
+  width: 100%;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 1px solid #93c5fd;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  margin-top: 8px;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.sell-price-preview__label {
+  font-size: 0.85rem;
+  display: block;
+  color: #2563eb;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.sell-price-preview__value {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+  margin: 4px 0 2px 0;
+}
+
+.sell-price-preview__note {
+  font-size: 0.8rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.sell-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.sell-trust-copy {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #334155;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.sell-section--alt {
+  background: rgba(248, 250, 252, 0.6) !important;
+}
+
+.sell-section--alt-darker {
+  background: rgba(248, 250, 252, 0.8) !important;
+}
+
+.sell-container-1100 {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sell-container-1000 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sell-container-950 {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.sell-container-900 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sell-tag-pill--danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.sell-tag-pill--primary {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.sell-tag-pill--success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.sell-title--mt12 {
+  margin-top: 12px !important;
+}
+
+.sell-subtitle--muted {
+  color: #64748b;
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 8px auto 0;
+}
+
+/* Pain points & Commitment Cards */
+.sell-pain-grid,
+.sell-commitment-grid,
+.sell-comparison-grid,
+.sell-price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.sell-card-bento--border-danger {
+  padding: 28px !important;
+  border-radius: 20px !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  border-left: 4px solid #ef4444 !important;
+}
+
+.sell-card-bento--border-warning {
+  padding: 28px !important;
+  border-radius: 20px !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  border-left: 4px solid #f59e0b !important;
+}
+
+.sell-card-bento--border-primary {
+  padding: 28px !important;
+  border-radius: 20px !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  border-left: 4px solid #3b82f6 !important;
+}
+
+.sell-card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.sell-card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.sell-card-text {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sell-card-bento--white {
+  padding: 24px !important;
+  border-radius: 20px !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  background: #ffffff !important;
+}
+
+/* Comparison Cards */
+.sell-comparison-card {
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.sell-comparison-card--competitor {
+  background: #ffffff;
+  opacity: 0.88;
+}
+
+.sell-comparison-card--auto28 {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(37, 99, 235, 0.2);
+  border: 2px solid #2563eb;
+  position: relative;
+}
+
+.sell-comparison-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.sell-comparison-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.sell-comparison-title--muted {
+  color: #64748b;
+}
+
+.sell-comparison-title--light {
+  color: #ffffff;
+}
+
+.sell-comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.sell-comparison-list--dark {
+  color: #475569;
+}
+
+.sell-comparison-list--light {
+  color: #e2e8f0;
+}
+
+.sell-comparison-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* 📊 W3C Semantic Table & Grid Price Reference System */
+.sell-price-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 24px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.04);
+  margin-top: 1rem;
+}
+
+.sell-price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sell-price-table caption {
+  font-size: 0.85rem;
+  color: #64748b;
+  padding: 12px;
+  text-align: center;
+  caption-side: bottom;
+}
+
+.sell-price-table th {
+  background: #f8fafc;
+  padding: 16px 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.sell-price-table td {
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  color: #0f172a;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.sell-price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.sell-price-table tr:hover td {
+  background: #f8fafc;
+}
+
+.sell-type-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.sell-type-tag--ev {
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.sell-type-tag--ice {
+  color: #d97706;
+  background: rgba(217, 119, 6, 0.1);
+}
+
+.sell-price-range {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.sell-price-range--hot {
+  color: #2563eb;
+}
+
+/* Process Section */
+.sell-process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.sell-process-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.sell-process-number {
+  width: 36px;
+  height: 36px;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.sell-process-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.sell-process-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Testimonials */
+.sell-testimonial-stars {
+  display: flex;
+  gap: 4px;
+  color: #f59e0b;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.sell-testimonial-quote {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.sell-testimonial-author-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sell-testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.sell-testimonial-author {
+  display: block;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.sell-testimonial-car {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Exit Modal Elements */
+.sell-exit-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.sell-exit-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 2px solid #2563eb;
+  position: relative;
+  text-align: center;
+}
+
+.sell-exit-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f1f5f9;
+  border: none;
+  font-size: 1.5rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sell-exit-modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.sell-exit-badge {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.sell-exit-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 10px 0 6px 0;
+}
+
+.sell-exit-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.sell-exit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sell-exit-input {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.sell-exit-input:focus {
+  border-color: #2563eb;
+}
+
+.sell-exit-submit {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-height: 48px;
+}
+
+.sell-exit-submit:hover {
+  background: #1d4ed8;
+}
+
+.sell-exit-note {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+/* Footnote & Claim Traceability */
+.sell-claim-footnote {
+  font-size: 0.75rem;
+  color: #64748b;
+  vertical-align: super;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* 📱 Mobile Responsive Enhancements & Text Overflow Protection */
+@media (max-width: 639px) {
+  .btn-sell-valuation-submit,
+  .btn-neural-primary,
+  .btn-neural-dark {
+    width: 100% !important;
+    font-size: 0.85rem !important;
+    letter-spacing: -0.01em !important;
+    padding: 12px 14px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.3 !important;
+    min-height: 48px !important;
+  }
+
+  .sell-trust-dot {
+    display: none !important;
+  }
+
+  .sell-trust-copy {
+    flex-direction: column !important;
+    gap: 6px !important;
+    margin-top: 12px !important;
+  }
+}

@@ -1,0 +1,679 @@
+/* ==========================================================================
+   CAR SALE ESSENTIALS — NEURAL EXPRESSIVE GUIDE STYLES (Production 2026)
+   ========================================================================== */
+
+.guide-hero {
+  position: relative;
+  padding: 100px 20px 48px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.guide-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 9999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  color: var(--color-accent-blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+.guide-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.guide-hero h1 span.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.guide-hero p.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 760px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.guide-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hero-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+/* MAIN GUIDE CONTAINER */
+.guide-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* BENTO TWO PILLARS SECTION */
+.bento-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.bento-pillar-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-smooth);
+}
+
+.bento-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.pillar-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(79, 70, 229, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--color-accent-blue);
+  flex-shrink: 0;
+}
+
+.pillar-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.pillar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pillar-item-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-accent-blue);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pillar-item-content {
+  font-size: 0.975rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.pillar-item-content strong {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.pillar-item-sub {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+/* WARNING ALERT BANNER */
+.glass-alert-warning {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.06), rgba(220, 38, 38, 0.03));
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 20px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 56px;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.05);
+}
+
+.warning-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.warning-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #dc2626;
+  margin-bottom: 6px;
+}
+
+.warning-content p {
+  font-size: 0.95rem;
+  color: #7f1d1d;
+  line-height: 1.55;
+}
+
+/* SECTION HEADING WRAPPER */
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.section-title-wrapper h2 {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.section-title-wrapper p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+/* DETAILED DEEP-DIVE CARDS */
+.details-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.detail-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+  transition: transform 0.3s var(--ease-spring), border-color 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.detail-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.detail-card-icon {
+  font-size: 1.5rem;
+}
+
+.detail-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.detail-card p {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.detail-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.tag-accent-blue {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-accent-blue);
+}
+
+.tag-accent-amber {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.tag-accent-emerald {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+/* MARITAL STATUS DECISION TREE */
+.marital-tree-container {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 24px;
+  padding: 36px 32px;
+  margin-bottom: 56px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.marital-tree-title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  color: var(--color-text-primary);
+}
+
+.marital-branches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.marital-branch-card {
+  background: #f8fafc;
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  padding: 24px;
+  position: relative;
+  transition: border-color 0.25s ease;
+}
+
+.marital-branch-card:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.branch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.badge-married {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--color-accent-blue);
+}
+
+.badge-single {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.marital-branch-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.marital-branch-card p {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* NOTARY PROCESS STEPS */
+.notary-process-section {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 24px;
+  padding: 36px 32px;
+  margin-bottom: 56px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.notary-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.notary-step-card {
+  text-align: center;
+  padding: 20px 12px;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid var(--border-card);
+}
+
+.step-num-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.notary-step-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.notary-step-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* VINFAST EV SPECIAL GUIDE */
+.ev-special-card {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(37, 99, 235, 0.08));
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 56px;
+}
+
+.ev-special-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ev-special-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* INTERACTIVE CLIPBOARD CHECKLIST */
+.interactive-clipboard {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 28px;
+  max-width: 680px;
+  margin: 0 auto 56px;
+  padding: 48px 36px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.clipboard-clip-top {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 36px;
+  background: #334155;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.clipboard-clip-top::after {
+  content: '';
+  width: 50px;
+  height: 6px;
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+
+.clipboard-title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.clipboard-subtitle {
+  text-align: center;
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.clipboard-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.clipboard-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient-accent);
+  border-radius: 9999px;
+  transition: width 0.4s var(--ease-spring);
+}
+
+.check-item-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.check-item-row:hover {
+  background: #f1f5f9;
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.check-item-row.checked {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.4);
+}
+
+.check-item-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.check-item-row.checked .check-item-checkbox {
+  background: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
+  color: white;
+}
+
+.check-item-text {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.clipboard-status-footer {
+  text-align: center;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-card);
+}
+
+.status-ready-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-pending-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.clipboard-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.btn-action-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--gradient-accent);
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.925rem;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-action-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+}
+
+.btn-action-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  color: var(--color-text-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.925rem;
+  border-radius: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-action-secondary:hover {
+  background: #f8fafc;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 992px) {
+  .notary-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-pillars-grid,
+  .marital-branches {
+    grid-template-columns: 1fr;
+  }
+  .notary-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .interactive-clipboard {
+    padding: 36px 20px 24px;
+  }
+}

@@ -1,0 +1,128 @@
+/* ============================================
+   💊 FLOATING NAV CAPSULE (HEIGHT 52PX - LAYER 3 OVERLAY)
+   ============================================ */
+
+.floating-nav-capsule {
+  position: fixed;
+  top: 1rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  height: 52px; /* Khóa cao đúng 52px */
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 9999px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 12px 28px -4px rgba(2, 11, 20, 0.08);
+  z-index: 1000;
+  transition: transform 0.45s var(--ease-spring);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .floating-nav-capsule {
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 56rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: -0.05em;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 12px rgba(79, 70, 229, 0.1);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .nav-links { display: flex; }
+}
+
+.nav-link {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem; /* Pill Label: 11px */
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+}
+
+.btn-nav-hotline {
+  background: var(--color-text-primary); /* Carbon tối */
+  color: #FFFFFF;
+  height: 38px;
+  min-height: 38px;
+  max-height: 38px;
+  padding: 0 1rem;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.2s var(--ease-spring);
+  box-shadow: 0 4px 12px rgba(2, 11, 20, 0.15);
+}
+
+.btn-nav-hotline:hover {
+  transform: scale(1.03);
+}
+
+.btn-nav-hotline:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 480px) {
+  .floating-nav-capsule {
+    top: 0.75rem;
+    left: 0.5rem;
+    right: 0.5rem;
+    padding: 0 0.75rem;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .btn-nav-hotline {
+    padding: 0 0.75rem;
+    font-size: 0.7rem;
+    height: 36px;
+    min-height: 36px;
+    max-height: 36px;
+  }
+}
+
+/* 📱 MOBILE STICKY FLOATING QUICK ACTION BAR — PROHIBITED BY MANDATE (FORCE HIDDEN) */
+.mobile-sticky-bar {
+  display: none !important;
+}

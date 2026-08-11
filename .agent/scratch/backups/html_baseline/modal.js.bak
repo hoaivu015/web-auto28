@@ -1,0 +1,73 @@
+/**
+ * Auto 28 Landing Page - Detail Modal & Lightbox Module
+ */
+(function() {
+  'use strict';
+
+  function closeModal() {
+    const modal = document.getElementById('car-detail-modal') || document.getElementById('car-modal-view');
+    if (modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function initModalListeners() {
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+    if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.btn-detail-trigger');
+      if (!btn) return;
+
+      e.preventDefault();
+      e.stopPropagation();
+      const card = btn.closest('.expressive-car-card');
+      if (!card) return;
+
+      const carId = card.getAttribute('data-car-id');
+      const carInfo = (typeof carDetailsData !== 'undefined') ? (carDetailsData[carId] || carDetailsData[String(carId)]) : null;
+
+      if (carInfo) {
+        const titleEl = document.getElementById('modal-car-title');
+        if (titleEl) titleEl.textContent = carInfo.title;
+
+        const classEl = document.getElementById('modal-car-class');
+        if (classEl) classEl.textContent = carInfo.class;
+
+        const priceEl = document.getElementById('modal-car-price');
+        if (priceEl) priceEl.textContent = carInfo.price;
+
+        const odoEl = document.getElementById('modal-spec-odo');
+        if (odoEl) odoEl.textContent = carInfo.odo;
+
+        const colorEl = document.getElementById('modal-spec-color');
+        if (colorEl) colorEl.textContent = carInfo.color;
+
+        const batteryEl = document.getElementById('modal-spec-battery');
+        if (batteryEl) batteryEl.textContent = carInfo.battery;
+
+        const submitBtn = document.getElementById('btn-modal-action-submit');
+        if (submitBtn) submitBtn.setAttribute('data-car-name', carInfo.title);
+
+        const targetModal = document.getElementById('car-modal-view') || document.getElementById('car-detail-modal');
+        if (targetModal) {
+          targetModal.classList.add('open');
+          targetModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initModalListeners);
+  window.closeModal = closeModal;
+})();

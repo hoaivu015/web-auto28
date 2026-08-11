@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /scratch/
+Disallow: /.agents/
+Disallow: /node_modules/
+
+# GEO 2026 — Allow AI Search Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.auto28.com.vn/sitemap.xml

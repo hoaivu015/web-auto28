@@ -1,0 +1,127 @@
+    <!-- ⚡ SECTION 1: HERO & EXCLUSIVE SELLING FORM -->
+    <section id="hero" class="hero">
+        <div id="hero-bg" class="hero__bg">
+            <div class="slideshow" id="hero-slideshow">
+                <div class="slide" style="background-image: url('./assets/cars/vf8.jpg');"></div>
+                <div class="slide" data-bg="./assets/cars/vf9.jpg"></div>
+                <div class="slide" data-bg="./assets/cars/vfe34.jpg"></div>
+                <div class="slide" data-bg="./assets/cars/vf7.jpg"></div>
+            </div>
+        </div>
+        
+        <!-- Mesh dark gradient overlay -->
+        <div class="hero__overlay"></div>
+        <div class="hero__bokeh" id="hero-bokeh"></div>
+
+        <div class="hero__content">
+            <div class="hero__text">
+                <span class="hero__badge">ĐỊNH GIÁ TRỰC TUYẾN · THU MUA TẬN NHÀ</span>
+                <h1 class="hero__headline">
+                    Định Giá Xe Cũ Trong 10 Phút –<br>
+                    <span class="text-gradient">Thu Mua Cao Hơn Thị Trường 10-20 Triệu.</span>
+                </h1>
+                <p class="hero__sub">
+                    Auto 28 chuyên thu mua xe VinFast lướt tận nhà giá cao hơn thị trường 10-20 triệu tại TP.HCM, Bình Dương, Đồng Nai, Long An. Thẩm định AI trong 2 phút, hỗ trợ tất toán vay bank trong 1h, giải ngân tiền mặt/chuyển khoản 100% ngay khi ký hợp đồng.
+                </p>
+                <div class="hero__trust-badge">
+                    Đã giải ngân hơn 50 tỷ VNĐ cho 1.245+ chủ xe VinFast
+                </div>
+            </div>
+
+            <!-- EXCLUSIVE TWO-STEP MORPHING FORM (GLASMORPHISM FORM) -->
+            <div class="hero__form-wrapper">
+                <form class="hero__form-glass" id="sell-pricing-form" action="#" method="POST" novalidate>
+                    
+                    <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.05rem; letter-spacing: -0.02em; color: var(--color-text-primary); border-bottom: 1px solid rgba(0, 0, 0, 0.06); padding-bottom: 0.75rem; margin-bottom: 1rem; text-align: center;">
+                        ⚡ Định Giá AI Instant · Nhận Kết Quả Sau 2 Phút
+                    </div>
+
+                    <!-- 🤖 DYNAMIC AI PRICE ESTIMATE BADGE -->
+                    <div id="ai-price-estimate-badge" class="ai-price-badge">
+                        <div class="ai-badge-header">
+                            <span class="ai-pulse-dot"></span>
+                            <span>BIÊN ĐỘ GIÁ THU MUA DỰ KIẾN</span>
+                        </div>
+                        <div class="ai-price-range" id="ai-price-range-val">710 – 910 Triệu VNĐ</div>
+                        <div class="ai-badge-footer" id="ai-price-subtitle">Dựa trên 1.245+ xe đã thẩm định thành công</div>
+                    </div>
+
+                    <!-- STEP 1: CONFIGURE VEHICLE -->
+                    <div class="form-step" id="sell-step-1">
+                        <div class="form-group">
+                            <label for="car-model">Dòng xe VinFast của bạn</label>
+                            <select id="car-model" name="car-model">
+                                <option value="vf8" selected data-img="./assets/cars/vf8.jpg">VinFast VF 8</option>
+                                <option value="vf3" data-img="./assets/cars/vf3.jpg">VinFast VF 3</option>
+                                <option value="vf5" data-img="./assets/cars/vf5.jpg">VinFast VF 5</option>
+                                <option value="vf6" data-img="./assets/cars/vf6.jpg">VinFast VF 6</option>
+                                <option value="vf7" data-img="./assets/cars/vf7.jpg">VinFast VF 7</option>
+                                <option value="vf9" data-img="./assets/cars/vf9.jpg">VinFast VF 9</option>
+                                <option value="vfe34" data-img="./assets/cars/vfe34.jpg">VinFast VF e34</option>
+                                <option value="limo" data-img="./assets/cars/limo.jpg">VinFast LIMO</option>
+                                <option value="mpv" data-img="./assets/cars/mpv.jpg">VinFast MPV 7</option>
+                                <option value="lux-a" data-img="./assets/cars/lux-a.jpg">VinFast Lux A</option>
+                                <option value="lux-sa" data-img="./assets/cars/lux-sa.jpg">VinFast Lux SA</option>
+                                <option value="president" data-img="./assets/cars/president.jpg">VinFast President</option>
+                                <option value="fadil" data-img="./assets/cars/fadil.jpg">VinFast Fadil</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="year">Năm sản xuất</label>
+                                <select id="year" name="year">
+                                    <option>2026</option>
+                                    <option>2025</option>
+                                    <option selected>2024</option>
+                                    <option>2023</option>
+                                    <option>2022</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="km">Số KM đã đi</label>
+                                <select id="km" name="km">
+                                    <option>Dưới 10.000 km</option>
+                                    <option selected>10.000 – 30.000 km</option>
+                                    <option>30.000 – 60.000 km</option>
+                                    <option>Trên 60.000 km</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="btn-next-step" class="btn-cta" type="button" style="min-height: 48px;">
+                            XEM BIÊN ĐỘ GIÁ THU MUA AI ➜
+                        </button>
+                    </div>
+
+                    <!-- STEP 2: CAPTURE LEAD (HIDDEN SETUP INITIALLY) -->
+                    <div class="form-step hidden-setup" id="sell-step-2">
+                        <button type="button" class="btn-back-step" id="btn-prev-step">
+                            ← Quay lại chỉnh sửa thông tin xe
+                        </button>
+                        
+                        <p style="font-family: var(--font-body); font-size: 13px; line-height: 1.5; color: var(--color-text-secondary); margin-bottom: 0.75rem; text-align: left;">
+                            Nhập số điện thoại để nhận chi tiết bảng phân tích định giá + ưu đãi thu mua tận nhà 0đ qua Zalo.
+                        </p>
+                        
+                        <div class="form-group">
+                            <label for="customer-phone">Số điện thoại nhận báo giá (Zalo)</label>
+                            <input type="tel" id="customer-phone" name="customer-phone" placeholder="Nhập số điện thoại (VD: 0901 234 567)" required autocomplete="tel" style="min-height: 48px;">
+                        </div>
+                        
+                        <button id="cta-primary" class="btn-cta" type="submit" style="margin-top: 0.5rem; min-height: 48px;">
+                            NHẬN ĐỊNH GIÁ THU MUA QUA ZALO ➜
+                        </button>
+
+                        <div class="cta-trust-microcopy" style="font-size: 11px; color: var(--color-text-secondary); text-align: center; margin-top: 0.5rem; font-weight: 500;">
+                            🔒 Bảo mật 100% • Miễn phí thẩm định tận nhà • Tất toán dư nợ ngân hàng trong 1h
+                        </div>
+                    </div>
+
+                    <div class="form-disclaimer">
+                        <span>✓ Định giá AI 2 phút</span>
+                        <span>✓ Thu mua tận nhà 0đ</span>
+                        <span>✓ Bảo mật 100%</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>

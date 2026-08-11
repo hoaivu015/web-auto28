@@ -1,0 +1,373 @@
+  color: var(--color-accent-blue);
+  display: block;
+  line-height: 1.1;
+  text-shadow: 0 0 30px rgba(37, 99, 235, 0.1);
+}
+
+.counter-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  /* 11px Upper Pill Label */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-top: 0.75rem;
+  display: block;
+}
+
+.testimonial-slider-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) padding-box,
+    linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.01) 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-family: Georgia, serif;
+  font-size: 6rem;
+  color: var(--color-accent-blue);
+  opacity: 0.1;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  /* 15px */
+  line-height: 1.625rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-author {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.dot.active {
+  background: var(--color-accent-blue);
+  width: 1.5rem;
+  border-radius: 4px;
+}
+
+/* ============================================
+   🚗 FLUID PRODUCT GRID (LƯỚI THẺ XE THÍCH ỨNG - 1/1.414 Ratios)
+   ============================================ */
+
+.product-grid-section {
+  padding: 6rem 1.5rem;
+  background: transparent;
+}
+
+.filter-pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  max-width: 62rem;
+  margin: 0 auto 3rem;
+  list-style: none;
+  padding: 0;
+}
+
+.filter-pill {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--color-text-secondary);
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  /* Pill Label: 11px */
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-smooth);
+  text-transform: uppercase;
+}
+
+.filter-pill:hover {
+  color: var(--color-text-primary);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.filter-pill.active {
+  background: var(--gradient-accent);
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+.fluid-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .fluid-product-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .fluid-product-grid {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .fluid-product-grid {
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+  }
+}
+
+/* CAR CARD: aspect-[1/1.414], rounded-[32px], spring-rebound transitions */
+.expressive-car-card {
+  width: 100%;
+  height: auto;
+  min-height: fit-content;
+  background: linear-gradient(var(--color-surface-glass), var(--color-surface-glass)) padding-box,
+    linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.01) 100%) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 2rem;
+  /* 32px equivalent bo góc cực đại */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  will-change: transform, background-color;
+  transition:
+    transform 0.45s var(--ease-spring),
+    background-color 0.45s var(--ease-spring),
+    box-shadow 0.45s;
+}
+
+.expressive-car-card:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.expressive-car-card:active {
+  transform: scale(0.98);
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+/* Car image aspect-[16/10] with retro bo-corner */
+.card-img-container {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 1.25rem;
+  /* 20px corner radius */
+  overflow: hidden;
+  position: relative;
+  background: #F1F5F9;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-smooth);
+}
+
+.expressive-car-card:hover .card-img {
+  transform: scale(1.06);
+}
+
+.card-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Pill Label: 11px uppercase bold */
+.card-badge span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  /* 11px */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #059669;
+  /* emerald-600 */
+}
+
+.card-badge.bg-emerald span {
+  color: #059669;
+}
+
+.card-badge.bg-purple span {
+  color: #7C3AED;
+}
+
+.card-badge.bg-orange span {
+  color: #EA580C;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-meta-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.meta-tag-blue {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  /* 11px Pill uppercase */
+  letter-spacing: 0.1em;
+  color: var(--color-accent-blue);
+  text-transform: uppercase;
+}
+
+.meta-tag-gray {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  /* 11px */
+  color: var(--color-text-muted);
+}
+
+/* Tiêu đề chính (Hero Hook equivalent on Card): Black 900 khít dòng */
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  /* Black */
+  font-size: 20px;
+  /* Khóa cứng đúng 20px */
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  /* 125% */
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.spec-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.spec-pill {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  /* 11px standard spec pill */
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================
+   💊 NEURAL EXPRESSIVE PILL SHAPE SYSTEM (GLOBAL ENFORCER)
+   ============================================ */
+.pill-input,
+.modal-tel-input,
+.modal-pill-input,
+.btn-pill,
+.filter-pill,
+.card-badge,
+.hero__badge,
+.hero__trust-badge,
+.spec-pill,
+.bento-filter-pill {
+  border-radius: 9999px !important;
+}
+
+.filter-item input[type="text"],
+.filter-item input[type="tel"],
+.filter-item select {
+  border-radius: 9999px;
+}

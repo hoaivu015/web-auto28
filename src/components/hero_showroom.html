@@ -1,0 +1,75 @@
+    <!-- ⚡ SECTION 1: HERO & UNIFIED SEARCH FILTER -->
+    <section id="hero" class="hero">
+        <!-- Mesh light background is now fully handled by the ambient-canvas-base in the page background -->
+        <div class="hero__bokeh" id="hero-bokeh"></div>
+
+        <div class="hero__content" style="flex-direction: column; align-items: center; text-align: center; max-width: 60rem; margin: 0 auto; gap: 1.5rem; position: relative; z-index: 10;">
+            <div class="hero__text" style="max-width: 100%; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <span class="hero__badge">KHO XE CHÍNH HÃNG · GIAO XE TẬN NHÀ</span>
+                <h1 class="hero__headline" style="font-size: clamp(2.25rem, 5vw, 3.25rem); line-height: 1.15; text-align: center; letter-spacing: -0.04em;">
+                    Sở Hữu Xe VinFast Lướt Như Mới – <br>
+                    <span class="text-gradient">Cam Kết 5 Tiêu Chuẩn Vàng Vừa Bàn Giao.</span>
+                </h1>
+                <p class="hero__sub" style="text-align: center; max-width: 48rem; margin-bottom: 1rem; font-size: 16px; line-height: 1.6;">
+                    Auto 28 cung cấp xe VinFast lướt chính hãng (VF3, VF5, VF6, VF7, VF8, VF9, Lux A, Lux SA, Fadil) tại TP.HCM, Bình Dương, Đồng Nai với giá từ 240 triệu. Bao test hãng 176 hạng mục, cam kết xe nguyên bản 100%, hỗ trợ vay trả góp 80%, giao xe tận nhà 24h.
+                </p>
+                <div class="hero__trust-badge" style="margin-bottom: 0.5rem;">
+                    Đã bàn giao 1.245+ xe VinFast trên toàn quốc
+                </div>
+            </div>
+
+            <!-- BENTO FILTER PILL BOX -->
+            <div class="bento-filter-pill" style="margin-top: 0;">
+                <!-- Item 1: Dropdown Chọn dòng xe -->
+                <div class="filter-item">
+                    <label for="search-model">Dòng xe mong muốn</label>
+                    <select id="search-model" name="search-model">
+                        <option value="all">Tất cả các dòng xe</option>
+                        <option value="vf3">VinFast VF 3</option>
+                        <option value="vf5">VinFast VF 5</option>
+                        <option value="vf6">VinFast VF 6</option>
+                        <option value="vf7">VinFast VF 7</option>
+                        <option value="vf8">VinFast VF 8</option>
+                        <option value="vf9">VinFast VF 9</option>
+                        <option value="vfe34">VinFast VF e34</option>
+                        <option value="limo">VinFast LIMO</option>
+                        <option value="mpv">VinFast MPV 7</option>
+                        <option value="lux-a">VinFast Lux A 2.0</option>
+                        <option value="lux-sa">VinFast Lux SA 2.0</option>
+                        <option value="president">VinFast President</option>
+                        <option value="fadil">VinFast Fadil</option>
+                    </select>
+                </div>
+                <div class="filter-divider"></div>
+                <!-- Item 2: Dropdown Khoảng giá -->
+                <div class="filter-item">
+                    <label for="search-price">Khoảng giá phù hợp</label>
+                    <select id="search-price" name="search-price">
+                        <option value="all">Tất cả mức giá</option>
+                        <option value="under-400">Dưới 400 triệu</option>
+                        <option value="400-600">400 - 600 triệu</option>
+                        <option value="600-800">600 - 800 triệu</option>
+                        <option value="over-800">Trên 800 triệu</option>
+                    </select>
+                </div>
+                <!-- Button CTA -->
+                <button id="btn-search-trigger" class="btn-filter-submit" type="button" style="min-height: 48px;">
+                    TÌM XE VINFAST LƯỚT NGAY ➜
+                </button>
+            </div>
+            
+            <p class="hero-trust-microcopy" style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--color-text-secondary); display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+                <span>🛡️ Bao test hãng 176 hạng mục toàn quốc</span>
+                <span>•</span>
+                <span>⚡ Cọc 5tr giữ xe 48h (Hoàn 100% nếu không mua)</span>
+                <span>•</span>
+                <span>📄 Sang tên trọn gói 24h</span>
+            </p>
+
+            <div style="margin-top: 1rem;">
+                <a href="./sell.html" style="color: var(--color-accent-indigo); text-decoration: none; font-weight: 800; font-family: var(--font-display); font-size: 0.9rem; letter-spacing: 0.01em; display: inline-flex; align-items: center; min-height: 44px;">
+                    💰 BẠN MUỐN BÁN XE CŨ? ĐỊNH GIÁ AI TRONG 2 PHÚT ➜
+                </a>
+            </div>
+        </div>
+    </section>

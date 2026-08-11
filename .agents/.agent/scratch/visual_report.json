@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-07-23T12:50:47.577Z",
+  "totalFilesAudited": 0,
+  "passed": true,
+  "visualScore": 100,
+  "summary": {
+    "aboveTheFoldPass": 0,
+    "aboveTheFoldFail": 0,
+    "overflowFailures": 0,
+    "collisionFailures": 0,
+    "touchTargetFailures": 0,
+    "contrastFailures": 0
+  },
+  "details": {}
+}

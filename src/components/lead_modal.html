@@ -1,0 +1,142 @@
+    <!-- 💻 MODAL CHI TIẾT XE VỚI KÉN XOAY 360 ĐỘ (360° VIEW & VEHICLE PASSPORT) -->
+    <div class="expressive-modal" id="car-modal-view" role="dialog" aria-modal="true" aria-labelledby="modal-car-title">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-wrapper">
+            <div class="modal-drag-indicator"></div>
+            <button class="modal-close" id="modal-close-btn" aria-label="Đóng modal">&times;</button>
+            <div class="modal-content-inner">
+                
+                <!-- Left side: 360 View & Visual Showcase -->
+                <div class="modal-visual-panel">
+                    <!-- Mode 1: Slide Viewport -->
+                    <div class="modal-image-wrapper" id="modal-slide-viewport">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3C/svg%3E" alt="Chi tiết xe VinFast" class="modal-active-img" id="modal-display-img" style="opacity: 0; transition: opacity 0.3s ease;">
+                        <div class="modal-img-overlay-badge" id="modal-guarantee-badge">✓ Đã Kiểm Định Auto 28</div>
+                        <button class="modal-zoom-trigger" id="modal-gallery-zoom-trigger" aria-label="Phóng to ảnh full screen" title="Phóng to ảnh (Lightbox HD)">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                        </button>
+                        <button class="modal-gallery-arrow prev" id="modal-gallery-prev" aria-label="Ảnh trước">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        <button class="modal-gallery-arrow next" id="modal-gallery-next" aria-label="Ảnh sau">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                        <span class="modal-gallery-counter" id="modal-gallery-counter">1 / 1</span>
+                    </div>
+                    
+                    <!-- Gallery Thumbnails Strip (for Slide Mode) -->
+                    <div class="modal-gallery-thumbnails-container" id="modal-gallery-thumbnails" role="tablist" aria-label="Dải ảnh xe">
+                        <!-- Dynamic thumbnail buttons -->
+                    </div>
+
+                    <!-- Mode 2: Vertical Scrollable Image List -->
+                    <div class="modal-gallery-vertical-list" id="modal-gallery-vertical-list" style="display: none;">
+                        <!-- Dynamic image list items rendered by car-modal.js -->
+                    </div>
+                </div>
+
+                <!-- Right side: Car details, Specs Matrix & Lead Action -->
+                <div class="modal-info-panel">
+                    <div class="modal-header">
+                        <div class="modal-meta-row">
+                            <span class="modal-meta-line" id="modal-car-class">DÒNG XE ĐIỆN · ĐỜI 2023</span>
+                            <span class="modal-stock-status">🔥 Đang có sẵn tại Showroom</span>
+                        </div>
+                        <h2 class="modal-car-title" id="modal-car-title">VinFast VF 8 Plus</h2>
+                        
+                        <div class="modal-price-card">
+                            <div class="price-card-main">
+                                <span class="modal-price-label">Giá niêm yết xe lướt:</span>
+                                <span class="modal-price-value" id="modal-car-price">745 Triệu</span>
+                            </div>
+                            <div class="price-card-sub" id="modal-monthly-est">
+                                💳 Trả trước từ <strong style="color: var(--color-accent-blue);">149 Triệu</strong> (7.5 Tr/tháng)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4-Grid Vehicle Passport Matrix -->
+                    <div class="modal-specs-grid">
+                        <div class="modal-spec-card">
+                            <span class="spec-icon">⏱️</span>
+                            <div class="spec-info">
+                                <span class="spec-label">Số ODO</span>
+                                <strong class="spec-value" id="modal-spec-odo">15,000 km</strong>
+                            </div>
+                        </div>
+                        <div class="modal-spec-card">
+                            <span class="spec-icon">📅</span>
+                            <div class="spec-info">
+                                <span class="spec-label">Năm SX</span>
+                                <strong class="spec-value" id="modal-spec-year">2023</strong>
+                            </div>
+                        </div>
+                        <div class="modal-spec-card">
+                            <span class="spec-icon">🔋</span>
+                            <div class="spec-info">
+                                <span class="spec-label" id="modal-spec-battery-label">Loại Pin</span>
+                                <strong class="spec-value" id="modal-spec-battery-type">Xe mua pin</strong>
+                            </div>
+                        </div>
+                        <div class="modal-spec-card">
+                            <span class="spec-icon">🛡️</span>
+                            <div class="spec-info">
+                                <span class="spec-label">Bảo hành</span>
+                                <strong class="spec-value" id="modal-spec-warranty">Hãng đến 2033</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Details Row -->
+                    <div class="modal-spec-tags">
+                        <span class="spec-tag" id="modal-spec-color-tag">🎨 Màu Bạc</span>
+                        <span class="spec-tag" id="modal-spec-battery-detail">⚡ Sức khỏe pin > 90%</span>
+                        <span class="spec-tag">📄 Sang tên trọn gói 24h</span>
+                    </div>
+
+                    <!-- Lead Action Form & Zalo Dual CTA -->
+                    <div class="modal-action-box">
+                        <p class="action-box-title">⚡ NHẬN BÁO GIÁ LĂN BÁNH & ĐẶT CỌC GIỮ XE</p>
+                        <div class="modal-form-group">
+                            <input type="text" id="modal-name" placeholder="Họ và tên của bạn" class="modal-pill-input" autocomplete="name" style="min-height: 48px;">
+                            <input type="tel" id="modal-phone" placeholder="Số điện thoại (VD: 0901 234 567)" class="modal-tel-input" autocomplete="tel" style="min-height: 48px;">
+                            
+                            <div class="modal-btn-row">
+                                <button class="btn-modal-submit" id="btn-modal-action-submit" style="min-height: 48px;">NHẬN BÁO GIÁ LĂN BÁNH ➜</button>
+                                <a href="https://zalo.me/0888813838" target="_blank" rel="noopener noreferrer" class="btn-modal-zalo" id="btn-modal-zalo" style="min-height: 48px; display: inline-flex; align-items: center; justify-content: center;">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.8.48 3.5 1.32 4.97L2 22l5.16-1.31C8.54 21.52 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.57 0-3.04-.42-4.32-1.16l-.31-.18-3.07.78.8-2.99-.2-.32C4.16 14.86 3.75 13.48 3.75 12c0-4.55 3.7-8.25 8.25-8.25s8.25 3.7 8.25 8.25-3.7 8.25-8.25 8.25z"/></svg>
+                                    TƯ VẤN ZALO
+                                </a>
+                            </div>
+                        </div>
+                        <p class="action-box-note">✓ Bao test hãng 176 hạng mục • Cọc 5tr giữ xe 48h (Hoàn 100% nếu không mua)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔍 LIGHTBOX PHÓNG TO ẢNH FULLSCREEN HD & GESTURES -->
+    <div class="gallery-lightbox" id="gallery-lightbox-modal" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+        <div class="lightbox-controls-top">
+            <span class="lightbox-counter" id="lightbox-counter">1 / 1</span>
+            <div class="lightbox-actions">
+                <button class="lightbox-btn" id="lightbox-zoom-in" aria-label="Phóng to" title="Phóng to">+</button>
+                <button class="lightbox-btn" id="lightbox-zoom-out" aria-label="Thu nhỏ" title="Thu nhỏ">-</button>
+                <button class="lightbox-btn" id="lightbox-zoom-reset" aria-label="Tỷ lệ 1:1" title="Về 100%">1:1</button>
+                <button class="lightbox-btn close-btn" id="lightbox-close" aria-label="Đóng phóng to">&times;</button>
+            </div>
+        </div>
+        <div class="lightbox-image-container" id="lightbox-image-stage">
+            <img id="lightbox-active-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3C/svg%3E" alt="Ảnh xe phóng to HD" class="lightbox-img">
+        </div>
+        <button class="lightbox-arrow prev" id="lightbox-prev" aria-label="Ảnh trước">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="lightbox-arrow next" id="lightbox-next" aria-label="Ảnh sau">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="lightbox-caption" id="lightbox-caption">💡 Cuộn chuột / Chụm 2 ngón tay để phóng to • Vuốt để chuyển ảnh</div>
+    </div>

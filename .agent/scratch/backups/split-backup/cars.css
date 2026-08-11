@@ -1,0 +1,560 @@
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-spring);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.bento-card-white::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.08), transparent 75%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.bento-card-white:hover {
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.25) !important;
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.08) !important;
+}
+
+.bento-card-white:hover::before {
+  opacity: 1;
+}
+
+.bento-card-white .card-icon {
+  font-size: 2.25rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.bento-card-white:hover .card-icon {
+  transform: scale(1.15);
+}
+
+.bento-card-white h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.bento-card-white p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625rem;
+}
+
+@media (min-width: 768px) {
+  .asymmetric-bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bento-span-2 {
+    grid-column: span 2;
+  }
+
+  .bento-span-1 {
+    grid-column: span 1;
+  }
+}
+
+/* ============================================
+   💊 BENTO FILTER PILL BAR SYSTEM (index.html)
+   ============================================ */
+.bento-filter-pill {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E1E9F6;
+  padding: 1.25rem;
+  border-radius: 9999px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 52rem;
+  margin: 1.5rem auto 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .bento-filter-pill {
+    flex-direction: row;
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem 0.5rem 2.25rem;
+    gap: 0;
+    align-items: center;
+    height: 64px;
+  }
+
+  .filter-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+  }
+
+  .filter-divider {
+    width: 1px;
+    height: 1.75rem;
+    background: #E1E9F6;
+    margin: 0 1.75rem;
+  }
+}
+
+.filter-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+}
+
+.filter-item label {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 10.5px;
+  /* text-[11px] */
+  text-transform: uppercase;
+  color: var(--color-accent-blue);
+  /* Màu xanh dương in đậm phía trên */
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+/* Ẩn viền ô Dropdown mặc định & appearance-none */
+.filter-item select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  border: none;
+  background: transparent;
+  padding: 0 1.5rem 0 0;
+  /* Choàng chừa chỗ cho mũi tên */
+  margin: 0;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Ẩn giao diện gốc */
+}
+
+/* Thêm ký tự mũi tên mảnh */
+.filter-item::after {
+  content: '▼';
+  font-size: 8px;
+  color: var(--color-text-secondary);
+  position: absolute;
+  right: 0.5rem;
+  bottom: 8px;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: transform 0.3s;
+}
+
+.filter-item:hover::after {
+  opacity: 0.8;
+}
+
+.btn-filter-submit {
+  background: #020B14;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.875rem;
+  height: 48px;
+  padding: 0 2rem;
+  border-radius: 9999px;
+  /* rounded-full */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(2, 11, 20, 0.15);
+}
+
+@media (min-width: 768px) {
+  .btn-filter-submit {
+    width: auto;
+  }
+}
+
+.btn-filter-submit:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(29, 78, 216, 0.25);
+}
+
+.btn-filter-submit:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   📐 RESPONSIVE UNIFIED SPACING SYSTEM & OPTIMIZATIONS
+   ========================================================================== */
+
+/* Spacing Core Classes (Mapping from inline styles) */
+.ai-commitments,
+.social-proof,
+.product-grid-section,
+.advantages-section,
+.faq-accordion-section,
+.location-map-section,
+.process,
+.faq,
+.location {
+  padding: 3.25rem 1.5rem 2.5rem 1.5rem !important;
+  background: transparent;
+}
+
+.bottom-cta {
+  padding: 3rem 1.5rem 4rem;
+  background: transparent;
+}
+
+.footer-landing {
+  padding: 3rem 2rem;
+  background: var(--color-bg-base);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Base Transition for layout smoothness */
+.hero,
+.ai-commitments,
+.social-proof,
+.product-grid-section,
+.process,
+.faq,
+.location,
+.bottom-cta,
+.section-header,
+.bento-card-white,
+.medium-glass-card,
+.expressive-car-card,
+.step,
+.faq-question,
+.faq-answer {
+  transition: padding 0.3s ease, margin 0.3s ease, gap 0.3s ease;
+}
+
+.product-grid-section {
+  padding-top: 3.25rem !important;
+  scroll-margin-top: 5.5rem;
+}
+
+.section-header {
+  margin-bottom: 2rem !important;
+  text-align: center;
+}
+
+/* Medium Screens & Tablets Spacing Adjustment */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding: 5.5rem 1.25rem 2.5rem;
+  }
+
+  .ai-commitments,
+  .social-proof,
+  .product-grid-section,
+  .advantages-section,
+  .faq-accordion-section,
+  .location-map-section,
+  .process,
+  .faq,
+  .location {
+    padding: 2.75rem 1.25rem 2.25rem 1.25rem !important;
+  }
+
+  .bottom-cta {
+    padding: 2.5rem 1.25rem 3.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.75rem !important;
+  }
+}
+
+/* Mobile Screens Spacing & Density Polish */
+@media (max-width: 767px) {
+  .hero {
+    padding: 4.5rem 1rem 1.75rem;
+  }
+
+  .ai-commitments,
+  .social-proof,
+  .product-grid-section,
+  .advantages-section,
+  .faq-accordion-section,
+  .location-map-section,
+  .process,
+  .faq,
+  .location {
+    padding: 2.25rem 1rem 1.75rem 1rem !important;
+  }
+
+  .bottom-cta {
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  .section-header {
+    margin-bottom: 1.25rem !important;
+  }
+
+
+  /* Grid Gaps & Card Offsets */
+  .counter-grid {
+    margin-bottom: 2.5rem;
+    gap: 1.75rem;
+  }
+
+  .testimonial-card {
+    padding: 1.75rem;
+  }
+
+  .testimonial-text {
+    margin-bottom: 1.25rem;
+  }
+
+  .asymmetric-bento-grid {
+    gap: 1rem;
+  }
+
+  .bento-card-white {
+    padding: 1.75rem 1.25rem !important;
+  }
+
+  .medium-glass-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .expressive-car-card {
+    padding: 1rem;
+  }
+
+  .card-img-container {
+    margin-bottom: 0.75rem;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 0.25rem;
+  }
+
+  .card-bottom {
+    padding-top: 0.75rem;
+  }
+
+  .process-steps {
+    gap: 1.5rem;
+  }
+
+  .step {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .step-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .step h3 {
+    font-size: 1.05rem;
+  }
+
+  /* FAQs Spacing */
+  .faq-container {
+    gap: 0.75rem;
+  }
+
+  .faq-question {
+    padding: 1.25rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.25rem;
+  }
+
+  .faq-item.open .faq-answer {
+    padding-bottom: 1.25rem;
+  }
+
+  /* Footer Spacing */
+  .footer-landing {
+    padding: 2rem 1rem 7.5rem !important;
+  }
+}
+
+/* ============================================
+   📊 GLASSMORPHISM PRICING TABLE (GEO)
+   ============================================ */
+.pricing-table-container {
+  max-width: 72rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--color-surface-glass);
+  border: 1px solid var(--border-card);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  overflow-x: auto;
+  backdrop-filter: blur(10px);
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid rgba(225, 233, 246, 0.5);
+}
+
+.pricing-table th {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+  background: rgba(37, 99, 235, 0.03);
+}
+
+.pricing-table tr:hover {
+  background: rgba(37, 99, 235, 0.015);
+}
+
+.pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pricing-table td {
+  color: var(--color-text-secondary);
+}
+
+.pricing-table td strong {
+  color: var(--color-accent-blue);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   📱 CROSS-DEVICE RESPONSIVE FORM & NAVIGATION ENHANCEMENTS
+   ========================================================================== */
+
+.sell-card-bento-form {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 52rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  height: auto;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+@media (max-width: 639px) {
+  .sell-card-bento-form {
+    padding: 1.25rem 1rem !important;
+    border-radius: 1.25rem !important;
+    margin-top: 1rem !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .sell-card-bento-form {
+    padding: 2rem 2.25rem !important;
+  }
+}
+
+.valuation-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .valuation-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .valuation-form-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.btn-sell-valuation-submit {
+  cursor: pointer;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 1rem;
+  border: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 639px) {
+  .btn-sell-valuation-submit {
+    height: 48px;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.85rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .btn-sell-valuation-submit {
+    height: 52px;
+    padding: 0 2.25rem;
+    font-size: 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #main-content {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+  }
+}

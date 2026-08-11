@@ -1,0 +1,400 @@
+{
+  "version": "2.1",
+  "protocol": "IEEE P3172 Weighted Consensus + DNA Guard",
+  "last_updated": "2026-08-09",
+  "standard": "Auto 28 Multi-Agent Protocol v2.0",
+  "global_rules": {
+    "dna_gate": "BLOCK_ALL",
+    "dna_comment": "Neural Expressive ADN vi phạm → block toàn bộ Write-Action, không tính weight",
+    "dna_check_order": [
+      "ADN-1",
+      "ADN-2",
+      "ADN-3",
+      "ADN-4"
+    ],
+    "conflict_resolution_order": [
+      "1_dna_gate",
+      "2_veto_check",
+      "3_domain_authority",
+      "4_dynamic_weight",
+      "5_confidence_score",
+      "6_decision_log"
+    ]
+  },
+  "task_types": [
+    "conversion_optimization",
+    "technical_fix",
+    "content_update",
+    "performance_audit",
+    "seo_update",
+    "system_config",
+    "full_audit"
+  ],
+  "agents": {
+    "cro_specialist": {
+      "base_weight": 10,
+      "veto_power": false,
+      "dna_guardian": true,
+      "dna_domains": [
+        "form_ux",
+        "cta_design",
+        "adn3_typography"
+      ],
+      "authority_domains": [
+        "conversion",
+        "form_ux",
+        "cta",
+        "cro",
+        "ux_friction"
+      ],
+      "confidence_threshold": 0.85,
+      "context_multipliers": {
+        "conversion_optimization": 1,
+        "technical_fix": 0.5,
+        "content_update": 0.8,
+        "performance_audit": 0.6,
+        "seo_update": 0.7,
+        "system_config": 0,
+        "full_audit": 0.8
+      }
+    },
+    "landing-page-auditor": {
+      "base_weight": 9,
+      "veto_power": true,
+      "veto_triggers": [
+        "healthcheck_fail",
+        "audit_score_below_90",
+        "mime_type_error",
+        "dom_parity_fail"
+      ],
+      "dna_guardian": false,
+      "authority_domains": [
+        "technical_audit",
+        "healthcheck",
+        "scoring",
+        "mime_type",
+        "dom_parity"
+      ],
+      "confidence_threshold": 0.9,
+      "context_multipliers": {
+        "conversion_optimization": 0.6,
+        "technical_fix": 1,
+        "content_update": 0.5,
+        "performance_audit": 1,
+        "seo_update": 0.7,
+        "system_config": 1,
+        "full_audit": 1
+      }
+    },
+    "seo_specialist": {
+      "base_weight": 8,
+      "veto_power": false,
+      "dna_guardian": false,
+      "authority_domains": [
+        "seo",
+        "aeo",
+        "geo",
+        "schema",
+        "meta",
+        "json_ld",
+        "heading_structure",
+        "e_e_a_t"
+      ],
+      "confidence_threshold": 0.85,
+      "context_multipliers": {
+        "conversion_optimization": 0.7,
+        "technical_fix": 0.4,
+        "content_update": 0.9,
+        "performance_audit": 0.5,
+        "seo_update": 1,
+        "system_config": 0,
+        "full_audit": 0.8
+      }
+    },
+    "visual_inspector": {
+      "base_weight": 7,
+      "veto_power": true,
+      "veto_triggers": [
+        "wcag_aa_fail",
+        "touch_target_below_44px",
+        "dna_adn1_fail",
+        "dna_adn2_fail",
+        "dna_adn3_fail"
+      ],
+      "dna_guardian": true,
+      "dna_domains": [
+        "adn1_liquid_translucency",
+        "adn2_super_ellipse_radius",
+        "adn3_bold_first_typography"
+      ],
+      "authority_domains": [
+        "wcag",
+        "mobile_ux",
+        "visual_layout",
+        "dna_audit",
+        "touch_target"
+      ],
+      "confidence_threshold": 0.8,
+      "context_multipliers": {
+        "conversion_optimization": 0.9,
+        "technical_fix": 0.4,
+        "content_update": 0.7,
+        "performance_audit": 0.6,
+        "seo_update": 0.5,
+        "system_config": 0,
+        "full_audit": 0.9
+      }
+    },
+    "code_refactorer": {
+      "base_weight": 6,
+      "veto_power": false,
+      "dna_guardian": true,
+      "dna_domains": [
+        "adn4_spring_physics",
+        "adn1_css_classes"
+      ],
+      "authority_domains": [
+        "code_quality",
+        "refactor",
+        "scripts",
+        "node_automation",
+        "rollback"
+      ],
+      "confidence_threshold": 0.8,
+      "context_multipliers": {
+        "conversion_optimization": 0.5,
+        "technical_fix": 1,
+        "content_update": 0.4,
+        "performance_audit": 0.8,
+        "seo_update": 0.6,
+        "system_config": 1,
+        "full_audit": 0.7
+      }
+    },
+    "standard_researcher": {
+      "base_weight": 5,
+      "veto_power": false,
+      "dna_guardian": false,
+      "authority_domains": [
+        "research",
+        "data",
+        "market_intel",
+        "pricing",
+        "fact_verification"
+      ],
+      "confidence_threshold": 0.95,
+      "context_multipliers": {
+        "conversion_optimization": 0.6,
+        "technical_fix": 0.2,
+        "content_update": 1,
+        "performance_audit": 0.3,
+        "seo_update": 0.8,
+        "system_config": 0,
+        "full_audit": 0.6
+      }
+    },
+    "guide_content_specialist": {
+      "base_weight": 8,
+      "veto_power": false,
+      "dna_guardian": true,
+      "dna_domains": [
+        "content_structure",
+        "step_by_step_ux",
+        "readability",
+        "GEO_AI_readiness"
+      ],
+      "authority_domains": [
+        "guide_content",
+        "howto_structure",
+        "eeat",
+        "geo_ai_search",
+        "plain_language",
+        "nn_g_reading",
+        "troubleshooting_ux"
+      ],
+      "confidence_threshold": 0.9,
+      "context_multipliers": {
+        "conversion_optimization": 0.8,
+        "technical_fix": 0.3,
+        "content_update": 1,
+        "performance_audit": 0.4,
+        "seo_update": 0.9,
+        "system_config": 0,
+        "full_audit": 0.85
+      }
+    },
+    "auto_technical_inspector": {
+      "base_weight": 8,
+      "veto_power": true,
+      "veto_triggers": [
+        "invalid_automotive_specs",
+        "taboo_slang_terms",
+        "dangerous_safety_claims",
+        "unmapped_ev_metrics"
+      ],
+      "dna_guardian": true,
+      "dna_domains": [
+        "automotive_specs_table",
+        "web_units_standard",
+        "ISO_SAE_DIN_TCVN_compliance"
+      ],
+      "authority_domains": [
+        "automotive_technical_specs",
+        "ev_battery_btms_metrics",
+        "chassis_powertrain_inspection",
+        "iso_sae_din_tcvn_standards",
+        "web_units_formatting",
+        "schema_car_engine_alignment"
+      ],
+      "confidence_threshold": 0.9,
+      "context_multipliers": {
+        "conversion_optimization": 0.5,
+        "technical_fix": 0.8,
+        "content_update": 1.0,
+        "performance_audit": 0.6,
+        "seo_update": 0.9,
+        "system_config": 0,
+        "full_audit": 0.9
+      }
+    },
+    "structure_guardian": {
+      "base_weight": 6,
+      "veto_power": true,
+      "veto_triggers": [
+        "uppercase_filename",
+        "spaces_in_filename",
+        "duplicate_cars_data",
+        "rename_protected_file",
+        "html_in_subdirectory",
+        "suffix_final_new_copy",
+        "nesting_depth_exceeded"
+      ],
+      "dna_guardian": false,
+      "authority_domains": [
+        "file_naming",
+        "directory_structure",
+        "project_organization",
+        "module_architecture"
+      ],
+      "confidence_threshold": 0.95,
+      "context_multipliers": {
+        "conversion_optimization": 0.2,
+        "technical_fix": 0.8,
+        "content_update": 0.5,
+        "performance_audit": 0.4,
+        "seo_update": 0.6,
+        "system_config": 1.0,
+        "full_audit": 0.8
+      }
+    },
+    "lang_standards_guardian": {
+      "base_weight": 7,
+      "veto_power": true,
+      "veto_triggers": [
+        "invalid_html_semantic",
+        "missing_doctype",
+        "no_lang_attribute",
+        "css_important_abuse",
+        "js_eval_usage",
+        "js_document_write",
+        "js_var_declaration",
+        "js_inline_onclick",
+        "nodejs_hardcoded_secret",
+        "nodejs_missing_helmet"
+      ],
+      "dna_guardian": true,
+      "dna_domains": [
+        "html_semantics",
+        "css_architecture",
+        "js_module_pattern",
+        "server_security"
+      ],
+      "authority_domains": [
+        "html5_standards",
+        "css_w3c",
+        "ecmascript_2025",
+        "nodejs_security",
+        "wcag_2_2",
+        "web_vitals"
+      ],
+      "confidence_threshold": 0.92,
+      "context_multipliers": {
+        "conversion_optimization": 0.4,
+        "technical_fix": 1.0,
+        "content_update": 0.6,
+        "performance_audit": 0.9,
+        "seo_update": 0.8,
+        "system_config": 0.9,
+        "full_audit": 1.0
+      }
+    },
+    "reflection_gate_agent": {
+      "base_weight": 8,
+      "veto_power": true,
+      "veto_triggers": [
+        "skipped_self_critique",
+        "unverified_assumption",
+        "scope_exceeded",
+        "rule_violated_agents_md"
+      ],
+      "dna_guardian": false,
+      "authority_domains": [
+        "output_quality",
+        "scope_compliance",
+        "self_review",
+        "assumption_verification"
+      ],
+      "confidence_threshold": 0.95,
+      "context_multipliers": {
+        "conversion_optimization": 0.8,
+        "technical_fix": 1.0,
+        "content_update": 0.8,
+        "performance_audit": 0.9,
+        "seo_update": 0.8,
+        "system_config": 1.0,
+        "full_audit": 1.0
+      },
+      "reference": "AGENTS.md §18"
+    },
+    "memory_keeper": {
+      "base_weight": 5,
+      "veto_power": false,
+      "dna_guardian": false,
+      "authority_domains": [
+        "session_memory",
+        "mistake_logging",
+        "decision_logging",
+        "context_persistence"
+      ],
+      "confidence_threshold": 0.90,
+      "context_multipliers": {
+        "conversion_optimization": 0.3,
+        "technical_fix": 0.8,
+        "content_update": 0.5,
+        "performance_audit": 0.4,
+        "seo_update": 0.4,
+        "system_config": 1.0,
+        "full_audit": 0.7
+      },
+      "memory_files": [
+        ".agents/scratch/mistakes.md",
+        ".agents/scratch/session_context.md",
+        ".agents/scratch/decisions.jsonl"
+      ],
+      "reference": "AGENTS.md §19"
+    }
+  },
+  "weighted_score_formula": {
+    "description": "Final vote = Σ(base_weight × context_multiplier × agent_confidence × opinion) / Σ(base_weight × context_multiplier)",
+    "example": {
+      "task_type": "conversion_optimization",
+      "cro_specialist_effective": "10 × 1.0 × 0.92 = 9.2",
+      "auditor_effective": "9 × 0.6 × 0.95 = 5.1",
+      "visual_inspector_effective": "7 × 0.9 × 0.88 = 5.5"
+    }
+  },
+  "version": "2.2",
+  "last_updated": "2026-08-11",
+  "decision_log_path": ".agents/scratch/decisions.jsonl",
+  "reference": ".agents/orchestrator_protocol.md"
+}

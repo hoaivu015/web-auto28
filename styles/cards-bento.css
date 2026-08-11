@@ -1,0 +1,214 @@
+/* ============================================
+   📐 ASYMMETRICAL BENTO GRID & BENTO FILTER PILL BAR
+   ============================================ */
+
+.asymmetric-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.bento-card-white {
+  background: #FFFFFF !important;
+  border: 1px solid #E1E9F6 !important;
+  border-radius: 28px !important;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-spring);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+.bento-card-white::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(96, 165, 250, 0.08), transparent 75%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.bento-card-white:hover {
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.25) !important;
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.08) !important;
+}
+
+.bento-card-white:hover::before {
+  opacity: 1;
+}
+
+.bento-card-white .card-icon {
+  font-size: 2.25rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.bento-card-white:hover .card-icon {
+  transform: scale(1.15);
+}
+
+.bento-card-white h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.bento-card-white p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625rem;
+}
+
+@media (min-width: 768px) {
+  .asymmetric-bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .bento-span-2 {
+    grid-column: span 2;
+  }
+  
+  .bento-span-1 {
+    grid-column: span 1;
+  }
+}
+
+/* 💊 BENTO FILTER PILL BAR SYSTEM */
+.bento-filter-pill {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E1E9F6;
+  padding: 1.25rem;
+  border-radius: 2rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 52rem;
+  margin: 1.5rem auto 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .bento-filter-pill {
+    flex-direction: row;
+    border-radius: 9999px;
+    padding: 0.5rem 0.5rem 0.5rem 2.25rem;
+    gap: 0;
+    align-items: center;
+    height: 64px;
+  }
+  
+  .filter-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+  }
+  
+  .filter-divider {
+    width: 1px;
+    height: 1.75rem;
+    background: #E1E9F6;
+    margin: 0 1.75rem;
+  }
+}
+
+.filter-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+}
+
+.filter-item label {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  color: var(--color-accent-blue);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.filter-item select {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  border: none;
+  background: transparent;
+  padding: 0 1.5rem 0 0;
+  margin: 0;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter-item::after {
+  content: '▼';
+  font-size: 8px;
+  color: var(--color-text-secondary);
+  position: absolute;
+  right: 0.5rem;
+  bottom: 8px;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: transform 0.3s;
+}
+
+.filter-item:hover::after {
+  opacity: 0.8;
+}
+
+.btn-filter-submit {
+  background: #020B14;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.875rem;
+  height: 48px;
+  padding: 0 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(2, 11, 20, 0.15);
+}
+
+@media (min-width: 768px) {
+  .btn-filter-submit {
+    width: auto;
+  }
+}
+
+.btn-filter-submit:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(29, 78, 216, 0.25);
+}
+
+.btn-filter-submit:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,324 @@
+/* ============================================
+   📋 EXPRESSIVE DETAIL MODAL (VEHICLE PASSPORT & LEAD FORM)
+   ============================================ */
+
+/* Right Info Panel */
+.modal-info-panel {
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: var(--color-text-primary);
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-right: 2.75rem;
+}
+
+.modal-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.modal-meta-line {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.72rem;
+  color: #2563EB;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.modal-stock-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #D97706;
+}
+
+.modal-car-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+}
+
+.modal-price-card {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.04) 0%, rgba(2, 11, 20, 0.02) 100%);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 1rem;
+  padding: 0.85rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.35rem;
+}
+
+.price-card-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.modal-price-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.modal-price-value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.65rem;
+  color: #1D4ED8;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.price-card-sub {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* 4-Grid Vehicle Passport Matrix */
+.modal-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.modal-spec-card {
+  background: #F8FAFC;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  transition: background 0.2s ease;
+}
+
+.modal-spec-card:hover {
+  background: #F1F5F9;
+}
+
+.spec-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.spec-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  overflow: hidden;
+}
+
+.spec-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.spec-value {
+  font-size: 0.825rem;
+  font-weight: 800;
+  color: #0F172A;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Spec Tags */
+.modal-spec-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.spec-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #334155;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+}
+
+/* Lead Action & Dual CTA */
+.modal-action-box {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.9) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 1.25rem;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-box-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: #0F172A;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.modal-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.modal-tel-input, .modal-pill-input {
+  width: 100%;
+  height: 48px;
+  min-height: 48px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  padding: 0 1.25rem;
+  color: #0F172A;
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-tel-input:focus, .modal-pill-input:focus {
+  border-color: #2563EB;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.modal-btn-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .modal-btn-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-modal-submit {
+  background: #020B14;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  height: 48px;
+  min-height: 48px;
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(2, 11, 20, 0.15);
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.btn-modal-submit:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.25);
+}
+
+.btn-modal-submit:active {
+  transform: translateY(0);
+}
+
+.btn-modal-zalo {
+  background: #0068FF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  height: 48px;
+  min-height: 48px;
+  width: 100%;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.78rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 104, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-modal-zalo:hover {
+  background: #0052CC;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 104, 255, 0.3);
+}
+
+.action-box-note {
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.35;
+}
+
+@media (max-width: 767px) {
+  .expressive-modal {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal-wrapper {
+    max-width: 100%;
+    border-radius: 1.75rem 1.75rem 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    animation: modalSlideUpMobile 0.4s cubic-bezier(0.32, 1.25, 0.32, 1) forwards;
+  }
+
+  @keyframes modalSlideUpMobile {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(0); }
+  }
+
+  .modal-drag-indicator { display: block; }
+  .modal-close {
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 50;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .modal-visual-panel { padding: 1.5rem 1.25rem 1rem; }
+  .modal-info-panel { padding: 1.25rem 1.25rem calc(2.5rem + env(safe-area-inset-bottom, 0px)); }
+  .modal-price-value { font-size: 1.35rem; }
+  .modal-price-card { padding: 0.75rem 1rem; }
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Auto 28 Studio - Quản Lý Kho Xe & Tinh Chỉnh Giao Diện</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Modern Neural Expressive 2.0 Studio Design */
+        body.studio-body {
+            background-color: #F8FAFC;
+            color: #0F172A;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .studio-navbar {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 0.875rem 2rem;
+        }
+
+        .studio-nav-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .studio-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .studio-logo-text {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 900;
+            font-size: 1.35rem;
+            letter-spacing: -0.03em;
+            color: #0F172A;
+        }
+
+        .studio-badge {
+            background: linear-gradient(135deg, #2563EB, #1D4ED8);
+            color: white;
+            font-size: 0.6875rem;
+            font-weight: 800;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .studio-container {
+            max-width: 1320px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .studio-grid {
+            display: grid;
+            grid-template-columns: 460px 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .studio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .studio-panel {
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 1.5rem;
+            padding: 1.75rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .panel-title {
+            font-size: 1.125rem;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.125rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 0.375rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 0.75rem;
+            color: #0F172A;
+            font-size: 0.875rem;
+            font-weight: 500;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            background: #FFFFFF;
+            border-color: #2563EB;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        /* Modern Pos Controls */
+        .pos-card-box {
+            background: #F1F5F9;
+            border: 1px solid #E2E8F0;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .pos-grid-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.625rem;
+            margin-top: 0.75rem;
+        }
+
+        .btn-pos-item {
+            padding: 0.625rem 0.5rem;
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            color: #334155;
+            border-radius: 0.625rem;
+            cursor: pointer;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+            text-align: center;
+        }
+
+        .btn-pos-item:hover {
+            border-color: #2563EB;
+            color: #2563EB;
+            transform: translateY(-1px);
+        }
+
+        .btn-pos-item.active {
+            background: #2563EB;
+            color: #FFFFFF;
+            border-color: #2563EB;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Buttons */
+        .btn-studio {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.875rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-studio-primary {
+            background: #0F172A;
+            color: white;
+        }
+
+        .btn-studio-primary:hover {
+            background: #1E293B;
+            transform: translateY(-1px);
+        }
+
+        .btn-studio-success {
+            background: #059669;
+            color: white;
+        }
+
+        .btn-studio-success:hover {
+            background: #047857;
+        }
+
+        .btn-studio-secondary {
+            background: #E2E8F0;
+            color: #334155;
+        }
+
+        .btn-studio-secondary:hover {
+            background: #CBD5E1;
+        }
+
+        /* Live Preview Area */
+        .preview-wrapper-box {
+            background: linear-gradient(135deg, #F8FAFC, #EDF2F7);
+            border: 2px dashed #CBD5E1;
+            border-radius: 1.5rem;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .car-list-scroll {
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+            max-height: 520px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        .car-row-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            padding: 0.875rem 1.125rem;
+            border-radius: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .car-row-card:hover {
+            background: #FFFFFF;
+            border-color: #2563EB;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .car-thumb-img {
+            width: 64px;
+            height: 42px;
+            border-radius: 0.5rem;
+            object-fit: cover;
+            background: #CBD5E1;
+        }
+
+        /* Code Export Modal */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 1.5rem;
+        }
+
+        .modal-card {
+            background: #FFFFFF;
+            border-radius: 1.5rem;
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        textarea.code-area {
+            width: 100%;
+            height: 320px;
+            background: #0F172A;
+            color: #38BDF8;
+            font-family: monospace;
+            font-size: 0.8125rem;
+            padding: 1.25rem;
+            border-radius: 0.875rem;
+            border: none;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body class="studio-body">
+    <!-- Navbar Studio -->
+    <nav class="studio-navbar">
+        <div class="studio-nav-inner">
+            <a href="./index.html" class="studio-brand">
+                <span class="studio-logo-text">AUTO 28</span>
+                <span class="studio-badge">Studio Online</span>
+            </a>
+            <div style="display: flex; gap: 1rem;">
+                <a href="./index.html" target="_blank" class="btn-studio btn-studio-secondary">🌐 Xem Trang Web Thực Tế</a>
+                <button id="btn-export-code" class="btn-studio btn-studio-success">💾 Xuất Mã cars_data.js Mới</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container -->
+    <div class="studio-container">
+        <div class="studio-grid">
+            <!-- Left Form Panel -->
+            <div class="studio-panel">
+                <div class="panel-title">
+                    ✏ <span id="form-mode-title">Thêm Xe Mới Vào Kho</span>
+                </div>
+                <form id="car-form">
+                    <input type="hidden" id="car-id" value="">
+
+                    <div class="form-group">
+                        <label class="form-label">Tên Dòng Xe VinFast *</label>
+                        <input type="text" id="car-name" class="form-control" placeholder="VD: VinFast VF 6 Plus" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Năm Sản Xuất</label>
+                            <input type="number" id="car-year" class="form-control" value="2024">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Số KM (ODO)</label>
+                            <input type="number" id="car-odo" class="form-control" placeholder="VD: 15000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Màu Sắc</label>
+                            <input type="text" id="car-color" class="form-control" placeholder="VD: Màu Trắng">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Trạng Thái Pin</label>
+                            <select id="car-battery" class="form-control">
+                                <option value="Xe mua pin">Xe mua pin</option>
+                                <option value="Xe thuê pin">Xe thuê pin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Link Ảnh Đại Diện (Cloudinary / URL)</label>
+                        <input type="url" id="car-image-url" class="form-control" placeholder="https://res.cloudinary.com/..." required>
+                    </div>
+
+                    <!-- Modern Interactive Object Position Controls -->
+                    <div class="pos-card-box">
+                        <label class="form-label" style="color: #2563EB; font-weight: 800;">🎯 Tinh Chỉnh Độ Cắt Ảnh (Object Position)</label>
+                        <input type="text" id="car-img-position" class="form-control" placeholder="center 30%" value="center 30%">
+                        
+                        <div class="pos-grid-buttons">
+                            <button type="button" class="btn-pos-item" onclick="setPos('center 15%')">
+                                <span>🔼 Cắt Sát Nóc</span>
+                                <small style="font-weight: normal; opacity: 0.8;">(15% - Nâng Cao)</small>
+                            </button>
+                            <button type="button" class="btn-pos-item" onclick="setPos('center 25%')">
+                                <span>🎯 Cắt Phía Trên</span>
+                                <small style="font-weight: normal; opacity: 0.8;">(25% - Đẹp)</small>
+                            </button>
+                            <button type="button" class="btn-pos-item" onclick="setPos('center 35%')">
+                                <span>⚖️ Cân Bằng</span>
+                                <small style="font-weight: normal; opacity: 0.8;">(35% - Chuẩn)</small>
+                            </button>
+                            <button type="button" class="btn-pos-item" onclick="setPos('center 45%')">
+                                <span>🔻 Hạ Thấp</span>
+                                <small style="font-weight: normal; opacity: 0.8;">(45%)</small>
+                            </button>
+                            <button type="button" class="btn-pos-item" onclick="setPos('center 60%')">
+                                <span>🔽 Đẩy Đáy Xe</span>
+                                <small style="font-weight: normal; opacity: 0.8;">(60% - Chụp cao)</small>
+                            </button>
+                            <button type="button" class="btn-pos-item" onclick="setPos('center 75%')">
+                                <span>⏹ Giữ Nguyên Tâm</span>
+                                <small style="font-weight: normal; opacity: 0.8;">(75% - Chụp cận)</small>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Danh Sách Link Ảnh Chi Tiết (Phân cách bằng dấu phẩy)</label>
+                        <textarea id="car-detail-images" class="form-control" rows="3" placeholder="https://..., https://..."></textarea>
+                    </div>
+
+                    <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+                        <button type="submit" class="btn-studio btn-studio-primary" style="flex: 1;">💾 Lưu Xe Vào Danh Sách</button>
+                        <button type="button" id="btn-reset-form" class="btn-studio btn-studio-secondary">Đặt Lại</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Live Preview & List Panel -->
+            <div style="display: flex; flex-direction: column; gap: 2rem;">
+                <!-- Live Preview Card -->
+                <div class="studio-panel">
+                    <div class="panel-title">
+                        👁 Live Preview — Card Xe Chuẩn Giao Diện Auto 28
+                    </div>
+                    <div class="preview-wrapper-box">
+                        <div style="width: 100%; max-width: 360px;">
+                            <article class="expressive-car-card">
+                                <div class="card-top">
+                                    <div class="card-img-container">
+                                        <img id="preview-img" src="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg" alt="Preview Car" class="card-img" style="object-position: center 30%;">
+                                        <span class="card-badge card-badge--right"><span>CHECK HÃNG</span></span>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card-meta-line">
+                                            <span class="meta-tag-blue" id="preview-type">⚡ XE ĐIỆN</span>
+                                            <span class="meta-tag-gray" id="preview-year">Đời 2024</span>
+                                        </div>
+                                        <h3 class="card-title" id="preview-name">VinFast VF 5</h3>
+                                        <div class="spec-pills">
+                                            <span class="spec-pill" id="preview-odo">⏱ 25.000 km</span>
+                                            <span class="spec-pill" id="preview-color">🎯 Màu Trắng</span>
+                                            <span class="spec-pill" id="preview-battery">🔋 Xe mua pin</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-bottom">
+                                    <div class="price-box">
+                                        <span class="price-label">Liên hệ báo giá</span>
+                                        <span class="price-value">Liên hệ</span>
+                                    </div>
+                                    <button class="btn-card-action" style="padding: 0.5rem 1rem; border-radius: 9999px; background: #F1F5F9; border: 1px solid #E2E8F0; font-weight: 700; font-size: 0.75rem;">XEM CHI TIẾT XE</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cars Inventory List -->
+                <div class="studio-panel">
+                    <div class="panel-title">
+                        🚗 Danh Sách Xe Kho Auto 28 (<span id="cars-count">0</span> xe)
+                    </div>
+                    <div class="car-list-scroll" id="cars-list-container">
+                        <!-- Rendered dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code Export Modal -->
+    <div class="modal-backdrop" id="code-modal">
+        <div class="modal-card">
+            <h3 style="margin-top: 0; color: #0F172A; font-size: 1.25rem;">💾 Nguồn Dữ Liệu cars_data.js Mới Cập Nhật</h3>
+            <p style="font-size: 0.875rem; color: #64748B;">Sao chép toàn bộ mã dưới đây và dán đè vào file <code>cars_data.js</code> để lưu vĩnh viễn:</p>
+            <textarea class="code-area" id="code-textarea" readonly></textarea>
+            <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem;">
+                <button class="btn-studio btn-studio-primary" onclick="copyCode()">📋 Sao Chép Mã</button>
+                <button class="btn-studio btn-studio-secondary" onclick="closeModal()">Đóng Cửa Sổ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./cars_data.js"></script>
+    <script>
+        let currentCars = [...(window.staticCarsData || [])];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCarsList();
+            setupFormListeners();
+        });
+
+        function renderCarsList() {
+            const container = document.getElementById('cars-list-container');
+            document.getElementById('cars-count').innerText = currentCars.length;
+            container.innerHTML = '';
+
+            currentCars.forEach((car, index) => {
+                const item = document.createElement('div');
+                item.className = 'car-row-card';
+                item.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="${car.image_url}" class="car-thumb-img" alt="${car.name}">
+                        <div>
+                            <div style="font-weight: 800; font-size: 0.9375rem; color: #0F172A;">${car.name} (${car.year || 2024})</div>
+                            <div style="font-size: 0.75rem; color: #64748B; margin-top: 0.15rem;">
+                                ${car.color || ''} • ${car.odo ? car.odo.toLocaleString('vi-VN') + ' km' : ''} • ${car.battery_type || ''}
+                                ${car.image_position ? ` • <span style="color:#2563EB; font-weight:600;">Pos: ${car.image_position}</span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn-studio btn-studio-secondary" style="padding: 0.4rem 0.75rem; font-size: 0.75rem;" onclick="editCar(${index})">✏ Sửa & Căn Ảnh</button>
+                        <button class="btn-studio btn-studio-secondary" style="padding: 0.4rem 0.75rem; font-size: 0.75rem; color: #DC2626;" onclick="deleteCar(${index})">🗑 Xóa</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function setupFormListeners() {
+            const form = document.getElementById('car-form');
+            const inputs = ['car-name', 'car-year', 'car-odo', 'car-color', 'car-battery', 'car-image-url', 'car-img-position'];
+
+            inputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', updatePreview);
+            });
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                saveCar();
+            });
+
+            document.getElementById('btn-reset-form').addEventListener('click', resetForm);
+            document.getElementById('btn-export-code').addEventListener('click', exportCode);
+        }
+
+        function updatePreview() {
+            const name = document.getElementById('car-name').value || 'VinFast VF';
+            const year = document.getElementById('car-year').value || '2024';
+            const odo = document.getElementById('car-odo').value || '0';
+            const color = document.getElementById('car-color').value || 'Màu Trắng';
+            const battery = document.getElementById('car-battery').value || 'Xe mua pin';
+            const imgUrl = document.getElementById('car-image-url').value || 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg';
+            const imgPos = document.getElementById('car-img-position').value || 'center 30%';
+
+            document.getElementById('preview-name').innerText = name;
+            document.getElementById('preview-year').innerText = 'Đời ' + year;
+            document.getElementById('preview-odo').innerText = '⏱ ' + (parseInt(odo) || 0).toLocaleString('vi-VN') + ' km';
+            document.getElementById('preview-color').innerText = '🎯 ' + color;
+            document.getElementById('preview-battery').innerText = '🔋 ' + battery;
+            
+            const previewImg = document.getElementById('preview-img');
+            previewImg.src = imgUrl;
+            previewImg.style.objectPosition = imgPos;
+
+            // Update active state on position buttons
+            document.querySelectorAll('.btn-pos-item').forEach(btn => {
+                const text = btn.innerText;
+                if ((imgPos === 'center 15%' && text.includes('15%')) ||
+                    (imgPos === 'center 25%' && text.includes('25%')) ||
+                    (imgPos === 'center 35%' && text.includes('35%')) ||
+                    (imgPos === 'center 45%' && text.includes('45%')) ||
+                    (imgPos === 'center 60%' && text.includes('60%')) ||
+                    (imgPos === 'center 75%' && text.includes('75%'))) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function setPos(posValue) {
+            document.getElementById('car-img-position').value = posValue;
+            updatePreview();
+        }
+
+        function editCar(index) {
+            const car = currentCars[index];
+            document.getElementById('car-id').value = index;
+            document.getElementById('form-mode-title').innerText = '✏ Tinh Chỉnh Xe: ' + car.name;
+            
+            document.getElementById('car-name').value = car.name || '';
+            document.getElementById('car-year').value = car.year || 2024;
+            document.getElementById('car-odo').value = car.odo || 0;
+            document.getElementById('car-color').value = car.color || 'Màu Trắng';
+            document.getElementById('car-battery').value = car.battery_type || 'Xe mua pin';
+            document.getElementById('car-image-url').value = car.image_url || '';
+            document.getElementById('car-img-position').value = car.image_position || 'center 30%';
+            document.getElementById('car-detail-images').value = car.detail_images_list || '';
+
+            updatePreview();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function deleteCar(index) {
+            if (confirm(`Bạn có chắc chắn muốn xóa xe "${currentCars[index].name}" khỏi danh sách?`)) {
+                currentCars.splice(index, 1);
+                renderCarsList();
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('car-id').value = '';
+            document.getElementById('form-mode-title').innerText = 'Thêm Xe Mới Vào Kho';
+            document.getElementById('car-form').reset();
+            updatePreview();
+        }
+
+        function saveCar() {
+            const editId = document.getElementById('car-id').value;
+            const carObj = {
+                id: editId !== '' ? currentCars[editId].id : Date.now(),
+                name: document.getElementById('car-name').value,
+                year: parseInt(document.getElementById('car-year').value) || 2024,
+                odo: parseInt(document.getElementById('car-odo').value) || 0,
+                color: document.getElementById('car-color').value,
+                battery_type: document.getElementById('car-battery').value,
+                sale_price: 0,
+                status: "IN_STOCK",
+                image_url: document.getElementById('car-image-url').value,
+                image_position: document.getElementById('car-img-position').value || "center 30%",
+                notes: "",
+                detail_images_list: document.getElementById('car-detail-images').value
+            };
+
+            if (editId !== '') {
+                currentCars[editId] = carObj;
+            } else {
+                currentCars.unshift(carObj);
+            }
+
+            renderCarsList();
+            resetForm();
+            alert('✅ Đã cập nhật xe thành công!');
+        }
+
+        function exportCode() {
+            const code = 'window.staticCarsData = ' + JSON.stringify(currentCars, null, 2) + ';';
+            document.getElementById('code-textarea').value = code;
+            document.getElementById('code-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('code-modal').style.display = 'none';
+        }
+
+        function copyCode() {
+            const textarea = document.getElementById('code-textarea');
+            textarea.select();
+            document.execCommand('copy');
+            alert('📋 Đã sao chép toàn bộ mã cars_data.js!');
+        }
+    </script>
+</body>
+</html>

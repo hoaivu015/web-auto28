@@ -1,0 +1,893 @@
+{
+  "timestamp": "2026-07-30T14:43:24.858Z",
+  "totalFilesAudited": 16,
+  "devicesAudited": [
+    "Mobile (iPhone 15)",
+    "Tablet (iPad Air)",
+    "Desktop (MacBook 14\")"
+  ],
+  "passed": true,
+  "visualScore": 85,
+  "matrixSummary": {
+    "mobile": {
+      "aboveTheFoldPass": 15,
+      "overflowFailures": 0,
+      "touchTargetFailures": 259,
+      "contrastFailures": 44
+    },
+    "tablet": {
+      "aboveTheFoldPass": 15,
+      "overflowFailures": 0,
+      "touchTargetFailures": 204,
+      "contrastFailures": 44
+    },
+    "desktop": {
+      "aboveTheFoldPass": 15,
+      "overflowFailures": 0,
+      "touchTargetFailures": 261,
+      "contrastFailures": 44
+    }
+  },
+  "details": {
+    "fadil.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "guide-ev.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "guide.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "index.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 7,
+        "contrastIssues": 0,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 7 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 0,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 9,
+        "contrastIssues": 0,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 9 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          }
+        ]
+      }
+    },
+    "lux-a.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "lux-sa.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "neural-landing.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 0,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 0,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 0,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "sell.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 24,
+        "contrastIssues": 1,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 24 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 1 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "template.html": {
+      "mobile": {
+        "aboveTheFold": false,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 0,
+        "contrastIssues": 0,
+        "issues": [
+          {
+            "type": "ABOVE_THE_FOLD_FAIL",
+            "message": "[Mobile (iPhone 15)] Form CTA chính nằm ngoài tầm mắt màn hình đầu tiên (Tọa độ y: 9999px > Viewport Height: 844px)."
+          }
+        ],
+        "warnings": []
+      },
+      "tablet": {
+        "aboveTheFold": false,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 0,
+        "contrastIssues": 0,
+        "issues": [
+          {
+            "type": "ABOVE_THE_FOLD_FAIL",
+            "message": "[Tablet (iPad Air)] Form CTA chính nằm ngoài tầm mắt màn hình đầu tiên (Tọa độ y: 9999px > Viewport Height: 1194px)."
+          }
+        ],
+        "warnings": []
+      },
+      "desktop": {
+        "aboveTheFold": false,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 0,
+        "contrastIssues": 0,
+        "issues": [
+          {
+            "type": "ABOVE_THE_FOLD_FAIL",
+            "message": "[Desktop (MacBook 14\")] Form CTA chính nằm ngoài tầm mắt màn hình đầu tiên (Tọa độ y: 9999px > Viewport Height: 900px)."
+          }
+        ],
+        "warnings": []
+      }
+    },
+    "vf3.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "vf5.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "vf6.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "vf7.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "vf8.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "vf9.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    },
+    "vfe34.html": {
+      "mobile": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Mobile (iPhone 15)] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Mobile (iPhone 15)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "tablet": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 12,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Tablet (iPad Air)] Phát hiện 12 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 44x44px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Tablet (iPad Air)] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      },
+      "desktop": {
+        "aboveTheFold": true,
+        "hasOverflow": false,
+        "collisionCount": 0,
+        "smallTargets": 18,
+        "contrastIssues": 4,
+        "issues": [],
+        "warnings": [
+          {
+            "type": "SMALL_TARGET_SIZE",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 18 phần tử tương tác nhỏ hơn tiêu chuẩn vùng bấm 24x24px."
+          },
+          {
+            "type": "LOW_COLOR_CONTRAST",
+            "message": "[Desktop (MacBook 14\")] Phát hiện 4 đoạn văn bản có độ tương phản màu kém (< 4.5:1)."
+          }
+        ]
+      }
+    }
+  }
+}

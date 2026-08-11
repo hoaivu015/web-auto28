@@ -1,0 +1,471 @@
+/* ============================================
+   📊 SECTION HEADERS & TRUST COMMITMENTS
+   ============================================ */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  padding: 0 1rem;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.section-header p {
+  font-family: var(--font-body);
+  color: var(--color-text-secondary);
+  max-width: 36rem;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0em;
+}
+
+.ai-commitments {
+  padding: 2rem 1.5rem;
+  background: transparent;
+}
+
+.commitments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.medium-glass-card {
+  background: linear-gradient(var(--color-surface-glass), var(--color-surface-glass)) padding-box,
+              linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.01) 100%) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: 2rem;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-spring);
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.02);
+}
+
+.medium-glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(79, 70, 229, 0.03), transparent 75%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.medium-glass-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(79, 70, 229, 0.15);
+  box-shadow: 0 20px 40px rgba(79, 70, 229, 0.04);
+}
+
+.medium-glass-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 2.25rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.medium-glass-card:hover .card-icon {
+  transform: scale(1.15);
+}
+
+.medium-glass-card h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
+}
+
+.medium-glass-card p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625rem;
+}
+
+/* 👥 SOCIAL PROOF SECTION & COUNTERS */
+.social-proof {
+  padding: 2rem 1.5rem;
+  background: transparent;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 50rem;
+  margin: 0 auto 4rem;
+}
+
+@media (min-width: 640px) {
+  .counter-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.counter-item { text-align: center; }
+
+.counter-number {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: var(--color-accent-blue);
+  display: block;
+  line-height: 1.1;
+  text-shadow: 0 0 30px rgba(37, 99, 235, 0.1);
+}
+
+.counter-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-top: 0.75rem;
+  display: block;
+}
+
+.testimonial-slider-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  scrollbar-width: none;
+}
+
+.testimonial-slider::-webkit-scrollbar { display: none; }
+
+.testimonial-card {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) padding-box,
+              linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.01) 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-family: Georgia, serif;
+  font-size: 6rem;
+  color: var(--color-accent-blue);
+  opacity: 0.1;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-author {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.dot.active {
+  background: var(--color-accent-blue);
+  width: 1.5rem;
+  border-radius: 4px;
+}
+
+/* 🔢 PROCESS SECTION (QUY TRÌNH 4 BƯỚC "KHÔNG CHỜ ĐỢI") */
+.process {
+  padding: 2rem 1.5rem;
+  background: transparent;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.step.expressive-step-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 2rem; /* 32px Super Ellipse */
+  padding: 1.75rem 1.5rem;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.45s var(--ease-spring), background-color 0.45s var(--ease-spring), box-shadow 0.45s ease;
+}
+
+.step.expressive-step-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 40px rgba(2, 11, 20, 0.08);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.step-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.step-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.2);
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.step.expressive-step-card:hover .step-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.step-time-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent-blue);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.step-time-badge.pink {
+  background: rgba(236, 72, 153, 0.08);
+  color: #DB2777;
+  border-color: rgba(236, 72, 153, 0.2);
+}
+
+.step h3 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+.step-anxiety-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.025);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 0.875rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.step-anxiety-pill.highlight-emerald {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+  color: #047857;
+}
+
+/* ❓ FAQ SECTION */
+.faq {
+  padding: 2rem 1.5rem;
+  background: transparent;
+}
+
+.faq-container {
+  max-width: 46rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)) padding-box,
+              linear-gradient(135deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.01) 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.faq-item.open {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)) padding-box,
+              linear-gradient(135deg, rgba(79, 70, 229, 0.25) 0%, rgba(79, 70, 229, 0.05) 100%) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.02);
+}
+
+.faq-question {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.05rem;
+  letter-spacing: -0.025em;
+  user-select: none;
+}
+
+.faq-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  flex-shrink: 0;
+  transition: transform 0.4s var(--ease-spring), background 0.3s;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+  background: var(--color-accent-blue);
+  color: #FFFFFF;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-smooth);
+  padding: 0 1.75rem;
+  color: var(--color-text-secondary);
+  line-height: 1.625rem;
+}
+
+.faq-item.open .faq-answer {
+  padding-bottom: 1.5rem;
+}
+
+/* Process Step Time Badges */
+.step-time-badge {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.step-time-badge.blue {
+  color: var(--color-accent-blue);
+}
+
+.step-time-badge.secondary {
+  color: var(--color-text-secondary);
+}
+
+.step-time-badge.pink {
+  color: #EC4899;
+}
+

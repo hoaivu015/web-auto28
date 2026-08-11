@@ -1,0 +1,238 @@
+/* ==========================================================================
+   📐 RESPONSIVE BREAKPOINTS & SPACING POLISH (INTERNATIONAL STANDARDS 2026)
+   ========================================================================== */
+
+/* Base Transition for Layout Smoothness */
+.hero,
+.ai-commitments,
+.social-proof,
+.product-grid-section,
+.process,
+.faq,
+.location,
+.bottom-cta,
+.section-header,
+.bento-card-white,
+.medium-glass-card,
+.expressive-car-card,
+.step,
+.faq-question,
+.faq-answer {
+  transition: padding 0.3s ease, margin 0.3s ease, gap 0.3s ease;
+}
+
+/* ==========================================================================
+   1. Ultra-Wide & 4K Monitors (min-width: 1440px)
+   ========================================================================== */
+@media (min-width: 1440px) {
+  .hero-container,
+  .product-grid-section,
+  .asymmetric-bento-grid,
+  .location-container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-container {
+    max-width: 1320px;
+  }
+}
+
+/* ==========================================================================
+   2. Medium Screens & Tablets (768px - 1023px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding: 6.5rem 1.5rem 3rem;
+  }
+  .ai-commitments,
+  .social-proof,
+  .product-grid-section,
+  .process,
+  .faq {
+    padding: 2rem 1.5rem;
+  }
+  .location {
+    padding: 2rem 1.5rem;
+  }
+  .bottom-cta {
+    padding: 3rem 1.5rem 4rem;
+  }
+  .section-header {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ==========================================================================
+   3. Mobile Screens Standard (max-width: 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hero {
+    padding: 5.5rem 1rem 2rem;
+  }
+  .ai-commitments,
+  .social-proof,
+  .product-grid-section,
+  .process,
+  .faq {
+    padding: 2.5rem 1rem;
+  }
+  .location {
+    padding: 2rem 1rem;
+  }
+  .bottom-cta {
+    padding: 2rem 1rem 3rem;
+  }
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Grid Gaps & Card Offsets */
+  .counter-grid {
+    margin-bottom: 2.5rem;
+    gap: 1.5rem;
+  }
+  .testimonial-card {
+    padding: 1.5rem;
+    border-radius: 24px;
+  }
+  .testimonial-text {
+    margin-bottom: 1.25rem;
+  }
+  .asymmetric-bento-grid {
+    gap: 1rem;
+  }
+  .bento-card-white {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 24px !important;
+  }
+  .medium-glass-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 24px;
+  }
+  .expressive-car-card {
+    padding: 1rem;
+    gap: 0.75rem;
+    border-radius: 24px;
+  }
+  .card-top {
+    gap: 0.75rem;
+  }
+  .card-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+  .card-bottom {
+    padding-top: 0.625rem;
+    gap: 0.5rem;
+  }
+  .btn-card-action {
+    min-height: 48px;
+    font-size: 0.75rem;
+    padding: 0 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .process-steps {
+    gap: 1.5rem;
+  }
+  .step {
+    padding: 1.5rem 1.25rem;
+    border-radius: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-header-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .step-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    margin: 0 auto;
+  }
+  .step h3 {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+  .step p {
+    text-align: center;
+  }
+  
+  /* Touch Target Enforcement (WCAG 2.2 >= 48px & 8pt Spacing) */
+  .filter-pill {
+    min-height: 48px;
+    padding: 0.625rem 1.25rem;
+    margin: 4px;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-submit-lead {
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* FAQs Spacing & Touch Targets (WCAG 2.2 >= 48px) */
+  .faq-container {
+    gap: 0.75rem;
+  }
+  .faq-question {
+    padding: 1.25rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+  }
+  .faq-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+  }
+  .faq-answer {
+    padding: 0 1.25rem;
+  }
+  .faq-item.open .faq-answer {
+    padding-bottom: 1.25rem;
+  }
+  
+  /* Footer Spacing */
+  .footer-landing {
+    padding: 2.5rem 1.25rem 2.5rem !important;
+  }
+}
+
+/* ==========================================================================
+   4. Mobile Narrow (iPhone SE / Galaxy Fold: max-width: 374px)
+   ========================================================================== */
+@media (max-width: 374px) {
+  .hero {
+    padding: 4.5rem 0.75rem 1.5rem;
+  }
+  .bento-card-white,
+  .medium-glass-card {
+    padding: 1.25rem 0.75rem !important;
+    border-radius: 20px !important;
+  }
+  .expressive-car-card {
+    padding: 0.75rem;
+    border-radius: 20px;
+  }
+  .faq-question {
+    padding: 1rem 0.75rem;
+  }
+  .filter-pill {
+    font-size: 0.625rem;
+    padding: 0.5rem 0.875rem;
+    min-height: 48px;
+  }
+}
+
+

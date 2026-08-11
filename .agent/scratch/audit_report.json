@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-08-08T02:02:00.026Z",
+  "total_pages": 6,
+  "status": "FAIL",
+  "pages": [
+    {
+      "file": "guide-ev.html",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [
+        "Thiếu thẻ <form> chuẩn HTML5"
+      ],
+      "score": 100
+    },
+    {
+      "file": "guide.html",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "score": 100
+    },
+    {
+      "file": "index.html",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "score": 100
+    },
+    {
+      "file": "neural-landing.html",
+      "status": "FAIL",
+      "errors": [
+        "[Lỗi Cú Pháp JS Engine] Lỗi cú pháp (SyntaxError) tại neural.js: missing ) after argument list",
+        "[Lỗi 404 File] Thẻ <script src=\"/cars_data.js\"> tham chiếu đến tệp không tồn tại: /cars_data.js"
+      ],
+      "warnings": [],
+      "score": 0
+    },
+    {
+      "file": "sell.html",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "score": 100
+    },
+    {
+      "file": "template.html",
+      "status": "FAIL",
+      "errors": [
+        "[Lỗi 404 File] Thẻ <script src=\"/js/modules/hero.js\"> tham chiếu đến tệp không tồn tại: /js/modules/hero.js",
+        "[Lỗi 404 File] Thẻ <script src=\"/cars_data.js\"> tham chiếu đến tệp không tồn tại: /cars_data.js",
+        "[Lỗi 404 CSS] Thẻ <link href=\"/style.css\"> tham chiếu đến tệp CSS không tồn tại: /style.css",
+        "[Lỗi 404 CSS] Thẻ <link href=\"/css/base.css\"> tham chiếu đến tệp CSS không tồn tại: /css/base.css",
+        "[Lỗi 404 CSS] Thẻ <link href=\"/css/components/forms.css\"> tham chiếu đến tệp CSS không tồn tại: /css/components/forms.css"
+      ],
+      "warnings": [],
+      "score": 0
+    }
+  ]
+}

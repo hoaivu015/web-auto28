@@ -1,0 +1,10 @@
+[
+  {
+    "file": "sell.html",
+    "line": 138,
+    "severity": "MEDIUM",
+    "tag": "<div class=\"slide\">",
+    "issue": "Sử dụng inline style [background-image: url('./assets/cars/vf8.jpg');] trùng với CSS class .slide trong style.css",
+    "snippet": "<div class=\"slide\" style=\"background-image: url('./assets/cars/vf8.jpg');\">..."
+  }
+]

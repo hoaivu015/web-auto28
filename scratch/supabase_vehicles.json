@@ -1,0 +1,1255 @@
+[
+  {
+    "id": 93,
+    "code": "VH1407-01",
+    "name": "VF5",
+    "year": 2024,
+    "odo": 60000,
+    "purchase_price": 300000000,
+    "sale_price": 370000000,
+    "total_cost": 3000000,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": 67000000,
+    "status": "IN_STOCK",
+    "days": 0,
+    "color": "Đỏ",
+    "purchase_date": "2026-07-14",
+    "sale_date": null,
+    "buyer": "NV-HDNHAO",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 0,
+    "payment_history": [],
+    "cost_history": [
+      {
+        "date": "2026-07-14",
+        "note": "Hoa hồng",
+        "amount": 3000000,
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-07-14",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-07-14",
+        "note": "Chuyển sang SPA",
+        "user": "NV-TP-272",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-07-14",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-TP-272",
+        "status": "IN_STOCK"
+      }
+    ],
+    "created_at": "2026-07-14T08:55:39.501559+00:00",
+    "updated_at": "2026-07-14T08:57:11.557653+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1784019326/inventory/pdh7pizhqcmk8qlimh3d.jpg",
+    "is_coinvested": true,
+    "coinvestor_code": "NV-HDNHAO",
+    "coinvest_amount": 76000000,
+    "purchase_paid_amount": 300000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-07-14",
+        "note": "Thanh toán",
+        "amount": 300000000,
+        "receiver": "NV-HDNHAO",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 92,
+    "code": "VH1307-01",
+    "name": "MPV 7",
+    "year": 2026,
+    "odo": 8000,
+    "purchase_price": 600000000,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -600000000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "Xám",
+    "purchase_date": "2026-07-11",
+    "sale_date": null,
+    "buyer": "NV-BCQUOC",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-07-11",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-07-13T13:45:10.917327+00:00",
+    "updated_at": "2026-07-14T04:47:52.501698+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1784004469/inventory/ttuknjdfjheeuetchep2.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 150000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-07-13",
+        "note": "cọc xe",
+        "amount": 150000000,
+        "receiver": "NV-BCQUOC",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 91,
+    "code": "VH0407-03",
+    "name": "VF6 ECO 71B-01588",
+    "year": 2025,
+    "odo": 82000,
+    "purchase_price": 455000000,
+    "sale_price": 522000000,
+    "total_cost": 17000000,
+    "received_amount": 20000000,
+    "receivable_payable": 0,
+    "profit": 50000000,
+    "status": "DEPOSIT_SALE",
+    "days": 0,
+    "color": "trắng",
+    "purchase_date": "2026-06-17",
+    "sale_date": null,
+    "buyer": "NV-LKBINH",
+    "seller": "NV-NCVINH",
+    "commission": 5000000,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-06-17",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-07-04",
+        "note": "Chuyển sang SPA",
+        "user": "NV-KTOAN",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-07-04",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-KTOAN",
+        "status": "IN_STOCK"
+      },
+      {
+        "date": "2026-07-04",
+        "note": "Thanh toán: 20.000.000đ. Giao dịch Cọc trả thẳng",
+        "user": "NV-NCVINH",
+        "status": "DEPOSIT_SALE"
+      }
+    ],
+    "created_at": "2026-07-04T15:07:22.53019+00:00",
+    "updated_at": "2026-07-07T13:55:18.771509+00:00",
+    "image_url": "",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 455000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 1",
+        "amount": 10000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 2",
+        "amount": 420000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 3",
+        "amount": 25000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [
+      {
+        "date": "2026-07-04",
+        "note": "Giao dịch Cọc trả thẳng",
+        "amount": 20000000,
+        "receiver": "NV-NCVINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 89,
+    "code": "VH0407-01",
+    "name": "LUX A PLUS",
+    "year": 2022,
+    "odo": 70000,
+    "purchase_price": 455000000,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -455000000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "xám",
+    "purchase_date": "2026-06-27",
+    "sale_date": null,
+    "buyer": "NV-NCVINH",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-06-27",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-07-04T14:50:59.824954+00:00",
+    "updated_at": "2026-07-11T07:16:58.4249+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1783754215/inventory/vzkicbxc7kgzm3nxbtov.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 455000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 1",
+        "amount": 20000000,
+        "receiver": "NV-NCVINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 2",
+        "amount": 435000000,
+        "receiver": "NV-NCVINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 88,
+    "code": "VH0207-03",
+    "name": "LUX A PLUS",
+    "year": 2020,
+    "odo": 41000,
+    "purchase_price": 445000000,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -445000000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "đen",
+    "purchase_date": "2026-06-22",
+    "sale_date": null,
+    "buyer": "NV-NHTHAI",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-06-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-07-02T05:10:49.811341+00:00",
+    "updated_at": "2026-07-04T14:48:16.495618+00:00",
+    "image_url": "",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 450000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 1",
+        "amount": 450000000,
+        "receiver": "NV-NHTHAI",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 86,
+    "code": "VH0207-01",
+    "name": "VF6 PLUS (Bản Mỹ)",
+    "year": 2026,
+    "odo": 11000,
+    "purchase_price": 570000000,
+    "sale_price": 625000000,
+    "total_cost": 0,
+    "received_amount": 250000000,
+    "receivable_payable": 0,
+    "profit": 55000000,
+    "status": "BANK_CONFIRMED",
+    "days": 0,
+    "color": "xám",
+    "purchase_date": "2026-06-26",
+    "sale_date": null,
+    "buyer": "NV-LKBINH",
+    "seller": "NV-PHHVU",
+    "commission": 5000000,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-06-26",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-07-04",
+        "note": "Chuyển sang SPA",
+        "user": "NV-TP-272",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-07-06",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-TP-272",
+        "status": "IN_STOCK"
+      },
+      {
+        "date": "2026-07-06",
+        "note": "Thanh toán: 20.000.000đ. Giao dịch Cọc trả góp",
+        "user": "NV-PHHVU",
+        "status": "BANK_DEPOSIT"
+      },
+      {
+        "date": "2026-07-14",
+        "note": "Thanh toán: 230.000.000đ. ",
+        "user": "NV-PHHVU",
+        "status": "BANK_CONFIRMED"
+      }
+    ],
+    "created_at": "2026-07-02T04:59:36.61115+00:00",
+    "updated_at": "2026-07-14T08:58:26.173486+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1783754141/inventory/vlydxaiazd5po69w26ki.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 570000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 1",
+        "amount": 20000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 2",
+        "amount": 350000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-07-04",
+        "note": "tt lần 3",
+        "amount": 200000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [
+      {
+        "date": "2026-07-06",
+        "note": "Giao dịch Cọc trả góp",
+        "amount": 20000000,
+        "receiver": "NV-PHHVU",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-07-14",
+        "note": "",
+        "amount": 230000000,
+        "receiver": "NV-PHHVU",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 84,
+    "code": "VH0906-03",
+    "name": "VinFast VF6 Plus",
+    "year": 2024,
+    "odo": 25000,
+    "purchase_price": 0,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": 0,
+    "status": "IN_STOCK",
+    "days": 0,
+    "color": "Trắng",
+    "purchase_date": "2026-06-09",
+    "sale_date": null,
+    "buyer": null,
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 0,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-06-09",
+        "note": "Thêm nhanh xe từ quản lý Landing Page",
+        "user": "Hệ thống",
+        "status": "IN_STOCK"
+      }
+    ],
+    "created_at": "2026-06-09T13:56:32.389463+00:00",
+    "updated_at": "2026-06-09T13:56:32.389463+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781013388/inventory/tqzq8ombclzaufjjrmcd.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 0,
+    "purchase_payment_history": [],
+    "is_pinned": false,
+    "notes": "Lót Sàn , dán phim, Camera hành trình..",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "Mua Pin"
+  },
+  {
+    "id": 81,
+    "code": "VH0606-01",
+    "name": "VF6 ECO",
+    "year": 2025,
+    "odo": 29000,
+    "purchase_price": 525000000,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -525000000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "Xám",
+    "purchase_date": "2026-05-25",
+    "sale_date": null,
+    "buyer": "NV-BCQUOC",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-05-25",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-06-06T07:13:18.913917+00:00",
+    "updated_at": "2026-07-14T04:52:14.053398+00:00",
+    "image_url": "",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 0,
+    "purchase_payment_history": [],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "Mua Pin"
+  },
+  {
+    "id": 80,
+    "code": "VH0306-01",
+    "name": "VF6 Plus",
+    "year": 2025,
+    "odo": 34000,
+    "purchase_price": 565000000,
+    "sale_price": 625000000,
+    "total_cost": 400000,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": 59600000,
+    "status": "IN_STOCK",
+    "days": 0,
+    "color": "Xám",
+    "purchase_date": "2026-06-03",
+    "sale_date": null,
+    "buyer": "NV-NHTHAI",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [
+      {
+        "date": "2026-06-06",
+        "note": "[NV ứng] công chứng mua",
+        "amount": 400000,
+        "staff_id": "48",
+        "staff_expense_id": "7e9d59e6-2d4a-4c7e-afcd-0f1103f5cf3f"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-06-03",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-06-06",
+        "note": "Chuyển sang SPA",
+        "user": "NV-TP-272",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-06-06",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-TP-272",
+        "status": "IN_STOCK"
+      }
+    ],
+    "created_at": "2026-06-03T04:02:36.28363+00:00",
+    "updated_at": "2026-06-06T15:21:07.4117+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1780459352/inventory/c7f7peb51ziprgbkxaka.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 207000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-06-03",
+        "note": "Thanh toán lần 1",
+        "amount": 202000000,
+        "receiver": "NV-NHTHAI",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 69,
+    "code": "VH2205-15",
+    "name": "LIMO GREEN",
+    "year": 2025,
+    "odo": 1800,
+    "purchase_price": 625000000,
+    "sale_price": 680000000,
+    "total_cost": 500000,
+    "received_amount": 10000000,
+    "receivable_payable": 0,
+    "profit": 54500000,
+    "status": "DEPOSIT_SALE",
+    "days": 0,
+    "color": "Vàng",
+    "purchase_date": "2026-05-22",
+    "sale_date": null,
+    "buyer": "NV-BCQUOC",
+    "seller": "NV-TP-272",
+    "commission": 5000000,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-05-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-05-22",
+        "note": "Chuyển sang SPA",
+        "user": "NV-TP-272",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-05-23",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-TP-272",
+        "status": "IN_STOCK"
+      },
+      {
+        "date": "2026-05-23",
+        "note": "Thanh toán: 10.000.000đ. Giao dịch Cọc trả thẳng",
+        "user": "NV-TP-272",
+        "status": "DEPOSIT_SALE"
+      }
+    ],
+    "created_at": "2026-05-22T13:51:15.204899+00:00",
+    "updated_at": "2026-05-25T11:58:13.08446+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1779602796/inventory/ol38f2qwy6gyocicvoh8.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 600000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-05-22",
+        "note": "Thanh toán lần 1",
+        "amount": 600000000,
+        "receiver": "NV-BCQUOC",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [
+      {
+        "date": "2026-05-23",
+        "note": "Giao dịch Cọc trả thẳng",
+        "amount": 10000000,
+        "receiver": "NV-TP-272",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 68,
+    "code": "VH2205-14",
+    "name": "LIMO GREEN",
+    "year": 2025,
+    "odo": 6000,
+    "purchase_price": 625000000,
+    "sale_price": 695000000,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": 70000000,
+    "status": "IN_STOCK",
+    "days": 0,
+    "color": "Vàng",
+    "purchase_date": "2026-05-22",
+    "sale_date": null,
+    "buyer": "NV-BCQUOC",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-05-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-05-24",
+        "note": "Chuyển sang SPA",
+        "user": "NV-TP-272",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-05-24",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-TP-272",
+        "status": "IN_STOCK"
+      }
+    ],
+    "created_at": "2026-05-22T13:50:40.389464+00:00",
+    "updated_at": "2026-05-24T06:22:08.414121+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1779602821/inventory/bbbzsl11wnzs912d9rca.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 625000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-05-24",
+        "note": "Thanh toán",
+        "amount": 625000000,
+        "receiver": "NV-BCQUOC",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 65,
+    "code": "VH2205-11",
+    "name": "LUX A Base",
+    "year": 2022,
+    "odo": 63000,
+    "purchase_price": 425000000,
+    "sale_price": 550000000,
+    "total_cost": 1150000,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": 123850000,
+    "status": "IN_STOCK",
+    "days": 0,
+    "color": "Đen",
+    "purchase_date": "2026-05-22",
+    "sale_date": null,
+    "buyer": "NV-NCVINH",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [
+      {
+        "date": "2026-05-24",
+        "note": "[NV ứng] Sơn xe",
+        "amount": 1150000,
+        "staff_id": "30",
+        "staff_expense_id": "276e93e4-1809-4335-827d-84d9db4ecc90"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-05-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-05-24",
+        "note": "Chuyển sang SPA",
+        "user": "NV-TP-272",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-05-24",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-TP-272",
+        "status": "IN_STOCK"
+      }
+    ],
+    "created_at": "2026-05-22T13:48:42.362665+00:00",
+    "updated_at": "2026-05-24T06:09:08.797849+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1779602945/inventory/hfg7swfo0now4ou2goew.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 425000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-05-24",
+        "note": "Thanh toán",
+        "amount": 425000000,
+        "receiver": "NV-NCVINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 59,
+    "code": "VH2205-05",
+    "name": "VF7",
+    "year": 2024,
+    "odo": 12000,
+    "purchase_price": 700000000,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -700000000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "Trắng",
+    "purchase_date": "2026-05-22",
+    "sale_date": null,
+    "buyer": "NV-NCVINH",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-05-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-05-22T13:43:08.16361+00:00",
+    "updated_at": "2026-05-24T06:10:30.334172+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1779603027/inventory/nlyfsoqjbt5lggotv9es.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 0,
+    "purchase_payment_history": [],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 58,
+    "code": "VH2205-04",
+    "name": "VF7",
+    "year": 2025,
+    "odo": 30,
+    "purchase_price": 740000000,
+    "sale_price": 0,
+    "total_cost": 0,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -740000000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "Xám",
+    "purchase_date": "2026-05-22",
+    "sale_date": null,
+    "buyer": "NV-NCVINH",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [],
+    "history": [
+      {
+        "date": "2026-05-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-05-22T13:42:27.369225+00:00",
+    "updated_at": "2026-06-03T03:47:31.733021+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1780458449/inventory/wp43gctsczvwdx9bertl.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 0,
+    "purchase_payment_history": [],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 55,
+    "code": "VH2205-01",
+    "name": "VF6 ECO",
+    "year": 2025,
+    "odo": 14800,
+    "purchase_price": 530000000,
+    "sale_price": 0,
+    "total_cost": 500000,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": -530500000,
+    "status": "DEPOSIT_BUY",
+    "days": 0,
+    "color": "Trắng",
+    "purchase_date": "2026-05-22",
+    "sale_date": null,
+    "buyer": "NV-NHTHAI",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [
+      {
+        "date": "2026-05-26",
+        "note": "[NV ứng] Sang pin",
+        "amount": 500000,
+        "staff_id": "40",
+        "staff_expense_id": "d1e7b9ab-b783-42e3-b308-e8c53f172081"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-05-22",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      }
+    ],
+    "created_at": "2026-05-22T13:39:10.969593+00:00",
+    "updated_at": "2026-06-09T13:30:25.030758+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1780459131/inventory/mifd8mc0msngj3gocxxk.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 10000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-05-22",
+        "note": "Cọc mua xe",
+        "amount": 10000000,
+        "receiver": "NV-NHTHAI",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [],
+    "buyer_name": null,
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  },
+  {
+    "id": 30,
+    "code": "VH-2604-05",
+    "name": "LUX SA PRE",
+    "year": 2019,
+    "odo": 32000,
+    "purchase_price": 510000000,
+    "sale_price": 585000000,
+    "total_cost": 2600000,
+    "received_amount": 0,
+    "receivable_payable": 0,
+    "profit": 72400000,
+    "status": "IN_STOCK",
+    "days": 0,
+    "color": "Trắng",
+    "purchase_date": "2026-04-14",
+    "sale_date": null,
+    "buyer": "NV-PHHVU",
+    "seller": null,
+    "commission": 0,
+    "buying_commission": 3000000,
+    "payment_history": [],
+    "cost_history": [
+      {
+        "date": "2026-05-03",
+        "note": "Đường bộ",
+        "amount": 500000,
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-05-03",
+        "note": "Sơn xe ",
+        "amount": 2000000,
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-05-06",
+        "note": "[NV Kế Toán  ứng] Thay dầu\n",
+        "amount": 50000,
+        "staff_id": "48",
+        "staff_expense_id": "c0a80096-172a-41da-a0a9-2678aad12996"
+      },
+      {
+        "date": "2026-05-09",
+        "note": "[NV ứng] thay dầu",
+        "amount": 50000,
+        "staff_id": "48",
+        "staff_expense_id": "3d0b2846-e53a-4a88-bfe6-0687ccbf221a"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-04-14",
+        "note": "Khởi tạo xe mới (Cọc mua)",
+        "user": "Hệ thống",
+        "status": "DEPOSIT_BUY"
+      },
+      {
+        "date": "2026-04-27",
+        "note": "Chuyển sang SPA",
+        "user": "NV-KTOAN",
+        "status": "SPA"
+      },
+      {
+        "date": "2026-04-27",
+        "note": "Hoàn thành Spa - Nhập kho chờ bán",
+        "user": "NV-KTOAN",
+        "status": "IN_STOCK"
+      },
+      {
+        "date": "2026-05-03",
+        "note": "Thanh toán: 10.000.000đ. Giao dịch Cọc trả thẳng",
+        "user": "NV-LKBINH",
+        "status": "DEPOSIT_SALE"
+      },
+      {
+        "date": "2026-05-03",
+        "note": "Thanh toán: 20.000.000đ. ",
+        "user": "NV-TP-272",
+        "status": "DEPOSIT_SALE"
+      },
+      {
+        "date": "2026-05-19",
+        "note": "Hủy giao dịch đặt cọc - Quay về trạng thái Trong kho",
+        "user": "NV-PHHVU",
+        "status": "IN_STOCK"
+      }
+    ],
+    "created_at": "2026-04-14T15:20:09.708502+00:00",
+    "updated_at": "2026-07-13T13:46:38.814577+00:00",
+    "image_url": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1776259180/inventory/bpyom2wxuhlbn4xivs9k.jpg",
+    "is_coinvested": false,
+    "coinvestor_code": "",
+    "coinvest_amount": 0,
+    "purchase_paid_amount": 510000000,
+    "purchase_payment_history": [
+      {
+        "date": "2026-04-27",
+        "note": "",
+        "amount": 510000000,
+        "receiver": "NV-HDNHAO"
+      }
+    ],
+    "is_pinned": false,
+    "notes": "",
+    "sale_payment_history": [
+      {
+        "date": "2026-05-03",
+        "note": "Giao dịch Cọc trả thẳng",
+        "amount": 10000000,
+        "receiver": "NV-LKBINH",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-05-03",
+        "note": "",
+        "amount": 20000000,
+        "receiver": "NV-TP-272",
+        "staff_id": "",
+        "staff_expense_id": ""
+      },
+      {
+        "date": "2026-05-19",
+        "note": "Hoàn tiền cọc - Hủy giao dịch",
+        "amount": -30000000,
+        "receiver": "NV-PHHVU",
+        "staff_id": "",
+        "staff_expense_id": ""
+      }
+    ],
+    "buyer_name": "Phan Hữu Hoài Vũ",
+    "seller_name": null,
+    "partner_capital_repaid": false,
+    "partner_profit_shared": false,
+    "customer_name": null,
+    "buying_bonus": 0,
+    "buying_bonus_paid": false,
+    "show_on_landing": true,
+    "detail_images_list": "",
+    "battery_type": "None"
+  }
+]

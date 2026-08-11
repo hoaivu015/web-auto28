@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- ⚡ PRECONNECT AND DNS-PREFETCH FOR SPEED INSIGHTS & TRACKING PIXELS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://wcnyxxbfdtsmgynozkvk.supabase.co">
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://analytics.tiktok.com">
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com">
+
+    <!-- 📦 MODULE PRELOADS FOR ESM IMPORT WATERFALL PREVENTION -->
+    <link rel="modulepreload" href="./main.js">
+    <link rel="modulepreload" href="./js/ambient.js">
+    <link rel="modulepreload" href="./js/carousel.js">
+    <link rel="modulepreload" href="./js/accordion.js">
+    <link rel="modulepreload" href="./js/leads.js">
+    <link rel="modulepreload" href="./js/inventory.js">
+    <link rel="modulepreload" href="./js/inventory-components.js">
+    <link rel="modulepreload" href="./js/config.js">
+    <link rel="modulepreload" href="./js/utils.js">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto 28 | Showroom Xe VinFast Lướt Tại TP.HCM, Bình Dương, Đồng Nai</title>
+    <meta name="description" content="Auto 28 - Showroom mua bán, ký gửi xe VinFast lướt uy tín tại TP.HCM, Bình Dương, Đồng Nai, Long An, Vũng Tàu. Cam kết xe chất lượng, hỗ trợ trả góp.">
+    <link rel="canonical" href="https://www.auto28.com.vn">
+
+    <!-- ⚡ PRELOAD CRITICAL FONTS TO ELIMINATE CLS -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/bevietnampro/v12/QdVPSTAyLFyeg_IDWvOJmVES_Hw3BXoYZ7Aj.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/bevietnampro/v12/QdVPSTAyLFyeg_IDWvOJmVES_Hw4BXoYZ7AjSh8.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_vb.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko50yygg_vbd-E.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Google Fonts: Plus Jakarta Sans for Headers & Be Vietnam Pro for Vietnamese diacritics readability -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/base.css">
+
+    <!-- 🌐 FAVICON -->
+    <link class="favicon-tag" rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781182289/logos/whznez2lfw4qnu2tsd9g.jpg">
+
+    <!-- 📊 STRUCTURED DATA (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoDealer",
+      "name": "Auto 28 | Showroom Xe VinFast Lướt Tại TP.HCM, Bình Dương, Đồng Nai",
+      "description": "Auto 28 - Showroom mua bán, ký gửi xe VinFast lướt uy tín tại TP.HCM, Bình Dương, Đồng Nai, Long An, Vũng Tàu. Cam kết xe chất lượng, hỗ trợ trả góp nhanh.",
+      "telephone": "0888813838",
+      "url": "https://www.auto28.com.vn",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8F Đường Trịnh Hoài Đức",
+        "addressLocality": "Tăng Nhơn Phú",
+        "addressRegion": "Quận 9, TP. Hồ Chí Minh",
+        "addressCountry": "VN"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Thành phố Hồ Chí Minh" },
+        { "@type": "AdministrativeArea", "name": "Bình Dương" },
+        { "@type": "AdministrativeArea", "name": "Đồng Nai" },
+        { "@type": "AdministrativeArea", "name": "Long An" },
+        { "@type": "AdministrativeArea", "name": "Tây Ninh" },
+        { "@type": "AdministrativeArea", "name": "Bà Rịa - Vũng Tàu" }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Car",
+      "name": "VinFast Lướt",
+      "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781182289/logos/whznez2lfw4qnu2tsd9g.jpg",
+      "brand": {
+        "@type": "Brand",
+        "name": "VinFast"
+      },
+      "model": "Lướt",
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "VinFast"
+      },
+      "bodyType": "SUV",
+      "fuelType": "Electricity",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "VND",
+        "seller": {
+          "@type": "AutoDealer",
+          "name": "Auto 28"
+        }
+      }
+    }
+    </script>
+
+    <!-- Unified Performance-Optimized Tracking Script -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        window.fbq = window.fbq || function() {
+            (window.fbq.q = window.fbq.q || []).push(arguments);
+        };
+        window.fbq.push = window.fbq;
+        window.fbq.loaded = true;
+        window.fbq.version = '2.0';
+        window.fbq.queue = [];
+
+        window.ttq = window.ttq || [];
+        window.ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+        window.ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+                t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+            }
+        };
+        for (var i = 0; i < window.ttq.methods.length; i++) {
+            window.ttq.setAndDefer(window.ttq, window.ttq.methods[i]);
+        }
+    </script>
+
+    <!-- 🌐 OPEN GRAPH & SOCIAL MEDIA -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Auto 28 | Showroom Xe VinFast Lướt Tại TP.HCM, Bình Dương, Đồng Nai">
+    <meta property="og:description" content="Auto 28 - Showroom mua bán, ký gửi xe VinFast lướt uy tín tại TP.HCM, Bình Dương, Đồng Nai, Long An, Vũng Tàu. Cam kết xe chất lượng, hỗ trợ trả góp.">
+    <meta property="og:image" content="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781182289/logos/whznez2lfw4qnu2tsd9g.jpg">
+    <meta property="og:url" content="https://www.auto28.com.vn">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Auto 28 | Showroom Xe VinFast Lướt Tại TP.HCM, Bình Dương, Đồng Nai">
+    <meta name="twitter:description" content="Auto 28 - Showroom mua bán, ký gửi xe VinFast lướt uy tín tại TP.HCM, Bình Dương, Đồng Nai, Long An, Vũng Tàu. Cam kết xe chất lượng, hỗ trợ trả góp.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781182289/logos/whznez2lfw4qnu2tsd9g.jpg">
+</head>
+
+<body class="neural-expressive-body">
+    <!-- 🔮 AMBIENT CANVAS -->
+    <div class="ambient-canvas-base">
+        <div class="ambient-light light-1"></div>
+        <div class="ambient-light light-2"></div>
+        <div class="ambient-light light-3"></div>
+    </div>
+
+    <!-- 💊 FLOATING NAV CAPSULE -->
+<header class="floating-nav-capsule" id="nav-capsule">
+    <a href="./index.html" class="nav-logo">AUTO28</a>
+    <nav class="nav-links">
+        <a href="./index.html#inventory" class="nav-link">DANH SÁCH XE</a>
+        <a href="/dinh-gia" class="nav-link">ĐỊNH GIÁ BÁN XE</a>
+        <a href="/huong-dan" class="nav-link">HƯỚNG DẪN PHÁP LÝ</a>
+        <a href="/huong-dan-mua-xe-dien" class="nav-link">CẨM NANG XE ĐIỆN</a>
+    </nav>
+    <a href="tel:0888813838" class="btn-nav-hotline">HOTLINE</a>
+</header>
+
+    <main>
+    <!-- ⚡ SECTION 1: HERO & UNIFIED SEARCH FILTER -->
+    <section id="hero" class="hero">
+        <div class="hero__bokeh" id="hero-bokeh"></div>
+
+        <div class="hero__content hero__content--centered">
+            <div class="hero__text hero__text--centered">
+                <div style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.25); color: #2563eb; padding: 6px 18px; border-radius: 99px; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; box-shadow: 0 2px 10px rgba(37, 99, 235, 0.1);">
+                    🔥 <span id="showroom-live-date-badge">Hôm nay: Còn 3 suất ưu đãi trả góp 70% + Tặng 1 năm bảo dưỡng</span>
+                </div>
+                <br>
+                <span class="hero__badge">KHO XE CHÍNH HÃNG · GIAO XE TẬN NHÀ</span>
+                <h1 class="hero__headline hero__headline--centered">Sở Hữu Xe VinFast Lướt Như Mới – <br><span class="text-gradient">Cam Kết 5 Tiêu Chuẩn Vàng</span></h1>
+                <p class="hero__sub hero__sub--centered">Nguyên bản 100%. Xe chính chủ. Bảo hành chính hãng. Hỗ trợ trả góp 70% giá trị xe. Đổi trả miễn phí trong 7 ngày nếu phát hiện lỗi đâm đụng, ngập nước.</p>
+                <div class="hero__trust-badge hero__trust-badge--centered">
+                    ⚡ Đã bàn giao 1.245+ xe VinFast trên toàn quốc
+                </div>
+            </div>
+
+            <!-- BENTO FILTER PILL BOX -->
+            <form class="bento-filter-pill" id="hero-bento-filter-form" onsubmit="event.preventDefault();" style="margin-top: 0;">
+                <!-- Item 1: Dropdown Chọn dòng xe -->
+                <div class="filter-item">
+                    <label for="search-model">Dòng xe mong muốn</label>
+                    <select id="search-model" name="search-model">
+                        <option value="all" selected>Tất cả các dòng xe</option>
+                        <option value="vf3">VinFast VF 3</option>
+                        <option value="vf5">VinFast VF 5</option>
+                        <option value="vf6">VinFast VF 6</option>
+                        <option value="vf7">VinFast VF 7</option>
+                        <option value="vf8">VinFast VF 8</option>
+                        <option value="vf9">VinFast VF 9</option>
+                        <option value="vfe34">VinFast VF e34</option>
+                        <option value="limo">VinFast LIMO</option>
+                        <option value="mpv">VinFast MPV 7</option>
+                        <option value="lux-a">VinFast Lux A 2.0</option>
+                        <option value="lux-sa">VinFast Lux SA 2.0</option>
+                        <option value="president">VinFast President</option>
+                        <option value="fadil">VinFast Fadil</option>
+                    </select>
+                </div>
+                <div class="filter-divider"></div>
+                <!-- Item 2: Dropdown Khoảng giá -->
+                <div class="filter-item">
+                    <label for="search-price">Khoảng giá phù hợp</label>
+                    <select id="search-price" name="search-price">
+                        <option value="all">Tất cả mức giá</option>
+                        <option value="under-400">Dưới 400 triệu</option>
+                        <option value="400-600">400 - 600 triệu</option>
+                        <option value="600-800">600 - 800 triệu</option>
+                        <option value="over-800">Trên 800 triệu</option>
+                    </select>
+                </div>
+                <!-- Button CTA -->
+                <button id="btn-search-trigger" class="btn-filter-submit" type="submit">
+                    Tìm Xe Ưng Ý Ngay ➜
+                </button>
+            </form>
+
+            <div style="margin-top: 1rem;">
+                <a href="/dinh-gia" style="color: var(--color-accent-indigo); text-decoration: none; font-weight: 700; font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.02em;">
+                    💰 BẠN MUỐN BÁN XE? CLICK ĐỂ ĐỊNH GIÁ AI →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💎 SECTION 2: BENTO GRID: 4 CAM KẾT VÀNG CHỈ CÓ TẠI AUTO 28 -->
+    <section id="ai-commitments" class="ai-commitments">
+        <div class="section-header reveal">
+            <h2>4 Cam Kết Chỉ Có Tại Auto 28</h2>
+        </div>
+        <ul class="asymmetric-bento-grid reveal-stagger">
+            <li class="bento-card-white bento-span-2 reveal">
+                <span class="card-icon">🔍</span>
+                <h3>Minh Bạch Lịch Sử – Check Hãng Toàn Quốc</h3>
+                <p>Mỗi chiếc VinFast (Fadil, Lux A, Lux SA cho đến các dòng xe điện VF 3, VF 5, VF 6, VF 7, VF 8, VF 9) trước khi lên sàn Auto 28 đều phải trải qua quy trình kiểm tra khắt khe. Chúng tôi cam kết bằng văn bản: Không đâm đụng ảnh hưởng đến kết cấu, không ngập nước/thủy kích, không tua đồng hồ Odo. Khách hàng thoải mái mang xe ra hãng hoặc bất kỳ gara nào để check lại.</p>
+            </li>
+
+            <li class="bento-card-white bento-span-1 reveal">
+                <span class="card-icon">🔋</span>
+                <h3>Pin Hoàn Hảo – Sẵn Sàng Lăn Bánh</h3>
+                <p>Đối với xe điện VinFast, Auto 28 cung cấp chứng nhận kiểm tra sức khỏe pin (SOH) trên 85%, cập nhật phần mềm mới nhất và hỗ trợ thủ tục chuyển đổi gói thuê pin chính chủ từ VinFast chỉ trong 30 phút.</p>
+            </li>
+
+            <li class="bento-card-white bento-span-1 reveal">
+                <span class="card-icon">💸</span>
+                <h3>Trả Góp 70% – Thủ Tục Trong Ngày</h3>
+                <p>Liên kết chặt chẽ với các ngân hàng lớn. Hỗ trợ vay mua xe VinFast lướt với lãi suất ưu đãi, thủ tục xét duyệt nhanh gọn, nhận xe ngay trong ngày.</p>
+            </li>
+
+            <li class="bento-card-white bento-span-2 reveal">
+                <span class="card-icon">🛡️</span>
+                <h3>7 Ngày Trải Nghiệm – Lỗi Là Đổi Trả</h3>
+                <p>Để khẳng định chất lượng đầu vào, Auto 28 áp dụng chính sách độc quyền: Khách hàng có 7 ngày chạy thử nghiệm sản phẩm. Nếu phát hiện xe không đúng cam kết ban đầu, chúng tôi hoàn trả 100% tiền cọc không mất phí.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 👥 SECTION 3: SOCIAL PROOF / STATS -->
+    <section id="social-proof" class="social-proof">
+        <div class="counter-grid reveal">
+            <div class="counter-item">
+                <span id="counter-cars" class="counter-number">0</span>
+                <span class="counter-label">Xe VinFast Đã Kiểm Định & Giao Xe</span>
+            </div>
+            <div class="counter-item">
+                <span id="counter-billion" class="counter-number">0</span>
+                <span class="counter-label">VNĐ Đã Giải Ngân Giao Dịch</span>
+            </div>
+        </div>
+
+        <!-- Testimonial Slider -->
+        <div class="testimonial-slider-container reveal">
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Tôi bán chiếc Lux A 2021, tưởng thủ tục sẽ rất rườm rà vì xe đang trả góp. Ai ngờ anh em Auto28 làm xong tất toán ngân hàng chỉ trong một buổi chiều. Giá tốt hơn showroom kế bên 15 triệu!"
+                    </p>
+                    <div>
+                        <div class="testimonial-author">Anh Hoàng Minh</div>
+                        <div class="testimonial-role">Chủ xe VinFast Lux A 2.0 · Quận 7, TP.HCM</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Tìm xe cũ rất sợ pin chai, nhưng mua VF8 ở đây được cam kết dung lượng pin trên 94%, đầy đủ giấy tờ check hãng. Xe đi cực kỳ êm ái, như xe mới."
+                    </p>
+                    <div>
+                        <div class="testimonial-author">Chị Lan Anh</div>
+                        <div class="testimonial-role">Chủ xe VinFast VF 8 · TP. Thủ Đức</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Bán xe cũ cho showroom ngoài hay bị dìm giá, qua bên này có công cụ định giá bằng AI rất minh bạch. Check xe tại nhà, ký công chứng xong tiền về tài khoản ngay lập tức."
+                    </p>
+                    <div>
+                        <div class="testimonial-author">Anh Tuấn</div>
+                        <div class="testimonial-role">Chủ xe VinFast Fadil · Bình Dương</div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Dịch vụ thu mua tận nhà vô cùng tiện lợi. Nhân viên xuống tận Biên Hòa kiểm tra xe kỹ lưỡng, bàn giao tiền bạc nhanh chóng, thủ tục hỗ trợ từ A-Z rất tin cậy."
+                    </p>
+                    <div>
+                        <div class="testimonial-author">Chú Hùng</div>
+                        <div class="testimonial-role">Chủ xe VinFast Lux SA 2.0 · Biên Hòa, Đồng Nai</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🚗 SECTION 4: FLUID PRODUCT GRID -->
+    <section id="inventory" class="product-grid-section">
+        <div class="section-header reveal">
+            <h2>Kho Xe Điện VinFast Sẵn Giao Ngay</h2>
+            <p>Hồ sơ pháp lý đầy đủ, bảo hành chính hãng, bàn giao và giao xe tận hầm chung cư.</p>
+        </div>
+
+        <ul class="filter-pills reveal">
+            <li class="filter-pill active" data-filter="all">Tất cả xe</li>
+            <li class="filter-pill" data-filter="vf3">VF 3</li>
+            <li class="filter-pill" data-filter="vf5">VF 5</li>
+            <li class="filter-pill" data-filter="vf6">VF 6</li>
+            <li class="filter-pill" data-filter="vf7">VF 7</li>
+            <li class="filter-pill" data-filter="vfe34">VF e34</li>
+            <li class="filter-pill" data-filter="vf8">VF 8</li>
+            <li class="filter-pill" data-filter="vf9">VF 9</li>
+            <li class="filter-pill" data-filter="limo">Limo</li>
+            <li class="filter-pill" data-filter="mpv">MPV 7</li>
+            <li class="filter-pill" data-filter="gas">Xe xăng (Lux/Fadil)</li>
+        </ul>
+
+        <div class="fluid-product-grid reveal-stagger" id="cars-grid" data-filter-model="all"></div>
+    </section>
+
+    <!-- 🔢 SECTION 5: ADVANTAGES -->
+    <section id="process" class="process">
+        <div class="section-header reveal">
+            <h2>Ưu Thế Vượt Trội Tại Auto 28</h2>
+            <p>Xe đã qua sử dụng tại Auto 28 không chỉ được kiểm định nghiêm ngặt mà còn được chăm sóc và tái chuẩn hóa theo đúng triết lý chất lượng của thương hiệu. Từ kiểm định kỹ thuật, lịch sử xe minh bạch cho đến trải nghiệm mua hàng chuyên nghiệp - tất cả tạo nên sự khác biệt cho mỗi chiếc xe lướt Auto 28.</p>
+        </div>
+        <ul class="asymmetric-bento-grid reveal-stagger">
+            <li class="bento-card-white bento-span-2 reveal">
+                <h3>Kiểm định toàn diện</h3>
+                <p>Xe qua quy trình kiểm định kỹ thuật khắt khe, phân loại minh bạch (Signature - Selected - Standard), đảm bảo chất lượng.</p>
+            </li>
+
+            <li class="bento-card-white bento-span-1 reveal">
+                <h3>Lịch sử xe rõ ràng, minh bạch</h3>
+                <p>Công khai lịch sử sử dụng, tránh xe lỗi, đâm đụng, ngập nước. Minh bạch mọi thông tin kỹ thuật và pháp lý.</p>
+            </li>
+
+            <li class="bento-card-white bento-span-1 reveal">
+                <h3>Bảo hành chính hãng</h3>
+                <p>Hỗ trợ bảo hành từ VinFast, phụ tùng chính hãng, bảo dưỡng định kỳ đúng chuẩn.</p>
+            </li>
+
+            <li class="bento-card-white bento-span-2 reveal">
+                <h3>Thủ tục nhanh gọn, chuyên nghiệp</h3>
+                <p>Hỗ trợ pháp lý, sang tên - giao xe nhanh chóng. Tư vấn tài chính linh hoạt, thủ tục vay dễ dàng.</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ❓ SECTION 6: FAQ ACCORDION -->
+    <section id="faq" class="faq">
+        <div class="section-header reveal">
+            <h2>Giải đáp thắc mắc của bạn</h2>
+        </div>
+        <ul class="faq-container">
+            <li class="faq-item reveal">
+                <div class="faq-question">
+                    Thủ tục chuyển nhượng hợp đồng pin xe điện có phức tạp không?
+                    <i class="faq-icon">↓</i>
+                </div>
+                <div class="faq-answer">
+                    Hoàn toàn không phức tạp. Auto28 phối hợp chặt chẽ trực tiếp với VinFast hỗ trợ trọn gói thủ tục sang tên hợp đồng thuê pin. Bạn chỉ cần ký giấy ủy quyền mua bán xe cũ theo mẫu, toàn bộ phần còn lại chúng tôi sẽ giải quyết trong 24 giờ.
+                </div>
+            </li>
+            <li class="faq-item reveal">
+                <div class="faq-question">
+                    Xe đang vay ngân hàng / trả góp có giao dịch được không?
+                    <i class="faq-icon">↓</i>
+                </div>
+                <div class="faq-answer">
+                    Hoàn toàn được! Auto28 hỗ trợ tất toán toàn bộ số tiền vay ngân hàng hoặc các khoản vay tài chính liên quan ngay trong ngày, hỗ trợ giải phóng giấy tờ xe bản gốc để tiến hành mua bán đúng luật pháp Việt Nam.
+                </div>
+            </li>
+            <li class="faq-item reveal">
+                <div class="faq-question">
+                    Quy trình kiểm định 176 hạng mục gồm những gì?
+                    <i class="faq-icon">↓</i>
+                </div>
+                <div class="faq-answer">
+                    Kỹ thuật viên chuyên nghiệp sẽ kiểm định toàn diện từ thân vỏ (nước sơn, độ biến dạng do va chạm), gầm xe, các mạch sạc, chẩn đoán phần mềm bằng máy quét lỗi chuyên dụng VinFast, và đánh giá chi tiết dung lượng pin thực tế.
+                </div>
+            </li>
+            <li class="faq-item reveal">
+                <div class="faq-question">
+                    Mức định giá AI của Auto28 được cập nhật thế nào?
+                    <i class="faq-icon">↓</i>
+                </div>
+                <div class="faq-answer">
+                    Thuật toán thông minh của chúng tôi quét dữ liệu giao dịch thực tế từ các hội nhóm, sàn xe cũ uy tín trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực của xe điện Việt Nam.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 📍 SECTION 7: MAP & ADDRESS SHOWROOM -->
+    <section id="location" class="location reveal" style="text-align: center;">
+        <div class="section-header" style="margin-bottom: 2rem;">
+            <h2>Ghé thăm Showroom Auto28</h2>
+            <p>Đón tiếp trực tiếp khách hàng lái thử xe và hoàn tất hồ sơ trực tiếp tại showroom.</p>
+        </div>
+        <div class="map-container" style="max-width: 1000px; margin: 0 auto; border-radius: 2rem; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.6); line-height: 0; border: 1px solid rgba(255,255,255,0.05);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.578425109371!2d106.77361217593324!3d10.843538889309341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527b0785d11ab%3A0x8437185ef2074ae3!2sAuto28!5e0!3m2!1svi!2s!4v1779961633757!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bản đồ vị trí Showroom Auto28">
+            </iframe>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- 🌙 DARK FOOTER -->
+<footer class="dark-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <a href="./index.html" class="nav-logo">AUTO28</a>
+            <p class="footer-tagline" style="margin-top: 16px;">Hệ thống mua bán ký gửi xe ô tô VinFast lướt uy tín hàng đầu Việt Nam. Cam kết 5 tiêu chuẩn vàng kiểm định chất lượng và hỗ trợ pháp lý trọn gói.</p>
+            <div class="footer-contact-info" style="font-size: 0.9rem; margin-top: 16px;">
+                <p>📍 8F Đường Trịnh Hoài Đức, Hiệp Phú, Quận 9, TP. Thủ Đức, TP. HCM</p>
+                <p>📞 Hotline: 0888.81.38.38</p>
+            </div>
+        </div>
+        
+        <div class="footer-col">
+            <h5>Dịch Vụ</h5>
+            <ul class="footer-links">
+                <li><a href="./index.html">Mua xe ô tô lướt</a></li>
+                <li><a href="/dinh-gia">Định giá & Thu mua</a></li>
+                <li><a href="https://zalo.me/0888813838" target="_blank" rel="noopener" style="color: #10b981; font-weight: 600;">💬 Chat Zalo 24/7 (0888.81.38.38)</a></li>
+                <li><a href="/huong-dan">Hướng dẫn pháp lý</a></li>
+                <li><a href="/huong-dan-mua-xe-dien">Cẩm nang xe điện</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h5>Dòng Xe VinFast</h5>
+            <ul class="footer-links" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;">
+                <li><a href="/vf3">VinFast VF 3</a></li>
+                <li><a href="/vf5">VinFast VF 5</a></li>
+                <li><a href="/vf6">VinFast VF 6</a></li>
+                <li><a href="/vf7">VinFast VF 7</a></li>
+                <li><a href="/vf8">VinFast VF 8</a></li>
+                <li><a href="/vf9">VinFast VF 9</a></li>
+                <li><a href="/vfe34">VinFast VF e34</a></li>
+                <li><a href="/lux-a">VinFast Lux A</a></li>
+                <li><a href="/lux-sa">VinFast Lux SA</a></li>
+                <li><a href="/fadil">VinFast Fadil</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 Auto28. Tất cả quyền được bảo lưu.</p>
+        <p>Hotline: <a href="tel:0888813838" style="color: #3b82f6; text-decoration: none; font-weight: 700;">0888.81.38.38</a></p>
+    </div>
+</footer>
+    <!-- 💻 MODAL CHI TIẾT XE -->
+<div class="expressive-modal" id="car-modal-view" role="dialog" aria-modal="true" aria-labelledby="modal-car-title" aria-hidden="true">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-wrapper">
+        <div class="modal-drag-indicator" id="modal-drag-indicator" title="Vuốt xuống để đóng"></div>
+        <button class="modal-close" id="modal-close-btn" aria-label="Đóng cửa sổ chi tiết xe">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="modal-content-inner">
+            <div class="modal-visual-panel">
+                <div class="modal-image-wrapper">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3C/svg%3E" alt="Car Detail" class="modal-active-img" id="modal-display-img">
+                </div>
+            </div>
+
+            <div class="modal-info-panel">
+                <div class="modal-header">
+                    <span class="modal-meta-line" id="modal-car-class">SUV 5 CHỖ · ĐỜI 2023</span>
+                    <h2 class="modal-car-title" id="modal-car-title">VinFast VF 8 Plus</h2>
+                    <div class="modal-price-line">
+                        <span class="modal-price-label">Giá ưu đãi:</span>
+                        <span class="modal-price-value" id="modal-car-price">745 Triệu</span>
+                    </div>
+
+                    <!-- 🔥 Scarcity Urgency Badge -->
+                    <div class="modal-scarcity-badge" id="modal-scarcity-badge">🎁 Ưu đãi độc quyền: Hỗ trợ thủ tục sang tên trọn gói</div>
+                </div>
+
+                <!-- Bento Micro-Cards Spec Grid -->
+                <ul class="modal-specs-bento-grid">
+                    <li class="bento-spec-card"><span class="spec-card-icon">⏱️</span><div class="spec-card-text"><span class="spec-card-label">Số Odo</span><strong id="modal-spec-odo">15,000 km</strong></div></li>
+                    <li class="bento-spec-card"><span class="spec-card-icon">🎨</span><div class="spec-card-text"><span class="spec-card-label">Màu sơn</span><strong id="modal-spec-color">Màu Bạc</strong></div></li>
+                    <li class="bento-spec-card"><span class="spec-card-icon">📍</span><div class="spec-card-text"><span class="spec-card-label">Biển số</span><strong id="modal-spec-plate">Biển Hà Nội</strong></div></li>
+                    <li class="bento-spec-card"><span class="spec-card-icon">🔋</span><div class="spec-card-text"><span class="spec-card-label">Pin xe</span><strong id="modal-spec-battery">Thuê pin (SOH 95%)</strong></div></li>
+                    <li class="bento-spec-card bento-spec-card--full"><span class="spec-card-icon">🛡️</span><div class="spec-card-text"><span class="spec-card-label">Bảo hành</span><strong>Cam kết bảo hành chính hãng từ VinFast</strong></div></li>
+                </ul>
+
+                <div class="modal-action-box" id="modal-action-box">
+                    <p class="action-box-title" style="text-align: center; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; color: #0f172a;">Đăng ký lái thử &amp; Nhận báo giá lăn bánh</p>
+                    <form id="lead-form" style="display: flex; flex-direction: column; gap: 0.625rem; width: 100%;">
+                        <!-- 🛡️ ANTI-BOT HONEYPOT FIELD (Hidden from real users, traps automated spam bots) -->
+                        <input type="text" name="hp_company_field" id="modal-hp-field" style="display:none !important; position:absolute; left:-9999px; width:0; height:0;" tabindex="-1" autocomplete="off">
+
+                        <input type="text" id="modal-name" name="fullname" placeholder="Họ và tên của bạn" class="modal-pill-input" required autocomplete="name">
+                        <input type="tel" id="modal-phone" name="phone" placeholder="Số điện thoại liên hệ (10 số)" class="modal-tel-input" required autocomplete="tel" maxlength="13">
+                        <span class="modal-input-feedback" id="modal-phone-feedback"></span>
+                        
+                        <p class="action-box-trust" style="text-align: center; font-size: 11px; color: #64748b; margin: 2px 0 6px;">🔒 Auto28 bảo mật 100% thông tin &amp; tư vấn miễn phí.</p>
+                        
+                        <button type="submit" class="btn-modal-submit" id="btn-modal-action-submit">⚡ NHẬN ƯU ĐÃI NGAY ➜</button>
+                    </form>
+
+                    <!-- Instant Quick Actions with Touch Spacing Safety Zone -->
+                    <div class="modal-quick-actions" style="margin-top: 12px; display: flex; gap: 8px;">
+                        <a href="tel:0888813838" class="btn-quick-action btn-quick-call" id="btn-quick-call" style="flex: 1; text-align: center; text-decoration: none; padding: 10px 14px; border-radius: 9999px; background: rgba(37, 99, 235, 0.08); color: #2563eb; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(37, 99, 235, 0.2); transition: all 0.2s ease;">📞 Gọi Hotline</a>
+                        <a href="https://zalo.me/0888813838" target="_blank" rel="noopener" class="btn-quick-action btn-quick-zalo" id="btn-quick-zalo" style="flex: 1; text-align: center; text-decoration: none; padding: 10px 14px; border-radius: 9999px; background: rgba(16, 185, 129, 0.08); color: #059669; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(16, 185, 129, 0.2); transition: all 0.2s ease;">💬 Chat Zalo Xe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- 🎁 EXIT-INTENT CRO MODAL FOR SHOWROOM -->
+
+    <div id="showroom-exit-modal" style="position: fixed; inset: 0; background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(8px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 16px;">
+        <div style="background: #ffffff; width: 100%; max-width: 480px; border-radius: 24px; padding: 28px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 2px solid #2563eb; position: relative; text-align: center;">
+            <button id="close-showroom-exit-modal" aria-label="Close modal" style="position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; font-size: 1.5rem; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; color: #64748b; display: flex; align-items: center; justify-content: center;">&times;</button>
+            <span style="font-size: 2.8rem; display: block; margin-bottom: 6px;">🚗</span>
+            <span style="background: rgba(37, 99, 235, 0.1); color: #2563eb; padding: 4px 12px; border-radius: 99px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;">Báo Giá Lăn Bánh Ưu Đãi</span>
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 10px 0 6px 0;">Nhận Voucher +5 Triệu Khi Mua Xe VinFast Lướt</h3>
+            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 16px; line-height: 1.5;">Auto28 hỗ trợ giảm ngay 5.000.000 VNĐ vào hợp đồng mua xe & giao xe tận nhà miễn phí cho khách hàng đăng ký hôm nay.</p>
+            <form id="showroom-exit-form" style="display: flex; flex-direction: column; gap: 10px;">
+                <input type="tel" id="showroom-exit-phone" required placeholder="Nhập Số điện thoại của bạn..." maxlength="12" style="padding: 12px 16px; border-radius: 12px; border: 1px solid #cbd5e1; font-size: 1rem; font-weight: 600; outline: none;">
+                <button type="submit" style="background: #2563eb; color: #fff; border: none; padding: 14px 20px; border-radius: 12px; font-weight: 800; font-size: 1rem; cursor: pointer; transition: background 0.2s;">
+                    ⚡ NHẬN BÁO GIÁ & VOUCHER +5 TRIỆU ➜
+                </button>
+            </form>
+            <p style="font-size: 0.75rem; color: #94a3b8; margin-top: 10px;">✓ Tặng gói check xe chính hãng · Phản hồi trong 5 phút</p>
+        </div>
+    </div>
+
+
+    <script src="./cars_data.js"></script>
+    <script type="module" src="./main.js"></script>
+
+    <!-- ⚡ SHOWROOM CRO SPECIALIST ENGINE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Live Date Badge
+            const dateBadge = document.getElementById('showroom-live-date-badge');
+            if (dateBadge) {
+                const now = new Date();
+                const dateStr = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
+                dateBadge.textContent = `Hôm nay (${dateStr}): Còn 3 suất ưu đãi trả góp 70% + Tặng 1 năm bảo dưỡng`;
+            }
+
+            // Exit-Intent Modal
+            const exitModal = document.getElementById('showroom-exit-modal');
+            const closeBtn = document.getElementById('close-showroom-exit-modal');
+            const exitForm = document.getElementById('showroom-exit-form');
+            let hasShownExit = false;
+
+            const showExitModal = () => {
+                if (hasShownExit || localStorage.getItem('auto28_showroom_exit_dismissed')) return;
+                hasShownExit = true;
+                if (exitModal) exitModal.style.display = 'flex';
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({'event': 'cro_showroom_exit_trigger'});
+            };
+
+            document.addEventListener('mouseleave', (e) => {
+                if (e.clientY <= 0) showExitModal();
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    if (exitModal) exitModal.style.display = 'none';
+                    try { localStorage.setItem('auto28_showroom_exit_dismissed', '1'); } catch (e) {}
+                });
+            }
+
+            if (exitForm) {
+                exitForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const phone = document.getElementById('showroom-exit-phone')?.value || '';
+                    const cleanPhone = phone.replace(/\D/g, '');
+                    if (!cleanPhone || cleanPhone.length < 10) {
+                        alert('Vui lòng nhập chính xác số điện thoại (10 chữ số)!');
+                        return;
+                    }
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({'event': 'form_lead_success', 'cro_event': 'showroom_exit_lead', 'phone': cleanPhone});
+                    alert('🎉 Cảm ơn bạn! Auto28 đã ghi nhận SĐT ' + phone + ' để gửi bảng giá lăn bánh ưu đãi và Voucher +5 Triệu qua Zalo!');
+                    if (exitModal) exitModal.style.display = 'none';
+                    try { localStorage.setItem('auto28_showroom_exit_dismissed', '1'); } catch (e) {}
+                });
+            }
+        });
+    </script>
+</body>
+</html>`;
+}
+const MODEL_DETAILS = {
+  'vf3': {
+    name: 'VinFast VF 3',
+    subtitle: 'Xe Điện Mini SUV Đô Thị Siêu Tiết Kiệm',
+    price: '240 - 299 Triệu',
+    tag: 'Mini SUV 4 Chỗ',
+    img: '/assets/cars/vf3.jpg',
+    battery: 'Pin LFP 18.6 kWh · Quãng đường 210 km/sạc',
+    specs: [
+      { label: 'Số chỗ ngồi', val: '4 chỗ' },
+      { label: 'Quãng đường sạc full', val: '210 km (NEDC)' },
+      { label: 'Thời gian sạc nhanh 10-70%', val: '36 phút' },
+      { label: 'Khoảng sáng gầm xe', val: '191 mm' },
+      { label: 'Bảo hành xe', val: '7 năm hoặc 160,000 km' }
+    ],
+    desc: 'VinFast VF 3 lướt giá siêu tốt tại Auto28. Xe kiểm định 5 tiêu chuẩn vàng, hồ sơ sang tên trọn gói trong ngày.'
+  },
+  'vf5': {
+    name: 'VinFast VF 5 Plus',
+    subtitle: 'SUV Phân Khúc A Quốc Dân - Tối Ưu Chi Phí',
+    price: '420 - 480 Triệu',
+    tag: 'A-SUV 5 Chỗ',
+    img: '/assets/cars/vf5.jpg',
+    battery: 'Pin LFP 37.23 kWh · Quãng đường 326 km/sạc',
+    specs: [
+      { label: 'Công suất tối đa', val: '134 HP (100 kW)' },
+      { label: 'Quãng đường sạc full', val: '326 km (NEDC)' },
+      { label: 'Mô-men xoắn cực đại', val: '135 Nm' },
+      { label: 'Túi khí an toàn', val: '6 Túi khí' },
+      { label: 'Bảo hành xe chính hãng', val: '7 năm hoặc 140,000 km' }
+    ],
+    desc: 'Bán xe VinFast VF 5 Plus cũ lướt đẹp như mới. Hỗ trợ trả góp 80%, giao xe tận nơi.'
+  },
+  'vf6': {
+    name: 'VinFast VF 6',
+    subtitle: 'B-SUV Đa Dụng - Đẳng Cấp Công Nghệ',
+    price: '610 - 710 Triệu',
+    tag: 'B-SUV 5 Chỗ',
+    img: '/assets/cars/vf6.jpg',
+    battery: 'Pin LFP 59.6 kWh · Quãng đường 399 - 381 km/sạc',
+    specs: [
+      { label: 'Công suất tối đa', val: '201 HP (150 kW) Plus' },
+      { label: 'Hệ thống trợ lái ADAS', val: 'Cấp độ 2' },
+      { label: 'Màn hình trung tâm', val: '12.9 inch Touchscreen' },
+      { label: 'Tăng tốc 0-100 km/h', val: '8.9 giây' },
+      { label: 'Trang bị an toàn', val: '8 Túi khí' }
+    ],
+    desc: 'VinFast VF 6 lướt chính chủ tại Auto28. Cam kết xe không đâm đụng, không ngập nước, pin nguyên bản.'
+  },
+  'vf7': {
+    name: 'VinFast VF 7',
+    subtitle: 'C-SUV Thiết Kế Vũ Trụ Tương Lai',
+    price: '780 - 950 Triệu',
+    tag: 'C-SUV 5 Chỗ',
+    img: '/assets/cars/vf7.jpg',
+    battery: 'Pin LFP 75.3 kWh · Quãng đường 431 - 496 km/sạc',
+    specs: [
+      { label: 'Công suất tối đa (Plus AWD)', val: '349 HP (260 kW)' },
+      { label: 'Mô-men xoắn cực đại', val: '500 Nm' },
+      { label: 'Hệ dẫn động', val: 'AWD 2 Cầu toàn thời gian' },
+      { label: 'Mâm xe thể thao', val: '20 inch Alloy' },
+      { label: 'Trợ lái thông minh', val: 'Full ADAS Level 2' }
+    ],
+    desc: 'VinFast VF 7 lướt siêu lướt giá cực ưu đãi. Đầy đủ bản Base & Plus AWD, kiểm định 175 chi tiết.'
+  },
+  'vf8': {
+    name: 'VinFast VF 8',
+    subtitle: 'D-SUV Đẳng Cấp Toàn Cầu - Pin Tiên Tiến',
+    price: '725 - 890 Triệu',
+    tag: 'D-SUV 5 Chỗ',
+    img: '/assets/cars/vf8.jpg',
+    battery: 'Pin CATL 87.7 kWh · Quãng đường 471 km/sạc',
+    specs: [
+      { label: 'Công suất tối đa (Plus)', val: '402 HP (300 kW)' },
+      { label: 'Mô-men xoắn cực đại', val: '620 Nm' },
+      { label: 'Tăng tốc 0-100 km/h', val: '5.5 giây' },
+      { label: 'Hệ thống treo', val: 'Độc lập đa liên kết' },
+      { label: 'Tiêu chuẩn an toàn', val: 'ASEAN NCAP 5 sao' }
+    ],
+    desc: 'VinFast VF 8 Eco & Plus lướt giá tốt nhất thị trường. Auto28 bao kiểm tra hãng, hỗ trợ làm sang tên trọn gói.'
+  },
+  'vf9': {
+    name: 'VinFast VF 9',
+    subtitle: 'E-SUV Chủ Tịch Hạng Sang - 6/7 Chỗ Đỉnh Cao',
+    price: '1,150 - 1,450 Triệu',
+    tag: 'E-SUV 6/7 Chỗ',
+    img: '/assets/cars/vf9.jpg',
+    battery: 'Pin CATL 123 kWh · Quãng đường 626 km/sạc',
+    specs: [
+      { label: 'Công suất tối đa', val: '402 HP (300 kW)' },
+      { label: 'Ghế thương gia (Bản 6 chỗ)', val: 'Massage, Thông gió, Sưởi' },
+      { label: 'Cửa sổ trời toàn cảnh', val: 'Panoramic Glass Roof' },
+      { label: 'Bóng hơi giảm chấn', val: 'Treo khí nén thích ứng' },
+      { label: 'Màn hình giải trí', val: '15.6 inch OLED' }
+    ],
+    desc: 'Mua bán VinFast VF 9 lướt bản Eco & Plus 6/7 chỗ. Cam kết chất lượng cao nhất, bảo hành chính hãng lâu dài.'
+  },
+  'vfe34': {
+    name: 'VinFast VF e34',
+    subtitle: 'C-SUV Xe Điện Tiên Phong Việt Nam',
+    price: '460 - 530 Triệu',
+    tag: 'C-SUV 5 Chỗ',
+    img: '/assets/cars/vfe34.jpg',
+    battery: 'Pin LFP 42 kWh · Quãng đường 318 km/sạc',
+    specs: [
+      { label: 'Công suất tối đa', val: '147 HP (110 kW)' },
+      { label: 'Trợ lý ảo thông minh', val: 'ViVi tiếng Việt' },
+      { label: 'Quản lý xe', val: 'App VinFast Smart' },
+      { label: 'Bảo hành chính hãng', val: '10 năm' },
+      { label: 'Chi phí sạc điện', val: 'Siêu tiết kiệm' }
+    ],
+    desc: 'Bán xe điện VinFast VF e34 lướt giá rẻ, chính chủ giữ gìn cẩn thận. Hỗ trợ sang tên nhanh gọn.'
+  },
+  'lux-a': {
+    name: 'VinFast Lux A2.0',
+    subtitle: 'Sedan Phân Khúc D Động Cơ BMW Turbo 2.0L',
+    price: '480 - 580 Triệu',
+    tag: 'Sedan D 5 Chỗ',
+    img: '/assets/cars/lux-a.jpg',
+    battery: 'Động cơ xăng 2.0L Turbo BMW · Hộp số ZF 8 cấp',
+    specs: [
+      { label: 'Động cơ', val: '2.0L DOHC I4 Turbo' },
+      { label: 'Công suất', val: '228 HP (Bản Cao cấp)' },
+      { label: 'Hộp số', val: 'Tự động 8 cấp ZF' },
+      { label: 'Dẫn động', val: 'RWD Cầu sau' },
+      { label: 'Khung gầm', val: 'BMW 5 Series Nền tảng' }
+    ],
+    desc: 'VinFast Lux A2.0 lướt đầm chắc phong cách Đức. Xe lướt chọn lọc, không đâm đụng ngập nước.'
+  },
+  'lux-sa': {
+    name: 'VinFast Lux SA2.0',
+    subtitle: 'SUV 7 Chỗ Khung Gầm BMW X5 Đầm Chắc',
+    price: '650 - 790 Triệu',
+    tag: 'SUV 7 Chỗ',
+    img: '/assets/cars/lux-sa.jpg',
+    battery: 'Động cơ 2.0L Turbo BMW · Hộp số ZF 8 cấp · AWD',
+    specs: [
+      { label: 'Động cơ', val: '2.0L Turbo DOHC' },
+      { label: 'Công suất', val: '228 HP / 350 Nm' },
+      { label: 'Dẫn động', val: 'AWD 2 Cầu toàn thời gian' },
+      { label: 'Khung gầm', val: 'Nền tảng BMW X5 F15' },
+      { label: 'Nội thất', val: 'Da Nappa cao cấp' }
+    ],
+    desc: 'Bán xe ô tô VinFast Lux SA2.0 cũ lướt đẹp 98%. Đầy đủ các bản Base, Plus, Premium giá cực hấp dẫn.'
+  },
+  'fadil': {
+    name: 'VinFast Fadil',
+    subtitle: 'Hatchback Hạng A Khỏe Nhất Phân Khúc',
+    price: '310 - 370 Triệu',
+    tag: 'Hatchback A 5 Chỗ',
+    img: '/assets/cars/fadil.jpg',
+    battery: 'Động cơ xăng 1.4L 4 xi-lanh · Hộp số CVT',
+    specs: [
+      { label: 'Động cơ', val: '1.4L DOHC I4' },
+      { label: 'Công suất', val: '98 HP / 128 Nm' },
+      { label: 'Hộp số', val: 'Vô cấp CVT' },
+      { label: 'Hệ thống an toàn', val: 'ESC, TCS, HSA, ROM' },
+      { label: 'Số túi khí', val: '6 Túi khí (Bản Cao cấp)' }
+    ],
+    desc: 'VinFast Fadil lướt giá siêu tiết kiệm. Xe nhỏ gọn chạy phố khỏe, bảo dưỡng chính hãng đầy đủ.'
+  }
+};
+
+// 2. Build Car Model Specific Pages
+    <script src="/js/modules/catalog.js"></script>
+    <script src="/js/modules/modal.js"></script>
+    <script src="/js/modules/form-handler.js"></script>
+    <script src="/js/modules/ui-observers.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
