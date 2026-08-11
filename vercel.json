@@ -9,6 +9,7 @@
     { "source": "/sell", "destination": "/sell.html" },
     { "source": "/huong-dan", "destination": "/guide.html" },
     { "source": "/huong-dan-mua-xe-dien", "destination": "/guide-ev.html" },
+    { "source": "/huong-dan-mua-xe-dien.html", "destination": "/guide-ev.html" },
     { "source": "/studio", "destination": "/auto28-studio.html" },
     { "source": "/auto28-studio", "destination": "/auto28-studio.html" },
     { "source": "/vf3", "destination": "/index.html?filter=vf3#product-grid-section" },
