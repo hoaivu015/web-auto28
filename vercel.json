@@ -2,61 +2,46 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/showroom", "destination": "/index.html" },
-    { "source": "/dinh-gia", "destination": "/sell.html" },
-    { "source": "/sell", "destination": "/sell.html" },
-    { "source": "/huong-dan", "destination": "/guide.html" },
-    { "source": "/huong-dan-mua-xe-dien", "destination": "/guide-ev.html" },
-    { "source": "/huong-dan-mua-xe-dien.html", "destination": "/guide-ev.html" },
-    { "source": "/studio", "destination": "/auto28-studio.html" },
-    { "source": "/auto28-studio", "destination": "/auto28-studio.html" },
-    { "source": "/vf3", "destination": "/index.html?filter=vf3#product-grid-section" },
-    { "source": "/vf5", "destination": "/index.html?filter=vf5#product-grid-section" },
-    { "source": "/vf6", "destination": "/index.html?filter=vf6#product-grid-section" },
-    { "source": "/vf7", "destination": "/index.html?filter=vf7#product-grid-section" },
-    { "source": "/vf8", "destination": "/index.html?filter=vf8#product-grid-section" },
-    { "source": "/vf9", "destination": "/index.html?filter=vf9#product-grid-section" },
-    { "source": "/vfe34", "destination": "/index.html?filter=vfe34#product-grid-section" },
-    { "source": "/lux-a", "destination": "/index.html?filter=lux-a#product-grid-section" },
-    { "source": "/lux-sa", "destination": "/index.html?filter=lux-sa#product-grid-section" },
-    { "source": "/fadil", "destination": "/index.html?filter=fadil#product-grid-section" }
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/showroom", "dest": "/index.html" },
+    { "src": "/dinh-gia", "dest": "/sell.html" },
+    { "src": "/sell", "dest": "/sell.html" },
+    { "src": "/huong-dan", "dest": "/guide.html" },
+    { "src": "/huong-dan-mua-xe-dien", "dest": "/guide-ev.html" },
+    { "src": "/huong-dan-mua-xe-dien.html", "dest": "/guide-ev.html" },
+    { "src": "/studio", "dest": "/auto28-studio.html" },
+    { "src": "/auto28-studio", "dest": "/auto28-studio.html" },
+    { "src": "/vf3", "dest": "/index.html?filter=vf3#product-grid-section" },
+    { "src": "/vf5", "dest": "/index.html?filter=vf5#product-grid-section" },
+    { "src": "/vf6", "dest": "/index.html?filter=vf6#product-grid-section" },
+    { "src": "/vf7", "dest": "/index.html?filter=vf7#product-grid-section" },
+    { "src": "/vf8", "dest": "/index.html?filter=vf8#product-grid-section" },
+    { "src": "/vf9", "dest": "/index.html?filter=vf9#product-grid-section" },
+    { "src": "/vfe34", "dest": "/index.html?filter=vfe34#product-grid-section" },
+    { "src": "/lux-a", "dest": "/index.html?filter=lux-a#product-grid-section" },
+    { "src": "/lux-sa", "dest": "/index.html?filter=lux-sa#product-grid-section" },
+    { "src": "/fadil", "dest": "/index.html?filter=fadil#product-grid-section" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/(.*)\\.(css|js)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
       ]
     }
   ]
