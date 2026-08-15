@@ -12,8 +12,18 @@
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
     <link rel="dns-prefetch" href="https://res.cloudinary.com">
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
-    <link rel="stylesheet" href="./style.css">
+    <!-- ⚡ ASYNC FONT & STYLESHEET LOADING (ZERO RENDER-BLOCKING) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
+    </noscript>
+
+    <link rel="preload" as="style" href="./style.css">
+    <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="./style.css">
+    </noscript>
 
     <!-- Google Tag Manager (Optimized non-blocking position) -->
     <script>(function (w, d, s, l, i) {
@@ -147,7 +157,7 @@
 </head>
 <body class="neural-expressive-body">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPKRWBPC" height="0" width="0"
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-PPKRWBPC" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Facebook Pixel Code (noscript) -->
