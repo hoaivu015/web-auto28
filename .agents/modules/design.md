@@ -94,16 +94,34 @@ ADN-4: SPRING PHYSICS MOTION — Hover/tap/modal dùng spring (stiffness 280-340
 }
 ```
 
+### Mobile Vehicle Card (Vertical Stacked Layout - Luxury Automotive Standard):
+```css
+/* Bắt buộc trên mobile (max-width: 639px): Thẻ dọc 100%, ảnh 16:10 sắc nét */
+@media (max-width: 639px) {
+  .expressive-car-card {
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+  .card-img-container {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 1rem;
+  }
+}
+```
+
 ---
 
 ## ⛔ CẤM TUYỆT ĐỐI — Anti-patterns
 
 ```
-❌ background solid:    background: white; background: #f3f4f6
-❌ góc bo nhỏ:          border-radius: 6px, 8px, 12px cho component chính
-❌ font-weight thấp:    font-weight: 400, 500, 600, 700 cho tiêu đề primary
-❌ CSS transition thuần: transition: all 0.3s ease cho UI chính
-❌ spacing lẻ:          margin/padding 3px, 5px, 7px, 9px, 13px
+❌ background solid:          background: white; background: #f3f4f6
+❌ góc bo nhỏ:                border-radius: 6px, 8px, 12px cho component chính
+❌ font-weight thấp:          font-weight: 400, 500, 600, 700 cho tiêu đề primary
+❌ CSS transition thuần:       transition: all 0.3s ease cho UI chính
+❌ spacing lẻ:                margin/padding 3px, 5px, 7px, 9px, 13px
+❌ mobile horizontal card:    CẤM dùng bố cục ngang (flex-direction: row) cho card xe trên mobile (làm méo ảnh 16:10 & cắt chữ CTA)
 ```
 
 ---
@@ -111,3 +129,4 @@ ADN-4: SPRING PHYSICS MOTION — Hover/tap/modal dùng spring (stiffness 280-340
 ## 🔗 Tham chiếu đầy đủ
 - [Design System Skill](file:///Users/phanvu/Desktop/lading-page/.agents/skills/design-system-guide/SKILL.md) — Code anatomy mẫu
 - [iPhone Native UI Enforcer](file:///Users/phanvu/Desktop/lading-page/.agents/skills/iphone-native-ui-enforcer/SKILL.md) — Mobile haptic matrix
+

@@ -257,6 +257,46 @@
         "full_audit": 0.9
       }
     },
+    "web_performance_architect": {
+      "base_weight": 9,
+      "veto_power": true,
+      "veto_triggers": [
+        "lcp_exceeds_2500ms",
+        "inp_exceeds_200ms",
+        "cls_exceeds_0_1",
+        "render_blocking_resource_found",
+        "uncompressed_static_asset",
+        "unmapped_lcp_element"
+      ],
+      "dna_guardian": true,
+      "dna_domains": [
+        "crp_asset_loading_order",
+        "web_vitals_budget",
+        "font_display_swap",
+        "critical_css_inline"
+      ],
+      "authority_domains": [
+        "web_performance",
+        "page_load_architecture",
+        "core_web_vitals",
+        "lcp_inp_cls_optimization",
+        "critical_rendering_path",
+        "edge_caching_cdn",
+        "service_worker_offline",
+        "asset_pipeline_budget",
+        "main_thread_long_tasks"
+      ],
+      "confidence_threshold": 0.92,
+      "context_multipliers": {
+        "conversion_optimization": 0.7,
+        "technical_fix": 1.0,
+        "content_update": 0.6,
+        "performance_audit": 1.0,
+        "seo_update": 0.8,
+        "system_config": 0.9,
+        "full_audit": 1.0
+      }
+    },
     "structure_guardian": {
       "base_weight": 6,
       "veto_power": true,

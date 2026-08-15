@@ -26,25 +26,40 @@ function buildLandingPage() {
 
 <head>
     <meta charset="UTF-8">
-    <!-- Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận</title>
+    <meta name="description"
+        content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI nhanh chóng, check hãng 176 hạng mục, bàn giao tận nhà.">
+    
+    <!-- 🌐 CANONICAL & OPEN GRAPH META (SEO 2026) -->
+    <link rel="canonical" href="https://www.auto28.com.vn/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.auto28.com.vn/">
+    <meta property="og:title" content="Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận">
+    <meta property="og:description" content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI nhanh chóng, check hãng 176 hạng mục, bàn giao tận nhà.">
+    <meta property="og:image" content="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg">
+    
+    <!-- ⚡ RESOURCE HINTS (CWV 2026) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://analytics.tiktok.com">
+    <link rel="preload" as="script" href="./cars_data.js?v=2.1.0">
+    <link rel="preload" as="script" href="./modules/car-modal.js?v=2.1.0">
+    <link rel="modulepreload" href="./main.js?v=2.1.0">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Google Tag Manager (Optimized non-blocking position) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PPKRWBPC');</script>
     <!-- End Google Tag Manager -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận</title>
-    <meta name="description"
-        content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI nhanh chóng, check hãng 176 hạng mục, bàn giao tận nhà.">
-    
-    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
-    <link rel="dns-prefetch" href="https://res.cloudinary.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
-    <link rel="dns-prefetch" href="https://analytics.tiktok.com">
-    <link rel="modulepreload" href="./main.js">
-    
-    <link rel="stylesheet" href="./style.css">
     
     <!-- 🌐 FAVICON -->
     <link rel="icon" type="image/jpeg" href="./assets/logos/logo.jpg">
@@ -239,32 +254,38 @@ function buildLandingPage() {
       ]
     }
     </script>
-    <!-- Facebook Pixel Code -->
+    <!-- ⚡ NON-BLOCKING THIRD-PARTY TRACKING (CWV 2026 TBT OPTIMIZED) -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '537471081061777');
-        fbq('track', 'PageView');
+        function loadThirdPartyPixels() {
+            // Facebook Pixel Code
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '537471081061777');
+            fbq('track', 'PageView');
+
+            // TikTok Pixel Code
+            !function (w, d, t) {
+                w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+                    for (
+                        var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e;
+                };
+                ttq.load('D802OM3C77UEKU3Q3HPG');
+                ttq.page();
+            }(window, document, 'ttq');
+        }
+
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadThirdPartyPixels, { timeout: 2000 });
+        } else {
+            window.addEventListener('DOMContentLoaded', loadThirdPartyPixels, { passive: true });
+        }
     </script>
-    <!-- End Facebook Pixel Code -->
-    <!-- TikTok Pixel Code Start -->
-    <script>
-        !function (w, d, t) {
-            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
-                for (
-                    var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e;
-            };
-            ttq.load('D802OM3C77UEKU3Q3HPG');
-            ttq.page();
-        }(window, document, 'ttq');
-    </script>
-    <!-- TikTok Pixel Code End -->
     <!-- Google tag được quản lý tập trung bởi GTM-PPKRWBPC -->
     <!-- GA4 (G-PM7K9CB73D) và Google Ads (AW-18153153954) cấu hình trong GTM Dashboard -->
 </head>
@@ -305,13 +326,13 @@ ${leadModalHtml}
 
 ${footerHtml}
 
-    <script src="./cars_data.js" defer></script>
-    <script src="./modules/hero-slideshow.js" defer></script>
-    <script src="./modules/ai-valuation.js" defer></script>
-    <script src="./modules/car-filter.js" defer></script>
-    <script src="./modules/ui-effects.js" defer></script>
-    <script src="./modules/car-modal.js" defer></script>
-    <script type="module" src="./main.js"></script>
+    <script src="./cars_data.js?v=2.1.0" defer></script>
+    <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
+    <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
+    <script src="./modules/car-filter.js?v=2.1.0" defer></script>
+    <script src="./modules/ui-effects.js?v=2.1.0" defer></script>
+    <script src="./modules/car-modal.js?v=2.1.0" defer></script>
+    <script type="module" src="./main.js?v=2.1.0"></script>
 </body>
 
 </html>

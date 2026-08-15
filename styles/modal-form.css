@@ -102,11 +102,12 @@
   background: #F8FAFC;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0.85rem;
-  padding: 0.65rem 0.85rem;
+  padding: 0.65rem 0.75rem;
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.55rem;
   transition: background 0.2s ease;
+  min-width: 0;
 }
 
 .modal-spec-card:hover {
@@ -116,13 +117,15 @@
 .spec-icon {
   font-size: 1.25rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .spec-info {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
-  overflow: hidden;
+  min-width: 0;
+  flex: 1;
 }
 
 .spec-label {
@@ -131,15 +134,17 @@
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .spec-value {
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: #0F172A;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+  line-height: 1.25;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 /* Spec Tags */
@@ -322,3 +327,130 @@
   .modal-price-value { font-size: 1.35rem; }
   .modal-price-card { padding: 0.75rem 1rem; }
 }
+
+/* ============================================
+   📞 CALL GUARD MODAL STYLES (STATIC STANDARD)
+   ============================================ */
+.call-guard-modal {
+  display: none;
+}
+.call-guard-modal.open {
+  display: flex;
+}
+.call-guard-card {
+  max-width: 440px !important;
+  padding: 2rem 1.5rem !important;
+  text-align: center;
+  background: #FFFFFF !important;
+}
+.call-guard-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.call-guard-icon-wrap {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+.call-guard-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+}
+.call-guard-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.25);
+  animation: pulseGlow 2s infinite;
+  z-index: 1;
+}
+@keyframes pulseGlow {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+.call-guard-title {
+  font-family: var(--font-display, sans-serif);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: #0F172A;
+  margin: 0 0 0.5rem;
+}
+.call-guard-desc {
+  font-size: 0.9rem;
+  color: #64748B;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+.call-guard-number-badge {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1D4ED8;
+  font-family: var(--font-display, sans-serif);
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+.call-guard-notice {
+  font-size: 0.8rem;
+  color: #059669;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.call-guard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+}
+.call-guard-btn-confirm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: linear-gradient(135deg, #16A34A, #15803D);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+  transition: all 0.2s ease;
+}
+.call-guard-btn-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(22, 163, 74, 0.4);
+}
+.call-guard-btn-cancel {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #F1F5F9;
+  color: #64748B;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.call-guard-btn-cancel:hover {
+  background: #E2E8F0;
+  color: #334155;
+}
+

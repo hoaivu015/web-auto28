@@ -185,7 +185,24 @@
             });
 
             try {
+                // 🚀 1. Gửi thông báo về Telegram Bot
                 const response = await fetch(`https://api.telegram.org/bot${activeTelegramToken}/sendMessage?${params.toString()}`);
+                
+                // 🚀 2. Tự động bắn Webhook Lark/Feishu nếu cấu hình
+                const larkUrl = window.larkWebhookUrl || window.activeLarkWebhook;
+                if (larkUrl) {
+                    fetch(larkUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            msg_type: 'text',
+                            content: {
+                                text: `🚀 [Auto 28 - Yêu Cầu Định Giá AI]\n🚗 Dòng xe: ${modelName} (${year})\n🛣️ ODO: ${km}\n💰 Định giá AI: ${estimatedPrice}\n📞 SĐT: ${phone}\n⏰ Thời gian: ${new Date().toLocaleString('vi-VN')}`
+                            }
+                        })
+                    }).catch(e => console.warn('Lark webhook dispatch bypassed:', e.message));
+                }
+
                 if (response.ok) {
                     if (typeof gtag === 'function') {
                         gtag('event', 'generate_lead', {
@@ -202,8 +219,20 @@
                         });
                     }
 
-                    // GTM Datalayer Push (Preserved 100%)
+                    // 📊 3. GTM Datalayer Push Chuẩn Hóa CRO 2026
                     window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'lead_form_submitted',
+                        'form_id': 'sell-pricing-form',
+                        'form_type': 'ai_valuation_lead',
+                        'car_model': modelName,
+                        'car_year': year,
+                        'car_km': km,
+                        'estimated_price': estimatedPrice,
+                        'phone': cleanPhone,
+                        'timestamp': new Date().toISOString()
+                    });
+
                     window.dataLayer.push({
                         'event': 'form_lead_success',
                         'event_category': 'Lead',

@@ -51,6 +51,7 @@ Tầng 6: Ghi decision log
 | Agent | Veto Triggers |
 |---|---|
 | `landing-page-auditor` | `healthcheck_fail`, `audit_score_below_90`, `mime_type_error`, `dom_parity_fail` |
+| `web_performance_architect` | `lcp_exceeds_2500ms`, `inp_exceeds_200ms`, `cls_exceeds_0_1`, `render_blocking_resource_found`, `uncompressed_static_asset` |
 | `visual_inspector` | `wcag_aa_fail`, `touch_target_below_44px`, `dna_adn1_fail`, `dna_adn2_fail`, `dna_adn3_fail` |
 | `structure_guardian` | `uppercase_filename`, `spaces_in_filename`, `html_in_subdirectory`, `nesting_depth_exceeded` |
 | `lang_standards_guardian` | `missing_doctype`, `no_lang_attribute`, `css_important_abuse`, `js_var_declaration` |
@@ -67,6 +68,7 @@ Cả hai cùng domain → xuống Tầng 4.
 **Domain map nhanh:**
 - `cro_specialist` → form, CTA, CVR, UX friction
 - `landing-page-auditor` → technical audit, healthcheck, scoring
+- `web_performance_architect` → Core Web Vitals, page load architecture, LCP/INP/CLS, CRP, caching, SW
 - `seo_specialist` → SEO, AEO, schema, JSON-LD, meta
 - `visual_inspector` → WCAG, mobile UX, DNA audit
 - `code_refactorer` → code quality, refactor, scripts

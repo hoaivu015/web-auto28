@@ -104,6 +104,7 @@ Bước 4: Tổng hợp Screenshot & Báo cáo Vi phạm
 | **ADN-2** Super Ellipse Radius | `border-radius` của card ≥ 32px chưa? | ≥ 32px = PASS |
 | **ADN-3** Bold-First Typography | `font-weight` tiêu đề ≥ 800 (Bold/Black) chưa? | ≥ 800 = PASS |
 | **ADN-4** Spring Physics Motion | Hover/tap có spring animation không? | Có `stiffness` + `damping` = PASS |
+| **MOBILE-LAYOUT** Vertical Card | Card xe mobile (≤ 639px) có dạng dọc (`flex-col`) & ảnh 16:10 không? | Bắt buộc dạng dọc (Vertical Stacked) |
 
 **Tool kiểm tra:**
 ```js

@@ -33,19 +33,35 @@
 - Cấu trúc nội dung kim tự tháp ngược (Inverted Pyramid)
 - Bảng `<table>` thông số kỹ thuật xe — không dùng div grid
 
-### Core Web Vitals (Cứng)
+### Core Web Vitals 2026 & Page Load Architecture (Chuẩn Công Nghiệp)
 
-| Chỉ số | Ngưỡng | Công cụ đo |
-|---|---|---|
-| LCP | < 2.5s | Lighthouse / WebPageTest |
-| INP | < 200ms | CrUX Dashboard |
-| CLS | ≤ 0.1 | Lighthouse |
-| Page load | < 2s | WebPageTest |
+| Chỉ số | Target Đạt | Ngưỡng Cảnh Báo | Veto Trigger (Block) | Công cụ đo |
+|---|---|---|---|---|
+| **LCP** | **< 1.2s** | > 1.8s | **> 2.5s** | Lighthouse / CrUX |
+| **INP** | **< 100ms** | > 150ms | **> 200ms** | CrUX / Web Vitals JS |
+| **CLS** | **≤ 0.02** | > 0.05 | **> 0.1** | Lighthouse |
+| **TTFB** | **< 200ms** | > 350ms | **> 500ms** | Server / Edge Telemetry |
+| **FCP** | **< 0.8s** | > 1.2s | **> 1.5s** | Lighthouse |
+| **TBT** | **< 100ms** | > 180ms | **> 250ms** | Lighthouse |
 
-- Ảnh: WebP/AVIF, `loading="lazy"`, dưới 250KB
-- `<link rel="preconnect">` cho mọi external CDN
-- `<link rel="modulepreload">` cho JS critical path
-- **CDN**: static assets phải serve qua CDN khi deploy production
+#### Quy Tắc Đường Tới Hạn (Critical Rendering Path - CRP Architecture)
+1. **LCP Element Optimization**:
+   - Thẻ LCP (ảnh Hero/Banner chính) BẮT BUỘC có thuộc tính `fetchpriority="high"`, `loading="eager"`, `decoding="sync"`.
+   - BẮT BUỘC preload LCP Image trong `<head>`: `<link rel="preload" as="image" href="..." fetchpriority="high">`.
+   - CẤM dùng `loading="lazy"` hoặc JavaScript client-side render cho phần tử LCP.
+2. **Inline Critical CSS**:
+   - Extract và inline Critical CSS (< 14KB gzipped) trực tiếp trong thẻ `<style>` ở `<head>`.
+   - CSS phụ không khẩn cấp tải qua: `<link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">`.
+3. **Script Execution Non-blocking**:
+   - 100% thẻ `<script>` trong `<head>` bắt buộc có thuộc tính `defer` hoặc `type="module"`.
+   - Tracking Pixels (GA4, Facebook, TikTok) chỉ khởi chạy sau FCP hoặc qua `requestIdleCallback()`.
+4. **Asset & Font Architecture**:
+   - Phông chữ WOFF2 + `font-display: swap` hoặc `font-display: optional` + Preload + Font metric overrides.
+   - Hình ảnh format WebP/AVIF, bắt buộc thuộc tính `width`, `height` hoặc `aspect-ratio` giữ vị trí (CLS = 0).
+5. **Edge Caching & Service Worker**:
+   - Dynamic HTML: `Cache-Control: public, max-age=0, must-revalidate`.
+   - Static Immutable Assets: `Cache-Control: public, max-age=31536000, immutable`.
+   - Service Worker (`sw.js`): Cache-First cho static, Stale-While-Revalidate cho data, Route Prefetching khi hover.
 
 ### Mobile Standards
 - Touch targets ≥ 48px (`min-height: 48px`) — bắt buộc WCAG 2.2

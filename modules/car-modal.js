@@ -3,7 +3,7 @@
  * Safe Refactoring Standard: Tier-1 Enterprise (ES2025 Compliant)
  * DNA: Neural Expressive 2.0 + AbortController Lifecycle Management
  */
-(function() {
+(function () {
     'use strict';
 
     const SVG_FALLBACK_CAR = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='100%25' height='100%25' fill='%23f1f5f9'/%3E%3Cpath d='M250 250l50-60 60 70 80-100 110 140H250z' fill='%23cbd5e1'/%3E%3Ccircle cx='310' cy='180' r='25' fill='%23cbd5e1'/%3E%3Ctext x='50%25' y='80%25' dominant-baseline='middle' text-anchor='middle' fill='%2364748b' font-family='sans-serif' font-size='20' font-weight='600'%3EAuto 28 - Hình ảnh xe%3C/text%3E%3C/svg%3E";
@@ -17,6 +17,14 @@
             return url.replace('/upload/', `/upload/w_${maxDim},h_${maxDim},c_limit,f_auto,q_auto/`);
         }
         return url;
+    }
+
+    function getCloudinarySrcset(url) {
+        if (!url || typeof url !== 'string' || !url.includes('cloudinary.com') || !url.includes('/upload/')) return '';
+        const base400 = formatCloudinaryUrl(url, 400);
+        const base800 = formatCloudinaryUrl(url, 800);
+        const base1200 = formatCloudinaryUrl(url, 1200);
+        return `${base400} 400w, ${base800} 800w, ${base1200} 1200w`;
     }
 
     function renderStaticVehicles() {
@@ -70,23 +78,11 @@
                 priceText = 'Liên hệ';
             }
 
-            // Badge trái: chỉ hiển thị cho xe điện (loại pin)
-            let badgeText = '';
-            let badgeClass = '';
-            if (isElectric) {
-                if (car.battery_type === 'Mua Pin' || notesLower.includes('mua đứt') || notesLower.includes('pin mua') || notesLower.includes('sở hữu pin')) {
-                    badgeText = 'Mua Pin';
-                    badgeClass = 'bg-emerald';
-                } else {
-                    badgeText = 'Pin Thuê';
-                    badgeClass = '';
-                }
-            }
 
             const yearVal = car.year || '2024';
             const odoText = car.odo ? car.odo.toLocaleString('vi-VN') + ' km' : 'Siêu lướt';
             const colorText = car.color ? car.color.replace(/^Màu\s+/i, '') : 'Bạc';
-            const batteryTypeLabel = isElectric 
+            const batteryTypeLabel = isElectric
                 ? (car.battery_type === 'Mua Pin' ? 'Pin mua' : 'Hợp đồng thuê pin')
                 : 'Động cơ xăng';
 
@@ -94,11 +90,17 @@
             const monthlyEst = (Math.max(3.5, priceInMillions * 0.01)).toFixed(1).replace('.0', '');
 
             let detailImages = [];
+            const coverImg = car.image_url ? formatCloudinaryUrl(car.image_url) : '';
             if (car.detail_images_list) {
-                detailImages = car.detail_images_list.split(',').map(s => formatCloudinaryUrl(s.trim())).filter(Boolean);
-            }
-            if (!detailImages.length && car.image_url) {
-                detailImages = [formatCloudinaryUrl(car.image_url)];
+                const list = car.detail_images_list.split(',').map(s => formatCloudinaryUrl(s.trim())).filter(Boolean);
+                if (coverImg) {
+                    const filteredList = list.filter(img => img !== coverImg);
+                    detailImages = [coverImg, ...filteredList];
+                } else {
+                    detailImages = list;
+                }
+            } else if (coverImg) {
+                detailImages = [coverImg];
             }
 
             window.carDetailsData[car.id] = {
@@ -131,23 +133,23 @@
             const priceLabel = priceInMillions > 0 ? 'Báo giá lăn bánh' : 'Liên hệ báo giá';
 
             // Spec icon SVGs (inline, nhẹ)
-            const icoOdo  = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
+            const icoOdo = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`;
             const icoColor = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>`;
-            const icoBatt  = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2"/></svg>`;
-            const icoFuel  = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M17 22V10l4 4"/><line x1="1" y1="22" x2="23" y2="22"/></svg>`;
+            const icoBatt = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2"/></svg>`;
+            const icoFuel = `<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M17 22V10l4 4"/><line x1="1" y1="22" x2="23" y2="22"/></svg>`;
+            const icoShieldCheck = `<svg class="badge-icon" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`;
 
             const battIcon = isElectric ? icoBatt : icoFuel;
             const battPillText = isElectric ? (car.battery_type || 'Mua Pin') : 'Xăng';
 
+            const srcsetAttr = getCloudinarySrcset(car.image_url);
+            const srcsetHtml = srcsetAttr ? `srcset="${srcsetAttr}" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"` : '';
+
             cardEl.innerHTML = `
                 <div class="card-top">
                     <div class="card-img-container">
-                        <img src="${formatCloudinaryUrl(car.image_url, 600) || SVG_FALLBACK_CAR}" alt="${car.name}" class="card-img" loading="lazy" decoding="async" style="opacity: 0; transition: opacity 0.5s ease; ${car.image_position ? `object-position: ${car.image_position};` : ''}" onload="this.style.opacity='1'" onerror="this.src='${SVG_FALLBACK_CAR}'; this.style.opacity='1'">
-                        ${isElectric ? `<div class="card-badge ${badgeClass}"><span>${badgeText}</span></div>` : ''}
-                        <div class="card-badge card-badge--right"><span>Check Hãng</span></div>
-                        <button class="card-favorite-btn" aria-label="Lưu xe ${car.name}" onclick="event.stopPropagation()">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                        </button>
+                        <img src="${formatCloudinaryUrl(car.image_url, 600) || SVG_FALLBACK_CAR}" ${srcsetHtml} width="400" height="225" crossorigin="anonymous" alt="${car.name}" class="card-img" loading="lazy" decoding="async" style="opacity: 0; transition: opacity 0.5s ease; ${car.image_position ? `object-position: ${car.image_position};` : ''}" onload="this.style.opacity='1'" onerror="this.src='${SVG_FALLBACK_CAR}'; this.style.opacity='1'">
+                        <div class="card-badge card-badge--right">${icoShieldCheck}<span>Đã Check 176 Hạng Mục</span></div>
                     </div>
                     <div class="card-content-col">
                         <div class="card-body">
@@ -204,7 +206,7 @@
             }
         }
 
-        function openCarModalWithData(carInfo) {
+        function openCarModalWithData(carInfo, clickedPreviewSrc) {
             if (!modal || !carInfo) return;
 
             const titleEl = document.getElementById('modal-car-title');
@@ -250,10 +252,16 @@
             }
 
             let galleryImages = [];
+            const coverUrl = carInfo.img || clickedPreviewSrc || '';
             if (carInfo.detailImages && Array.isArray(carInfo.detailImages) && carInfo.detailImages.length > 0) {
-                galleryImages = carInfo.detailImages;
-            } else if (carInfo.img) {
-                galleryImages = [carInfo.img];
+                if (coverUrl) {
+                    const filtered = carInfo.detailImages.filter(u => u !== coverUrl);
+                    galleryImages = [coverUrl, ...filtered];
+                } else {
+                    galleryImages = carInfo.detailImages;
+                }
+            } else if (coverUrl) {
+                galleryImages = [coverUrl];
             } else {
                 galleryImages = [SVG_FALLBACK_CAR];
             }
@@ -266,6 +274,14 @@
             const nextBtn = document.getElementById('modal-gallery-next');
             const slideViewport = document.getElementById('modal-slide-viewport');
             const zoomTriggerBtn = document.getElementById('modal-gallery-zoom-trigger');
+
+            // ⚡ INSTANT IMAGE PREVIEW (0ms):
+            // Slide #1 luôn là Ảnh bìa mà khách vừa nhấp vào => Giữ nguyên 100% góc chụp, tải tức thì 0ms, không bao giờ nhảy/giật ảnh
+            const initialPreview = galleryImages[0] || SVG_FALLBACK_CAR;
+            if (modalImg) {
+                modalImg.src = initialPreview;
+                modalImg.style.opacity = '1';
+            }
 
             // Lightbox Elements
             const lightboxModal = document.getElementById('gallery-lightbox-modal');
@@ -345,18 +361,31 @@
             function renderGalleryState(index) {
                 currentGalleryIndex = (index + galleryImages.length) % galleryImages.length;
                 const activeSrc = galleryImages[currentGalleryIndex] || SVG_FALLBACK_CAR;
-                
+
                 if (modalImg) {
-                    modalImg.style.opacity = '0';
-                    modalImg.style.transition = 'opacity 0.25s ease';
-                    modalImg.onload = function() {
+                    if (modalImg.src === activeSrc) {
                         modalImg.style.opacity = '1';
-                    };
-                    modalImg.onerror = function() {
-                        modalImg.src = SVG_FALLBACK_CAR;
-                        modalImg.style.opacity = '1';
-                    };
-                    modalImg.src = activeSrc;
+                        if (slideViewport) slideViewport.classList.remove('is-loading');
+                    } else {
+                        // Progressive Swap: Giữ ảnh đang hiển thị và tải ngầm ảnh mới để tránh nháy đen
+                        if (slideViewport) slideViewport.classList.add('is-loading');
+                        const preloader = new Image();
+                        preloader.onload = function () {
+                            if (currentGalleryIndex === (index + galleryImages.length) % galleryImages.length) {
+                                modalImg.src = activeSrc;
+                                modalImg.style.opacity = '1';
+                                if (slideViewport) slideViewport.classList.remove('is-loading');
+                            }
+                        };
+                        preloader.onerror = function () {
+                            if (currentGalleryIndex === (index + galleryImages.length) % galleryImages.length) {
+                                modalImg.src = SVG_FALLBACK_CAR;
+                                modalImg.style.opacity = '1';
+                                if (slideViewport) slideViewport.classList.remove('is-loading');
+                            }
+                        };
+                        preloader.src = activeSrc;
+                    }
                     modalImg.alt = `${carInfo.title || 'Xe VinFast'} - Ảnh ${currentGalleryIndex + 1}`;
                 }
                 if (counterEl) {
@@ -374,7 +403,12 @@
                     thumbBtns.forEach((btn, i) => {
                         if (i === currentGalleryIndex) {
                             btn.classList.add('active');
-                            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                            // ⚡ Scoped Horizontal Scroll: Chỉ cuộn bên trong dải thumbnail, bảo vệ layout modal không bị lệch
+                            const scrollTarget = btn.offsetLeft - (thumbsContainer.clientWidth / 2) + (btn.clientWidth / 2);
+                            thumbsContainer.scrollTo({
+                                left: Math.max(0, scrollTarget),
+                                behavior: 'smooth'
+                            });
                         } else {
                             btn.classList.remove('active');
                         }
@@ -389,12 +423,35 @@
                     thumbBtn.className = `modal-thumb-btn ${idx === 0 ? 'active' : ''}`;
                     thumbBtn.setAttribute('type', 'button');
                     thumbBtn.setAttribute('aria-label', `Xem ảnh ${idx + 1}`);
-                    thumbBtn.innerHTML = `<img src="${imgUrl}" alt="Thumbnail ${idx + 1}" loading="lazy" onerror="this.src='${SVG_FALLBACK_CAR}'">`;
+                    thumbBtn.innerHTML = `<img src="${imgUrl}" alt="Thumbnail ${idx + 1}" loading="eager" decoding="async" onerror="this.src='${SVG_FALLBACK_CAR}'">`;
                     thumbBtn.addEventListener('click', () => {
                         renderGalleryState(idx);
                     });
                     thumbsContainer.appendChild(thumbBtn);
                 });
+
+                // ⚡ Swipe Touch & Momentum Drag for Thumbnails Bar (Mobile & Desktop)
+                let isThumbDown = false;
+                let thumbStartX = 0;
+                let thumbScrollLeft = 0;
+
+                thumbsContainer.addEventListener('mousedown', (e) => {
+                    isThumbDown = true;
+                    thumbStartX = e.pageX - thumbsContainer.offsetLeft;
+                    thumbScrollLeft = thumbsContainer.scrollLeft;
+                }, { signal });
+
+                window.addEventListener('mouseup', () => {
+                    isThumbDown = false;
+                }, { signal });
+
+                thumbsContainer.addEventListener('mousemove', (e) => {
+                    if (!isThumbDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - thumbsContainer.offsetLeft;
+                    const walk = (x - thumbStartX) * 1.5;
+                    thumbsContainer.scrollLeft = thumbScrollLeft - walk;
+                }, { signal });
             }
 
             if (prevBtn) {
@@ -615,11 +672,31 @@
             const btnModalSubmit = document.getElementById('btn-modal-action-submit');
             if (btnModalSubmit) btnModalSubmit.setAttribute('data-car-name', carInfo.title || 'VinFast');
 
+            const modalWrapper = modal.querySelector('.modal-wrapper');
+            if (modalWrapper) modalWrapper.scrollLeft = 0;
+
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
         }
 
         if (modal) {
+            // ⚡ Hover / Touch Preload for Instant Click Response
+            document.addEventListener('pointerover', (e) => {
+                const card = e.target.closest('.expressive-car-card');
+                if (!card || card.classList.contains('skeleton-card')) return;
+                const carId = card.getAttribute('data-car-id');
+                const carInfo = (window.carDetailsData && carId && window.carDetailsData[carId]);
+                if (carInfo && carInfo.detailImages && carInfo.detailImages.length > 0) {
+                    const firstImg = carInfo.detailImages[0];
+                    if (!window._preloadedCarImgs) window._preloadedCarImgs = new Set();
+                    if (firstImg && !window._preloadedCarImgs.has(firstImg)) {
+                        window._preloadedCarImgs.add(firstImg);
+                        const preloadLink = new Image();
+                        preloadLink.src = firstImg;
+                    }
+                }
+            }, { capture: true, passive: true, signal });
+
             document.addEventListener('click', (e) => {
                 const card = e.target.closest('.expressive-car-card');
                 if (!card || card.classList.contains('skeleton-card')) return;
@@ -627,10 +704,12 @@
                 const carId = card.getAttribute('data-car-id');
                 let carInfo = (window.carDetailsData && carId && window.carDetailsData[carId]) ? window.carDetailsData[carId] : null;
 
+                const imgEl = card.querySelector('.card-img');
+                const cardPreviewSrc = imgEl ? (imgEl.currentSrc || imgEl.src) : null;
+
                 if (!carInfo) {
                     const titleText = card.querySelector('.card-title')?.textContent?.trim() || 'VinFast VF 8 Plus';
                     const priceText = card.querySelector('.price-value')?.textContent?.trim() || '745 Triệu';
-                    const imgEl = card.querySelector('.card-img');
 
                     carInfo = {
                         id: carId || 'default',
@@ -645,14 +724,14 @@
                         battery: 'Xe mua pin chính hãng, bảo hành 10 năm',
                         prepay: '149 Triệu',
                         monthly: '7.5 Tr/tháng',
-                        img: imgEl ? imgEl.src : SVG_FALLBACK_CAR
+                        img: cardPreviewSrc || SVG_FALLBACK_CAR
                     };
                 }
 
-                openCarModalWithData(carInfo);
+                openCarModalWithData(carInfo, cardPreviewSrc);
             }, { signal });
 
-            window.openCarModal = function(carId, overrideData) {
+            window.openCarModal = function (carId, overrideData) {
                 let carInfo = overrideData || (window.carDetailsData && carId ? window.carDetailsData[carId] : null);
                 if (!carInfo) {
                     carInfo = {
@@ -758,8 +837,8 @@
             btnModalSubmit.textContent = '⏳ ĐANG GỬI...';
             btnModalSubmit.disabled = true;
 
-            const activeTelegramToken = window.activeTelegramToken || '8354150269:AAF2da1-GZAXNgDVplWot053UDETG7CX5ss'; 
-            const activeTelegramChatId = window.activeTelegramChatId || '2117317097'; 
+            const activeTelegramToken = window.activeTelegramToken || '8354150269:AAF2da1-GZAXNgDVplWot053UDETG7CX5ss';
+            const activeTelegramChatId = window.activeTelegramChatId || '2117317097';
 
             const message = `
 <b>🔥 YÊU CẦU BÁO GIÁ LĂN BÁNH & ƯU ĐÃI XE</b>
@@ -779,14 +858,45 @@
             });
 
             try {
+                // 🚀 1. Gửi thông báo về Telegram Bot
                 const response = await fetch(`https://api.telegram.org/bot${activeTelegramToken}/sendMessage?${params.toString()}`);
+
+                // 🚀 2. Tự động bắn Webhook Lark/Feishu nếu cấu hình
+                const larkUrl = window.larkWebhookUrl || window.activeLarkWebhook;
+                if (larkUrl) {
+                    fetch(larkUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            msg_type: 'text',
+                            content: {
+                                text: `🔥 [Auto 28 - Lead Mua Xe]\n🚗 Xe quan tâm: ${carName}\n👤 Khách hàng: ${name}\n📞 SĐT: ${phone}\n⏰ Thời gian: ${new Date().toLocaleString('vi-VN')}`
+                            }
+                        })
+                    }).catch(e => console.warn('Lark webhook dispatch bypassed:', e.message));
+                }
+
                 if (response.ok) {
+                    // 📊 3. Chuẩn hóa sự kiện DataLayer CRO 2026
                     window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'lead_form_submitted',
+                        form_id: 'car_lead_modal',
+                        form_type: 'car_inquiry',
+                        vehicle_name: carName,
+                        phone: phone,
+                        name: name,
+                        timestamp: new Date().toISOString()
+                    });
+
                     window.dataLayer.push({
                         event: 'form_lead_success',
                         vehicle_name: carName,
                         phone: phone
                     });
+
+                    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: carName });
+                    if (typeof ttq === 'function') ttq.track('CompleteRegistration', { content_name: carName });
                     if (typeof gtag === 'function') {
                         gtag('event', 'generate_lead', {
                             'event_category': 'Conversion',

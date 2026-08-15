@@ -1,1 +1,1 @@
-[]
+{"timestamp":"2026-08-15T21:49:30+07:00","decision":"Enforce Vertical Stacked Card Layout for all car cards on mobile (<= 639px) with 16:10 aspect ratio and full-width CTA buttons. Ban horizontal row layout on mobile to prevent image clipping and text overflow.","affected_files":["styles/cards-vehicle.css","style.css",".agents/modules/design.md",".agents/agents/visual_inspector.md",".agents/scratch/session_context.md"],"authority":"visual_inspector"}

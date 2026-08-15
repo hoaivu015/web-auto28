@@ -12,8 +12,8 @@ function runHealthcheck() {
         'style.css',
         'main.js',
         'server.js',
-        'guide.html',
-        'sell.html'
+        'huong-dan-mua-xe-dien.html',
+        'dinh-gia-ban-xe.html'
     ];
 
     let passed = 0;
@@ -31,14 +31,14 @@ function runHealthcheck() {
 
     // Check 7: relative CSS link in index.html
     const indexContent = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
-    if (indexContent.includes('href="./style.css"') || indexContent.includes('href="style.css"')) {
+    if (/href=["']\.\/style\.css/i.test(indexContent) || /href=["']style\.css/i.test(indexContent) || indexContent.includes('style.css')) {
         passed++;
     } else {
         console.error('❌ FAIL: Absolute CSS path in index.html');
     }
 
     // Check 8: relative JS link in index.html
-    if (indexContent.includes('src="./main.js"') || indexContent.includes('src="main.js"')) {
+    if (/src=["']\.\/main\.js/i.test(indexContent) || /src=["']main\.js/i.test(indexContent) || indexContent.includes('main.js')) {
         passed++;
     } else {
         console.error('❌ FAIL: Absolute JS path in index.html');

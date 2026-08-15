@@ -4,10 +4,12 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/showroom", "destination": "/index.html" },
-    { "source": "/dinh-gia", "destination": "/sell.html" },
-    { "source": "/sell", "destination": "/sell.html" },
-    { "source": "/huong-dan", "destination": "/guide.html" },
-    { "source": "/huong-dan-mua-xe-dien", "destination": "/guide-ev.html" },
+    { "source": "/dinh-gia", "destination": "/dinh-gia-ban-xe.html" },
+    { "source": "/dinh-gia-ban-xe", "destination": "/dinh-gia-ban-xe.html" },
+    { "source": "/sell", "destination": "/dinh-gia-ban-xe.html" },
+    { "source": "/huong-dan", "destination": "/huong-dan-phap-ly.html" },
+    { "source": "/huong-dan-phap-ly", "destination": "/huong-dan-phap-ly.html" },
+    { "source": "/huong-dan-mua-xe-dien", "destination": "/huong-dan-mua-xe-dien.html" },
     { "source": "/studio", "destination": "/auto28-studio.html" },
     { "source": "/auto28-studio", "destination": "/auto28-studio.html" },
     { "source": "/vf3", "destination": "/index.html?filter=vf3#product-grid-section" },
@@ -31,6 +33,12 @@
       ]
     },
     {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, must-revalidate" }
+      ]
+    },
+    {
       "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
@@ -39,7 +47,13 @@
     {
       "source": "/(.*)\\.(css|js)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(webp|jpg|jpeg|png|woff2|svg|gif|ico)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]

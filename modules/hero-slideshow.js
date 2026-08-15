@@ -12,15 +12,16 @@
     let heroSlideshow = null;
 
     const modelImages = {
-        'vf3': './assets/cars/vf3.jpg',
-        'vf5': './assets/cars/vf5.jpg',
-        'vf6': './assets/cars/vf6.jpg',
-        'vf7': './assets/cars/vf7.jpg',
-        'vf8': './assets/cars/vf8.jpg',
-        'vf9': './assets/cars/vf9.jpg',
-        'vfe34': './assets/cars/vfe34.jpg',
-        'lux-a': './assets/cars/lux-a.jpg',
-        'fadil': './assets/cars/fadil.jpg'
+        'vf3': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg',
+        'vf5': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709366/inventory/gehgz48kyrfao336efyb.jpg',
+        'vf6': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709177/inventory/ci5f0omtx7mjovhtvya8.jpg',
+        'vf7': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709448/inventory/ewa3yyqts4rhldte2buv.jpg',
+        'vf8': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709092/inventory/rwubuzxz8gja6b8cauqh.jpg',
+        'vf9': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781708783/inventory/i95dhl2jbrj6rqheflys.jpg',
+        'vfe34': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781708926/inventory/oxqcdqoorcxhqtwh3ldw.jpg',
+        'lux-a': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781708596/inventory/es90jtyqysmmnulp98be.jpg',
+        'lux-sa': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781708428/inventory/oteggo6zalcmq0q6h5ry.jpg',
+        'fadil': 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781708381/inventory/xcaajbdokhtaytiopc65.jpg'
     };
 
     function triggerBackgroundSwap(imgUrl) {

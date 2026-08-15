@@ -85,28 +85,32 @@
             }
         });
 
-        // Parallax Mouse Tilt
+        // Parallax Mouse Tilt (Throttled via requestAnimationFrame)
         const heroContent = document.querySelector('.hero__content');
         const heroSectionMove = document.getElementById('hero');
         
         if (heroSectionMove && heroContent) {
+            let rafId = null;
             heroSectionMove.addEventListener('mousemove', (e) => {
+                if (rafId) return;
                 const { clientX, clientY } = e;
-                const centerX = window.innerWidth / 2;
-                const centerY = window.innerHeight / 2;
-                
-                const moveX = (clientX - centerX) / 60;
-                const moveY = (clientY - centerY) / 60;
-                
-                heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
-                
-                const form = document.getElementById('pricing-form');
-                if (form) {
-                    const rotateX = (clientY - centerY) / 80;
-                    const rotateY = (clientX - centerX) / 80;
-                    form.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
-                }
-            });
+                rafId = requestAnimationFrame(() => {
+                    const centerX = window.innerWidth / 2;
+                    const centerY = window.innerHeight / 2;
+                    const moveX = (clientX - centerX) / 60;
+                    const moveY = (clientY - centerY) / 60;
+                    
+                    heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                    
+                    const form = document.getElementById('pricing-form') || document.getElementById('sell-pricing-form');
+                    if (form) {
+                        const rotateX = (clientY - centerY) / 80;
+                        const rotateY = (clientX - centerX) / 80;
+                        form.style.transform = `perspective(1000px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+                    }
+                    rafId = null;
+                });
+            }, { passive: true });
         }
 
         // Sticky CTA Display on Scroll
@@ -114,8 +118,13 @@
         const heroSection = document.getElementById('hero');
 
         if (stickyFooter && heroSection) {
+            let heroThreshold = heroSection.offsetHeight * 0.5;
+            window.addEventListener('resize', () => {
+                heroThreshold = heroSection.offsetHeight * 0.5;
+            }, { passive: true });
+
             window.addEventListener('scroll', () => {
-                if (window.scrollY > heroSection.offsetHeight * 0.5) {
+                if (window.scrollY > heroThreshold) {
                     stickyFooter.classList.add('visible');
                 } else {
                     stickyFooter.classList.remove('visible');
@@ -139,22 +148,30 @@
             }
         }
 
-        // Testimonial Slider Automation
+        // Testimonial Slider Automation (Paused when off-screen)
         const slider = document.querySelector('.testimonial-slider');
         const dots = document.querySelectorAll('.dot');
         
-        if (slider && dots.length > 0) {
+        if (slider) {
             let isPaused = false;
+            let isVisible = true;
 
-            slider.addEventListener('scroll', () => {
-                const index = Math.round(slider.scrollLeft / slider.offsetWidth);
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-            }, { passive: true });
+            const sliderObserver = new IntersectionObserver((entries) => {
+                isVisible = entries[0].isIntersecting;
+            }, { threshold: 0.1 });
+            sliderObserver.observe(slider);
+
+            if (dots.length > 0) {
+                slider.addEventListener('scroll', () => {
+                    const index = Math.round(slider.scrollLeft / slider.offsetWidth);
+                    dots.forEach((dot, i) => {
+                        dot.classList.toggle('active', i === index);
+                    });
+                }, { passive: true });
+            }
 
             setInterval(() => {
-                if (isPaused) return;
+                if (isPaused || !isVisible) return;
                 const maxScroll = slider.scrollWidth - slider.offsetWidth;
                 if (slider.scrollLeft >= maxScroll - 10) {
                     slider.scrollTo({ left: 0, behavior: 'smooth' });
@@ -236,131 +253,6 @@
                 </div>
             `;
             document.body.appendChild(callModal);
-
-            // Add styles dynamically for modal
-            if (!document.getElementById('call-guard-styles')) {
-                const style = document.createElement('style');
-                style.id = 'call-guard-styles';
-                style.textContent = `
-                    .call-guard-card {
-                        max-width: 440px !important;
-                        padding: 2rem 1.5rem !important;
-                        text-align: center;
-                        background: #FFFFFF !important;
-                    }
-                    .call-guard-body {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                    .call-guard-icon-wrap {
-                        position: relative;
-                        width: 64px;
-                        height: 64px;
-                        margin-bottom: 1rem;
-                    }
-                    .call-guard-icon {
-                        width: 64px;
-                        height: 64px;
-                        background: linear-gradient(135deg, #2563EB, #1D4ED8);
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 1.75rem;
-                        color: #FFF;
-                        position: relative;
-                        z-index: 2;
-                        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
-                    }
-                    .call-guard-pulse {
-                        position: absolute;
-                        inset: -6px;
-                        border-radius: 50%;
-                        background: rgba(37, 99, 235, 0.25);
-                        animation: pulseGlow 2s infinite;
-                        z-index: 1;
-                    }
-                    @keyframes pulseGlow {
-                        0% { transform: scale(0.95); opacity: 0.8; }
-                        50% { transform: scale(1.15); opacity: 0.3; }
-                        100% { transform: scale(0.95); opacity: 0.8; }
-                    }
-                    .call-guard-title {
-                        font-family: var(--font-display, sans-serif);
-                        font-weight: 800;
-                        font-size: 1.35rem;
-                        color: #0F172A;
-                        margin: 0 0 0.5rem;
-                    }
-                    .call-guard-desc {
-                        font-size: 0.9rem;
-                        color: #64748B;
-                        line-height: 1.5;
-                        margin: 0 0 1rem;
-                    }
-                    .call-guard-number-badge {
-                        background: #EFF6FF;
-                        border: 1px solid #BFDBFE;
-                        color: #1D4ED8;
-                        font-family: var(--font-display, sans-serif);
-                        font-weight: 900;
-                        font-size: 1.5rem;
-                        padding: 0.5rem 1.25rem;
-                        border-radius: 12px;
-                        letter-spacing: 0.05em;
-                        margin-bottom: 0.75rem;
-                    }
-                    .call-guard-notice {
-                        font-size: 0.8rem;
-                        color: #059669;
-                        font-weight: 600;
-                        margin-bottom: 1.5rem;
-                    }
-                    .call-guard-actions {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 0.65rem;
-                        width: 100%;
-                    }
-                    .call-guard-btn-confirm {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 100%;
-                        padding: 0.85rem 1rem;
-                        background: linear-gradient(135deg, #16A34A, #15803D);
-                        color: #FFFFFF !important;
-                        font-weight: 700;
-                        font-size: 0.95rem;
-                        border-radius: 12px;
-                        text-decoration: none !important;
-                        box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
-                        transition: all 0.2s ease;
-                    }
-                    .call-guard-btn-confirm:hover {
-                        transform: translateY(-2px);
-                        box-shadow: 0 12px 25px rgba(22, 163, 74, 0.4);
-                    }
-                    .call-guard-btn-cancel {
-                        width: 100%;
-                        padding: 0.75rem 1rem;
-                        background: #F1F5F9;
-                        color: #64748B;
-                        font-weight: 600;
-                        font-size: 0.88rem;
-                        border: none;
-                        border-radius: 12px;
-                        cursor: pointer;
-                        transition: background 0.2s ease;
-                    }
-                    .call-guard-btn-cancel:hover {
-                        background: #E2E8F0;
-                        color: #334155;
-                    }
-                `;
-                document.head.appendChild(style);
-            }
         }
 
         // Close modal handlers
