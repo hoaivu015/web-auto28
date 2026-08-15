@@ -25,10 +25,9 @@
     <link rel="dns-prefetch" href="https://analytics.tiktok.com">
     
     <!-- ⚡ ASYNC FONT & STYLESHEET LOADING (ZERO RENDER-BLOCKING) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap">
     </noscript>
 
     <link rel="preload" as="style" href="./style.css">
@@ -511,32 +510,34 @@
             fbq('init', '537471081061777');
             fbq('track', 'PageView');
 
-            // TikTok Pixel Code
+            // TikTok Pixel Code (Official SDK Standard)
             !function (w, d, t) {
-                w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
-                    for (
-                        var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e;
+                w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
+                ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+                ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+                for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+                ttq.instance = function (t) {
+                    for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                    return e;
+                };
+                ttq.load = function (e, n) {
+                    var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner;
+                    ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                    var c = document.createElement("script"); c.type = "text/javascript", c.async = !0, c.src = r + "?sdkid=" + e + "&lib=" + t;
+                    var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(c, a);
                 };
                 ttq.load('D802OM3C77UEKU3Q3HPG');
                 ttq.page();
-            }(window, document, 'script');
+            }(window, document, 'ttq');
         }
 
-        // Trigger on first user interaction or fallback after window load + 4s
-        const pixelTriggerEvents = ['scroll', 'touchstart', 'mousemove', 'keydown', 'click'];
+        // Trigger strictly on first user interaction (zero bot penalty, 100% human coverage)
+        const pixelTriggerEvents = ['scroll', 'touchstart', 'pointerdown', 'mousedown', 'keydown', 'click'];
         function onPixelUserInteraction() {
             loadThirdPartyPixels();
             pixelTriggerEvents.forEach(evt => window.removeEventListener(evt, onPixelUserInteraction, { passive: true }));
         }
         pixelTriggerEvents.forEach(evt => window.addEventListener(evt, onPixelUserInteraction, { passive: true, once: true }));
-
-        window.addEventListener('load', () => {
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadThirdPartyPixels, { timeout: 4000 });
-            } else {
-                setTimeout(loadThirdPartyPixels, 3500);
-            }
-        }, { passive: true });
     </script>
     <!-- Google tag được quản lý tập trung bởi GTM-PPKRWBPC -->
     <!-- GA4 (G-PM7K9CB73D) và Google Ads (AW-18153153954) cấu hình trong GTM Dashboard -->

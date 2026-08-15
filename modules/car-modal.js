@@ -10,21 +10,21 @@
 
     let modalAbortController = null;
 
-    function formatCloudinaryUrl(url, maxDim = 1200) {
+    function formatCloudinaryUrl(url, maxDim = 600) {
         if (!url || typeof url !== 'string') return SVG_FALLBACK_CAR;
         if (url.includes('cloudinary.com') && url.includes('/upload/')) {
-            if (url.includes('/w_') || url.includes('/c_limit') || url.includes('/c_fit') || url.includes('/c_pad')) return url;
-            return url.replace('/upload/', `/upload/w_${maxDim},h_${maxDim},c_limit,f_auto,q_auto/`);
+            if (url.includes('/w_') || url.includes('/c_limit') || url.includes('/c_fit') || url.includes('/c_pad') || url.includes('/c_fill')) return url;
+            return url.replace('/upload/', `/upload/w_${maxDim},c_limit,f_auto,q_auto/`);
         }
         return url;
     }
 
     function getCloudinarySrcset(url) {
         if (!url || typeof url !== 'string' || !url.includes('cloudinary.com') || !url.includes('/upload/')) return '';
-        const base400 = formatCloudinaryUrl(url, 400);
-        const base800 = formatCloudinaryUrl(url, 800);
-        const base1200 = formatCloudinaryUrl(url, 1200);
-        return `${base400} 400w, ${base800} 800w, ${base1200} 1200w`;
+        const base380 = formatCloudinaryUrl(url, 380);
+        const base640 = formatCloudinaryUrl(url, 640);
+        const base960 = formatCloudinaryUrl(url, 960);
+        return `${base380} 380w, ${base640} 640w, ${base960} 960w`;
     }
 
     function renderStaticVehicles() {
@@ -143,12 +143,12 @@
             const battPillText = isElectric ? (car.battery_type || 'Mua Pin') : 'Xăng';
 
             const srcsetAttr = getCloudinarySrcset(car.image_url);
-            const srcsetHtml = srcsetAttr ? `srcset="${srcsetAttr}" sizes="(max-width: 640px) 400px, (max-width: 1024px) 800px, 1200px"` : '';
+            const srcsetHtml = srcsetAttr ? `srcset="${srcsetAttr}" sizes="(max-width: 640px) 380px, (max-width: 1024px) 640px, 960px"` : '';
 
             cardEl.innerHTML = `
                 <div class="card-top">
                     <div class="card-img-container">
-                        <img src="${formatCloudinaryUrl(car.image_url, 600) || SVG_FALLBACK_CAR}" ${srcsetHtml} width="400" height="225" crossorigin="anonymous" alt="${car.name}" class="card-img" loading="lazy" decoding="async" style="opacity: 0; transition: opacity 0.5s ease; ${car.image_position ? `object-position: ${car.image_position};` : ''}" onload="this.style.opacity='1'" onerror="this.src='${SVG_FALLBACK_CAR}'; this.style.opacity='1'">
+                        <img src="${formatCloudinaryUrl(car.image_url, 400) || SVG_FALLBACK_CAR}" ${srcsetHtml} width="400" height="225" crossorigin="anonymous" alt="${car.name}" class="card-img" loading="lazy" decoding="async" style="opacity: 0; transition: opacity 0.5s ease; ${car.image_position ? `object-position: ${car.image_position};` : ''}" onload="this.style.opacity='1'" onerror="this.src='${SVG_FALLBACK_CAR}'; this.style.opacity='1'">
                         <div class="card-badge card-badge--right">${icoShieldCheck}<span>Đã Check 176 Hạng Mục</span></div>
                     </div>
                     <div class="card-content-col">
@@ -188,7 +188,11 @@
         if (typeof window.loadDynamicLandingPageConfig === 'function') {
             window.loadDynamicLandingPageConfig();
         }
-        renderStaticVehicles();
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(renderStaticVehicles, { timeout: 600 });
+        } else {
+            setTimeout(renderStaticVehicles, 30);
+        }
         window.fetchAndRenderVehicles = renderStaticVehicles;
         window.renderStaticVehicles = renderStaticVehicles;
 

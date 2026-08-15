@@ -113,17 +113,19 @@
             }, { passive: true });
         }
 
-        // Sticky CTA Display on Scroll
+        // Sticky CTA Display on Scroll (Lazy Reflow / Zero-blocking)
         const stickyFooter = document.getElementById('sticky-cta');
         const heroSection = document.getElementById('hero');
 
         if (stickyFooter && heroSection) {
-            let heroThreshold = heroSection.offsetHeight * 0.5;
-            window.addEventListener('resize', () => {
+            let heroThreshold = 0;
+            const updateThreshold = () => {
                 heroThreshold = heroSection.offsetHeight * 0.5;
-            }, { passive: true });
+            };
+            window.addEventListener('resize', updateThreshold, { passive: true });
 
             window.addEventListener('scroll', () => {
+                if (!heroThreshold) updateThreshold();
                 if (window.scrollY > heroThreshold) {
                     stickyFooter.classList.add('visible');
                 } else {
@@ -132,19 +134,28 @@
             }, { passive: true });
         }
 
-        // Bokeh Particles Generator
+        // Bokeh Particles Generator (Deferred Background Fragment)
         const bokehContainer = document.getElementById('hero-bokeh');
         if (bokehContainer) {
-            for (let i = 0; i < 12; i++) {
-                const bokeh = document.createElement('div');
-                bokeh.className = 'bokeh-item';
-                const size = Math.random() * 15 + 10;
-                bokeh.style.width = `${size}px`;
-                bokeh.style.height = `${size}px`;
-                bokeh.style.left = `${Math.random() * 100}%`;
-                bokeh.style.animationDelay = `${Math.random() * 10}s`;
-                bokeh.style.animationDuration = `${Math.random() * 8 + 8}s`;
-                bokehContainer.appendChild(bokeh);
+            const generateBokeh = () => {
+                const fragment = document.createDocumentFragment();
+                for (let i = 0; i < 8; i++) {
+                    const bokeh = document.createElement('div');
+                    bokeh.className = 'bokeh-item';
+                    const size = Math.random() * 15 + 10;
+                    bokeh.style.width = `${size}px`;
+                    bokeh.style.height = `${size}px`;
+                    bokeh.style.left = `${Math.random() * 100}%`;
+                    bokeh.style.animationDelay = `${Math.random() * 10}s`;
+                    bokeh.style.animationDuration = `${Math.random() * 8 + 8}s`;
+                    fragment.appendChild(bokeh);
+                }
+                bokehContainer.appendChild(fragment);
+            };
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(generateBokeh, { timeout: 1500 });
+            } else {
+                setTimeout(generateBokeh, 300);
             }
         }
 
