@@ -219,40 +219,43 @@
                         });
                     }
 
-                    // 📊 3. GTM Datalayer Push Chuẩn Hóa CRO 2026
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        'event': 'lead_form_submitted',
-                        'form_id': 'sell-pricing-form',
-                        'form_type': 'ai_valuation_lead',
-                        'car_model': modelName,
-                        'car_year': year,
-                        'car_km': km,
-                        'estimated_price': estimatedPrice,
-                        'phone': cleanPhone,
-                        'timestamp': new Date().toISOString()
-                    });
+                    // 📊 3. Chuẩn hóa sự kiện DataLayer CRO 2026 & SHA-256 Hashed Event Tracking
+                    if (window.Auto28Tracking && typeof window.Auto28Tracking.dispatchLeadTracking === 'function') {
+                        window.Auto28Tracking.dispatchLeadTracking({
+                            phone: cleanPhone,
+                            carName: modelName,
+                            formId: 'sell-pricing-form',
+                            formType: 'ai_valuation_lead',
+                            leadType: 'Dinh_Gia_Thu_Mua_Xe',
+                            value: estimatedPrice || 0
+                        });
+                    } else {
+                        // Fallback tracking
+                        window.dataLayer = window.dataLayer || [];
+                        const eventId = 'val_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+                        window.dataLayer.push({
+                            'event': 'generate_lead',
+                            'event_id': eventId,
+                            'form_id': 'sell-pricing-form',
+                            'form_type': 'ai_valuation_lead',
+                            'car_model': modelName,
+                            'car_year': year,
+                            'car_km': km,
+                            'estimated_price': estimatedPrice,
+                            'phone': cleanPhone,
+                            'timestamp': new Date().toISOString()
+                        });
 
-                    window.dataLayer.push({
-                        'event': 'form_lead_success',
-                        'event_category': 'Lead',
-                        'form_id': 'sell-pricing-form',
-                        'car_model': modelName,
-                        'car_year': year,
-                        'car_km': km,
-                        'phone': cleanPhone
-                    });
+                        window.dataLayer.push({
+                            'event': 'lead_form_submitted',
+                            'event_id': eventId,
+                            'form_id': 'sell-pricing-form',
+                            'car_model': modelName
+                        });
 
-                    window.dataLayer.push({
-                        'event': 'form_submit_success',
-                        'form_id': 'hero_pricing_form_sell',
-                        'car_model': modelName,
-                        'car_year': year,
-                        'car_km': km
-                    });
-
-                    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: modelName });
-                    if (typeof ttq === 'function') ttq.track('CompleteRegistration', { content_name: modelName });
+                        if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: modelName }, { eventID: eventId });
+                        if (typeof ttq === 'function') ttq.track('CompleteRegistration', { content_name: modelName }, { event_id: eventId });
+                    }
 
                     if (ctaBtn) {
                         ctaBtn.textContent = '✅ ĐÃ GỬI BÁO GIÁ THÀNH CÔNG!';

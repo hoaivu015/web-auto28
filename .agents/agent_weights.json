@@ -422,6 +422,74 @@
         ".agents/scratch/decisions.jsonl"
       ],
       "reference": "AGENTS.md §19"
+    },
+    "attribution_tracking_architect": {
+      "base_weight": 9,
+      "veto_power": true,
+      "veto_triggers": [
+        "missing_event_id_deduplication",
+        "unhashed_pii_violation",
+        "emq_score_below_8_5",
+        "broken_lead_webhook",
+        "forbidden_360_tracking_detected"
+      ],
+      "dna_guardian": false,
+      "authority_domains": [
+        "server_side_tracking",
+        "meta_capi",
+        "ga4_server_protocol",
+        "tiktok_events_api",
+        "google_ads_enhanced_conversions",
+        "datalayer_taxonomy",
+        "event_deduplication",
+        "lead_webhook_automation",
+        "first_party_cookies"
+      ],
+      "confidence_threshold": 0.92,
+      "context_multipliers": {
+        "conversion_optimization": 0.95,
+        "technical_fix": 0.9,
+        "content_update": 0.4,
+        "performance_audit": 0.8,
+        "seo_update": 0.6,
+        "system_config": 1.0,
+        "full_audit": 0.95
+      }
+    },
+    "automotive_cro_architect": {
+      "base_weight": 10,
+      "veto_power": false,
+      "dna_guardian": true,
+      "dna_domains": [
+        "form_ux",
+        "cta_design",
+        "adn3_typography",
+        "anxiety_reducers",
+        "loan_simulator_ux"
+      ],
+      "authority_domains": [
+        "cro",
+        "conversion_rate_optimization",
+        "meclabs_conversion_heuristic",
+        "lift_model",
+        "progressive_profiling",
+        "automotive_sales_copy",
+        "anxiety_reduction",
+        "loan_calculator_ux",
+        "inspection_report_ux",
+        "qualitative_analytics",
+        "ab_testing_rigor"
+      ],
+      "confidence_threshold": 0.9,
+      "context_multipliers": {
+        "conversion_optimization": 1.0,
+        "technical_fix": 0.5,
+        "content_update": 0.85,
+        "performance_audit": 0.65,
+        "seo_update": 0.7,
+        "system_config": 0.0,
+        "full_audit": 0.9
+      }
     }
   },
   "weighted_score_formula": {

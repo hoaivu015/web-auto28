@@ -884,32 +884,49 @@
                 }
 
                 if (response.ok) {
-                    // 📊 3. Chuẩn hóa sự kiện DataLayer CRO 2026
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        event: 'lead_form_submitted',
-                        form_id: 'car_lead_modal',
-                        form_type: 'car_inquiry',
-                        vehicle_name: carName,
-                        phone: phone,
-                        name: name,
-                        timestamp: new Date().toISOString()
-                    });
-
-                    window.dataLayer.push({
-                        event: 'form_lead_success',
-                        vehicle_name: carName,
-                        phone: phone
-                    });
-
-                    if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: carName });
-                    if (typeof ttq === 'function') ttq.track('CompleteRegistration', { content_name: carName });
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'generate_lead', {
-                            'event_category': 'Conversion',
-                            'event_label': 'Modal Xem Ưu Đãi Mua Xe',
-                            'car_model': carName
+                    // 📊 3. Chuẩn hóa sự kiện DataLayer CRO 2026 & SHA-256 Hashed Event Tracking
+                    if (window.Auto28Tracking && typeof window.Auto28Tracking.dispatchLeadTracking === 'function') {
+                        window.Auto28Tracking.dispatchLeadTracking({
+                            phone: phone,
+                            name: name,
+                            carName: carName,
+                            formId: 'car_lead_modal',
+                            formType: 'car_inquiry',
+                            leadType: 'Tu_Van_Xe_Modal'
                         });
+                    } else {
+                        // Fallback tracking
+                        window.dataLayer = window.dataLayer || [];
+                        const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+                        window.dataLayer.push({
+                            event: 'generate_lead',
+                            event_id: eventId,
+                            form_id: 'car_lead_modal',
+                            form_type: 'car_inquiry',
+                            vehicle_name: carName,
+                            phone: phone,
+                            name: name,
+                            timestamp: new Date().toISOString()
+                        });
+
+                        window.dataLayer.push({
+                            event: 'lead_form_submitted',
+                            event_id: eventId,
+                            form_id: 'car_lead_modal',
+                            vehicle_name: carName
+                        });
+
+                        if (typeof fbq === 'function') fbq('track', 'Lead', { content_name: carName }, { eventID: eventId });
+                        if (typeof ttq === 'function') ttq.track('CompleteRegistration', { content_name: carName }, { event_id: eventId });
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'generate_lead', {
+                                'event_id': eventId,
+                                'transaction_id': eventId,
+                                'event_category': 'Conversion',
+                                'event_label': 'Modal Xem Ưu Đãi Mua Xe',
+                                'car_model': carName
+                            });
+                        }
                     }
 
                     btnModalSubmit.textContent = '✅ ĐÃ GỬI BÁO GIÁ!';

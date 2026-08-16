@@ -102,7 +102,7 @@ Tầng 5 — CONFIDENCE SCORE: final_vote = effective_weight × confidence
 Tầng 6 — DECISION LOG: Ghi vào .agents/scratch/decisions.jsonl
 ```
 
-**Veto Agents (không thể bị override bởi weight):** `landing-page-auditor`, `web_performance_architect`, `visual_inspector`, `structure_guardian`, `lang_standards_guardian`, `auto_technical_inspector`, `reflection_gate_agent`
+**Veto Agents (không thể bị override bởi weight):** `landing-page-auditor`, `web_performance_architect`, `visual_inspector`, `structure_guardian`, `lang_standards_guardian`, `auto_technical_inspector`, `reflection_gate_agent`, `attribution_tracking_architect`
 
 ---
 

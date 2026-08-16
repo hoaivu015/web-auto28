@@ -496,14 +496,34 @@
             if (window._thirdPartyPixelsLoaded) return;
             window._thirdPartyPixelsLoaded = true;
 
-            // Google Tag Manager (Non-blocking Deferred Loading)
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-PPKRWBPC');
+            // 1. Google Tag Manager (sGTM First-Party Container with Auto-Fallback)
+            (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                var f = d.getElementsByTagName(s)[0];
+                var j = d.createElement(s);
+                var dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                
+                // Priority: custom sGTM domain -> standard googletagmanager.com
+                var sGtmBase = (w.sGtmDomain && typeof w.sGtmDomain === 'string') 
+                    ? w.sGtmDomain.replace(/\/+$/, '') 
+                    : 'https://www.googletagmanager.com';
+                j.src = sGtmBase + '/gtm.js?id=' + i + dl;
+                
+                j.onerror = function() {
+                    // Fallback to official GTM endpoint if custom sGTM subdomain fails or is unreachable
+                    if (j.src.indexOf('googletagmanager.com') === -1) {
+                        var fbScript = d.createElement(s);
+                        fbScript.async = true;
+                        fbScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                        f.parentNode.insertBefore(fbScript, f);
+                    }
+                };
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PPKRWBPC');
 
-            // Facebook Pixel Code
+            // 2. Facebook Pixel Code (Enhanced Dual-Stream CAPI-ready)
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -515,7 +535,7 @@
             fbq('init', '537471081061777');
             fbq('track', 'PageView');
 
-            // TikTok Pixel Code (Official SDK Standard)
+            // 3. TikTok Pixel Code (Official SDK Standard)
             !function (w, d, t) {
                 w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
                 ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
@@ -1165,6 +1185,7 @@
 
 
     <script src="./cars_data.js?v=2.1.0" defer></script>
+    <script src="./modules/tracking-pipeline.js?v=2.2.0" defer></script>
     <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
     <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
     <script src="./modules/car-filter.js?v=2.1.0" defer></script>
