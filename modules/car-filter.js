@@ -34,10 +34,25 @@
         });
     }
 
-    function applyFilter(filterVal, shouldScroll) {
+    function updateUrlFilterParam(filterVal) {
+        if (!window.history || !window.history.replaceState) return;
+        try {
+            const url = new URL(window.location.href);
+            if (!filterVal || filterVal === 'all') {
+                url.searchParams.delete('filter');
+                url.searchParams.delete('model');
+            } else {
+                url.searchParams.set('filter', filterVal);
+                url.searchParams.delete('model');
+            }
+            window.history.replaceState(null, '', url.pathname + (url.search ? url.search : '') + url.hash);
+        } catch(e) {}
+    }
+
+    function applyFilter(filterVal, shouldScroll, skipUrlUpdate) {
         const filterPills = document.querySelectorAll('.filter-pill');
         if (filterPills.length > 0) {
-            const targets = filterVal.split(',').map(s => s.trim());
+            const targets = (filterVal || 'all').split(',').map(s => s.trim());
             let hasMatch = false;
             filterPills.forEach(p => {
                 const pVal = p.getAttribute('data-filter');
@@ -54,6 +69,10 @@
         }
 
         filterCarCards(filterVal);
+
+        if (!skipUrlUpdate) {
+            updateUrlFilterParam(filterVal);
+        }
 
         if (shouldScroll) {
             const gridSection = document.getElementById('product-grid-section');
@@ -77,14 +96,14 @@
         }
 
         // Attach listener to footer car filter links for smooth same-page transition
-        const footerLinks = document.querySelectorAll('a[data-filter-link], a[href*="filter="]');
+        const footerLinks = document.querySelectorAll('a[data-filter-link], a[href*="filter="], a[href*="model="]');
         footerLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 let filterVal = link.getAttribute('data-filter-link');
                 if (!filterVal) {
                     try {
                         const urlObj = new URL(link.href, window.location.origin);
-                        filterVal = urlObj.searchParams.get('filter');
+                        filterVal = urlObj.searchParams.get('filter') || urlObj.searchParams.get('model');
                     } catch(err) {}
                 }
                 if (filterVal) {
@@ -99,20 +118,17 @@
                     if (isSamePage && carsGrid) {
                         e.preventDefault();
                         applyFilter(filterVal, true);
-                        if (window.history && window.history.pushState) {
-                            window.history.pushState(null, '', link.href);
-                        }
                     }
                 }
             });
         });
 
-        // Check URL query parameters on initial page load
+        // Check URL query parameters (?filter=... or ?model=...) on initial page load
         const urlParams = new URLSearchParams(window.location.search);
-        const filterParam = urlParams.get('filter');
+        const filterParam = urlParams.get('filter') || urlParams.get('model');
         if (filterParam) {
             setTimeout(() => {
-                applyFilter(filterParam, true);
+                applyFilter(filterParam, true, true);
             }, 150);
         }
 

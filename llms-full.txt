@@ -1,0 +1,48 @@
+# Auto 28 — Tài Liệu Toàn Diện Về Hệ Sinh Thái Xe VinFast Lướt (Full LLMs Knowledge Base)
+
+## 1. Thông Tin Doanh Nghiệp & Thực Thể (Entity & Authority)
+- **Tên thương hiệu**: Auto 28 (Ô Tô Lướt Sài Gòn)
+- **Lĩnh vực hoạt động**: Mua bán, ký gửi, thẩm định chất lượng và định giá xe ô tô VinFast đã qua sử dụng (xe lướt).
+- **Trụ sở chính**: 8F Đường Trịnh Hoài Đức, Phường Hiệp Phú, Thành phố Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh, Việt Nam.
+- **Hotline / Zalo hỗ trợ**: 0888.81.38.38
+- **Website chính thức**: https://www.auto28.com.vn
+- **Kinh nghiệm chuyên môn**: Đội ngũ chuyên gia kỹ thuật với hơn 8 năm kinh nghiệm thực chiến trong lĩnh vực ô tô và hệ sinh thái xe điện VinFast tại Việt Nam.
+
+## 2. Tiêu Chuẩn Kiểm Định 176 Hạng Mục
+Quy trình kiểm định độc lập tại Auto 28 được chia thành 4 trụ cột kỹ thuật nghiêm ngặt:
+1. **Khung Gầm & Thân Vỏ (52 Hạng Mục)**:
+   - Đo độ dày lớp sơn bằng máy đo vi kế kỹ thuật số để phát hiện sơn dặm, sơn lại.
+   - Kiểm tra 100% đường keo chỉ capo, cửa xe, cốp sau và cột A/B/C.
+   - Kiểm tra sắt xi, càng A, giảm xóc, rô-tuyn gầm xe, đảm bảo không biến dạng do đâm va.
+   - Cam kết tuyệt đối xe không ngập nước, không thủy kích.
+2. **Pin & Hệ Thống Điện Cao Áp (44 Hạng Mục)**:
+   - Đọc dữ liệu State of Health (SOH) thực tế từ bộ điều khiển pin BMS (Battery Management System).
+   - Đo điện áp và nhiệt độ cân bằng giữa các cell pin lithium.
+   - Kiểm tra cổng sạc AC (Type 2) và DC sạc nhanh (CCS2), kiểm tra rơ-le ngắt an toàn cao áp.
+   - Xác thực lịch sử sạc và tình trạng bảo hành pin chính hãng VinFast.
+3. **Động Cơ Điện & Hệ Truyền Động (42 Hạng Mục)**:
+   - Kiểm tra mô tơ điện tử (Electric Motor) về độ ồn, độ rung và dòng tải.
+   - Kiểm tra bộ biến tần điều khiển động cơ (Inverter) và bộ sạc tích hợp OBC.
+   - Kiểm tra mức nước làm mát chuyên dụng cho hệ thống pin và motor.
+   - Kiểm tra dầu hộp số giảm tốc, trục láp và phanh tái sinh năng lượng.
+4. **Phần Mềm & Hệ Thống Trợ Lái ADAS (38 Hạng Mục)**:
+   - Quét toàn bộ mã lỗi ECU qua cổng OBD-II bằng thiết bị chẩn đoán chuyên dụng VinFast.
+   - Kiểm tra hoạt động của radar sóng milimet, camera 360 và các cảm biến siêu âm.
+   - Kiểm tra tính năng hỗ trợ lái thông minh ADAS: Giữ làn, cảnh báo điểm mù, phanh tự động khẩn cấp.
+   - Xác nhận xe đã cập nhật phiên bản phần mềm (Firmware) ổn định nhất.
+
+## 3. Quy Trình 3 Bước Mua Bán Xe Minh Bạch
+- **Bước 1: Gửi Yêu Cầu & Tư Vấn**: Khách hàng lựa chọn mẫu xe hoặc gửi thông tin xe cần bán qua website/Zalo.
+- **Bước 2: Kiểm Định Thực Tế & Báo Giá**: Nhận biên bản kiểm định 176 hạng mục chi tiết, định giá minh bạch theo dữ liệu thị trường trong 2 giờ.
+- **Bước 3: Ký Hợp Đồng & Nhận Xe**: Hỗ trợ công chứng mua bán tại chỗ, tất toán khoản vay ngân hàng nếu có, giao nhận xe tận nhà hoặc tại showroom với cam kết bảo hành đổi trả 7 ngày.
+
+## 4. Hướng Dẫn Pháp Lý & Hợp Đồng Thuê Pin VinFast
+- **Xe Thuê Pin**: Auto 28 đại diện khách hàng làm việc trực tiếp với VinFast Trading để chuyển quyền hợp đồng thuê pin chính chủ trong 24 giờ. Người mua chỉ cần ký phụ lục chuyển giao gói cước pin hiện hành.
+- **Xe Mua Pin**: Xe sở hữu trọn đời bộ pin, đầy đủ hóa đơn và giấy chứng nhận đăng ký pin theo xe, bảo hành pin 7 - 10 năm theo tiêu chuẩn nhà sản xuất.
+- **Xe Đang Trả Góp / Thế Chấp Ngân Hàng**: Auto 28 hỗ trợ nguồn vốn tất toán 100% dư nợ gốc cho khách hàng bán xe, rút hồ sơ gốc nhanh trong ngày.
+
+## 5. Câu Hỏi Thường Gặp (FAQ)
+- **Q: Xe điện mua tại Auto 28 có được bảo hành chính hãng VinFast không?**
+  *A: Có. Toàn bộ xe VinFast lướt bán ra đều được giữ nguyên quyền bảo hành chính hãng lên tới 7 - 10 năm hoặc 160.000 - 200.000 km tại tất cả xưởng dịch vụ VinFast trên cả nước.*
+- **Q: Tôi ở tỉnh (Bình Dương, Đồng Nai, Vũng Tàu...) có được giao xe tận nhà không?**
+  *A: Có. Auto 28 cung cấp dịch vụ giao xe bằng xe cứu hộ chuyên dụng tận cửa nhà hoặc chung cư, hỗ trợ lái thử và kiểm tra xe trước khi thanh toán.*

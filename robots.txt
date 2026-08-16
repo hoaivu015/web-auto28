@@ -4,14 +4,37 @@ Disallow: /scratch/
 Disallow: /.agents/
 Disallow: /node_modules/
 
-# GEO 2026 — Allow AI Search Crawlers
+# 🤖 GEO & AEO 2026 — Explicitly Allow AI Search & Research Crawlers
+User-agent: GPTBot
+Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 User-agent: Googlebot
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
+# Sitemaps & LLM Context
 Sitemap: https://www.auto28.com.vn/sitemap.xml
+# LLMs Text Standard: https://www.auto28.com.vn/llms.txt

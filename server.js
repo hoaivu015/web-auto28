@@ -38,6 +38,16 @@ app.get('/sw.js', (req, res) => {
 });
 app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
 app.get('/robots.txt', (req, res) => res.sendFile(path.join(__dirname, 'robots.txt')));
+app.get('/llms.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.setHeader('Cache-Control', dynamicStaticCache);
+  res.sendFile(path.join(__dirname, 'llms.txt'));
+});
+app.get('/llms-full.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  res.setHeader('Cache-Control', dynamicStaticCache);
+  res.sendFile(path.join(__dirname, 'llms-full.txt'));
+});
 
 const fs = require('fs');
 

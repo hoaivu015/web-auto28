@@ -68,188 +68,272 @@ function buildLandingPage() {
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "AutoDealer",
-      "@id": "https://www.auto28.com.vn/#autodealer",
-      "name": "Auto28 - Hệ thống Xe VinFast Lướt Uy Tín TP.HCM & Lân Cận",
-      "description": "Auto28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI, check hãng 176 hạng mục.",
-      "telephone": "0888813838",
-      "url": "https://www.auto28.com.vn",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "8F Đường Trịnh Hoài Đức",
-        "addressLocality": "Tăng Nhơn Phú",
-        "addressRegion": "Quận 9, TP. Hồ Chí Minh",
-        "addressCountry": "VN"
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "AdministrativeArea",
-          "name": "Thành phố Hồ Chí Minh"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bình Dương"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Đồng Nai"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Long An"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Tây Ninh"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bà Rịa - Vũng Tàu"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Thủ tục chuyển nhượng hợp đồng pin xe điện có phức tạp không?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hoàn toàn không phức tạp. Auto28 phối hợp chặt chẽ trực tiếp với VinFast hỗ trợ trọn gói thủ tục sang tên hợp đồng thuê pin. Bạn chỉ cần ký giấy ủy quyền mua bán xe cũ theo mẫu, toàn bộ phần còn lại chúng tôi sẽ giải quyết trong 24 giờ."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Xe đang vay ngân hàng / trả góp có giao dịch được không?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hoàn toàn được! Auto28 hỗ trợ tất toán toàn bộ số tiền vay ngân hàng hoặc các khoản vay tài chính liên quan ngay trong ngày, hỗ trợ giải phóng giấy tờ xe bản gốc để tiến hành mua bán đúng luật pháp Việt Nam."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quy trình kiểm định 176 hạng mục gồm những gì?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kỹ thuật viên chuyên nghiệp sẽ kiểm định toàn diện từ thân vỏ (nước sơn, độ biến dạng do va chạm), gầm xe, các mạch sạc, chẩn đoán phần mềm bằng máy quét lỗi chuyên dụng VinFast, và đánh giá chi tiết dung lượng pin thực tế."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Mức định giá AI của Auto28 được cập nhật thế nào?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Thuật toán thông minh của chúng tôi quét dữ liệu giao dịch thực tế từ các hội nhóm, sàn xe cũ uy tín trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực của xe điện Việt Nam."
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Danh Mục Xe VinFast Lướt Tại Auto28",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF3",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
-            },
-            "model": "VF3",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "240000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+          "@type": "AutoDealer",
+          "@id": "https://www.auto28.com.vn/#autodealer",
+          "name": "Auto 28 - Hệ Thống Xe VinFast Lướt Uy Tín TP.HCM & Lân Cận",
+          "alternateName": "Ô Tô Lướt Sài Gòn Auto 28",
+          "description": "Auto 28 là hệ thống chuyên mua bán, ký gửi và định giá xe VinFast lướt uy tín hàng đầu tại TP.HCM và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI, check hãng 176 hạng mục, bảo hành pin và giao xe tận nhà.",
+          "telephone": "0888813838",
+          "url": "https://www.auto28.com.vn",
+          "logo": "https://www.auto28.com.vn/assets/logos/logo.jpg",
+          "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
+          "priceRange": "$$",
+          "slogan": "Minh Bạch Từng Chi Tiết - Đồng Hành Cùng Xe Điện",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8F Đường Trịnh Hoài Đức",
+            "addressLocality": "Phường Hiệp Phú",
+            "addressRegion": "TP. Thủ Đức, TP. Hồ Chí Minh",
+            "postalCode": "700000",
+            "addressCountry": "VN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "10.8495",
+            "longitude": "106.7785"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "08:00",
+              "closes": "19:30"
             }
+          ],
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Thành phố Hồ Chí Minh" },
+            { "@type": "AdministrativeArea", "name": "Bình Dương" },
+            { "@type": "AdministrativeArea", "name": "Đồng Nai" },
+            { "@type": "AdministrativeArea", "name": "Long An" },
+            { "@type": "AdministrativeArea", "name": "Tây Ninh" },
+            { "@type": "AdministrativeArea", "name": "Bà Rịa - Vũng Tàu" },
+            { "@type": "Country", "name": "Việt Nam" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.auto28.com.vn/#website",
+          "url": "https://www.auto28.com.vn",
+          "name": "Auto 28 - Mua Bán Xe VinFast Lướt",
+          "description": "Nền tảng mua bán, định giá và kiểm định xe VinFast lướt chất lượng cao.",
+          "publisher": { "@id": "https://www.auto28.com.vn/#autodealer" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.auto28.com.vn/?filter={search_term_string}#product-grid-section",
+            "query-input": "required name=search_term_string"
           }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF5 Plus",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
+          "@type": "BreadcrumbList",
+          "@id": "https://www.auto28.com.vn/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang Chủ",
+              "item": "https://www.auto28.com.vn/"
             },
-            "model": "VF5 Plus",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "420000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kho Xe VinFast Lướt",
+              "item": "https://www.auto28.com.vn/#product-grid-section"
             }
-          }
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF8 Eco / Plus",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
+          "@type": "FAQPage",
+          "@id": "https://www.auto28.com.vn/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Thủ tục chuyển nhượng hợp đồng pin xe điện có phức tạp không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hoàn toàn không phức tạp. Auto 28 phối hợp chặt chẽ trực tiếp với VinFast hỗ trợ trọn gói thủ tục sang tên hợp đồng thuê pin chính chủ trong 24 giờ. Khách hàng chỉ cần ký giấy ủy quyền và nhận bàn giao xe."
+              }
             },
-            "model": "VF8",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
+            {
+              "@type": "Question",
+              "name": "Xe đang vay ngân hàng / trả góp có giao dịch được không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hoàn toàn được! Auto 28 hỗ trợ nguồn vốn tất toán toàn bộ số tiền vay ngân hàng ngay trong ngày, giải phóng giấy tờ xe bản gốc để tiến hành mua bán đúng luật pháp Việt Nam."
+              }
             },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "780000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+            {
+              "@type": "Question",
+              "name": "Quy trình kiểm định 176 hạng mục gồm những gì?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kiểm định toàn diện 4 trụ cột: (1) Thân vỏ & Khung gầm 52 mục không đâm đụng, (2) Pin & Hệ thống điện 44 mục đo SOH thực tế từ BMS, (3) Động cơ điện & Truyền động 42 mục, (4) Quét phần mềm OBD-II & ADAS 38 mục."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mức định giá AI của Auto 28 được cập nhật thế nào?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Thuật toán định giá của Auto 28 quét dữ liệu giao dịch thực tế từ các sàn xe cũ trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực tế của xe."
+              }
             }
-          }
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF9 Eco / Plus",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
+          "@type": "ItemList",
+          "@id": "https://www.auto28.com.vn/#inventory",
+          "name": "Danh Mục Xe VinFast Lướt Tuyển Chọn Tại Auto 28",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 3",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 3",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "240000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
             },
-            "model": "VF9",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 5 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 5 Plus",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "420000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
             },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "1150000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 6 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 6 Plus",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "630000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 7 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 7 Plus",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "790000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF e34",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF e34",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "440000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 8 Eco / Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 8",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "780000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 9 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 9",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "1150000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
             }
-          }
+          ]
         }
       ]
     }

@@ -23,279 +23,20 @@
     <link rel="dns-prefetch" href="https://res.cloudinary.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://analytics.tiktok.com">
+    <link rel="preload" as="script" href="./cars_data.js?v=2.1.0">
+    <link rel="preload" as="script" href="./modules/car-modal.js?v=2.1.0">
+    <link rel="modulepreload" href="./main.js?v=2.1.0">
     
-    <!-- ⚡ ASYNC FONT & STYLESHEET LOADING (ZERO RENDER-BLOCKING) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap">
-    </noscript>
-
-    <link rel="preload" as="style" href="./style.css">
-    <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="./style.css">
-    </noscript>
-
-    <!-- ⚡ CRITICAL ABOVE-THE-FOLD CSS (INSTANT FCP / ZERO-WATERFALL) -->
-    <style id="critical-css">
-    :root {
-      --color-bg-base: #F3F6FC;
-      --color-surface-glass: #FFFFFF;
-      --color-element-glass: rgba(0, 0, 0, 0.03);
-      --color-accent-blue: #2563EB;
-      --color-accent-indigo: #4F46E5;
-      --color-text-primary: #020B14;
-      --color-text-secondary: #1E293B;
-      --color-text-muted: #334155;
-      --gradient-accent: linear-gradient(90deg, #2563EB, #4F46E5);
-      --border-card: #E1E9F6;
-      --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-body: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; background-color: #F3F6FC; }
-    body {
-      background-color: #F3F6FC;
-      color: #020B14;
-      font-family: var(--font-body);
-      font-size: 15px;
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    .ambient-canvas-base {
-      position: fixed;
-      inset: 0;
-      z-index: -10;
-      background: radial-gradient(circle at 10% 10%, rgba(96, 165, 250, 0.08) 0%, transparent 40%),
-                  radial-gradient(circle at 90% 85%, rgba(244, 114, 182, 0.08) 0%, transparent 40%),
-                  radial-gradient(circle at 50% 40%, rgba(168, 85, 247, 0.06) 0%, transparent 50%),
-                  #F3F6FC;
-      pointer-events: none;
-      contain: strict;
-    }
-    .floating-nav-capsule {
-      position: fixed;
-      top: 1rem;
-      left: 0.75rem;
-      right: 0.75rem;
-      height: 52px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid #E1E9F6;
-      backdrop-filter: blur(32px);
-      -webkit-backdrop-filter: blur(32px);
-      border-radius: 9999px;
-      padding: 0 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 12px 28px -4px rgba(2, 11, 20, 0.08);
-      z-index: 1000;
-    }
-    @media (min-width: 768px) {
-      .floating-nav-capsule {
-        top: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 56rem;
-        padding: 0 1.5rem;
-      }
-    }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 1.15rem;
-      letter-spacing: -0.05em;
-      color: #020B14;
-    }
-    .nav-links { display: none; align-items: center; gap: 1.75rem; }
-    @media (min-width: 768px) { .nav-links { display: flex; } }
-    .nav-link {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.6875rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #1E293B;
-      text-decoration: none;
-    }
-    .btn-nav-hotline {
-      background: #020B14;
-      color: #FFFFFF;
-      height: 38px;
-      padding: 0 1rem;
-      border-radius: 9999px;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.75rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hero {
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 7rem 1.5rem 2.5rem;
-      overflow: hidden;
-    }
-    .hero__content {
-      position: relative;
-      z-index: 10;
-      max-width: 60rem;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1.5rem;
-    }
-    .hero__badge {
-      display: inline-block;
-      background: rgba(79, 70, 229, 0.06);
-      border: 1px solid rgba(79, 70, 229, 0.12);
-      padding: 0.375rem 0.875rem;
-      border-radius: 9999px;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      color: #4F46E5;
-      margin-bottom: 1.5rem;
-      text-transform: uppercase;
-    }
-    .hero__headline {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: clamp(2.25rem, 5vw, 3.25rem);
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      margin-bottom: 1.25rem;
-      color: #020B14;
-      text-align: center;
-    }
-    .text-gradient {
-      background: linear-gradient(90deg, #2563EB, #4F46E5, #EC4899);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-    .hero__sub {
-      font-family: var(--font-body);
-      font-size: 16px;
-      font-weight: 400;
-      color: #1E293B;
-      line-height: 1.6;
-      max-width: 48rem;
-      margin-bottom: 1rem;
-    }
-    .hero__trust-badge {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.6875rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #334155;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero__trust-badge::before { content: '⚡'; color: #4F46E5; }
-    .bento-filter-pill {
-      display: flex;
-      flex-direction: column;
-      background: #FFFFFF;
-      border: 1px solid #E1E9F6;
-      padding: 1.25rem;
-      border-radius: 2rem;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
-      gap: 1.25rem;
-      width: 100%;
-      max-width: 52rem;
-      margin: 0 auto;
-    }
-    @media (min-width: 768px) {
-      .bento-filter-pill {
-        flex-direction: row;
-        border-radius: 9999px;
-        padding: 0.5rem 0.5rem 0.5rem 2.25rem;
-        gap: 0;
-        align-items: center;
-        height: 64px;
-      }
-      .filter-item { flex: 1; }
-      .filter-divider {
-        width: 1px;
-        height: 1.75rem;
-        background: #E1E9F6;
-        margin: 0 1.75rem;
-      }
-    }
-    .filter-item {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      text-align: left;
-    }
-    .filter-item label {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 10.5px;
-      text-transform: uppercase;
-      color: #2563EB;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
-    }
-    .filter-item select {
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #020B14;
-      border: none;
-      background: transparent;
-      padding: 0 1.5rem 0 0;
-      width: 100%;
-      outline: none;
-      cursor: pointer;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-    .btn-filter-submit {
-      background: #020B14;
-      color: #FFFFFF;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.875rem;
-      height: 48px;
-      min-height: 48px;
-      padding: 0 2rem;
-      border-radius: 9999px;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      white-space: nowrap;
-    }
-    @media (min-width: 768px) {
-      .btn-filter-submit { width: auto; }
-    }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
+    <link rel="stylesheet" href="./style.css">
     
-    <!-- Google Tag Manager DataLayer Initializer (CWV 2026 Non-blocking) -->
-    <script>window.dataLayer = window.dataLayer || [];</script>
+    <!-- Google Tag Manager (Optimized non-blocking position) -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PPKRWBPC');</script>
+    <!-- End Google Tag Manager -->
     
     <!-- 🌐 FAVICON -->
     <link rel="icon" type="image/jpeg" href="./assets/logos/logo.jpg">
@@ -304,188 +45,272 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "AutoDealer",
-      "@id": "https://www.auto28.com.vn/#autodealer",
-      "name": "Auto28 - Hệ thống Xe VinFast Lướt Uy Tín TP.HCM & Lân Cận",
-      "description": "Auto28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI, check hãng 176 hạng mục.",
-      "telephone": "0888813838",
-      "url": "https://www.auto28.com.vn",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "8F Đường Trịnh Hoài Đức",
-        "addressLocality": "Tăng Nhơn Phú",
-        "addressRegion": "Quận 9, TP. Hồ Chí Minh",
-        "addressCountry": "VN"
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "AdministrativeArea",
-          "name": "Thành phố Hồ Chí Minh"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bình Dương"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Đồng Nai"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Long An"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Tây Ninh"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bà Rịa - Vũng Tàu"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Thủ tục chuyển nhượng hợp đồng pin xe điện có phức tạp không?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hoàn toàn không phức tạp. Auto28 phối hợp chặt chẽ trực tiếp với VinFast hỗ trợ trọn gói thủ tục sang tên hợp đồng thuê pin. Bạn chỉ cần ký giấy ủy quyền mua bán xe cũ theo mẫu, toàn bộ phần còn lại chúng tôi sẽ giải quyết trong 24 giờ."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Xe đang vay ngân hàng / trả góp có giao dịch được không?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hoàn toàn được! Auto28 hỗ trợ tất toán toàn bộ số tiền vay ngân hàng hoặc các khoản vay tài chính liên quan ngay trong ngày, hỗ trợ giải phóng giấy tờ xe bản gốc để tiến hành mua bán đúng luật pháp Việt Nam."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quy trình kiểm định 176 hạng mục gồm những gì?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Kỹ thuật viên chuyên nghiệp sẽ kiểm định toàn diện từ thân vỏ (nước sơn, độ biến dạng do va chạm), gầm xe, các mạch sạc, chẩn đoán phần mềm bằng máy quét lỗi chuyên dụng VinFast, và đánh giá chi tiết dung lượng pin thực tế."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Mức định giá AI của Auto28 được cập nhật thế nào?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Thuật toán thông minh của chúng tôi quét dữ liệu giao dịch thực tế từ các hội nhóm, sàn xe cũ uy tín trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực của xe điện Việt Nam."
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Danh Mục Xe VinFast Lướt Tại Auto28",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF3",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
-            },
-            "model": "VF3",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "240000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+          "@type": "AutoDealer",
+          "@id": "https://www.auto28.com.vn/#autodealer",
+          "name": "Auto 28 - Hệ Thống Xe VinFast Lướt Uy Tín TP.HCM & Lân Cận",
+          "alternateName": "Ô Tô Lướt Sài Gòn Auto 28",
+          "description": "Auto 28 là hệ thống chuyên mua bán, ký gửi và định giá xe VinFast lướt uy tín hàng đầu tại TP.HCM và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI, check hãng 176 hạng mục, bảo hành pin và giao xe tận nhà.",
+          "telephone": "0888813838",
+          "url": "https://www.auto28.com.vn",
+          "logo": "https://www.auto28.com.vn/assets/logos/logo.jpg",
+          "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
+          "priceRange": "$$",
+          "slogan": "Minh Bạch Từng Chi Tiết - Đồng Hành Cùng Xe Điện",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "8F Đường Trịnh Hoài Đức",
+            "addressLocality": "Phường Hiệp Phú",
+            "addressRegion": "TP. Thủ Đức, TP. Hồ Chí Minh",
+            "postalCode": "700000",
+            "addressCountry": "VN"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "10.8495",
+            "longitude": "106.7785"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "08:00",
+              "closes": "19:30"
             }
+          ],
+          "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Thành phố Hồ Chí Minh" },
+            { "@type": "AdministrativeArea", "name": "Bình Dương" },
+            { "@type": "AdministrativeArea", "name": "Đồng Nai" },
+            { "@type": "AdministrativeArea", "name": "Long An" },
+            { "@type": "AdministrativeArea", "name": "Tây Ninh" },
+            { "@type": "AdministrativeArea", "name": "Bà Rịa - Vũng Tàu" },
+            { "@type": "Country", "name": "Việt Nam" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.auto28.com.vn/#website",
+          "url": "https://www.auto28.com.vn",
+          "name": "Auto 28 - Mua Bán Xe VinFast Lướt",
+          "description": "Nền tảng mua bán, định giá và kiểm định xe VinFast lướt chất lượng cao.",
+          "publisher": { "@id": "https://www.auto28.com.vn/#autodealer" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.auto28.com.vn/?filter={search_term_string}#product-grid-section",
+            "query-input": "required name=search_term_string"
           }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF5 Plus",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
+          "@type": "BreadcrumbList",
+          "@id": "https://www.auto28.com.vn/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Trang Chủ",
+              "item": "https://www.auto28.com.vn/"
             },
-            "model": "VF5 Plus",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
-            },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "420000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kho Xe VinFast Lướt",
+              "item": "https://www.auto28.com.vn/#product-grid-section"
             }
-          }
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF8 Eco / Plus",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
+          "@type": "FAQPage",
+          "@id": "https://www.auto28.com.vn/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Thủ tục chuyển nhượng hợp đồng pin xe điện có phức tạp không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hoàn toàn không phức tạp. Auto 28 phối hợp chặt chẽ trực tiếp với VinFast hỗ trợ trọn gói thủ tục sang tên hợp đồng thuê pin chính chủ trong 24 giờ. Khách hàng chỉ cần ký giấy ủy quyền và nhận bàn giao xe."
+              }
             },
-            "model": "VF8",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
+            {
+              "@type": "Question",
+              "name": "Xe đang vay ngân hàng / trả góp có giao dịch được không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hoàn toàn được! Auto 28 hỗ trợ nguồn vốn tất toán toàn bộ số tiền vay ngân hàng ngay trong ngày, giải phóng giấy tờ xe bản gốc để tiến hành mua bán đúng luật pháp Việt Nam."
+              }
             },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "780000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+            {
+              "@type": "Question",
+              "name": "Quy trình kiểm định 176 hạng mục gồm những gì?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kiểm định toàn diện 4 trụ cột: (1) Thân vỏ & Khung gầm 52 mục không đâm đụng, (2) Pin & Hệ thống điện 44 mục đo SOH thực tế từ BMS, (3) Động cơ điện & Truyền động 42 mục, (4) Quét phần mềm OBD-II & ADAS 38 mục."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mức định giá AI của Auto 28 được cập nhật thế nào?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Thuật toán định giá của Auto 28 quét dữ liệu giao dịch thực tế từ các sàn xe cũ trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực tế của xe."
+              }
             }
-          }
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "Car",
-            "name": "VinFast VF9 Eco / Plus",
-            "brand": {
-              "@type": "Brand",
-              "name": "VinFast"
+          "@type": "ItemList",
+          "@id": "https://www.auto28.com.vn/#inventory",
+          "name": "Danh Mục Xe VinFast Lướt Tuyển Chọn Tại Auto 28",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 3",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 3",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "240000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
             },
-            "model": "VF9",
-            "vehicleEngine": {
-              "@type": "EngineSpecification",
-              "engineType": "Electric"
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 5 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 5 Plus",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "420000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
             },
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "VND",
-              "price": "1150000000",
-              "itemCondition": "https://schema.org/UsedCondition",
-              "availability": "https://schema.org/InStock"
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 6 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 6 Plus",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "630000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 7 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 7 Plus",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "790000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF e34",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF e34",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "440000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 8 Eco / Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 8",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "780000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 9 Plus",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 9",
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "1150000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
             }
-          }
+          ]
         }
       ]
     }
@@ -493,37 +318,7 @@
     <!-- ⚡ NON-BLOCKING THIRD-PARTY TRACKING (CWV 2026 TBT OPTIMIZED) -->
     <script>
         function loadThirdPartyPixels() {
-            if (window._thirdPartyPixelsLoaded) return;
-            window._thirdPartyPixelsLoaded = true;
-
-            // 1. Google Tag Manager (sGTM First-Party Container with Auto-Fallback)
-            (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-                var f = d.getElementsByTagName(s)[0];
-                var j = d.createElement(s);
-                var dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                
-                // Priority: custom sGTM domain -> standard googletagmanager.com
-                var sGtmBase = (w.sGtmDomain && typeof w.sGtmDomain === 'string') 
-                    ? w.sGtmDomain.replace(/\/+$/, '') 
-                    : 'https://www.googletagmanager.com';
-                j.src = sGtmBase + '/gtm.js?id=' + i + dl;
-                
-                j.onerror = function() {
-                    // Fallback to official GTM endpoint if custom sGTM subdomain fails or is unreachable
-                    if (j.src.indexOf('googletagmanager.com') === -1) {
-                        var fbScript = d.createElement(s);
-                        fbScript.async = true;
-                        fbScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                        f.parentNode.insertBefore(fbScript, f);
-                    }
-                };
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-PPKRWBPC');
-
-            // 2. Facebook Pixel Code (Enhanced Dual-Stream CAPI-ready)
+            // Facebook Pixel Code
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -535,34 +330,22 @@
             fbq('init', '537471081061777');
             fbq('track', 'PageView');
 
-            // 3. TikTok Pixel Code (Official SDK Standard)
+            // TikTok Pixel Code
             !function (w, d, t) {
-                w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
-                ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
-                ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
-                for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-                ttq.instance = function (t) {
-                    for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
-                    return e;
-                };
-                ttq.load = function (e, n) {
-                    var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner;
-                    ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
-                    var c = document.createElement("script"); c.type = "text/javascript", c.async = !0, c.src = r + "?sdkid=" + e + "&lib=" + t;
-                    var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(c, a);
+                w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) {
+                    for (
+                        var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e;
                 };
                 ttq.load('D802OM3C77UEKU3Q3HPG');
                 ttq.page();
             }(window, document, 'ttq');
         }
 
-        // Trigger strictly on first user interaction (zero bot penalty, 100% human coverage)
-        const pixelTriggerEvents = ['scroll', 'touchstart', 'pointerdown', 'mousedown', 'keydown', 'click'];
-        function onPixelUserInteraction() {
-            loadThirdPartyPixels();
-            pixelTriggerEvents.forEach(evt => window.removeEventListener(evt, onPixelUserInteraction, { passive: true }));
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadThirdPartyPixels, { timeout: 2000 });
+        } else {
+            window.addEventListener('DOMContentLoaded', loadThirdPartyPixels, { passive: true });
         }
-        pixelTriggerEvents.forEach(evt => window.addEventListener(evt, onPixelUserInteraction, { passive: true, once: true }));
     </script>
     <!-- Google tag được quản lý tập trung bởi GTM-PPKRWBPC -->
     <!-- GA4 (G-PM7K9CB73D) và Google Ads (AW-18153153954) cấu hình trong GTM Dashboard -->
@@ -570,7 +353,7 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-PPKRWBPC"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPKRWBPC"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <!-- Facebook Pixel Code (noscript) -->
@@ -595,12 +378,12 @@
             <a href="./huong-dan-phap-ly.html" class="nav-link">Hướng dẫn pháp lý</a>
             <a href="./huong-dan-mua-xe-dien.html" class="nav-link">Cẩm nang xe điện</a>
         </nav>
-        <a href="tel:0888813838" class="btn-nav-hotline" aria-label="Gọi hotline tư vấn Auto 28: 0888 813 838">
+        <a href="tel:0888813838" class="btn-nav-hotline">
             Hotline
         </a>
     </header>
 
-    <main id="main-content">
+
     <!-- ⚡ SECTION 1: HERO & UNIFIED SEARCH FILTER -->
     <section id="hero" class="hero">
         <!-- Mesh light background is now fully handled by the ambient-canvas-base in the page background -->
@@ -678,39 +461,57 @@
     </section>
 
 
-    <!-- 💎 SECTION 2: BENTO GRID: 4 CAM KẾT VÀNG CHỈ CÓ TẠI AUTO 28 -->
+    <!-- 💎 SECTION 2: BENTO GRID: 4 CAM KẾT VÀNG & TIÊU CHUẨN 176 HẠNG MỤC -->
     <section id="ai-commitments" class="ai-commitments">
         <div class="section-header reveal">
-            <h2>4 Cam Kết Vàng Chỉ Có Tại Auto 28</h2>
-            <p>Hệ thống lưới Bento trắng tinh khôi, cấu trúc bất đối xứng để tạo cảm giác cao cấp như một cuốn catalogue điện tử.</p>
+            <h2>4 Cam Kết Vàng & Tiêu Chuẩn 176 Hạng Mục</h2>
+            <p>Hệ thống kiểm định độc lập bằng máy chẩn đoán chuyên dụng VinFast, minh bạch pháp lý và bảo hành toàn diện.</p>
         </div>
         <div class="asymmetric-bento-grid reveal-stagger">
             <!-- Card 1 (Large - span 2) -->
             <div class="bento-card-white bento-span-2 reveal">
                 <span class="card-icon">🔍</span>
-                <h3>Minh Bạch Lịch Sử – Check Hãng Toàn Quốc</h3>
-                <p>Mỗi chiếc VinFast (Fadil, Lux A, Lux SA cho đến các dòng xe điện VF 3, VF 5, VF 6, VF 7, VF 8, VF 9) trước khi lên sàn Auto 28 đều phải trải qua quy trình kiểm tra khắt khe. Chúng tôi cam kết bằng văn bản: Không đâm đụng ảnh hưởng đến kết cấu, không ngập nước/thủy kích, không tua đồng hồ Odo. Khách hàng thoải mái mang xe ra hãng hoặc bất kỳ gara nào để check lại.</p>
+                <h3>Kiểm Định 176 Hạng Mục – Check Hãng Toàn Quốc</h3>
+                <p>Mỗi chiếc xe VinFast (từ VF 3, VF 5, VF 6, VF 7, VF 8, VF 9 đến dòng xe xăng Lux A, Lux SA, Fadil) tại Auto 28 đều phải vượt qua quy trình kiểm định 4 trụ cột:</p>
+                <div class="inspection-pillars-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1rem;">
+                    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 0.75rem;">
+                        <strong style="color: var(--color-accent-blue); display: block; font-size: 0.9rem; margin-bottom: 0.25rem;">🚗 Thân Vỏ & Khung Gầm</strong>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">52 hạng mục: Đo vi kế nước sơn, keo chỉ nguyên bản, sắt xi không đâm đụng, không ngập nước.</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 0.75rem;">
+                        <strong style="color: var(--color-accent-blue); display: block; font-size: 0.9rem; margin-bottom: 0.25rem;">🔋 Pin & Hệ Thống Điện</strong>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">44 hạng mục: Đọc SOH thực tế từ BMS, cân bằng cell pin, cổng sạc AC/DC, rơ-le cao áp.</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 0.75rem;">
+                        <strong style="color: var(--color-accent-blue); display: block; font-size: 0.9rem; margin-bottom: 0.25rem;">⚙️ Động Cơ & Truyền Động</strong>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">42 hạng mục: Mô tơ điện, bộ biến tần Inverter, nước làm mát pin, dầu hộp số giảm tốc.</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 0.75rem;">
+                        <strong style="color: var(--color-accent-blue); display: block; font-size: 0.9rem; margin-bottom: 0.25rem;">💻 Phần Mềm & ADAS</strong>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">38 hạng mục: Quét OBD-II chuyên dụng, radar sóng milimet, camera 360, trợ lái thông minh.</span>
+                    </div>
+                </div>
             </div>
             
             <!-- Card 2 (Small - span 1) -->
             <div class="bento-card-white bento-span-1 reveal">
                 <span class="card-icon">🔋</span>
                 <h3>Pin Hoàn Hảo – Sẵn Sàng Lăn Bánh</h3>
-                <p>Đối với xe điện VinFast, Auto 28 cung cấp chứng nhận kiểm tra sức khỏe pin (SOH) trên 85%, cập nhật phần mềm mới nhất và hỗ trợ thủ tục chuyển đổi gói thuê pin chính chủ từ VinFast chỉ trong 30 phút.</p>
+                <p>Auto 28 cung cấp chứng nhận kiểm tra sức khỏe pin (SOH) trên 85%, cập nhật phần mềm mới nhất và hỗ trợ thủ tục chuyển đổi gói thuê pin chính chủ từ VinFast chỉ trong 30 phút.</p>
             </div>
             
             <!-- Card 3 (Small - span 1) -->
             <div class="bento-card-white bento-span-1 reveal">
                 <span class="card-icon">💸</span>
                 <h3>Trả Góp 70% – Thủ Tục Trong Ngày</h3>
-                <p>Liên kết chặt chẽ với các ngân hàng lớn. Hỗ trợ vay mua xe VinFast lướt với lãi suất ưu đãi, thủ tục xét duyệt nhanh gọn, nhận xe ngay trong ngày.</p>
+                <p>Liên kết chặt chẽ với các ngân hàng lớn. Hỗ trợ vay mua xe VinFast lướt với lãi suất ưu đãi, xét duyệt nhanh gọn, nhận xe ngay trong ngày.</p>
             </div>
             
             <!-- Card 4 (Large - span 2) -->
             <div class="bento-card-white bento-span-2 reveal">
                 <span class="card-icon">🛡️</span>
                 <h3>7 Ngày Trải Nghiệm – Lỗi Là Đổi Trả</h3>
-                <p>Để khẳng định chất lượng đầu vào, Auto 28 áp dụng chính sách độc quyền: Khách hàng có 7 ngày chạy thử nghiệm sản phẩm. Nếu phát hiện xe không đúng cam kết ban đầu, chúng tôi hoàn trả 100% tiền cọc không mất phí.</p>
+                <p>Khách hàng có 7 ngày chạy thử nghiệm sản phẩm. Nếu phát hiện xe không đúng cam kết ban đầu (đâm đụng, thủy kích, tua odo, pin lỗi), Auto 28 hoàn trả 100% tiền cọc và chi phí phát sinh không mất phí.</p>
             </div>
         </div>
     </section>
@@ -792,6 +593,11 @@
         <div class="section-header reveal">
             <h2>Kho Xe Điện VinFast Sẵn Giao Ngay</h2>
             <p>Hồ sơ pháp lý đầy đủ, bảo hành chính hãng, bàn giao và giao xe tận hầm chung cư.</p>
+            <div class="inventory-status-bar" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(37, 99, 235, 0.08); border: 1px solid rgba(37, 99, 235, 0.2); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.75rem;">
+                <span class="inventory-timestamp"><i class="fas fa-clock" style="color: var(--color-accent-blue); margin-right: 0.35rem;"></i>Kho xe &amp; bảng giá cập nhật: <strong id="live-inventory-date" style="color: var(--color-text-primary);">Hôm nay</strong></span>
+                <span style="color: rgba(255,255,255,0.2);">•</span>
+                <span class="inventory-badge-live" style="color: #10B981; font-weight: 600;">🟢 Sẵn sàng giao dịch</span>
+            </div>
         </div>
 
         <!-- Filter pills -->
@@ -867,6 +673,9 @@
     <section id="process" class="process">
         <div class="section-header reveal">
             <h2>3 Bước Minh Bạch Nhận Xe Ngay</h2>
+            <p class="process-tldr" style="max-width: 760px; margin: 0.75rem auto 0; font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); padding: 0.75rem 1.25rem; border-radius: 1rem;">
+                <strong style="color: var(--color-accent-blue);">Tóm tắt quy trình:</strong> Mua bán xe VinFast lướt tại Auto 28 diễn ra minh bạch trong 3 bước: Gửi thông tin trực tuyến, nhận báo giá kèm biên bản check 176 hạng mục tận nơi trong 2 giờ, và hoàn tất ký hợp đồng pháp lý nhận xe tại nhà với chính sách đổi trả 7 ngày hoàn tiền 100%.
+            </p>
         </div>
         <div class="process-steps" id="process-steps">
             <div class="step reveal">
@@ -953,8 +762,40 @@
                 <p style="font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 0.25rem;">Đang tải bản đồ chỉ đường tương tác...</p>
             </div>
         </div>
+
+        <!-- 🌟 E-E-A-T AUTHORITY & WHY TRUST AUTO 28 (CHÂN TRANG) -->
+        <div class="eeat-authority-box reveal" style="max-width: 1000px; margin: 2.5rem auto 0; text-align: left; background: linear-gradient(135deg, rgba(15,23,42,0.85) 0%, rgba(30,41,59,0.7) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 1.5rem; padding: 1.75rem 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;">
+                <div style="flex: 1 1 500px;">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.8rem; color: var(--color-accent-blue); font-weight: 600; margin-bottom: 0.75rem;">
+                        🏆 THẨM QUYỀN CHUYÊN GIA &amp; PHÁP LÝ MINH BẠCH
+                    </div>
+                    <h3 style="font-size: 1.35rem; color: #FFFFFF; font-weight: 800; margin-bottom: 0.5rem;">Vì Sao Hàng Nghìn Khách Hàng Chọn Auto 28?</h3>
+                    <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 0.75rem;">
+                        Sáng lập bởi đội ngũ kỹ sư và chuyên gia với <strong>hơn 8 năm kinh nghiệm thực chiến</strong> trong hệ sinh thái ô tô và xe điện VinFast. Chúng tôi không chỉ kinh doanh xe lướt mà trực tiếp thẩm định độc lập từng tế bào pin, đảm bảo quyền lợi chuyển nhượng gói cước pin và hồ sơ pháp lý sạch 100%.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: #E2E8F0;">
+                        <span>📍 <strong>Showroom:</strong> 8F Trịnh Hoài Đức, P. Hiệp Phú, TP. Thủ Đức, TP.HCM</span>
+                        <span>📞 <strong>Hotline:</strong> 0888.81.38.38</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 1rem 1.25rem; border-radius: 1rem; text-align: center; min-width: 130px;">
+                        <span style="font-size: 1.75rem; font-weight: 900; color: var(--color-accent-blue); display: block;">8+</span>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">Năm Kinh Nghiệm</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 1rem 1.25rem; border-radius: 1rem; text-align: center; min-width: 130px;">
+                        <span style="font-size: 1.75rem; font-weight: 900; color: #10B981; display: block;">176</span>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">Hạng Mục Check</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); padding: 1rem 1.25rem; border-radius: 1rem; text-align: center; min-width: 130px;">
+                        <span style="font-size: 1.75rem; font-weight: 900; color: #F59E0B; display: block;">100%</span>
+                        <span style="font-size: 0.8rem; color: var(--color-text-secondary);">Cam Kết Hoàn Cọc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    </main>
 
 
     <!-- 💻 MODAL CHI TIẾT XE VỚI KÉN XOAY 360 ĐỘ (360° VIEW & VEHICLE PASSPORT) -->
@@ -1185,7 +1026,6 @@
 
 
     <script src="./cars_data.js?v=2.1.0" defer></script>
-    <script src="./modules/tracking-pipeline.js?v=2.2.0" defer></script>
     <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
     <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
     <script src="./modules/car-filter.js?v=2.1.0" defer></script>

@@ -28,6 +28,15 @@
     }
 
     function renderStaticVehicles() {
+        const dateEl = document.getElementById('live-inventory-date');
+        if (dateEl) {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            dateEl.textContent = `${day}/${month}/${year}`;
+        }
+
         const carsGrid = document.getElementById('cars-grid');
         if (!carsGrid) return;
 
@@ -123,11 +132,13 @@
                 notes: car.notes || ''
             };
 
-            const cardEl = document.createElement('div');
+            const cardEl = document.createElement('article');
             cardEl.className = 'expressive-car-card reveal visible';
             cardEl.setAttribute('data-model', modelType);
             cardEl.setAttribute('data-price', priceInMillions.toString());
             cardEl.setAttribute('data-car-id', car.id);
+            cardEl.setAttribute('itemscope', '');
+            cardEl.setAttribute('itemtype', 'https://schema.org/Car');
 
 
             // Price label conditional
@@ -145,11 +156,12 @@
 
             const srcsetAttr = getCloudinarySrcset(car.image_url);
             const srcsetHtml = srcsetAttr ? `srcset="${srcsetAttr}" sizes="(max-width: 640px) 380px, (max-width: 1024px) 640px, 960px"` : '';
+            const descriptiveAlt = `Xe ${car.name} lướt đời ${yearVal} màu ${colorText} tại Auto 28 TP.HCM`;
 
             cardEl.innerHTML = `
                 <div class="card-top">
                     <div class="card-img-container">
-                        <img src="${formatCloudinaryUrl(car.image_url, 400) || SVG_FALLBACK_CAR}" ${srcsetHtml} width="400" height="225" crossorigin="anonymous" alt="${car.name}" class="card-img" loading="lazy" decoding="async" style="opacity: 0; transition: opacity 0.5s ease; ${car.image_position ? `object-position: ${car.image_position};` : ''}" onload="this.style.opacity='1'" onerror="this.src='${SVG_FALLBACK_CAR}'; this.style.opacity='1'">
+                        <img src="${formatCloudinaryUrl(car.image_url, 400) || SVG_FALLBACK_CAR}" ${srcsetHtml} width="400" height="225" crossorigin="anonymous" alt="${descriptiveAlt}" itemprop="image" class="card-img" loading="lazy" decoding="async" style="opacity: 0; transition: opacity 0.5s ease; ${car.image_position ? `object-position: ${car.image_position};` : ''}" onload="this.style.opacity='1'" onerror="this.src='${SVG_FALLBACK_CAR}'; this.style.opacity='1'">
                         <div class="card-badge card-badge--right">${icoShieldCheck}<span>Đã Check 176 Hạng Mục</span></div>
                     </div>
                     <div class="card-content-col">
@@ -158,7 +170,7 @@
                                 <span class="meta-tag-blue">${isElectric ? '⚡ XE ĐIỆN' : '⛽ XE XĂNG'}</span>
                                 <span class="meta-tag-gray">Đời ${yearVal}</span>
                             </div>
-                            <h3 class="card-title">${car.name}</h3>
+                            <h3 class="card-title" itemprop="name">${car.name}</h3>
                             <div class="spec-pills">
                                 <span class="spec-pill">${icoOdo} ${odoText}</span>
                                 <span class="spec-pill">${icoColor} ${colorText}</span>
