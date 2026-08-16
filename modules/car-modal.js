@@ -43,6 +43,7 @@
 
         carsGrid.innerHTML = '';
         window.carDetailsData = window.carDetailsData || {};
+        const fragment = document.createDocumentFragment();
 
         vehicles.forEach(car => {
             const nameLower = (car.name || '').toLowerCase();
@@ -176,8 +177,10 @@
                 </div>
             `;
 
-            carsGrid.appendChild(cardEl);
+            fragment.appendChild(cardEl);
         });
+
+        carsGrid.appendChild(fragment);
     }
 
     function initCarModal() {
