@@ -310,6 +310,32 @@
                 callModal.classList.add('open');
             }
         });
+
+        // 3. Lazy Google Maps Facade Loader (web.dev 2026 standard)
+        const mapContainer = document.getElementById('map-facade-container');
+        const loadMapBtn = document.getElementById('btn-load-live-map');
+        if (mapContainer) {
+            let mapLoaded = false;
+            const injectLiveMap = () => {
+                if (mapLoaded) return;
+                mapLoaded = true;
+                mapContainer.innerHTML = `
+                    <iframe title="Bản đồ chỉ đường tới Showroom Auto 28" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.578425109371!2d106.77361217593324!3d10.843538889309341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527b0785d11ab%3A0x8437185ef2074ae3!2sAuto28!5e0!3m2!1svi!2s!4v1779961633757!5m2!1svi!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0; width: 100%; height: 450px; display: block;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                `;
+            };
+
+            if (loadMapBtn) {
+                loadMapBtn.addEventListener('click', injectLiveMap, { once: true });
+            }
+        }
     }
 
     window.animateCounter = animateCounter;

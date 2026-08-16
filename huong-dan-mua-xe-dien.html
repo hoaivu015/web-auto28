@@ -24,16 +24,8 @@
         <link rel="stylesheet" href="./style.css">
     </noscript>
 
-    <!-- Google Tag Manager (Optimized non-blocking position) -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PPKRWBPC');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager DataLayer Initializer (CWV 2026 Non-blocking) -->
+    <script>window.dataLayer = window.dataLayer || [];</script>
 
     <link rel="icon" type="image/jpeg" href="./assets/logos/logo.jpg">
 
@@ -509,15 +501,61 @@
                 </div>
             </div>
 
-            <div class="footer-bottom-bar">
-                <div>
-                    © 2026 <strong>Auto28</strong>. Tất cả quyền được bảo lưu. Hệ thống mua bán xe VinFast lướt chất lượng cao.
-                </div>
-                <div class="footer-geo-badge">
-                    📍 Phục vụ TP.HCM • Bình Dương • Đồng Nai • Long An & Toàn Quốc
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- ⚡ NON-BLOCKING THIRD-PARTY TRACKING (CWV 2026 TBT OPTIMIZED) -->
+    <script>
+        function loadThirdPartyPixels() {
+            if (window._thirdPartyPixelsLoaded) return;
+            window._thirdPartyPixelsLoaded = true;
+
+            // Google Tag Manager (Non-blocking Deferred Loading)
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-PPKRWBPC');
+
+            // Facebook Pixel Code
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '537471081061777');
+            fbq('track', 'PageView');
+
+            // TikTok Pixel Code (Official SDK Standard)
+            !function (w, d, t) {
+                w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
+                ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+                ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+                for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+                ttq.instance = function (t) {
+                    for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                    return e;
+                };
+                ttq.load = function (e, n) {
+                    var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner;
+                    ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                    var c = document.createElement("script"); c.type = "text/javascript", c.async = !0, c.src = r + "?sdkid=" + e + "&lib=" + t;
+                    var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(c, a);
+                };
+                ttq.load('D802OM3C77UEKU3Q3HPG');
+                ttq.page();
+            }(window, document, 'ttq');
+        }
+        // Trigger strictly on first user interaction (zero bot penalty, 100% human coverage)
+        const pixelTriggerEvents = ['scroll', 'touchstart', 'pointerdown', 'mousedown', 'keydown', 'click'];
+        function onPixelUserInteraction() {
+            loadThirdPartyPixels();
+            pixelTriggerEvents.forEach(evt => window.removeEventListener(evt, onPixelUserInteraction, { passive: true }));
+        }
+        pixelTriggerEvents.forEach(evt => window.addEventListener(evt, onPixelUserInteraction, { passive: true, once: true }));
+    </script>
 </body>
 </html>

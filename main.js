@@ -3,29 +3,35 @@
  * Safe Refactoring Standard: Tier-1 Enterprise
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // ⚡ Initialize Hero Background & Mobile Slideshow
+    // ⚡ Critical Above-The-Fold Init (Instant Paint)
     if (typeof window.initHeroSlideshow === 'function') {
         window.initHeroSlideshow();
     }
-
-    // 🧬 Initialize AI Valuation & Wizard Form
-    if (typeof window.initAIValuation === 'function') {
-        window.initAIValuation();
-    }
-
-    // 🚗 Initialize Bento Grid Filters & Search
     if (typeof window.initCarFilter === 'function') {
         window.initCarFilter();
     }
 
-    // ✨ Initialize UI Animation Effects & Accordions
-    if (typeof window.initUIEffects === 'function') {
-        window.initUIEffects();
-    }
+    // ✨ Non-critical UI Effects (Next Animation Frame)
+    requestAnimationFrame(() => {
+        if (typeof window.initUIEffects === 'function') {
+            window.initUIEffects();
+        }
+    });
 
-    // 💻 Initialize Car Detail Modal & Dynamic Vehicles
-    if (typeof window.initCarModal === 'function') {
-        window.initCarModal();
+    // 🧬 Deferred Background Modules (Idle Execution / Zero TBT)
+    const initDeferredModules = () => {
+        if (typeof window.initAIValuation === 'function') {
+            window.initAIValuation();
+        }
+        if (typeof window.initCarModal === 'function') {
+            window.initCarModal();
+        }
+    };
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initDeferredModules, { timeout: 800 });
+    } else {
+        setTimeout(initDeferredModules, 50);
     }
 
     // 🚀 Service Worker Registration (SW 2026 PWA)

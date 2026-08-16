@@ -10,11 +10,11 @@
 
     let modalAbortController = null;
 
-    function formatCloudinaryUrl(url, maxDim = 600) {
+    function formatCloudinaryUrl(url, maxDim = 380) {
         if (!url || typeof url !== 'string') return SVG_FALLBACK_CAR;
         if (url.includes('cloudinary.com') && url.includes('/upload/')) {
-            if (url.includes('/w_') || url.includes('/c_limit') || url.includes('/c_fit') || url.includes('/c_pad') || url.includes('/c_fill')) return url;
-            return url.replace('/upload/', `/upload/w_${maxDim},c_limit,f_auto,q_auto/`);
+            const cleanUrl = url.replace(/\/upload\/(?:[^\/]+\/)?(v\d+\/)/, '/upload/$1');
+            return cleanUrl.replace('/upload/', `/upload/w_${maxDim},c_limit,f_auto,q_auto/`);
         }
         return url;
     }
