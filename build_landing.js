@@ -1,11 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-function buildLandingPage() {
-    console.log("=========================================");
-    console.log("Building Auto 28 Landing Page (index.html)...");
-    console.log("=========================================");
-
+function generateShowroomHtml() {
     const rootDir = __dirname;
     const compDir = path.join(rootDir, 'src', 'components');
 
@@ -13,17 +9,17 @@ function buildLandingPage() {
     const navHtml = fs.readFileSync(path.join(compDir, 'nav.html'), 'utf8');
     const heroHtml = fs.readFileSync(path.join(compDir, 'hero_showroom.html'), 'utf8');
     const commitmentsHtml = fs.readFileSync(path.join(compDir, 'commitments.html'), 'utf8');
-    const comparisonMatrixHtml = fs.readFileSync(path.join(compDir, 'comparison_matrix.html'), 'utf8');
+    const comparisonMatrixHtml = fs.existsSync(path.join(compDir, 'comparison_matrix.html')) ? fs.readFileSync(path.join(compDir, 'comparison_matrix.html'), 'utf8') : '';
     const socialProofHtml = fs.readFileSync(path.join(compDir, 'social_proof.html'), 'utf8');
     const productGridHtml = fs.readFileSync(path.join(compDir, 'product_grid.html'), 'utf8');
-    const processHtml = fs.readFileSync(path.join(compDir, 'process.html'), 'utf8');
+    const processHtml = fs.existsSync(path.join(compDir, 'process.html')) ? fs.readFileSync(path.join(compDir, 'process.html'), 'utf8') : '';
     const faqAccordionHtml = fs.readFileSync(path.join(compDir, 'faq_accordion.html'), 'utf8');
     const locationMapHtml = fs.readFileSync(path.join(compDir, 'location_map.html'), 'utf8');
+    const footerHtml = fs.readFileSync(path.join(compDir, 'footer.html'), 'utf8');
     const leadModalHtml = fs.readFileSync(path.join(compDir, 'lead_modal.html'), 'utf8');
     const exitModalHtml = fs.existsSync(path.join(compDir, 'exit_modal.html')) ? fs.readFileSync(path.join(compDir, 'exit_modal.html'), 'utf8') : '';
-    const footerHtml = fs.readFileSync(path.join(compDir, 'footer.html'), 'utf8');
 
-    const indexHtmlContent = `<!DOCTYPE html>
+    return `<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -62,6 +58,11 @@ function buildLandingPage() {
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
     <link rel="stylesheet" href="./style.css">
+    <noscript>
+        <style>
+            .reveal { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
     
     <!-- Google Tag Manager (Optimized non-blocking position) -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -721,9 +722,21 @@ function buildLandingPage() {
     </script>
 </body>
 </html>`;
-
-    fs.writeFileSync(path.join(rootDir, 'index.html'), indexHtmlContent, 'utf8');
-    console.log("✅ index.html generated successfully with World-Class SEO/GEO Schema!");
 }
 
-buildLandingPage();
+function buildLandingPage() {
+    console.log("=========================================");
+    console.log("Building Auto 28 Landing Page (index.html)...");
+    console.log("=========================================");
+    const rootDir = __dirname;
+    const indexHtmlContent = generateShowroomHtml();
+    fs.writeFileSync(path.join(rootDir, 'index.html'), indexHtmlContent, 'utf8');
+    console.log("✅ index.html generated successfully with World-Class SEO/GEO Schema!");
+    return indexHtmlContent;
+}
+
+if (require.main === module) {
+    buildLandingPage();
+}
+
+module.exports = { generateShowroomHtml, buildLandingPage };

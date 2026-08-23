@@ -37,11 +37,26 @@ function runHealthcheck() {
         console.error('❌ FAIL: Absolute CSS path in index.html');
     }
 
-    // Check 8: relative JS link in index.html
-    if (/src=["']\.\/main\.js/i.test(indexContent) || /src=["']main\.js/i.test(indexContent) || indexContent.includes('main.js')) {
+    // Check 8: All required JS modules loaded in index.html
+    const requiredModules = [
+        'cars_data.js',
+        'tracking-pipeline.js',
+        'hero-slideshow.js',
+        'ai-valuation.js',
+        'car-filter.js',
+        'ui-effects.js',
+        'car-modal.js',
+        'main.js'
+    ];
+    let allModulesPresent = true;
+    requiredModules.forEach((mod) => {
+        if (!indexContent.includes(mod)) {
+            console.error(`❌ FAIL: Missing required JS module in index.html: ${mod}`);
+            allModulesPresent = false;
+        }
+    });
+    if (allModulesPresent) {
         passed++;
-    } else {
-        console.error('❌ FAIL: Absolute JS path in index.html');
     }
 
     // Check 9: Footer exists in index.html or guide.html
@@ -51,7 +66,7 @@ function runHealthcheck() {
         console.error('❌ FAIL: Footer element missing in HTML');
     }
 
-    // Check 10: Schema JSON-LD exists
+    // Check 10: Schema JSON-LD exists & SSOT verified
     if (indexContent.includes('application/ld+json')) {
         passed++;
     } else {

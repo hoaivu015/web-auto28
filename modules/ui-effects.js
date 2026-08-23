@@ -52,6 +52,13 @@
             revealObserver.observe(el);
         });
 
+        // 🛡️ Fail-Safe Fallback: Force reveal all elements after 1.2s to guarantee ZERO blank screen
+        setTimeout(() => {
+            document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+                el.classList.add('visible');
+            });
+        }, 1200);
+
         // Process Steps Connecting Line Animation
         const processSection = document.getElementById('process-steps');
         if (processSection) {
