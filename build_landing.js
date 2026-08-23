@@ -20,6 +20,7 @@ function buildLandingPage() {
     const faqAccordionHtml = fs.readFileSync(path.join(compDir, 'faq_accordion.html'), 'utf8');
     const locationMapHtml = fs.readFileSync(path.join(compDir, 'location_map.html'), 'utf8');
     const leadModalHtml = fs.readFileSync(path.join(compDir, 'lead_modal.html'), 'utf8');
+    const exitModalHtml = fs.existsSync(path.join(compDir, 'exit_modal.html')) ? fs.readFileSync(path.join(compDir, 'exit_modal.html'), 'utf8') : '';
     const footerHtml = fs.readFileSync(path.join(compDir, 'footer.html'), 'utf8');
 
     const indexHtmlContent = `<!DOCTYPE html>
@@ -559,9 +560,11 @@ function buildLandingPage() {
 
     ${locationMapHtml}
 
+    ${footerHtml}
+
     ${leadModalHtml}
 
-    ${footerHtml}
+    ${exitModalHtml}
 
     <!-- 🏎️ MODAL CHI TIẾT XE ĐỘC QUYỀN (DYNAMIC CAR MODAL CONTAINER) -->
     <div class="car-modal-backdrop" id="car-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-car-title">
@@ -646,9 +649,67 @@ function buildLandingPage() {
     </div>
 
     <!-- ⚡ SCRIPTS LOAD ORDER -->
-    <script src="./cars_data.js?v=2.1.0"></script>
-    <script src="./modules/car-modal.js?v=2.1.0"></script>
+    <script src="./cars_data.js?v=2.1.0" defer></script>
+    <script src="./modules/tracking-pipeline.js?v=2.2.0" defer></script>
+    <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
+    <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
+    <script src="./modules/car-filter.js?v=2.1.0" defer></script>
+    <script src="./modules/ui-effects.js?v=2.1.0" defer></script>
+    <script src="./modules/car-modal.js?v=2.1.0" defer></script>
     <script type="module" src="./main.js?v=2.1.0"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateBadge = document.getElementById('promo-date-badge');
+            if (dateBadge) {
+                const now = new Date();
+                const dateStr = now.getDate() + '/' + (now.getMonth() + 1) + '/' + now.getFullYear();
+                dateBadge.textContent = 'Hôm nay (' + dateStr + '): Còn 3 suất ưu đãi trả góp 70% + Tặng 1 năm bảo dưỡng';
+            }
+            const exitModal = document.getElementById('showroom-exit-modal');
+            const closeBtn = document.getElementById('close-showroom-exit-modal');
+            const exitForm = document.getElementById('showroom-exit-form');
+            let hasShownExit = false;
+            const showExitModal = () => {
+                if (hasShownExit || localStorage.getItem('auto28_showroom_exit_dismissed')) return;
+                hasShownExit = true;
+                if (exitModal) exitModal.style.display = 'flex';
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({'event': 'cro_showroom_exit_trigger'});
+            };
+            document.addEventListener('mouseleave', (e) => {
+                if (e.clientY <= 0) showExitModal();
+            });
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    if (exitModal) exitModal.style.display = 'none';
+                    try { localStorage.setItem('auto28_showroom_exit_dismissed', '1'); } catch (e) {}
+                });
+            }
+            if (exitForm) {
+                exitForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const phone = document.getElementById('showroom-exit-phone')?.value || '';
+                    const cleanPhone = phone.replace(/\\D/g, '');
+                    if (!cleanPhone || cleanPhone.length < 10) {
+                        alert('Vui lòng nhập chính xác số điện thoại (10 chữ số)!');
+                        return;
+                    }
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'lead_form_submitted',
+                        'form_id': 'showroom-exit-form',
+                        'form_type': 'showroom_exit_lead',
+                        'phone': cleanPhone,
+                        'timestamp': new Date().toISOString()
+                    });
+                    window.dataLayer.push({'event': 'form_lead_success', 'cro_event': 'showroom_exit_lead', 'phone': cleanPhone});
+                    alert('🎉 Cảm ơn bạn! Auto28 đã ghi nhận SĐT ' + phone + ' để gửi bảng giá lăn bánh ưu đãi và Voucher +5 Triệu qua Zalo!');
+                    if (exitModal) exitModal.style.display = 'none';
+                    try { localStorage.setItem('auto28_showroom_exit_dismissed', '1'); } catch (e) {}
+                });
+            }
+        });
+    </script>
 
     <!-- ⚡ SW Registration -->
     <script>

@@ -61,14 +61,15 @@ function getShowroomHtml() {
     const navHtml = fs.readFileSync(path.join(__dirname, 'src/components/nav.html'), 'utf8');
     const heroShowroomHtml = fs.readFileSync(path.join(__dirname, 'src/components/hero_showroom.html'), 'utf8');
     const commitmentsHtml = fs.readFileSync(path.join(__dirname, 'src/components/commitments.html'), 'utf8');
+    const comparisonMatrixHtml = fs.existsSync(path.join(__dirname, 'src/components/comparison_matrix.html')) ? fs.readFileSync(path.join(__dirname, 'src/components/comparison_matrix.html'), 'utf8') : '';
     const socialProofHtml = fs.readFileSync(path.join(__dirname, 'src/components/social_proof.html'), 'utf8');
     const productGridHtml = fs.readFileSync(path.join(__dirname, 'src/components/product_grid.html'), 'utf8');
-    const advantagesHtml = fs.readFileSync(path.join(__dirname, 'src/components/advantages.html'), 'utf8');
+    const processHtml = fs.existsSync(path.join(__dirname, 'src/components/process.html')) ? fs.readFileSync(path.join(__dirname, 'src/components/process.html'), 'utf8') : '';
     const faqAccordionHtml = fs.readFileSync(path.join(__dirname, 'src/components/faq_accordion.html'), 'utf8');
     const locationMapHtml = fs.readFileSync(path.join(__dirname, 'src/components/location_map.html'), 'utf8');
     const footerHtml = fs.readFileSync(path.join(__dirname, 'src/components/footer.html'), 'utf8');
     const leadModalHtml = fs.readFileSync(path.join(__dirname, 'src/components/lead_modal.html'), 'utf8');
-    const exitModalHtml = fs.readFileSync(path.join(__dirname, 'src/components/exit_modal.html'), 'utf8');
+    const exitModalHtml = fs.existsSync(path.join(__dirname, 'src/components/exit_modal.html')) ? fs.readFileSync(path.join(__dirname, 'src/components/exit_modal.html'), 'utf8') : '';
 
     cachedShowroomHtml = `<!DOCTYPE html>
 <html lang="vi">
@@ -115,9 +116,10 @@ function getShowroomHtml() {
     <main>
         ${heroShowroomHtml}
         ${commitmentsHtml}
+        ${comparisonMatrixHtml}
         ${socialProofHtml}
         ${productGridHtml}
-        ${advantagesHtml}
+        ${processHtml}
         ${faqAccordionHtml}
         ${locationMapHtml}
     </main>
@@ -127,6 +129,7 @@ function getShowroomHtml() {
     ${exitModalHtml}
 
     <script src="./cars_data.js?v=2.1.0" defer></script>
+    <script src="./modules/tracking-pipeline.js?v=2.2.0" defer></script>
     <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
     <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
     <script src="./modules/car-filter.js?v=2.1.0" defer></script>
