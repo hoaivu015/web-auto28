@@ -21,6 +21,36 @@
     }
 
     function initUIEffects() {
+        // 💊 Smart Scroll Nav Capsule (Auto-hide on scroll down, reveal on scroll up)
+        const navCapsule = document.getElementById('nav-capsule');
+        if (navCapsule) {
+            let lastScrollY = window.scrollY;
+            let isNavHidden = false;
+            let navTicking = false;
+
+            window.addEventListener('scroll', () => {
+                if (!navTicking) {
+                    window.requestAnimationFrame(() => {
+                        const currentScrollY = window.scrollY;
+                        if (currentScrollY > 70 && currentScrollY > lastScrollY + 8) {
+                            if (!isNavHidden) {
+                                navCapsule.classList.add('nav-hidden');
+                                isNavHidden = true;
+                            }
+                        } else if (currentScrollY < lastScrollY - 6 || currentScrollY <= 25) {
+                            if (isNavHidden) {
+                                navCapsule.classList.remove('nav-hidden');
+                                isNavHidden = false;
+                            }
+                        }
+                        lastScrollY = currentScrollY;
+                        navTicking = false;
+                    });
+                    navTicking = true;
+                }
+            }, { passive: true });
+        }
+
         // Counter Animation Observer
         const counterObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {

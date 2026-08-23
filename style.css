@@ -189,7 +189,7 @@ body {
   left: 0.75rem;
   right: 0.75rem;
   height: 52px; /* Khóa cao đúng 52px */
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   border: 1px solid var(--border-card);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -200,8 +200,15 @@ body {
   justify-content: space-between;
   box-shadow: 0 12px 28px -4px rgba(2, 11, 20, 0.08);
   z-index: 1000;
-  transition: transform 0.45s var(--ease-spring);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  will-change: transform;
   overflow: hidden;
+}
+
+.floating-nav-capsule.nav-hidden {
+  transform: translateY(-140%) !important;
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
@@ -212,6 +219,9 @@ body {
     width: 100%;
     max-width: 56rem;
     padding: 0 1.5rem;
+  }
+  .floating-nav-capsule.nav-hidden {
+    transform: translate(-50%, -140%) !important;
   }
 }
 
@@ -4843,6 +4853,177 @@ body {
     min-height: 48px;
   }
 }
+
+/* ============================================
+   📱 MOBILE VERSUS BENTO CARDS (≤ 639PX)
+   ============================================ */
+.comparison-mobile-cards {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 639px) {
+  .comparison-table-scroll {
+    display: none !important;
+  }
+  .comparison-mobile-cards {
+    display: flex !important;
+  }
+}
+
+.versus-bento-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-card);
+  border-radius: 1.25rem;
+  padding: 1.15rem;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.04);
+}
+
+.versus-criterion-header {
+  margin-bottom: 0.85rem;
+}
+
+.versus-criterion-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  display: block;
+  line-height: 1.35;
+}
+
+.versus-criterion-sub {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.versus-branches-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+
+.versus-branch {
+  border-radius: 0.875rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.versus-branch.competitor-branch {
+  background: rgba(241, 245, 249, 0.7);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  color: var(--color-text-secondary);
+}
+
+.versus-branch.competitor-branch p {
+  margin: 0.35rem 0 0 0;
+  font-size: 0.825rem;
+  color: #64748B;
+}
+
+.versus-branch.auto28-branch {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0.03) 100%);
+  border: 1.5px solid rgba(37, 99, 235, 0.25);
+  color: var(--color-text-primary);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+}
+
+.versus-branch.auto28-branch p {
+  margin: 0.35rem 0 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.versus-branch.auto28-branch strong {
+  color: var(--color-accent-blue);
+  font-weight: 800;
+}
+
+.versus-branch-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.tag-cross-pill {
+  color: #b91c1c;
+}
+
+.tag-check-pill {
+  color: #047857;
+}
+
+/* ============================================
+   🌟 E-E-A-T STATS GRID (3-COLUMN NATIVE MOBILE)
+   ============================================ */
+.eeat-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.625rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .eeat-stats-grid {
+    display: flex;
+    gap: 1rem;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+.eeat-stat-card {
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid #E2E8F0;
+  padding: 0.85rem 0.5rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .eeat-stat-card {
+    min-width: 130px;
+    padding: 1.1rem 1.25rem;
+  }
+}
+
+.eeat-stat-num {
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  display: block;
+  line-height: 1.1;
+}
+
+.eeat-stat-num.text-blue { color: #2563EB; }
+.eeat-stat-num.text-green { color: #059669; }
+.eeat-stat-num.text-amber { color: #D97706; }
+
+.eeat-stat-label {
+  font-size: clamp(0.68rem, 2vw, 0.8rem);
+  font-weight: 600;
+  color: #475569;
+  margin-top: 0.3rem;
+  display: block;
+  line-height: 1.3;
+}
+
 
 
 

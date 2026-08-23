@@ -57,7 +57,8 @@ function generateShowroomHtml() {
     <link rel="modulepreload" href="./main.js?v=2.1.0">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
-    <link rel="stylesheet" href="./style.css?v=2.3.0">
+    <!-- 🎨 CRITICAL CSS DESIGN SYSTEM (NEURAL EXPRESSIVE 2.0) -->
+    <link rel="stylesheet" href="./style.css?v=2.5.0">
     <noscript>
         <style>
             .reveal { opacity: 1 !important; transform: none !important; }
