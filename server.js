@@ -54,9 +54,9 @@ const fs = require('fs');
 let cachedShowroomHtml = null;
 let cachedSellHtml = null;
 
-// Real-time component assembly helper for / and /showroom with In-Memory Caching
+// Real-time component assembly helper for / and /showroom with In-Memory Caching (Production Only)
 function getShowroomHtml() {
-  if (cachedShowroomHtml) return cachedShowroomHtml;
+  if (process.env.NODE_ENV === 'production' && cachedShowroomHtml) return cachedShowroomHtml;
   try {
     const navHtml = fs.readFileSync(path.join(__dirname, 'src/components/nav.html'), 'utf8');
     const heroShowroomHtml = fs.readFileSync(path.join(__dirname, 'src/components/hero_showroom.html'), 'utf8');
@@ -194,9 +194,9 @@ function getShowroomHtml() {
   }
 }
 
-// Real-time component assembly helper for /dinh-gia and /sell
+// Real-time component assembly helper for /dinh-gia and /sell (Production Only)
 function getSellHtml() {
-  if (cachedSellHtml) return cachedSellHtml;
+  if (process.env.NODE_ENV === 'production' && cachedSellHtml) return cachedSellHtml;
   try {
     const navHtml = fs.readFileSync(path.join(__dirname, 'src/components/nav.html'), 'utf8');
     const heroSellHtml = fs.readFileSync(path.join(__dirname, 'src/components/sell/hero_sell.html'), 'utf8');

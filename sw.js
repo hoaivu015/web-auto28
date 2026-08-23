@@ -3,7 +3,7 @@
  * Strategy: Stale-While-Revalidate with Cache Quota Safety & Search Normalization
  */
 
-const CACHE_NAME = 'auto28-v2.1.0-cache';
+const CACHE_NAME = 'auto28-v2.2.0-cache';
 const MAX_IMAGE_CACHE_ITEMS = 30;
 const PRECACHE_ASSETS = [
     '/',
