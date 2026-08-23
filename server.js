@@ -146,6 +146,9 @@ app.get('/sell', (req, res) => res.send(getSellHtml()));
 app.get('/huong-dan', (req, res) => res.sendFile(path.join(__dirname, 'huong-dan-phap-ly.html')));
 app.get('/huong-dan-phap-ly', (req, res) => res.sendFile(path.join(__dirname, 'huong-dan-phap-ly.html')));
 app.get('/huong-dan-mua-xe-dien', (req, res) => res.sendFile(path.join(__dirname, 'huong-dan-mua-xe-dien.html')));
+app.get('/tinh-tra-gop', (req, res) => res.sendFile(path.join(__dirname, 'tinh-tra-gop.html')));
+app.get('/tinh-tra-gop.html', (req, res) => res.sendFile(path.join(__dirname, 'tinh-tra-gop.html')));
+app.get('/du-toan-tra-gop', (req, res) => res.sendFile(path.join(__dirname, 'tinh-tra-gop.html')));
 app.get('/studio', (req, res) => res.sendFile(path.join(__dirname, 'auto28-studio.html')));
 app.get('/auto28-studio', (req, res) => res.sendFile(path.join(__dirname, 'auto28-studio.html')));
 

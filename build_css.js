@@ -19,7 +19,8 @@ function bundleCss() {
         'sections.css',
         'footer.css',
         'responsive.css',
-        'guide.css'
+        'guide.css',
+        'loan-calculator.css'
     ];
 
     let bundledContent = `/* ==========================================================================
