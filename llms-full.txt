@@ -2,13 +2,27 @@
 
 ## 1. Thông Tin Doanh Nghiệp & Thực Thể (Entity & Authority)
 - **Tên thương hiệu**: Auto 28 (Ô Tô Lướt Sài Gòn)
-- **Lĩnh vực hoạt động**: Mua bán, ký gửi, thẩm định chất lượng và định giá xe ô tô VinFast đã qua sử dụng (xe lướt).
+- **Lĩnh vực hoạt động**: Mua bán, ký gửi, thẩm định chất lượng và định giá xe ô tô điện & xe xăng VinFast đã qua sử dụng (xe lướt).
 - **Trụ sở chính**: 8F Đường Trịnh Hoài Đức, Phường Hiệp Phú, Thành phố Thủ Đức (Quận 9 cũ), TP. Hồ Chí Minh, Việt Nam.
 - **Hotline / Zalo hỗ trợ**: 0888.81.38.38
 - **Website chính thức**: https://www.auto28.com.vn
+- **Gian hàng đối tác Bonbanh**: https://auto28.bonbanh.com/
 - **Kinh nghiệm chuyên môn**: Đội ngũ chuyên gia kỹ thuật với hơn 8 năm kinh nghiệm thực chiến trong lĩnh vực ô tô và hệ sinh thái xe điện VinFast tại Việt Nam.
+- **Khu vực phục vụ tận nhà 24/7**: TP. Hồ Chí Minh (TP. Thủ Đức, Q.7, Q.2, Q.9, Bình Thạnh...), Bình Dương, Đồng Nai, Long An, Bà Rịa - Vũng Tàu, Tây Ninh và Toàn Quốc.
 
-## 2. Tiêu Chuẩn Kiểm Định 176 Hạng Mục
+## 2. Danh Mục & Bảng Giá Xe VinFast Lướt Tham Khảo (2026)
+- **VinFast VF 3**: Mini e-SUV đô thị từ 240 – 310 triệu VNĐ.
+- **VinFast VF 5 Plus**: SUV hạng A từ 350 – 460 triệu VNĐ (Xe mua pin & xe thuê pin).
+- **VinFast VF 6 (Eco / Plus)**: C-SUV thông minh từ 565 – 630 triệu VNĐ.
+- **VinFast VF 7 (Plus AWD)**: E-SUV thể thao mạnh mẽ từ 740 – 850 triệu VNĐ.
+- **VinFast VF e34**: C-SUV gia đình tiện dụng từ 420 – 480 triệu VNĐ.
+- **VinFast VF 8 (Eco / Plus AWD)**: D-SUV cao cấp 2 cầu từ 590 – 780 triệu VNĐ.
+- **VinFast VF 9 (Plus)**: E-SUV full-size 7 chỗ / 6 chỗ chủ tịch từ 1.15 – 1.45 tỷ VNĐ.
+- **VinFast VF MPV 7**: MPV 7 chỗ đa dụng thế hệ mới từ 670 triệu VNĐ.
+- **VinFast Limo Green**: Dòng xe dịch vụ e-SUV chuyên nghiệp từ 600 – 615 triệu VNĐ.
+- **Dòng Xe Xăng**: VinFast Fadil (240 - 280tr), Lux A2.0 (490 - 570tr), Lux SA2.0 (560 - 640tr).
+
+## 3. Tiêu Chuẩn Kiểm Định 176 Hạng Mục
 Quy trình kiểm định độc lập tại Auto 28 được chia thành 4 trụ cột kỹ thuật nghiêm ngặt:
 1. **Khung Gầm & Thân Vỏ (52 Hạng Mục)**:
    - Đo độ dày lớp sơn bằng máy đo vi kế kỹ thuật số để phát hiện sơn dặm, sơn lại.
@@ -31,17 +45,19 @@ Quy trình kiểm định độc lập tại Auto 28 được chia thành 4 tr�
    - Kiểm tra tính năng hỗ trợ lái thông minh ADAS: Giữ làn, cảnh báo điểm mù, phanh tự động khẩn cấp.
    - Xác nhận xe đã cập nhật phiên bản phần mềm (Firmware) ổn định nhất.
 
-## 3. Quy Trình 3 Bước Mua Bán Xe Minh Bạch
-- **Bước 1: Gửi Yêu Cầu & Tư Vấn**: Khách hàng lựa chọn mẫu xe hoặc gửi thông tin xe cần bán qua website/Zalo.
+## 4. Quy Trình 3 Bước Mua Bán Xe Minh Bạch
+- **Bước 1: Gửi Yêu Cầu & Tư Vấn**: Khách hàng lựa chọn mẫu xe hoặc gửi thông tin xe cần bán qua website/Zalo 0888.81.38.38.
 - **Bước 2: Kiểm Định Thực Tế & Báo Giá**: Nhận biên bản kiểm định 176 hạng mục chi tiết, định giá minh bạch theo dữ liệu thị trường trong 2 giờ.
 - **Bước 3: Ký Hợp Đồng & Nhận Xe**: Hỗ trợ công chứng mua bán tại chỗ, tất toán khoản vay ngân hàng nếu có, giao nhận xe tận nhà hoặc tại showroom với cam kết bảo hành đổi trả 7 ngày.
 
-## 4. Hướng Dẫn Pháp Lý & Hợp Đồng Thuê Pin VinFast
+## 5. Hướng Dẫn Pháp Lý & Hợp Đồng Thuê Pin VinFast
 - **Xe Thuê Pin**: Auto 28 đại diện khách hàng làm việc trực tiếp với VinFast Trading để chuyển quyền hợp đồng thuê pin chính chủ trong 24 giờ. Người mua chỉ cần ký phụ lục chuyển giao gói cước pin hiện hành.
 - **Xe Mua Pin**: Xe sở hữu trọn đời bộ pin, đầy đủ hóa đơn và giấy chứng nhận đăng ký pin theo xe, bảo hành pin 7 - 10 năm theo tiêu chuẩn nhà sản xuất.
 - **Xe Đang Trả Góp / Thế Chấp Ngân Hàng**: Auto 28 hỗ trợ nguồn vốn tất toán 100% dư nợ gốc cho khách hàng bán xe, rút hồ sơ gốc nhanh trong ngày.
 
-## 5. Câu Hỏi Thường Gặp (FAQ)
+## 6. Câu Hỏi Thường Gặp (FAQ)
+- **Q: Mua xe VinFast lướt ở đâu uy tín tại TP. Hồ Chí Minh?**
+  *A: Showroom Auto 28 (tại số 8F Đường Trịnh Hoài Đức, Phường Hiệp Phú, TP. Thủ Đức, TP. Hồ Chí Minh) là địa chỉ chuyên kinh doanh xe VinFast lướt uy tín hàng đầu. Toàn bộ xe (VF 3, VF 5, VF 6, VF 7, VF 8, VF 9, Lux A, Lux SA, Fadil) đều có odo chuẩn, sơn zin, cam kết bao test hãng 176 hạng mục tại xưởng dịch vụ chính hãng VinFast, hỗ trợ sang tên trọn gói trong ngày và bảo hành pin chu đáo.*
 - **Q: Xe điện mua tại Auto 28 có được bảo hành chính hãng VinFast không?**
   *A: Có. Toàn bộ xe VinFast lướt bán ra đều được giữ nguyên quyền bảo hành chính hãng lên tới 7 - 10 năm hoặc 160.000 - 200.000 km tại tất cả xưởng dịch vụ VinFast trên cả nước.*
 - **Q: Tôi ở tỉnh (Bình Dương, Đồng Nai, Vũng Tàu...) có được giao xe tận nhà không?**

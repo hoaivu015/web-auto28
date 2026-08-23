@@ -13,6 +13,7 @@ function buildLandingPage() {
     const navHtml = fs.readFileSync(path.join(compDir, 'nav.html'), 'utf8');
     const heroHtml = fs.readFileSync(path.join(compDir, 'hero_showroom.html'), 'utf8');
     const commitmentsHtml = fs.readFileSync(path.join(compDir, 'commitments.html'), 'utf8');
+    const comparisonMatrixHtml = fs.readFileSync(path.join(compDir, 'comparison_matrix.html'), 'utf8');
     const socialProofHtml = fs.readFileSync(path.join(compDir, 'social_proof.html'), 'utf8');
     const productGridHtml = fs.readFileSync(path.join(compDir, 'product_grid.html'), 'utf8');
     const processHtml = fs.readFileSync(path.join(compDir, 'process.html'), 'utf8');
@@ -38,6 +39,14 @@ function buildLandingPage() {
     <meta property="og:title" content="Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận">
     <meta property="og:description" content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI nhanh chóng, check hãng 176 hạng mục, bàn giao tận nhà.">
     <meta property="og:image" content="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg">
+    <meta property="og:site_name" content="Auto 28">
+    <meta property="og:locale" content="vi_VN">
+
+    <!-- 📍 LOCAL GEO TAGS (SEO 2026) -->
+    <meta name="geo.region" content="VN-SG">
+    <meta name="geo.placename" content="TP. Hồ Chí Minh">
+    <meta name="geo.position" content="10.8495;106.7785">
+    <meta name="ICBM" content="10.8495, 106.7785">
     
     <!-- ⚡ RESOURCE HINTS (CWV 2026) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,7 +79,7 @@ function buildLandingPage() {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "AutoDealer",
+          "@type": ["AutoDealer", "LocalBusiness"],
           "@id": "https://www.auto28.com.vn/#autodealer",
           "name": "Auto 28 - Hệ Thống Xe VinFast Lướt Uy Tín TP.HCM & Lân Cận",
           "alternateName": "Ô Tô Lướt Sài Gòn Auto 28",
@@ -80,6 +89,8 @@ function buildLandingPage() {
           "logo": "https://www.auto28.com.vn/assets/logos/logo.jpg",
           "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
           "priceRange": "$$",
+          "currenciesAccepted": "VND",
+          "paymentAccepted": "Tiền mặt, Chuyển khoản, Hỗ trợ trả góp ngân hàng",
           "slogan": "Minh Bạch Từng Chi Tiết - Đồng Hành Cùng Xe Điện",
           "address": {
             "@type": "PostalAddress",
@@ -102,6 +113,10 @@ function buildLandingPage() {
               "closes": "19:30"
             }
           ],
+          "sameAs": [
+            "https://auto28.bonbanh.com/",
+            "https://www.facebook.com/otoluotsaigon9/"
+          ],
           "areaServed": [
             { "@type": "AdministrativeArea", "name": "Thành phố Hồ Chí Minh" },
             { "@type": "AdministrativeArea", "name": "Bình Dương" },
@@ -110,6 +125,63 @@ function buildLandingPage() {
             { "@type": "AdministrativeArea", "name": "Tây Ninh" },
             { "@type": "AdministrativeArea", "name": "Bà Rịa - Vũng Tàu" },
             { "@type": "Country", "name": "Việt Nam" }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "168",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "VN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 7
+          },
+          "knowsAbout": [
+            "Xe VinFast lướt",
+            "VinFast VF 3",
+            "VinFast VF 5 Plus",
+            "VinFast VF 6",
+            "VinFast VF 7",
+            "VinFast VF 8",
+            "VinFast VF 9",
+            "Xe mua pin",
+            "Định giá xe điện VinFast",
+            "Kiểm định xe cũ 176 hạng mục",
+            "Chuyển nhượng hợp đồng pin VinFast",
+            "TP. Hồ Chí Minh"
+          ],
+          "review": [
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Anh Hoàng Minh" },
+              "datePublished": "2026-01-15",
+              "reviewBody": "Tôi bán chiếc Lux A 2021, tưởng thủ tục sẽ rất rườm rà vì xe đang trả góp. Ai ngờ anh em Auto 28 làm xong tất toán ngân hàng chỉ trong một buổi chiều. Giá tốt hơn showroom kế bên 15 triệu!",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Chị Lan Anh" },
+              "datePublished": "2026-01-28",
+              "reviewBody": "Tìm xe cũ rất sợ pin chai, nhưng mua VF 8 ở Auto 28 được cam kết dung lượng pin trên 94%, đầy đủ giấy tờ check hãng 176 hạng mục. Xe đi cực kỳ êm ái, như xe mới.",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Anh Tuấn" },
+              "datePublished": "2026-02-05",
+              "reviewBody": "Bán xe cũ cho showroom ngoài hay bị dìm giá, qua bên Auto 28 có công cụ định giá bằng AI rất minh bạch. Check xe tại nhà, ký công chứng xong tiền về tài khoản ngay lập tức.",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+            },
+            {
+              "@type": "Review",
+              "author": { "@type": "Person", "name": "Chú Hùng" },
+              "datePublished": "2026-02-14",
+              "reviewBody": "Dịch vụ thu mua và giao xe tận nhà vô cùng tiện lợi. Nhân viên xuống tận Biên Hòa kiểm tra xe kỹ lưỡng, bàn giao tiền bạc nhanh chóng, hỗ trợ thủ tục từ A-Z rất tin cậy.",
+              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+            }
           ]
         },
         {
@@ -144,9 +216,44 @@ function buildLandingPage() {
           ]
         },
         {
+          "@type": "HowTo",
+          "@id": "https://www.auto28.com.vn/#howto-buy",
+          "name": "Quy trình mua xe VinFast lướt 3 bước tại Auto 28",
+          "description": "3 bước mua xe VinFast lướt an toàn, bảo đảm test hãng 176 hạng mục và bàn giao tận nhà trong 24h.",
+          "totalTime": "P1D",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Lựa chọn dòng xe & Nhận tư vấn",
+              "text": "Khách hàng chọn mẫu xe VinFast (VF3, VF5, VF6, VF7, VF8, VF9) theo nhu cầu ngân sách và nhận báo giá chi tiết qua Hotline/Zalo 0888.81.38.38."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Kiểm tra 176 hạng mục & Lái thử",
+              "text": "Nhận biên bản kiểm định 176 hạng mục độc lập và đo dung lượng pin SOH thực tế; bao test tại xưởng dịch vụ chính hãng VinFast."
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Ký hợp đồng, Sang tên pin & Giao xe",
+              "text": "Hoàn tất thủ tục sang tên chính chủ và chuyển đổi hợp đồng pin trong 24h; hỗ trợ trả góp ngân hàng 80% và giao xe tận nhà kèm chính sách đổi trả 7 ngày."
+            }
+          ]
+        },
+        {
           "@type": "FAQPage",
           "@id": "https://www.auto28.com.vn/#faq",
           "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Mua xe VinFast lướt ở đâu uy tín tại TP. Hồ Chí Minh?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Showroom Auto 28 (tại số 8F Đường Trịnh Hoài Đức, Phường Hiệp Phú, TP. Thủ Đức, TP. Hồ Chí Minh) là địa chỉ chuyên kinh doanh xe VinFast lướt uy tín hàng đầu. Toàn bộ xe (VF 3, VF 5, VF 6, VF 7, VF 8, VF 9, Lux A, Lux SA, Fadil) đều có odo chuẩn, sơn zin, cam kết bao test hãng 176 hạng mục tại xưởng dịch vụ chính hãng VinFast, hỗ trợ sang tên trọn gói trong ngày và bảo hành pin chu đáo."
+              }
+            },
             {
               "@type": "Question",
               "name": "Thủ tục chuyển nhượng hợp đồng pin xe điện có phức tạp không?",
@@ -178,6 +285,22 @@ function buildLandingPage() {
                 "@type": "Answer",
                 "text": "Thuật toán định giá của Auto 28 quét dữ liệu giao dịch thực tế từ các sàn xe cũ trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực tế của xe."
               }
+            },
+            {
+              "@type": "Question",
+              "name": "Xe VinFast lướt mua tại Auto 28 có được bảo hành chính hãng không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Có. Toàn bộ xe VinFast lướt bán ra đều giữ nguyên chế độ bảo hành chính hãng từ 7 - 10 năm hoặc 160.000 - 200.000 km tại tất cả xưởng dịch vụ VinFast trên toàn quốc."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Auto 28 có giao xe tận nhà tại Bình Dương, Đồng Nai, Long An không?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Có. Auto 28 cung cấp dịch vụ giao xe bằng xe cứu hộ chuyên dụng tận nơi tại TP.HCM, Bình Dương, Đồng Nai, Long An, Vũng Tàu, Tây Ninh và các tỉnh phía Nam trong vòng 24 giờ."
+              }
             }
           ]
         },
@@ -191,12 +314,41 @@ function buildLandingPage() {
               "position": 1,
               "item": {
                 "@type": "Car",
-                "name": "VinFast VF 3",
+                "name": "VinFast VF MPV 7",
                 "brand": { "@type": "Brand", "name": "VinFast" },
-                "model": "VF 3",
+                "model": "VF MPV 7",
+                "vehicleModelDate": "2026",
+                "numberOfDoors": 5,
+                "vehicleSeatingCapacity": 7,
                 "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
                 "fuelType": "Electric",
                 "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "VND",
+                  "price": "670000000",
+                  "itemCondition": "https://schema.org/UsedCondition",
+                  "availability": "https://schema.org/InStock",
+                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Car",
+                "name": "VinFast VF 3",
+                "brand": { "@type": "Brand", "name": "VinFast" },
+                "model": "VF 3",
+                "vehicleModelDate": "2024",
+                "numberOfDoors": 3,
+                "vehicleSeatingCapacity": 4,
+                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
+                "fuelType": "Electric",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
                 "offers": {
                   "@type": "Offer",
                   "priceCurrency": "VND",
@@ -209,40 +361,23 @@ function buildLandingPage() {
             },
             {
               "@type": "ListItem",
-              "position": 2,
+              "position": 3,
               "item": {
                 "@type": "Car",
                 "name": "VinFast VF 5 Plus",
                 "brand": { "@type": "Brand", "name": "VinFast" },
                 "model": "VF 5 Plus",
+                "vehicleModelDate": "2024",
+                "numberOfDoors": 5,
+                "vehicleSeatingCapacity": 5,
                 "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
                 "fuelType": "Electric",
                 "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
                 "offers": {
                   "@type": "Offer",
                   "priceCurrency": "VND",
-                  "price": "420000000",
-                  "itemCondition": "https://schema.org/UsedCondition",
-                  "availability": "https://schema.org/InStock",
-                  "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Car",
-                "name": "VinFast VF 6 Plus",
-                "brand": { "@type": "Brand", "name": "VinFast" },
-                "model": "VF 6 Plus",
-                "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
-                "fuelType": "Electric",
-                "itemCondition": "https://schema.org/UsedCondition",
-                "offers": {
-                  "@type": "Offer",
-                  "priceCurrency": "VND",
-                  "price": "630000000",
+                  "price": "350000000",
                   "itemCondition": "https://schema.org/UsedCondition",
                   "availability": "https://schema.org/InStock",
                   "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
@@ -254,16 +389,20 @@ function buildLandingPage() {
               "position": 4,
               "item": {
                 "@type": "Car",
-                "name": "VinFast VF 7 Plus",
+                "name": "VinFast VF 6 Plus / Eco",
                 "brand": { "@type": "Brand", "name": "VinFast" },
-                "model": "VF 7 Plus",
+                "model": "VF 6",
+                "vehicleModelDate": "2025",
+                "numberOfDoors": 5,
+                "vehicleSeatingCapacity": 5,
                 "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
                 "fuelType": "Electric",
                 "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709448/inventory/ewa3yyqts4rhldte2buv.jpg",
                 "offers": {
                   "@type": "Offer",
                   "priceCurrency": "VND",
-                  "price": "790000000",
+                  "price": "565000000",
                   "itemCondition": "https://schema.org/UsedCondition",
                   "availability": "https://schema.org/InStock",
                   "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
@@ -275,16 +414,20 @@ function buildLandingPage() {
               "position": 5,
               "item": {
                 "@type": "Car",
-                "name": "VinFast VF e34",
+                "name": "VinFast VF 7 Plus AWD",
                 "brand": { "@type": "Brand", "name": "VinFast" },
-                "model": "VF e34",
+                "model": "VF 7 Plus",
+                "vehicleModelDate": "2024",
+                "numberOfDoors": 5,
+                "vehicleSeatingCapacity": 5,
                 "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
                 "fuelType": "Electric",
                 "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709448/inventory/ewa3yyqts4rhldte2buv.jpg",
                 "offers": {
                   "@type": "Offer",
                   "priceCurrency": "VND",
-                  "price": "440000000",
+                  "price": "740000000",
                   "itemCondition": "https://schema.org/UsedCondition",
                   "availability": "https://schema.org/InStock",
                   "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
@@ -296,16 +439,20 @@ function buildLandingPage() {
               "position": 6,
               "item": {
                 "@type": "Car",
-                "name": "VinFast VF 8 Eco / Plus",
+                "name": "VinFast VF 8 Plus AWD",
                 "brand": { "@type": "Brand", "name": "VinFast" },
                 "model": "VF 8",
+                "vehicleModelDate": "2022",
+                "numberOfDoors": 5,
+                "vehicleSeatingCapacity": 5,
                 "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
                 "fuelType": "Electric",
                 "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
                 "offers": {
                   "@type": "Offer",
                   "priceCurrency": "VND",
-                  "price": "780000000",
+                  "price": "590000000",
                   "itemCondition": "https://schema.org/UsedCondition",
                   "availability": "https://schema.org/InStock",
                   "seller": { "@id": "https://www.auto28.com.vn/#autodealer" }
@@ -320,9 +467,13 @@ function buildLandingPage() {
                 "name": "VinFast VF 9 Plus",
                 "brand": { "@type": "Brand", "name": "VinFast" },
                 "model": "VF 9",
+                "vehicleModelDate": "2023",
+                "numberOfDoors": 5,
+                "vehicleSeatingCapacity": 7,
                 "vehicleEngine": { "@type": "EngineSpecification", "engineType": "Electric" },
                 "fuelType": "Electric",
                 "itemCondition": "https://schema.org/UsedCondition",
+                "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
                 "offers": {
                   "@type": "Offer",
                   "priceCurrency": "VND",
@@ -390,40 +541,128 @@ function buildLandingPage() {
         <div class="ambient-light light-3"></div>
     </div>
 
-${navHtml}
+    ${navHtml}
 
-${heroHtml}
+    ${heroHtml}
 
-${commitmentsHtml}
+    ${commitmentsHtml}
 
-${socialProofHtml}
+    ${comparisonMatrixHtml}
 
-${productGridHtml}
+    ${socialProofHtml}
 
-${processHtml}
+    ${productGridHtml}
 
-${faqAccordionHtml}
+    ${processHtml}
 
-${locationMapHtml}
+    ${faqAccordionHtml}
 
-${leadModalHtml}
+    ${locationMapHtml}
 
-${footerHtml}
+    ${leadModalHtml}
 
-    <script src="./cars_data.js?v=2.1.0" defer></script>
-    <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
-    <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
-    <script src="./modules/car-filter.js?v=2.1.0" defer></script>
-    <script src="./modules/ui-effects.js?v=2.1.0" defer></script>
-    <script src="./modules/car-modal.js?v=2.1.0" defer></script>
+    ${footerHtml}
+
+    <!-- 🏎️ MODAL CHI TIẾT XE ĐỘC QUYỀN (DYNAMIC CAR MODAL CONTAINER) -->
+    <div class="car-modal-backdrop" id="car-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-car-title">
+        <div class="car-modal-card">
+            <!-- Header bar with title and close button -->
+            <div class="modal-header-bar">
+                <div class="modal-header-info">
+                    <span class="modal-badge" id="modal-car-badge">XE LƯỚT CHÍNH HÃNG</span>
+                    <h2 class="modal-car-title" id="modal-car-title">VinFast VF 8 Plus</h2>
+                </div>
+                <button type="button" class="btn-modal-close" id="modal-close-btn" aria-label="Đóng cửa sổ">✕</button>
+            </div>
+
+            <!-- Price & Specs banner -->
+            <div class="modal-meta-banner">
+                <div class="modal-price-wrapper">
+                    <span class="modal-price-label">Giá niêm yết xe lướt:</span>
+                    <span class="modal-price-val" id="modal-car-price">780.000.000 đ</span>
+                </div>
+                <div class="modal-specs-pills" id="modal-specs-pills">
+                    <span class="modal-spec-pill" id="modal-spec-year">📅 2023</span>
+                    <span class="modal-spec-pill" id="modal-spec-odo">⚡ 15.000 km</span>
+                    <span class="modal-spec-pill" id="modal-spec-color">🎨 Trắng</span>
+                    <span class="modal-spec-pill" id="modal-spec-battery">🔋 Xe mua pin</span>
+                </div>
+            </div>
+
+            <!-- Scrollable body: gallery + details -->
+            <div class="modal-scroll-body">
+                <!-- Gallery: main photo + thumbnail strip -->
+                <div class="modal-gallery-wrapper">
+                    <div class="modal-main-photo-wrap">
+                        <img src="" alt="Chi tiết xe" id="modal-main-img" class="modal-main-img" loading="lazy">
+                    </div>
+                    <div class="modal-thumbs-strip" id="modal-thumbs-strip">
+                        <!-- Dynamic thumbs injected via JS -->
+                    </div>
+                </div>
+
+                <!-- 4 Inspection Pillar Highlights -->
+                <div class="modal-inspection-box">
+                    <h3 class="modal-section-h3">🛡️ Đạt Chuẩn Kiểm Định 176 Hạng Mục Auto 28</h3>
+                    <div class="modal-pillars-grid">
+                        <div class="modal-pillar-item">
+                            <span class="pillar-icon">🔩</span>
+                            <div class="pillar-text">
+                                <strong>Khung gầm &amp; Thân vỏ:</strong> Keo chỉ zin 100%, không tai nạn, đâm đụng.
+                            </div>
+                        </div>
+                        <div class="modal-pillar-item">
+                            <span class="pillar-icon">🔋</span>
+                            <div class="pillar-text">
+                                <strong>Pin &amp; Động cơ:</strong> Dung lượng pin đạt chuẩn SOH cao, bao check xưởng VinFast.
+                            </div>
+                        </div>
+                        <div class="modal-pillar-item">
+                            <span class="pillar-icon">📄</span>
+                            <div class="pillar-text">
+                                <strong>Pháp lý &amp; Sang tên:</strong> Hỗ trợ thủ tục chuyển nhượng pin chính chủ trong 24h.
+                            </div>
+                        </div>
+                        <div class="modal-pillar-item">
+                            <span class="pillar-icon">🤝</span>
+                            <div class="pillar-text">
+                                <strong>Đổi trả 7 ngày:</strong> Hoàn tiền 100% nếu phát hiện sai cam kết chất lượng.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky CTA footer inside modal -->
+            <div class="modal-footer-cta">
+                <a href="tel:0888813838" class="btn-modal-hotline" id="modal-btn-call">
+                    📞 Gọi Hotline Ngay
+                </a>
+                <button type="button" class="btn-modal-booking" id="modal-btn-book">
+                    ⚡ Đặt Lịch Xem Xe Này
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ⚡ SCRIPTS LOAD ORDER -->
+    <script src="./cars_data.js?v=2.1.0"></script>
+    <script src="./modules/car-modal.js?v=2.1.0"></script>
     <script type="module" src="./main.js?v=2.1.0"></script>
-</body>
 
-</html>
-`;
+    <!-- ⚡ SW Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js').catch(() => {});
+            });
+        }
+    </script>
+</body>
+</html>`;
 
     fs.writeFileSync(path.join(rootDir, 'index.html'), indexHtmlContent, 'utf8');
-    console.log("✅ index.html assembled successfully from src/components/*.html!");
+    console.log("✅ index.html generated successfully with World-Class SEO/GEO Schema!");
 }
 
 buildLandingPage();
