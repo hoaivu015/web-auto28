@@ -97,7 +97,7 @@ function getSellHtml() {
     <link rel="dns-prefetch" href="https://analytics.tiktok.com">
     <link rel="modulepreload" href="./main.js?v=2.1.0">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css?v=2.3.0">
     <link rel="icon" type="image/jpeg" href="./assets/logos/logo.jpg">
 </head>
 <body class="neural-expressive-body">
