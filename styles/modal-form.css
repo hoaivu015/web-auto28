@@ -155,13 +155,17 @@
 }
 
 .spec-tag {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: #334155;
-  background: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.25rem 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E40AF;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  padding: 0.3rem 0.75rem;
   border-radius: 9999px;
+  white-space: nowrap;
 }
 
 /* Lead Action & Dual CTA */

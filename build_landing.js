@@ -558,11 +558,11 @@ function generateShowroomHtml() {
 
     ${commitmentsHtml}
 
+    ${productGridHtml}
+
     ${comparisonMatrixHtml}
 
     ${socialProofHtml}
-
-    ${productGridHtml}
 
     ${processHtml}
 

@@ -4,20 +4,20 @@
 
 .floating-nav-capsule {
   position: fixed;
-  top: 1rem;
+  top: 0.75rem;
   left: 0.75rem;
   right: 0.75rem;
   height: 52px; /* Khóa cao đúng 52px */
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--border-card);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(225, 233, 246, 0.9);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
   border-radius: 9999px;
   padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 12px 28px -4px rgba(2, 11, 20, 0.08);
+  box-shadow: 0 12px 32px -4px rgba(2, 11, 20, 0.1);
   z-index: 1000;
   transition: transform 0.45s var(--ease-spring);
   overflow: hidden;

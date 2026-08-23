@@ -669,7 +669,7 @@
 
 @media (max-width: 767px) {
   .comparison-matrix-section {
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
   }
 
   .comparison-table-wrapper {
@@ -690,9 +690,9 @@
   .versus-bento-card {
     background: #FFFFFF;
     border: 1px solid var(--border-card);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 1.25rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
   }
 
   .versus-criterion-header {
@@ -723,8 +723,8 @@
   }
 
   .versus-branch {
-    padding: 0.75rem 0.9rem;
-    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    border-radius: 14px;
   }
 
   .competitor-branch {
@@ -733,19 +733,20 @@
   }
 
   .competitor-branch p {
-    font-size: 0.8rem;
+    font-size: 0.825rem;
     color: #64748B;
     margin-top: 0.25rem;
     line-height: 1.45;
   }
 
   .auto28-branch {
-    background: rgba(37, 99, 235, 0.04);
-    border: 1px solid rgba(37, 99, 235, 0.2);
+    background: rgba(37, 99, 235, 0.05);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.06);
   }
 
   .auto28-branch p {
-    font-size: 0.825rem;
+    font-size: 0.85rem;
     color: #1E293B;
     margin-top: 0.25rem;
     line-height: 1.45;
@@ -754,7 +755,7 @@
   .versus-branch-tag {
     display: inline-block;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 0.2rem;
   }
 
@@ -764,7 +765,7 @@
 
   .tag-check-pill {
     color: #059669;
-    font-weight: 800;
+    font-weight: 900;
   }
 }
 
@@ -807,7 +808,7 @@
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   text-decoration: none;
-  min-height: 44px;
+  min-height: 48px;
   transition: transform 0.3s var(--ease-spring), background 0.2s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   white-space: nowrap;
@@ -817,6 +818,115 @@
   transform: translateY(-2px);
   background: #1D4ED8;
   box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+@media (max-width: 767px) {
+  .comparison-summary-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .btn-comparison-cta {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   🏆 E-E-A-T AUTHORITY BOX & STATS GRID (SHOWROOM EXPERTISE)
+   ============================================ */
+
+.eeat-authority-box {
+  max-width: 1000px;
+  margin: 2.5rem auto 0;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid #E1E9F6;
+  border-radius: 32px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.eeat-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  min-width: 320px;
+}
+
+.eeat-stat-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s var(--ease-spring), border-color 0.2s;
+}
+
+.eeat-stat-card:hover {
+  transform: translateY(-3px);
+  border-color: #BFDBFE;
+}
+
+.eeat-stat-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.85rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.eeat-stat-num.text-blue { color: #2563EB; }
+.eeat-stat-num.text-green { color: #059669; }
+.eeat-stat-num.text-amber { color: #D97706; }
+
+.eeat-stat-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.3;
+}
+
+@media (max-width: 767px) {
+  .eeat-authority-box {
+    padding: 1.5rem 1.25rem;
+    border-radius: 24px;
+    margin-top: 2rem;
+  }
+
+  .eeat-stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-top: 1.25rem;
+  }
+
+  .eeat-stat-card {
+    padding: 0.85rem 0.35rem;
+    border-radius: 14px;
+  }
+
+  .eeat-stat-num {
+    font-size: 1.35rem;
+  }
+
+  .eeat-stat-label {
+    font-size: 0.65rem;
+    line-height: 1.2;
+  }
 }
 
 

@@ -865,6 +865,7 @@ input:checked + .switch-slider:before {
 
 .amortization-table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
   text-align: right;
   font-size: 0.885rem;
