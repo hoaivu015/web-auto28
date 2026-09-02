@@ -210,53 +210,6 @@ body {
   pointer-events: none !important;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .floating-nav-capsule {
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 96%;
-    max-width: 54rem;
-    padding: 0 1rem;
-  }
-
-  .floating-nav-capsule.nav-hidden {
-    transform: translate(-50%, -150%) !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 0.85rem;
-  }
-
-  .nav-link {
-    font-size: 0.625rem;
-    letter-spacing: 0.04em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .floating-nav-capsule {
-    top: 1.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 58rem;
-    padding: 0 1.5rem;
-  }
-
-  .floating-nav-capsule.nav-hidden {
-    transform: translate(-50%, -150%) !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-  }
 .nav-logo {
   font-family: var(--font-display);
   font-weight: 900;
@@ -286,6 +239,55 @@ body {
 
 .nav-link:hover {
   color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .floating-nav-capsule {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96%;
+    max-width: 54rem;
+    padding: 0 1rem;
+  }
+
+  .floating-nav-capsule.nav-hidden {
+    transform: translate(-50%, -150%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: 0.85rem;
+  }
+
+  .nav-link {
+    font-size: 0.625rem;
+    letter-spacing: 0.04em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .floating-nav-capsule {
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 58rem;
+    padding: 0 1.5rem;
+  }
+
+  .floating-nav-capsule.nav-hidden {
+    transform: translate(-50%, -150%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    gap: 1.5rem;
+  }
 }
 
 .btn-nav-hotline {
