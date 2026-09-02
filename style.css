@@ -3075,31 +3075,36 @@ body {
   border-radius: 4px;
 }
 
-/* 🔢 PROCESS SECTION (QUY TRÌNH 4 BƯỚC "KHÔNG CHỜ ĐỢI") */
+/* 🔢 PROCESS SECTION (QUY TRÌNH 3 BƯỚC MINH BẠCH) */
 .process {
   padding: 2rem 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
   background: transparent;
 }
 
 .process-steps {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 76rem;
-  margin: 0 auto;
+  gap: 2rem;
+  max-width: 64rem;
+  margin: 2rem auto 0;
   position: relative;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .process-steps {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .process-steps {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.step p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  margin: 0;
 }
 
 .step.expressive-step-card {
