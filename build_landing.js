@@ -27,14 +27,14 @@ function generateShowroomHtml() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận</title>
     <meta name="description"
-        content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI nhanh chóng, check hãng 176 hạng mục, bàn giao tận nhà.">
+        content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá nhanh trực tuyến, check hãng 176 hạng mục, bàn giao tận nhà.">
     
     <!-- 🌐 CANONICAL & OPEN GRAPH META (SEO 2026) -->
     <link rel="canonical" href="https://www.auto28.com.vn/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.auto28.com.vn/">
     <meta property="og:title" content="Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận">
-    <meta property="og:description" content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI nhanh chóng, check hãng 176 hạng mục, bàn giao tận nhà.">
+    <meta property="og:description" content="Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá nhanh trực tuyến, check hãng 176 hạng mục, bàn giao tận nhà.">
     <meta property="og:image" content="https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg">
     <meta property="og:site_name" content="Auto28.com.vn">
     <meta name="application-name" content="Auto28.com.vn">
@@ -88,7 +88,7 @@ function generateShowroomHtml() {
           "@id": "https://www.auto28.com.vn/#autodealer",
           "name": "Auto 28 - Hệ Thống Xe VinFast Lướt Uy Tín TP.HCM & Lân Cận",
           "alternateName": "Ô Tô Lướt Sài Gòn Auto 28",
-          "description": "Auto 28 là hệ thống chuyên mua bán, ký gửi và định giá xe VinFast lướt uy tín hàng đầu tại TP.HCM và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá AI, check hãng 176 hạng mục, bảo hành pin và giao xe tận nhà.",
+          "description": "Auto 28 là hệ thống chuyên mua bán, ký gửi và định giá xe VinFast lướt uy tín hàng đầu tại TP.HCM và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá nhanh trực tuyến, check hãng 176 hạng mục, bảo hành pin và giao xe tận nhà.",
           "telephone": "0888813838",
           "url": "https://www.auto28.com.vn",
           "logo": "https://www.auto28.com.vn/assets/logos/logo.jpg",
@@ -177,7 +177,7 @@ function generateShowroomHtml() {
               "@type": "Review",
               "author": { "@type": "Person", "name": "Anh Tuấn" },
               "datePublished": "2026-02-05",
-              "reviewBody": "Bán xe cũ cho showroom ngoài hay bị dìm giá, qua bên Auto 28 có công cụ định giá bằng AI rất minh bạch. Check xe tại nhà, ký công chứng xong tiền về tài khoản ngay lập tức.",
+              "reviewBody": "Bán xe cũ cho showroom ngoài hay bị ép giá, qua bên Auto 28 có công cụ định giá trực tuyến rất nhanh và chuẩn. Xem xe tại nhà, ký công chứng xong tiền về tài khoản ngay lập tức.",
               "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
             },
             {
@@ -291,10 +291,10 @@ function generateShowroomHtml() {
             },
             {
               "@type": "Question",
-              "name": "Mức định giá AI của Auto 28 được cập nhật thế nào?",
+              "name": "Mức giá thu mua xe của Auto 28 được tính toán như thế nào?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Thuật toán định giá của Auto 28 quét dữ liệu giao dịch thực tế từ các sàn xe cũ trên toàn quốc theo thời gian thực để đưa ra khoảng giá mua/bán sát nhất với giá trị thực tế của xe."
+                "text": "Auto 28 liên tục cập nhật dữ liệu giao dịch thực tế trên thị trường để đưa ra mức giá thu mua sát nhất với giá trị xe, tuyệt đối không ép giá và đảm bảo quyền lợi tối đa cho khách hàng."
               }
             },
             {
