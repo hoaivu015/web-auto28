@@ -60,7 +60,7 @@ function generateShowroomHtml() {
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;700;800;900&display=swap">
     <!-- 🎨 CRITICAL CSS DESIGN SYSTEM (NEURAL EXPRESSIVE 2.0) -->
-    <link rel="stylesheet" href="./style.css?v=2.5.0">
+    <link rel="stylesheet" href="./style.css?v=2.6.0">
     <noscript>
         <style>
             .reveal { opacity: 1 !important; transform: none !important; }
@@ -582,7 +582,7 @@ function generateShowroomHtml() {
     <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
     <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
     <script src="./modules/car-filter.js?v=2.1.0" defer></script>
-    <script src="./modules/ui-effects.js?v=2.1.0" defer></script>
+    <script src="./modules/ui-effects.js?v=2.6.0" defer></script>
     <script src="./modules/car-modal.js?v=2.1.0" defer></script>
     <script type="module" src="./main.js?v=2.1.0"></script>
     <script>

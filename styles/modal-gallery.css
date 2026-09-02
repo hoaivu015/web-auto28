@@ -18,6 +18,13 @@
   padding: 1rem;
 }
 
+/* 🛡️ Fallback Shield: Ensure legacy or stale modal backdrops are never rendered in document flow */
+.car-modal-backdrop,
+#car-modal,
+.expressive-modal:not(.open) {
+  display: none !important;
+}
+
 .expressive-modal.open {
   display: flex !important;
   opacity: 1 !important;

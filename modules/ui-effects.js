@@ -21,7 +21,7 @@
     }
 
     function initUIEffects() {
-        // 💊 Smart Scroll Nav Capsule (Auto-hide on scroll down, reveal on scroll up)
+        // 💊 Smart Scroll Nav Capsule (Auto-hide on scroll down, reveal on scroll up, auto-hide at footer)
         const navCapsule = document.getElementById('nav-capsule');
         if (navCapsule) {
             let lastScrollY = window.scrollY;
@@ -32,7 +32,14 @@
                 if (!navTicking) {
                     window.requestAnimationFrame(() => {
                         const currentScrollY = window.scrollY;
-                        if (currentScrollY > 70 && currentScrollY > lastScrollY + 8) {
+                        const isNearFooter = (window.innerHeight + currentScrollY) >= (document.documentElement.scrollHeight - 200);
+
+                        if (isNearFooter) {
+                            if (!isNavHidden) {
+                                navCapsule.classList.add('nav-hidden');
+                                isNavHidden = true;
+                            }
+                        } else if (currentScrollY > 70 && currentScrollY > lastScrollY + 8) {
                             if (!isNavHidden) {
                                 navCapsule.classList.add('nav-hidden');
                                 isNavHidden = true;

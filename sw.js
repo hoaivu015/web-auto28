@@ -3,18 +3,18 @@
  * Strategy: Stale-While-Revalidate with Cache Quota Safety & Search Normalization
  */
 
-const CACHE_NAME = 'auto28-v2.5.0-cache';
+const CACHE_NAME = 'auto28-v2.6.0-cache';
 const MAX_IMAGE_CACHE_ITEMS = 30;
 const PRECACHE_ASSETS = [
     '/',
-    '/style.css?v=2.5.0',
+    '/style.css?v=2.6.0',
     '/main.js?v=2.1.0',
     '/cars_data.js?v=2.1.0',
     '/modules/tracking-pipeline.js?v=2.2.0',
     '/modules/hero-slideshow.js?v=2.1.0',
     '/modules/ai-valuation.js?v=2.1.0',
     '/modules/car-filter.js?v=2.1.0',
-    '/modules/ui-effects.js?v=2.5.0',
+    '/modules/ui-effects.js?v=2.6.0',
     '/modules/car-modal.js?v=2.1.0',
     '/assets/logos/logo.jpg'
 ];

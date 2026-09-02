@@ -1,11 +1,11 @@
 {
   "name": "auto28-landing-page",
-  "version": "2.1.0",
+  "version": "2.6.0",
   "description": "Auto 28 Standalone Landing Page",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "node build_landing.js",
+    "build": "node build_css.js && node build_landing.js",
     "healthcheck": "node healthcheck.js",
     "audit": "node healthcheck.js"
   },
