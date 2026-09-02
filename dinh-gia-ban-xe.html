@@ -39,10 +39,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap">
     </noscript>
 
-    <link rel="preload" as="style" href="./style.css?v=2.5.0">
-    <link rel="stylesheet" href="./style.css?v=2.5.0" media="print" onload="this.media='all'">
+    <link rel="preload" as="style" href="./style.css?v=2.6.0">
+    <link rel="stylesheet" href="./style.css?v=2.6.0" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="./style.css?v=2.5.0">
+        <link rel="stylesheet" href="./style.css?v=2.6.0">
     </noscript>
 
     <!-- ⚡ CRITICAL ABOVE-THE-FOLD CSS -->
@@ -84,68 +84,6 @@
                   #F3F6FC;
       pointer-events: none;
       contain: strict;
-    }
-    .floating-nav-capsule {
-      position: fixed;
-      top: 1rem;
-      left: 0.75rem;
-      right: 0.75rem;
-      height: 52px;
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid #E1E9F6;
-      backdrop-filter: blur(32px);
-      -webkit-backdrop-filter: blur(32px);
-      border-radius: 9999px;
-      padding: 0 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 12px 28px -4px rgba(2, 11, 20, 0.08);
-      z-index: 1000;
-    }
-    @media (min-width: 768px) {
-      .floating-nav-capsule {
-        top: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 56rem;
-        padding: 0 1.5rem;
-      }
-    }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 1.15rem;
-      letter-spacing: -0.05em;
-      color: #020B14;
-    }
-    .nav-links { display: none; align-items: center; gap: 1.75rem; }
-    @media (min-width: 768px) { .nav-links { display: flex; } }
-    .nav-link {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.6875rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #1E293B;
-      text-decoration: none;
-    }
-    .btn-nav-hotline {
-      background: #020B14;
-      color: #FFFFFF;
-      height: 38px;
-      padding: 0 1rem;
-      border-radius: 9999px;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 0.75rem;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
     }
     .hero-sell {
       position: relative;
@@ -383,7 +321,8 @@
             AUTO28
         </a>
         <nav class="nav-links">
-            <a href="./index.html" class="nav-link">Danh sách xe</a>
+            <a href="./index.html#product-grid-section" class="nav-link">Danh sách xe</a>
+            <a href="./tinh-tra-gop.html" class="nav-link">Tính trả góp</a>
             <a href="./dinh-gia-ban-xe.html" class="nav-link active" style="color: var(--color-accent-blue); font-weight: 700;">Định giá bán xe</a>
             <a href="./huong-dan-phap-ly.html" class="nav-link">Hướng dẫn pháp lý</a>
             <a href="./huong-dan-mua-xe-dien.html" class="nav-link">Cẩm nang xe điện</a>
@@ -901,7 +840,7 @@
     <script src="./modules/hero-slideshow.js?v=2.1.0" defer></script>
     <script src="./modules/ai-valuation.js?v=2.1.0" defer></script>
     <script src="./modules/car-filter.js?v=2.1.0" defer></script>
-    <script src="./modules/ui-effects.js?v=2.1.0" defer></script>
+    <script src="./modules/ui-effects.js?v=2.6.0" defer></script>
     <script src="./modules/car-modal.js?v=2.1.0" defer></script>
     <script type="module" src="./main.js?v=2.1.0"></script>
 </body>
