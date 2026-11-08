@@ -209,10 +209,10 @@ function generateShowroomHtml(modelSlug) {
   const rootDir = __dirname;
   const compDir = path.join(rootDir, 'src', 'components');
   const routeMeta = (modelSlug && SEO_ROUTES_CONFIG[modelSlug]) ? SEO_ROUTES_CONFIG[modelSlug] : null;
-  const pageTitle = routeMeta ? routeMeta.pageTitle : 'Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM & Lân Cận';
+  const pageTitle = routeMeta ? routeMeta.pageTitle : 'Auto 28 - Mua Bán Xe VinFast Lướt Uy Tín Tại TP.HCM';
   const metaDesc = routeMeta ? routeMeta.metaDesc : 'Auto 28 là hệ thống kinh doanh xe VinFast lướt uy tín hàng đầu tại khu vực TP. Hồ Chí Minh và các tỉnh lân cận (Bình Dương, Đồng Nai, Long An...). Định giá nhanh trực tuyến, check hãng 176 hạng mục, bàn giao tận nhà.';
   const canonicalUrl = routeMeta ? `https://www.auto28.com.vn/${modelSlug}` : 'https://www.auto28.com.vn/';
-  const ogImage = routeMeta ? routeMeta.ogImage : 'https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg';
+  const ogImage = routeMeta ? routeMeta.ogImage : 'https://www.auto28.com.vn/assets/logos/logo.jpg';
 
   // Read component partials
   const navHtml = fs.readFileSync(path.join(compDir, 'nav.html'), 'utf8');
@@ -262,6 +262,13 @@ function generateShowroomHtml(modelSlug) {
     <meta property="og:title" content="${pageTitle}">
     <meta property="og:description" content="${metaDesc}">
     <meta property="og:image" content="${ogImage}">
+    <meta property="og:image:alt" content="${pageTitle}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${pageTitle}">
+    <meta name="twitter:description" content="${metaDesc}">
+    <meta name="twitter:image" content="${ogImage}">
     <meta property="og:site_name" content="Auto28.com.vn">
     <meta name="application-name" content="Auto28.com.vn">
     <meta name="apple-mobile-web-app-title" content="Auto28.com.vn">
@@ -318,7 +325,7 @@ function generateShowroomHtml(modelSlug) {
           "telephone": "0888813838",
           "url": "https://www.auto28.com.vn",
           "logo": "https://www.auto28.com.vn/assets/logos/logo.jpg",
-          "image": "https://res.cloudinary.com/dvh4hnwsy/image/upload/v1781709568/inventory/zd6iu9qtpf0jair1jhyx.jpg",
+          "image": "https://www.auto28.com.vn/assets/logos/logo.jpg",
           "priceRange": "$$",
           "currenciesAccepted": "VND",
           "paymentAccepted": "Tiền mặt, Chuyển khoản, Hỗ trợ trả góp ngân hàng",
