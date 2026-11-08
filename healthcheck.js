@@ -16,11 +16,17 @@ function runHealthcheck() {
         'dinh-gia-ban-xe.html'
     ];
 
+    const modelSlugs = [
+        'vf3', 'vf5', 'vf6', 'vf7',
+        'vfe34', 'vf8', 'vf9', 'limo',
+        'mpv', 'lux-a', 'lux-sa', 'fadil'
+    ];
+
     let passed = 0;
     let total = 10;
 
-    // Check 1-6: Required files
-    requiredFiles.forEach((file) => {
+    // Check 1-5: Core required files (index, style, main, server, guide-ev)
+    requiredFiles.slice(0, 5).forEach((file) => {
         const fullPath = path.join(dir, file);
         if (fs.existsSync(fullPath) && fs.statSync(fullPath).size > 0) {
             passed++;
@@ -29,12 +35,34 @@ function runHealthcheck() {
         }
     });
 
-    // Check 7: relative CSS link in index.html
+    // Check 6: Valuation page + All 12 Model SEO SSR Routes via generateShowroomHtml(slug)
+    let allLandingPagesValid = fs.existsSync(path.join(dir, 'dinh-gia-ban-xe.html'));
+    try {
+        const { generateShowroomHtml } = require('./build_landing.js');
+        modelSlugs.forEach((slug) => {
+            const html = generateShowroomHtml(slug);
+            if (!html || !html.includes(`https://www.auto28.com.vn/${slug}`)) {
+                console.error(`❌ FAIL: SSR Model route generation failed for /${slug}`);
+                allLandingPagesValid = false;
+            }
+        });
+    } catch (err) {
+        console.error(`❌ FAIL: Error testing generateShowroomHtml: ${err.message}`);
+        allLandingPagesValid = false;
+    }
+    if (allLandingPagesValid) {
+        passed++;
+    }
+
+    // Check 7: Relative CSS link in index.html & Zero Forbidden Battery Terms
     const indexContent = fs.readFileSync(path.join(dir, 'index.html'), 'utf8');
-    if (/href=["']\.\/style\.css/i.test(indexContent) || /href=["']style\.css/i.test(indexContent) || indexContent.includes('style.css')) {
+    const carsDataContent = fs.readFileSync(path.join(dir, 'cars_data.js'), 'utf8');
+    const forbiddenRegex = /Xe sở hữu pin|Mua đứt pin/i;
+    const hasRelativeCss = /href=["']\.\/style\.css/i.test(indexContent) || /href=["']style\.css/i.test(indexContent);
+    if (hasRelativeCss && !forbiddenRegex.test(indexContent) && !forbiddenRegex.test(carsDataContent)) {
         passed++;
     } else {
-        console.error('❌ FAIL: Absolute CSS path in index.html');
+        console.error('❌ FAIL: CSS path issue or Forbidden Battery Term ("Xe sở hữu pin" / "Mua đứt pin") detected');
     }
 
     // Check 8: All required JS modules loaded in index.html
@@ -59,17 +87,27 @@ function runHealthcheck() {
         passed++;
     }
 
-    // Check 9: Footer exists in index.html or guide.html
-    if (indexContent.includes('<footer') || indexContent.includes('footer')) {
+    // Check 9: Footer & Pre-rendered Static Cards exist in index.html
+    if (indexContent.includes('<footer') && indexContent.includes('expressive-car-card')) {
         passed++;
     } else {
-        console.error('❌ FAIL: Footer element missing in HTML');
+        console.error('❌ FAIL: Footer or pre-rendered car cards missing in index.html');
     }
 
-    // Check 10: Schema JSON-LD exists & SSOT verified
-    if (indexContent.includes('application/ld+json')) {
+    // Check 10: Schema JSON-LD exists & passes strict JSON.parse()
+    const ldJsonMatches = [...indexContent.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+    let jsonLdValid = ldJsonMatches.length > 0;
+    ldJsonMatches.forEach((match, idx) => {
+        try {
+            JSON.parse(match[1]);
+        } catch (err) {
+            console.error(`❌ FAIL: Invalid JSON-LD syntax in block #${idx + 1}: ${err.message}`);
+            jsonLdValid = false;
+        }
+    });
+    if (jsonLdValid) {
         passed++;
-    } else {
+    } else if (ldJsonMatches.length === 0) {
         console.error('❌ FAIL: Missing JSON-LD Schema');
     }
 

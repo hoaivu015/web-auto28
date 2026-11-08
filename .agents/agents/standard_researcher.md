@@ -83,6 +83,6 @@ Bước 4: DARPA XAI Reasoning Graph Output
     }
   ],
   "uncertain_claims": [],
-  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agent/scratch/research_evidence.json"
+  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agents/scratch/research_evidence.json"
 }
 ```

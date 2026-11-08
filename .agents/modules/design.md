@@ -24,36 +24,36 @@ ADN-4: SPRING PHYSICS MOTION — Hover/tap/modal dùng spring (stiffness 280-340
 
 ## 📋 Neural Expressive Checklist (bắt buộc trước khi submit UI)
 
-### Layer & Depth (ADN-1)
-- [ ] Card: `bg-white/70 backdrop-blur-xl border border-black/5 shadow-sm`
-- [ ] Modal backdrop: `bg-black/40 backdrop-blur-md`
-- [ ] Modal container: `bg-white/90 backdrop-blur-2xl border border-black/5`
-- [ ] Pill/Tag: `bg-gray-100/50` hoặc `bg-white/5` (dark)
-- [ ] KHÔNG dùng background solid thuần (`bg-white`, `bg-gray-100`) cho card chính
+### Layer & Depth (ADN-1 — Vanilla CSS Light Bento)
+- [ ] Card chính: `background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(24px); border: 1px solid #E1E9F6;`
+- [ ] Capsule Nav: `background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(28px);` + tự động ẩn (`.nav-hidden`) khi cuộn cách footer `≤ 200px`
+- [ ] Modal backdrop: `background: rgba(2, 11, 20, 0.55); backdrop-filter: blur(12px);`
+- [ ] Modal shield bắt buộc: `.car-modal-backdrop, #car-modal, .expressive-modal:not(.open) { display: none !important; }`
+- [ ] KHÔNG dùng Dark Box (`#0F172A`) đơn lẻ giữa nền Light Mode (`#F3F6FC`) gây nghịch đảo tương phản WCAG
 
 ### Border Radius (ADN-2)
-- [ ] Card lớn: `border-radius: 32px` — bắt buộc
-- [ ] Sub-component (ảnh trong card, input): `border-radius: 20px` đến `24px`
-- [ ] Button/CTA: `border-radius: 9999px` (full)
+- [ ] Card lớn: `border-radius: 32px` (desktop) / `24px` (`1.5rem` trên mobile) — bắt buộc
+- [ ] Sub-component (ảnh trong card, input): `border-radius: 16px` đến `24px`
+- [ ] Button/CTA: `border-radius: 9999px` (pill shape)
 - [ ] KHÔNG dùng `border-radius: 6px`, `8px`, `12px` cho component chính
 
 ### Typography (ADN-3)
 - [ ] Số liệu lớn (giá xe, metrics): `font-size: 2.25rem; font-weight: 900; letter-spacing: -0.05em; line-height: 1.1`
 - [ ] Tiêu đề card: `font-size: 1.25rem; font-weight: 900; letter-spacing: -0.025em`
-- [ ] Nhãn Tag/Pill: `font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase`
-- [ ] Văn bản phụ: `font-size: 0.875rem; font-weight: 500; color: #6b7280`
-- [ ] KHÔNG dùng `font-weight: 400, 500, 600, 700` cho tiêu đề primary — phải là `900`
+- [ ] Nhãn Tag/Pill: `font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase`
+- [ ] Văn bản phụ: `font-size: 0.875rem; font-weight: 500; color: #1E293B`
+- [ ] KHÔNG dùng `font-weight: 400, 500, 600, 700` cho tiêu đề primary — phải là `800` hoặc `900`
 
 ### Motion & Interaction (ADN-4)
-- [ ] Card hover: `transform: translateY(-6px) scale(1.02)` với `transition: spring(stiffness:340, damping:22)`
-- [ ] Button tap: `active:scale-[0.96]`
-- [ ] Modal open: slide từ `y:100%` → `y:0` với spring `stiffness:280, damping:26`
-- [ ] KHÔNG dùng `transition: all 0.3s ease` cho interaction chính
+- [ ] Card hover: `transform: translateY(-6px) scale(1.01)` với `transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1)`
+- [ ] Button tap: `transform: scale(0.96)`
+- [ ] KHÔNG dùng `transition: all 0.3s ease` chung chung gây tốn tài nguyên repaint
 
-### Spacing (ADN-1 + ADN-2 bổ sung)
-- [ ] Card padding: tối thiểu 24px, lý tưởng 32px
-- [ ] Spacing: bội số 8px — KHÔNG dùng giá trị lẻ (3px, 7px, 13px, 5px)
-- [ ] Touch target: tối thiểu 44×44px (iOS) / 48×48px (WCAG 2.2 Android)
+### Spacing & Layout Parity (ADN-1 + ADN-2 bổ sung)
+- [ ] **Uniform Section & Footer Offset (BẮT BUỘC)**: Khoảng cách `padding-top` và `padding-bottom` của mọi section trên Landing Page và khoảng cách với chân trang (footer) cố định chuẩn **`2rem` (`32px`)**.
+- [ ] Card padding: tối thiểu `24px` (`1.5rem`), lý tưởng `32px` (`2rem`) trên desktop; `16px` (`1rem`) trên mobile.
+- [ ] Spacing: bội số `4px` / `8px` — KHÔNG dùng giá trị lẻ (`3px`, `7px`, `13px`, `5px`).
+- [ ] Touch target: tối thiểu `48×48px` (WCAG 2.2 AA).
 
 ---
 

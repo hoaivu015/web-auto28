@@ -19,6 +19,7 @@ Khi AI sinh mã nguồn, nó thiếu "nhãn quan thẩm mỹ" và "ý đồ thi�
 ## 2. Danh Mục Lỗi Cần Rà Soát (Audit Checklist)
 
 ### A. Spacing & Token Drift (Lệch Spacing & Thiết Kế Bất Nhất Quán)
+*   [ ] **Quy chuẩn Khoảng cách Section & Footer `2rem` (BẮT BUỘC):** Toàn bộ khoảng cách `padding-top` và `padding-bottom` giữa các section trên Landing Page và khoảng cách với chân trang (footer) phải đồng nhất chuẩn **`2rem` (`32px`)**.
 *   [ ] **Lỗi số lẻ / số tự do:** Phát hiện các giá trị padding, margin, gap có giá trị lẻ hoặc không chia hết cho `4` hoặc `8` (ví dụ: `13px`, `18px`, `29px`, `43px`).
 *   [ ] **Lỗi Hardcode Pixel:** Các giá trị khoảng cách được hardcode bằng `px` thay vì sử dụng các biến CSS Token chuẩn của dự án (ví dụ: dùng `var(--spacing-md)` hoặc `var(--spacing-lg)`).
 *   [ ] **Lỗi Spacing bất nhất quán:** Hai phần tử có vai trò tương đương nhau nhưng lại có khoảng cách lề khác nhau.

@@ -140,7 +140,7 @@ Status: BLOCKED — Cần approval từ user để override
 2. **KHÔNG block file system operations** ngoài phạm vi dự án `/Users/phanvu/Desktop/lading-page/`.
 3. **KHÔNG can thiệp** vào `node_modules/`, `.git/`, `.agents/` (trừ khi audit được yêu cầu).
 4. **KHÔNG rename** bất kỳ file nào trong danh sách Known Exceptions.
-5. **Ghi log** mọi VETO vào `.agent/scratch/structure-guardian-log.jsonl`.
+5. **Ghi log** mọi VETO vào `.agents/scratch/structure-guardian-log.jsonl`.
 
 ---
 

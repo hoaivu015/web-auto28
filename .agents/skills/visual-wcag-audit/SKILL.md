@@ -76,13 +76,13 @@ Script tự động lưu bộ ảnh giao diện thực tế 2 chế độ chụp
    - `[page]_[device]_fold.png` (Ví dụ: `index_mobile_fold.png`, `index_desktop_fold.png`)
 
 📁 Đường dẫn lưu tệp:
-`file:///Users/phanvu/Desktop/lading-page/.agent/scratch/screenshots/`
+`file:///Users/phanvu/Desktop/lading-page/.agents/scratch/screenshots/`
 
 ---
 
 ## 📑 Báo Cáo JSON & Tiêu Chí Nghiệm Thu (Scoring Thresholds)
 
-- Báo cáo Ma trận chi tiết được lưu tại: `.agent/scratch/visual_report.json`
+- Báo cáo Ma trận chi tiết được lưu tại: `.agents/scratch/visual_report.json`
 - **Tiêu chí nghiệm thu (PASSED)**:
   - **Visual Score >= 85 / 100 điểm**.
   - **Horizontal Overflow Failures = 0** trên cả Mobile, Tablet và Desktop.

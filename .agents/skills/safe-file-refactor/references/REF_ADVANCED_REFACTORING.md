@@ -11,7 +11,7 @@ Script dưới đây là mẫu Parser AST không phụ thuộc thư viện ngoà
 ```javascript
 /**
  * Auto 28 - Enterprise AST Scope & Node Synthesizer Helper
- * File: .agent/scratch/ast_node_synthesizer.js
+ * File: .agents/scratch/ast_node_synthesizer.js
  */
 const fs = require('fs');
 const path = require('path');
@@ -80,7 +80,7 @@ Script tính điểm trọng số Specificity cho CSS Selector để ngăn ngừ
 ```javascript
 /**
  * Auto 28 - CSS Specificity Calculator & Cascade Order Shield
- * File: .agent/scratch/css_specificity_shield.js
+ * File: .agents/scratch/css_specificity_shield.js
  */
 
 function calculateSpecificity(selector) {
@@ -130,7 +130,7 @@ Script quét tham chiếu chéo giữa tất cả các file HTML và JS để li
 ```javascript
 /**
  * Auto 28 - Cross-File Static Dependency Analyzer
- * File: .agent/scratch/tree_shaking_analyzer.js
+ * File: .agents/scratch/tree_shaking_analyzer.js
  */
 const fs = require('fs');
 const path = require('path');

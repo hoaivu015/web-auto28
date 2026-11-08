@@ -81,7 +81,7 @@ Các mô hình tìm kiếm AI (ChatGPT Search, Gemini, Perplexity, Google AI Ove
 
 ### Touch Targets & Mobile Navigation
 *   **Kích thước Chạm (Touch Target)**: Toàn bộ nút liên hệ, nút submit, icon hotline phải đạt kích thước tối thiểu **48px x 48px** (`min-height: 48px; min-width: 48px;`) để thao tác dễ dàng trên di động.
-*   **Sticky CTA Bar**: Cố định thanh CTA kép (Gọi điện + Chat Zalo) ở đáy màn hình di động khi cuộn trang.
+*   **No Mobile Sticky Bar & Vertical Card**: CẤM thanh Sticky CTA Bar cố định ở đáy màn hình di động; thẻ xe trên mobile (`≤ 639px`) bắt buộc xếp dọc (`flex-direction: column`), ảnh `16:10`.
 
 ### Spacing System (8pt Grid System)
 *   Triệt tiêu hoàn toàn khoảng cách số lẻ (`13px`, `17px`, `21px`).

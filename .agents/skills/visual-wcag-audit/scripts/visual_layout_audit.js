@@ -12,7 +12,7 @@
  * - Multi-Device Above-The-Fold Lead Form & CTA Matrix
  * - WCAG 2.2 SC 2.5.8 Target Size (Touch >= 44x44px, Mouse >= 24x24px)
  * - WCAG 2.2 SC 1.4.3 & 1.4.11 Color Contrast (Text >= 4.5:1, UI Controls >= 3.0:1)
- * - Multi-Device Screenshot Vault (.agent/scratch/screenshots/)
+ * - Multi-Device Screenshot Vault (.agents/scratch/screenshots/)
  */
 
 const fs = require('fs');
@@ -24,7 +24,7 @@ const puppeteer = require('puppeteer-core');
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const PORT = 8899;
 const PROJECT_ROOT = path.resolve(__dirname, '../../../../');
-const SCRATCH_DIR = path.join(PROJECT_ROOT, '.agent/scratch');
+const SCRATCH_DIR = path.join(PROJECT_ROOT, '.agents/scratch');
 const SCREENSHOT_DIR = path.join(SCRATCH_DIR, 'screenshots');
 
 if (!fs.existsSync(SCREENSHOT_DIR)) {

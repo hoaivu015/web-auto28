@@ -40,7 +40,7 @@ registry: .agents/agent_weights.json
 
 ```
 Bước 1: Chụp Pre-build Snapshot (Bắt buộc)
-  └─ mkdir -p .agent/scratch/backups/html_baseline && cp *.html .agent/scratch/backups/html_baseline/
+  └─ mkdir -p .agents/scratch/backups/html_baseline && cp *.html .agents/scratch/backups/html_baseline/
 
 Bước 2: Viết/Thực thi Node.js Automation Script
   ├─ Sử dụng JSDOM / Cheerio / AST parser để sửa DOM an toàn
@@ -48,18 +48,18 @@ Bước 2: Viết/Thực thi Node.js Automation Script
      spec-pills, price-box, card-badge, bento-filter-pill, card-meta-line
 
 Bước 3: Chạy Code Hygiene Check & Verification Gate
-  └─ node scripts/code_hygiene_check.js
+  └─ npm run healthcheck
 
 Bước 4: Kiểm tra kết quả & Automated Rollback
   ├─ PASS ➔ Xác nhận thay đổi, xuất JSON handoff
-  └─ FAIL ➔ Tự động Rollback tức thì: cp .agent/scratch/backups/html_baseline/*.html ./
+  └─ FAIL ➔ Tự động Rollback tức thì: cp .agents/scratch/backups/html_baseline/*.html ./
 ```
 
 ---
 
 ## 3. RÀO CHẮN AN TOÀN & KHÔI PHỤC (SAFETY & AUTOMATED ROLLBACK)
 1. **Atomic Backup Requirement**: Không thực hiện bất kỳ lệnh sửa đĩa nào nếu snapshot chưa được tạo thành công.
-2. **Instant Rollback Gate**: Nếu `code_hygiene_check.js` văng lỗi hoặc DOM Parity bị phá vỡ, khôi phục nguyên trạng từ `html_baseline` trong <1 giây.
+2. **Instant Rollback Gate**: Nếu `npm run healthcheck` văng lỗi hoặc DOM Parity bị phá vỡ, khôi phục nguyên trạng từ `html_baseline` trong <1 giây.
 
 ---
 
@@ -67,34 +67,34 @@ Bước 4: Kiểm tra kết quả & Automated Rollback
 ```json
 {
   "subagent": "safe-code-refactorer",
-  "timestamp": "2026-07-30T21:42:00Z",
+  "timestamp": "2026-11-07T17:45:00Z",
   "backup_created": true,
-  "backup_path": "file:///Users/phanvu/Desktop/lading-page/.agent/scratch/backups/html_baseline/",
-  "files_modified": ["index.html", "showroom.html"],
+  "backup_path": "file:///Users/phanvu/Desktop/lading-page/.agents/scratch/backups/html_baseline/",
+  "files_modified": ["index.html"],
   "dom_parity_pass": true,
   "code_hygiene_pass": true,
   "rollback_required": false,
   "rollback_reason": null,
-  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agent/scratch/refactor_log.json",
+  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agents/scratch/refactor_log.json",
   "neural_expressive_dna_preserved": true
 }
 ```
 
 ---
 
-## 5. NEURAL EXPRESSIVE DNA — RÀO CHẮN BẢO TOÀN
+## 5. NEURAL EXPRESSIVE DNA — RÀO CHẮN BẢO TOÀN (VANILLA CSS/HTML)
 
 > **Mọi script refactor PHẢI bảo toàn 4 ADN cốt lõi.** Nếu script vô tình xóa/thay đổi bất kỳ ADN nào → tự động Rollback ngay lập tức.
 
 ### Hard Constraints trong mọi Node.js script:
 ```js
-// ✅ BẮT BUỘC: Kiểm tra trước khi ghi file
+// ✅ BẮT BUỘC: Kiểm tra bảo toàn CSS/HTML DNA trước khi ghi file
 const DNA_PRESERVE_PATTERNS = [
-  /backdrop-blur/,          // ADN-1: Liquid Translucency
-  /bg-\w+\/\d+/,           // ADN-1: opacity bg
-  /rounded-\[3[2-9]px\]/,  // ADN-2: Super Ellipse ≥32px
-  /font-black/,             // ADN-3: Bold-First
-  /stiffness|damping/,      // ADN-4: Spring Physics
+  /backdrop-filter:\s*blur/i,           // ADN-1: Liquid Translucency
+  /border-radius:\s*(32px|2rem|1\.5rem)/i, // ADN-2: Super Ellipse Radius
+  /font-weight:\s*(800|900)/i,          // ADN-3: Bold-First Typography
+  /cubic-bezier\(0\.22,\s*1,\s*0\.36,\s*1\)/i, // ADN-4: Spring Physics Motion
+  /expressive-car-card/                 // Core Vehicle Card Architecture
 ];
 
 function assertDNAPreserved(before, after) {
@@ -109,10 +109,10 @@ function assertDNAPreserved(before, after) {
 ```
 
 ### ⛔ CẤM trong script refactor:
-- Xóa class `backdrop-blur-*`, `bg-white/70`, `bg-white/90`
-- Replace `rounded-[32px]` → `rounded-xl` hay nhỏ hơn
-- Strip `font-black` → `font-bold` hay thấp hơn
-- Xóa Framer Motion spring props (`stiffness`, `damping`)
+- Xóa thuộc tính `backdrop-filter: blur(...)` trên card/modal/nav
+- Hạ `border-radius` của card chính xuống dưới `24px`/`32px`
+- Hạ `font-weight` của tiêu đề chính và giá xe xuống dưới `800`/`900`
+- Đổi bố cục `.expressive-car-card` trên mobile sang `flex-direction: row`
 
 ---
 

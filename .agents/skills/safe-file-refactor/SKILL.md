@@ -12,14 +12,14 @@ Chỉ dẫn chuyên sâu theo tiêu chuẩn công nghiệp tập đoàn công ng
 ## 🎯 1. NGUYÊN TẮC CỐ ĐỊNH (NON-NEGOTIABLE ENTERPRISE PROTOCOLS)
 
 1. **Tuyệt đối không cắt dòng tĩnh (No Hardcoded Line-Slicing)**: Nghiêm cấm dùng dải dòng tĩnh `lines.slice()`. AI BẮT BUỘC phải dùng **AST Structural Node Parser** (tìm ranh giới khối ngoặc nhọn `{ ... }` và cú pháp AST) hoặc **Marker/Signature-based Regex Extraction** để trích xuất khối hàm chính xác 100%.
-2. **Cơ chế Sao lưu Snapshot (Automated Snapshot Backup Protocol)**: Trước khi ghi đè hoặc chỉnh sửa bất kỳ tệp lớn nào (> 300 dòng), Agent BẮT BUỘC phải tự động tạo bản sao lưu snapshot tại `.agent/scratch/backups/<filename>.<timestamp>.bak`.
+2. **Cơ chế Sao lưu Snapshot (Automated Snapshot Backup Protocol)**: Trước khi ghi đè hoặc chỉnh sửa bất kỳ tệp lớn nào (> 300 dòng), Agent BẮT BUỘC phải tự động tạo bản sao lưu snapshot tại `.agents/scratch/backups/<filename>.<timestamp>.bak`.
 3. **Bảo toàn Tracking DataLayer & Hash Matrix**: Refactoring chỉ cải thiện cấu trúc bên trong. TUYỆT ĐỐI KHÔNG vừa tách file vừa thay đổi logic kinh doanh. BẮT BUỘC bảo tồn 100% các sự kiện `window.dataLayer.push({ event: 'form_lead_success', ... })` và Tracking Pixels (GA4, Facebook Pixel, TikTok Pixel).
 4. **Bảo vệ Thứ tự CSS Cascading & Specificity Shield**: Khi phân tách `style.css`, BẮT BUỘC phải kiểm soát thứ tự `@import` / `<link>`, bảo toàn hệ thống 8pt Grid spacing và biến CSS Token (`var(--spacing-md)`), triệt tiêu hoàn toàn lỗi **Ghost Spacing** (khoảng trắng ma).
 5. **Cross-File Tree-Shaking & Dead Code Purging**: Quét ma trận phụ thuộc chéo giữa 8+ trang HTML và tất cả các file JS để phát hiện code chết hoặc hàm không sử dụng trước khi tách, chống việc "chuyển rác sang file mới".
 6. **Event Lifecycle với `AbortController`**: Sử dụng Event Delegation trên `document` kết hợp với `AbortController` signal để quản lý vòng đời sự kiện, triệt tiêu rò rỉ bộ nhớ (Memory Leak) khi DOM re-render hoặc modal đóng/mở.
 7. **Nghiệm thu 3 Tầng bắt buộc (Mandatory 3-Tier Verification Gate)**:
    - **Tầng 1 (Syntax Gate)**: Chạy `node --check <file>` xác minh cú pháp không có lỗi.
-   - **Tầng 2 (Audit Gate)**: Chạy `node .agent/skills/landing-page-audit/scripts/audit-helper.js` (Yêu cầu đạt **90 - 100 điểm**).
+   - **Tầng 2 (Audit Gate)**: Chạy `node .agents/skills/landing-page-audit/scripts/audit-helper.js` (Yêu cầu đạt **90 - 100 điểm**).
    - **Tầng 3 (Hygiene Gate)**: Chạy `node scripts/code_hygiene_check.js` (Triệt tiêu token drift và rác comment).
 
 ---
@@ -44,10 +44,10 @@ graph TD
 - **Tree-Shaking Check**: Quét chéo với các trang HTML để phát hiện mã không sử dụng.
 
 ### Bước 2: Automated Snapshot Backup
-Chạy script tạo bản sao lưu an toàn tại `.agent/scratch/backups/`:
+Chạy script tạo bản sao lưu an toàn tại `.agents/scratch/backups/`:
 ```bash
-mkdir -p .agent/scratch/backups
-cp main.js .agent/scratch/backups/main.js.$(date +%s).bak
+mkdir -p .agents/scratch/backups
+cp main.js .agents/scratch/backups/main.js.$(date +%s).bak
 ```
 
 ### Bước 3: AST Node Extraction Script Execution
@@ -74,7 +74,7 @@ Chạy script Node.js tự động cập nhật `<script defer src="js/modules/.
 
 ### Bước 7: Kiểm Thử Nghiệm Thu 3 Tầng (Verification Gate)
 1. **Kiểm tra cú pháp**: `node --check js/modules/your-module.js`
-2. **Kiểm tra Landing Page Standards**: `node .agent/skills/landing-page-audit/scripts/audit-helper.js` (Yêu cầu 90+ điểm).
+2. **Kiểm tra Landing Page Standards**: `node .agents/skills/landing-page-audit/scripts/audit-helper.js` (Yêu cầu 90+ điểm).
 3. **Kiểm tra Vệ sinh Mã nguồn**: `node scripts/code_hygiene_check.js`
 
 ---
@@ -84,7 +84,7 @@ Chạy script Node.js tự động cập nhật `<script defer src="js/modules/.
 Mẫu script Node.js AST Parser Engine chuẩn Tier-1 Enterprise (trích xuất khối ngoặc nhọn bằng thuật toán đếm ngoặc AST Brace Matching):
 
 ```javascript
-// File: .agent/scratch/ast_split_module.js
+// File: .agents/scratch/ast_split_module.js
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');

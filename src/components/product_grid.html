@@ -1,8 +1,8 @@
     <!-- 🚗 SECTION 4: FLUID PRODUCT GRID (LƯỚI THẺ XE THÍCH ỨNG) -->
     <section id="product-grid-section" class="product-grid-section">
         <div class="section-header reveal">
-            <h2>Kho Xe Điện VinFast Sẵn Giao Ngay</h2>
-            <p>Hồ sơ pháp lý đầy đủ, bảo hành chính hãng, bàn giao và giao xe tận hầm chung cư.</p>
+            <h2 id="grid-section-title">Kho Xe VinFast Lướt Sẵn Giao Ngay</h2>
+            <p id="grid-section-desc">Hồ sơ pháp lý đầy đủ, bao test hãng 176 hạng mục, bàn giao và giao xe tận hầm chung cư.</p>
             <div class="inventory-status-bar" style="display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(37, 99, 235, 0.08); border: 1px solid rgba(37, 99, 235, 0.2); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.75rem;">
                 <span class="inventory-timestamp"><i class="fas fa-clock" style="color: var(--color-accent-blue); margin-right: 0.35rem;"></i>Kho xe &amp; bảng giá cập nhật: <strong id="live-inventory-date" style="color: var(--color-text-primary);">Hôm nay</strong></span>
                 <span style="color: rgba(255,255,255,0.2);">•</span>
@@ -10,20 +10,22 @@
             </div>
         </div>
 
-        <!-- Filter pills -->
-        <div class="filter-pills reveal">
-            <span class="filter-pill active" data-filter="all">TẤT CẢ XE</span>
-            <span class="filter-pill" data-filter="vf3">VF 3</span>
-            <span class="filter-pill" data-filter="vf5">VF 5</span>
-            <span class="filter-pill" data-filter="vf6">VF 6</span>
-            <span class="filter-pill" data-filter="vf7">VF 7</span>
-            <span class="filter-pill" data-filter="vfe34">VF E34</span>
-            <span class="filter-pill" data-filter="vf8">VF 8</span>
-            <span class="filter-pill" data-filter="vf9">VF 9</span>
-            <span class="filter-pill" data-filter="limo">LIMO</span>
-            <span class="filter-pill" data-filter="mpv">MPV 7</span>
-            <span class="filter-pill" data-filter="gas">XE XĂNG (LUX/FADIL)</span>
-        </div>
+        <!-- Filter pills (Crawlable SEO Anchor Links + Instant JS Filter) -->
+        <nav class="filter-pills reveal" aria-label="Bộ lọc dòng xe VinFast lướt">
+            <a href="./index.html#product-grid-section" class="filter-pill active" data-filter="all">TẤT CẢ XE</a>
+            <a href="./index.html?filter=vf3#product-grid-section" class="filter-pill" data-filter="vf3">VF 3</a>
+            <a href="./index.html?filter=vf5#product-grid-section" class="filter-pill" data-filter="vf5">VF 5</a>
+            <a href="./index.html?filter=vf6#product-grid-section" class="filter-pill" data-filter="vf6">VF 6</a>
+            <a href="./index.html?filter=vf7#product-grid-section" class="filter-pill" data-filter="vf7">VF 7</a>
+            <a href="./index.html?filter=vfe34#product-grid-section" class="filter-pill" data-filter="vfe34">VF E34</a>
+            <a href="./index.html?filter=vf8#product-grid-section" class="filter-pill" data-filter="vf8">VF 8</a>
+            <a href="./index.html?filter=vf9#product-grid-section" class="filter-pill" data-filter="vf9">VF 9</a>
+            <a href="./index.html?filter=limo#product-grid-section" class="filter-pill" data-filter="limo">LIMO</a>
+            <a href="./index.html?filter=mpv#product-grid-section" class="filter-pill" data-filter="mpv">MPV 7</a>
+            <a href="./index.html?filter=lux-a#product-grid-section" class="filter-pill" data-filter="lux-a">LUX A</a>
+            <a href="./index.html?filter=lux-sa#product-grid-section" class="filter-pill" data-filter="lux-sa">LUX SA</a>
+            <a href="./index.html?filter=fadil#product-grid-section" class="filter-pill" data-filter="fadil">FADIL</a>
+        </nav>
 
         <!-- Fluid Product Grid aspect-[1/1.414] -->
         <div class="fluid-product-grid reveal-stagger" id="cars-grid">

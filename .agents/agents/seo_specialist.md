@@ -79,7 +79,7 @@ Bước 4: Kiểm tra Semantic Elements & Table Optimization
   "tables_validated": true,
   "ai_citation_ready": true,
   "modified_files": ["index.html", "sell.html"],
-  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agent/scratch/seo_audit.json"
+  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agents/scratch/seo_audit.json"
 }
 ```
 

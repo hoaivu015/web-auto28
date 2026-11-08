@@ -151,7 +151,7 @@ Bước 4: Tổng hợp Báo cáo & Xuất Structured Handoff JSON
     "Chuẩn hóa tên 'Vỏ bọc pin' thành 'Vỏ hộp pin (Battery Pack Enclosure)' theo chuẩn hãng",
     "Cập nhật JSON-LD Schema VehicleEngine khớp với công suất 150 kW (201 hp) trên UI"
   ],
-  "evidence_file": "file:///Users/phanvu/Desktop/auto-28/lading-page/.agent/scratch/auto_technical_audit.json",
+  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agents/scratch/auto_technical_audit.json",
   "ready_for_implementation": true
 }
 ```

@@ -3,19 +3,19 @@
  * Strategy: Stale-While-Revalidate with Cache Quota Safety & Search Normalization
  */
 
-const CACHE_NAME = 'auto28-v2.6.0-cache';
+const CACHE_NAME = 'auto28-v2.7.0-cache';
 const MAX_IMAGE_CACHE_ITEMS = 30;
 const PRECACHE_ASSETS = [
     '/',
-    '/style.css?v=2.6.0',
-    '/main.js?v=2.1.0',
-    '/cars_data.js?v=2.1.0',
-    '/modules/tracking-pipeline.js?v=2.2.0',
-    '/modules/hero-slideshow.js?v=2.1.0',
-    '/modules/ai-valuation.js?v=2.1.0',
-    '/modules/car-filter.js?v=2.1.0',
-    '/modules/ui-effects.js?v=2.6.0',
-    '/modules/car-modal.js?v=2.1.0',
+    '/style.css?v=2.7.0',
+    '/main.js?v=2.7.0',
+    '/cars_data.js?v=2.7.0',
+    '/modules/tracking-pipeline.js?v=2.7.0',
+    '/modules/hero-slideshow.js?v=2.7.0',
+    '/modules/ai-valuation.js?v=2.7.0',
+    '/modules/car-filter.js?v=2.7.0',
+    '/modules/ui-effects.js?v=2.7.0',
+    '/modules/car-modal.js?v=2.7.0',
     '/assets/logos/logo.jpg'
 ];
 
@@ -73,9 +73,23 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
+    // Network-first for HTML documents & navigation routes (/lux-a, /vf5, etc.)
+    if (event.request.mode === 'navigate' || (event.request.headers.get('accept') || '').includes('text/html')) {
+        event.respondWith(
+            fetch(event.request).then((networkResponse) => {
+                if (networkResponse && networkResponse.status === 200) {
+                    const clone = networkResponse.clone();
+                    caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+                }
+                return networkResponse;
+            }).catch(() => caches.match(event.request))
+        );
+        return;
+    }
+
     event.respondWith(
         caches.open(CACHE_NAME).then((cache) => {
-            return cache.match(event.request, { ignoreSearch: true }).then((cachedResponse) => {
+            return cache.match(event.request).then((cachedResponse) => {
                 const fetchPromise = fetch(event.request).then((networkResponse) => {
                     if (networkResponse && (networkResponse.status === 200 || networkResponse.type === 'opaque')) {
                         cache.put(event.request, networkResponse.clone());

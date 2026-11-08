@@ -61,7 +61,7 @@ Trước khi tiến hành sửa đổi, hãy chạy phân tích để định v�
 
 - **Giải pháp cho lỗi TypeScript cụ thể:** Xem [REFERENCE.md](REFERENCE.md)
 - **Ví dụ so sánh Trước/Sau (Before/After):** Xem [EXAMPLES.md](EXAMPLES.md)
-- **Single Source of Truth về Thiết kế:** Xem [DESIGN.md](file:///Users/phanvu/Desktop/auto-28/DESIGN.md) và [Design System Code Guide](file:///Users/phanvu/Desktop/auto-28/.agent/skills/design-system-guide/SKILL.md)
+- **Single Source of Truth về Thiết kế:** Xem [modules/design.md](file:///Users/phanvu/Desktop/lading-page/.agents/modules/design.md) và [Design System Code Guide](file:///Users/phanvu/Desktop/lading-page/.agents/skills/design-system-guide/SKILL.md)
 
 ## Checklist Hoàn Thành Refactor
 

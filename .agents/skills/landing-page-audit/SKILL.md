@@ -12,7 +12,7 @@ Kỹ năng này giúp AI phân tích mã nguồn thực tế của Landing Page,
 Để tự động quét và đánh giá mã nguồn Landing Page hiện tại, hãy chạy script NodeJS hỗ trợ:
 
 ```bash
-node .agent/skills/landing-page-audit/scripts/audit-helper.js
+node .agents/skills/landing-page-audit/scripts/audit-helper.js
 ```
 
 ## Workflow 5 Bước Chuyên Sâu
@@ -42,7 +42,7 @@ AI Agent thực hiện quy trình phân tích Landing Page theo 5 bước tiêu 
 
 ### Bước 5: Kiểm định Mobile UX/UI & WCAG 2.2 Accessibility (Visual & Viewport Auditing)
 *   [ ] Touch target tối thiểu `48x48px` cho tất cả các nút tương tác và liên hệ.
-*   [ ] Mobile Sticky CTA Bar cố định cuộc gọi / chat ở đáy màn hình.
+*   [ ] **No Mobile Sticky Bar & Vertical Card Layout**: CẤM thanh Sticky CTA Bar đáy màn hình; thẻ xe trên mobile (`≤ 639px`) bắt buộc xếp dọc (`flex-direction: column`, ảnh `16:10`), khoảng cách giữa các section & footer chuẩn `2rem` (`32px`).
 *   [ ] Spacing System chuẩn bội số 4px / 8px (triệt tiêu Spacing số lẻ và Ghost Spacing).
 *   [ ] Đảm bảo độ tương phản màu sắc WCAG Level AA (tỷ lệ tương phản >= 4.5:1).
 *   [ ] **Visual Viewport Boundary & Reflow (WCAG 2.2 SC 1.4.10)**: Kiểm tra trực quan không bị che khuất/cắt cụt Form CTA (Button & Inputs) ở màn hình di động dọc (Mobile Viewport Clipping).

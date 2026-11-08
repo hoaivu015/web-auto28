@@ -52,15 +52,20 @@ app.get('/llms-full.txt', (req, res) => {
 
 const { generateShowroomHtml } = require('./build_landing.js');
 
-let cachedShowroomHtml = null;
+const cachedShowroomByModel = {};
 let cachedSellHtml = null;
 
-// Real-time component assembly helper for / and /showroom with In-Memory Caching (Production Only)
-function getShowroomHtml() {
-  if (process.env.NODE_ENV === 'production' && cachedShowroomHtml) return cachedShowroomHtml;
+// Real-time component assembly helper for / and /showroom and model SEO routes with In-Memory Caching (Production Only)
+function getShowroomHtml(modelSlug) {
+  const cacheKey = modelSlug || 'all';
+  if (process.env.NODE_ENV === 'production' && cachedShowroomByModel[cacheKey]) return cachedShowroomByModel[cacheKey];
   try {
-    cachedShowroomHtml = generateShowroomHtml();
-    return cachedShowroomHtml;
+    if (process.env.NODE_ENV !== 'production') {
+      delete require.cache[require.resolve('./build_landing.js')];
+    }
+    const { generateShowroomHtml: freshGenerateShowroomHtml } = require('./build_landing.js');
+    cachedShowroomByModel[cacheKey] = freshGenerateShowroomHtml(modelSlug);
+    return cachedShowroomByModel[cacheKey];
   } catch (err) {
     console.error('Error in getShowroomHtml:', err);
     return fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
@@ -152,10 +157,10 @@ app.get('/du-toan-tra-gop', (req, res) => res.sendFile(path.join(__dirname, 'tin
 app.get('/studio', (req, res) => res.sendFile(path.join(__dirname, 'auto28-studio.html')));
 app.get('/auto28-studio', (req, res) => res.sendFile(path.join(__dirname, 'auto28-studio.html')));
 
-// Dynamic car pages routing -> Redirect to main index inventory filter
-const carsList = ['vf3', 'vf5', 'vf6', 'vf7', 'vf8', 'vf9', 'vfe34', 'lux-a', 'lux-sa', 'fadil'];
+// Dynamic car pages routing -> Serve SEO-optimized Showroom HTML (200 OK with dedicated Title, Canonical & active filter)
+const carsList = ['vf3', 'vf5', 'vf6', 'vf7', 'vf8', 'vf9', 'vfe34', 'limo', 'mpv', 'lux-a', 'lux-sa', 'fadil'];
 carsList.forEach(car => {
-  app.get(`/${car}`, (req, res) => res.redirect(`/index.html?filter=${car}#product-grid-section`));
+  app.get(`/${car}`, (req, res) => res.send(getShowroomHtml(car)));
 });
 
 // Fallback all other static files with optimized Cache-Control headers

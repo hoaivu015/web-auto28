@@ -35,7 +35,7 @@ graph TD
 
     subgraph "🎨 NHÓM TRẢI NGHIỆM & GIAO DIỆN DI ĐỘNG"
         DS["Design System Guide (Neural Expressive 2.0)"]
-        IP["iPhone Native UI Enforcer (Touch Target >= 48px, Sticky CTA)"]
+        IP["iPhone Native UI Enforcer (Touch Target >= 48px, No Sticky Bar)"]
         UD["Update Docs (Đồng bộ tài liệu & Mermaid)"]
     end
 

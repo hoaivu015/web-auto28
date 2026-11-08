@@ -232,7 +232,7 @@ cat .agents/scratch/session_context.md  # Nhớ context từ session trước
 
 ---
 
-## 📁 Cấu Trúc Agent System v3.0
+## 📁 Cấu Trúc Agent System v3.1 (Single Source of Truth)
 
 ```
 .agents/
@@ -240,13 +240,13 @@ cat .agents/scratch/session_context.md  # Nhớ context từ session trước
 ├── modules/
 │   ├── technical.md           ← §5 Standards + §6 Silent Failure + §7 Observability
 │   ├── gates.md               ← Gate 1-4: Diagnosis, Counterfactual, Budget, Blast Radius
-│   ├── design.md              ← Neural Expressive DNA Gate (§14)
-│   └── content-cro.md        ← AEO 2026 + CRO + Language Standards (§9+§10)
-├── agents/                    ← 10 agent definitions
-├── skills/                    ← 21 skills
-├── orchestrator_protocol.md   ← Multi-agent pipeline 6 tầng
-├── agent_weights.json         ← Registry trọng số 12 agents v2.2
-└── scratch/                   ← Memory system
+│   ├── design.md              ← Neural Expressive DNA Gate (§14) + 2rem Spacing + Vertical Card
+│   └── content-cro.md         ← AEO 2026 + CRO + Language Standards (§9+§10)
+├── agents/                    ← 13 subagent definitions (đã hợp nhất CRO vào automotive_cro_architect)
+├── skills/                    ← 21 core skills (duy nhất tại .agents/skills/)
+├── orchestrator_protocol.md   ← Multi-agent pipeline 6 tầng v3.1
+├── agent_weights.json         ← Registry trọng số 13 agents v3.1
+└── scratch/                   ← Memory & Audit Evidence system
     ├── mistakes.md
     ├── session_context.md
     └── decisions.jsonl

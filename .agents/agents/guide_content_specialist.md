@@ -71,7 +71,7 @@ registry: .agents/agent_weights.json
 - **Phân Biệt Văn Nói vs Văn Viết Chuẩn Mực (Spoken vs Written Standard Matrix)**:
   - *Bộ phận bảo vệ pin*: CẤM từ mơ hồ/mỏng dẻo *"Vỏ bọc pin"* ➔ BẮT BUỘC dùng chuẩn kỹ thuật: **"Vỏ hộp pin"** *(xưởng hãng)* hoặc **"Tấm bảo vệ gầm pin"** *(khi nói về đáy gầm xe)*.
   - *Làm kín chống nước khối pin*: CẤM dùng nhầm từ *"keo chỉ pin"* (thuật ngữ xe xăng) ➔ BẮT BUỘC dùng chuẩn kỹ thuật: **"Đường keo làm kín chống nước khối pin"** *(Battery Pack Sealing Joint)*.
-  - *Hình thức sở hữu pin*: CẤM văn nói *"Mua đứt pin"* ➔ BẮT BUỘC dùng văn viết chuẩn: *"Xe mua pin"* / *"Xe sở hữu pin 100%"*.
+  - *Hình thức sở hữu pin*: CẤM văn nói *"Mua đứt pin"* hoặc *"Xe sở hữu pin"* ➔ BẮT BUỘC dùng thuật ngữ chuẩn: **"Xe mua pin"** (hoặc **"Xe thuê pin"**).
   - *Hình thức thuê pin*: CẤM văn nói *"Đi thuê pin"* ➔ BẮT BUỘC dùng văn viết chuẩn: *"Gói thuê pin cố định"* / *"Gói thuê pin linh hoạt"*.
   - *Hoạt động kiểm tra*: CẤM khẩu ngữ *"Coi gầm"*, *"Check gầm"* ➔ BẮT BUỘC dùng: *"Kiểm tra khung gầm"*, *"Kiểm tra xe"*.
   - *Yêu cầu giấy tờ*: CẤM khẩu ngữ *"Đòi chủ cũ đưa"* ➔ BẮT BUỘC dùng: *"Yêu cầu bên bán cung cấp"*.
@@ -162,7 +162,7 @@ Bước 4: Tổng hợp Báo cáo & Xuất Structured Handoff JSON
     "Bổ sung khối TL;DR Direct Answer ngay dưới H1 để tối ưu cho AI Search (GEO)",
     "Thêm khối Success Benchmark xác nhận ở cuối Bước 2 và Bước 3"
   ],
-  "evidence_file": "file:///Users/phanvu/Desktop/auto-28/lading-page/.agent/scratch/guide_content_audit.json",
+  "evidence_file": "file:///Users/phanvu/Desktop/lading-page/.agents/scratch/guide_content_audit.json",
   "ready_for_implementation": false
 }
 ```
